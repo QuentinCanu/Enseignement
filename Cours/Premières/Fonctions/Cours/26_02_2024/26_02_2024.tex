@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{main}
+
+\author{Quentin Canu}
+\title{Cours : Coefficient Directeur}
+\date{26 Février 2024}
+
+\begin{document}
+\maketitle
+\section{Questions Flashs}
+\begin{enumerate}
+\item Soit $f : x \mapsto 4x + 7$. Donner l'image de $2$ et de $-1$ par $f$. Quel est son coefficient directeur ? Quelle est son ordonnée à l'origine ?
+\end{enumerate}
+\section{Cours}
+\subsection*{Coefficient Directeur}
+\begin{proposition}
+Soit $f$ une fonction affine, et $x_1,x_2$ deux nombres. On note $y_1 = f(x_1)$ et $y_2 = f(x_2)$ l'image de ces nombres par $f$. Alors, le coefficient directeur $a$ de $f$ se calcule en effectuant
+\begin{equation*}
+a = \dfrac{y_2 - y_1}{x_2 - x_1} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+\end{equation*}
+\end{proposition}
+\begin{example}
+Soit $f$ une fonction affine, telle que
+\begin{equation*}
+\begin{aligned}
+f(3) &= 2\\
+f(1) &= 1\\
+\end{aligned}    
+\end{equation*}
+Alors, le coefficient directeur de $f$ est donné par
+\begin{equation*}
+a = \dfrac{2 - 1}{3 - 1} = \dfrac{1}{2}\,.
+\end{equation*}
+\end{example}
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+\millirepere[step = 1](-3.25,-3.25) -- (3.25,3.25);
+\draw (-3.25, -9/8) -- (3.25,17/8);
+\end{tikzpicture}
+\end{center}
+Le coefficient directeur correspond à la pente de la droite représentant la fonction : si l'on avance de $1$ en abscisses, on progresse de $a$ en ordonnée.
+\begin{definition}
+Une fonction $f$ est croissante (resp. décroissante) si et seulement si pour tout $x \leq y$, on a $f(x) \leq f(y)$ (resp. $f(x) \geq f(y)$). Une fonction à la fois croissante et décroissante est dite constante : dans ce cas, pour tout $x \leq y$, on a $f(x) = f(y)$.
+\end{definition}
+\begin{proposition}
+Soit $f$ une fonction affine. Alors $f$ est croissante (resp. décroissante) si et seulement si son coefficient directeur est positif (resp. négatif). Si son coefficient directeur est nul, alors la fonction est constante.
+\end{proposition}
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+\millirepere[step = 1](-3.25,-3.25) -- (3.25,3.25);
+\draw (-3.25, -9/8) -- (3.25,17/8) node[right] {$f$};
+\draw (-3.25, 2.5) -- (3.25, -1) node[right] {$g$};
+\end{tikzpicture}
+\end{center}
+Ici, $f$ est croissante et $g$ est décroissante.
+\section{Exercices}
+\begin{enumerate}[label=\textbf{ Exercice \arabic*}]
+\item Soit $f$ une fonction affine. Pour chacune des situations suivantes, déterminer le coefficient directeur de $f$.
+\begin{enumerate}[label=\emph{\alph*)}]
+\multido{}{4}{
+\item $f(\random{-5}{5}) = \random{-5}{5}$ et $f(\random{-5}{5}) = \random{-5}{5}$}
+\end{enumerate}
+\item Soit $f$ une fonction affine telle que $f(\random{1}{7}) = \random{-2}{2}$ et $f(\random{1}{7}) = \random{-2}{2}$.
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Calculer le coefficient directeur de $f$.
+\item Calculer son ordonnée à l'origine.
+\end{enumerate}
+\item Un restaurant propose un menu à $20$ \euro{}. Le responsable constate que baisser le prix du menu de $20$ centimes augmente le nombre moyen de clients à midi de $5$.
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Combien y a-t-il de clients en moyenne quand le prix du menu est à $19,80$ \euro{}. Et $19,60$ \euro{} ?
+\item On note $x$ le nombre moyen de clients et $f(x)$ le prix du menu en \euro{}. Déterminer $m$ et $n$ tel que $f(x) = mx + n$.
+\item Quel sera le prix si le nombre de clients est de $120$ ?
+\item Quel sera le nombre de clients moyen si le prix est de $16$ \euro{} ? 
+\end{enumerate}
+\end{enumerate}
+\end{document}

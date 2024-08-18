@@ -1,0 +1,74 @@
+\documentclass{exam}
+\usepackage[exos]{main}
+
+\title{Exercices : Équations Produit-Nul}
+\date{29 Avril 2024}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}
+\begin{proposition}
+Soient $A(x)$ et $B(x)$ deux expressions dépendant d'une inconnue $x$. Alors, l'équation
+\begin{equation*}
+A(x) \times B(x) = 0    
+\end{equation*}
+admet pour solutions les valeurs de $x$ telles que $A(x) = 0$ et les valeurs de $x$ telles que $B(x) = 0$.
+\end{proposition}
+\end{tcolorbox}
+\begin{example}
+L'équation
+\begin{equation*}
+(x+1)(x+2)=0    
+\end{equation*}
+admet pour solutions $-1$ (car $-1$ est solution de $x+1=0$) et $-2$ (car $-2$ est solution de $x+2=0$). L'ensemble des solutions de l'équation produit-nul est donc $\mathcal{S}=\{-1;-2\}$.
+\end{example}
+\begin{questions}
+\question Résoudre dans $\R$ les équations produit-nul suivantes :
+\begin{parts}
+\part $(-6x+4)(-2x+5)=0$
+\part $(-2x-2)(-6x+9)=0$
+\part $(-x+7)(4x+1)=0$
+\part $(6x-7)(5x+5)=0$
+\part $(-6x+5)(-x+3)=0$
+\part $(-9x-4)(-2x+4)=0$    
+\end{parts}
+\question 
+Résoudre dans $\R$ les équations suivantes :
+\begin{parts}
+\part $(6x+3)(x+8)+(6x+3)(7x+5)=0$
+\part $(-6x-6)(2x-5)-(-6x-6)(-9x+6)=0$
+\part $(5x-8)^2+(5x-8)(-9x-2)=0$
+\part $(8x-9)(-9x-8)-(8x-9)^2=0$
+\end{parts}
+\makeemptybox{10cm}
+\end{questions}
+\newpage
+\begin{tcolorbox}
+\begin{proposition}
+Soient $A(x)$ et $B(x)$ deux expressions dépendant d'une inconnue $x$. Pour résoudre l'équation $\dfrac{A(x)}{B(x)}=0$, il faut procéder à deux étapes :
+\begin{enumerate}
+\item Identifier les valeurs pour lesquelles $B(x)= 0$. L'équation n'a pas de sens si $B(x) = 0$.
+\item Résoudre l'équation $A(x)=0$, en excluant les solutions identifiées précedemment.
+\end{enumerate}
+\end{proposition}    
+\end{tcolorbox}
+\begin{example}
+L'équation
+\begin{equation*}
+\dfrac{x+2}{x+1} = 0
+\end{equation*}
+est définie sur $\R$ privé de $-1$ (car si $x = -1$, alors le dénominateur est nul). On résout sur cet ensemble l'équation $x+2=0$, ce qui donne $-2$ comme unique solution. L'ensemble des solutions de cette équation quotient-nul est $\mathcal{S}=\{-2\}$.
+\end{example}
+\begin{questions}
+\question Préciser au préalable quelles sont les valeurs interdite pour les équations ci-après, puis les résoudre :
+\begin{parts}
+\part $\dfrac{9x-4}{-2x-6}=0$
+\part $\dfrac{100-x^2}{9x-27}=0$
+\part $\dfrac{-3x-4}{5x+3}=-9$
+\part $\dfrac{1}{5x-2}=\dfrac{6}{4x+9}$
+\end{parts}
+\makeemptybox{10cm}
+\end{questions}
+\end{document}

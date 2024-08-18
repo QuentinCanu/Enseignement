@@ -1,0 +1,102 @@
+\documentclass{article}[onecolumn]
+\usepackage{main}
+\usepackage[margin=1.5cm]{geometry}
+\pagestyle{empty}
+
+\title{Révisions proportion et taux d'évolution}
+\date{5 Février 2024}
+\author{}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|m{5cm}|m{5cm}|m{5cm}|}
+        \hline
+        Exemple d'énoncé    & 
+        Calcul      &
+        Notion du cours \\
+        \hline
+Il y a $6$ sportifs parmi $12$ lycéens. Quel est le pourcentage de sportifs parmi les lycéens ? 
+                    &
+\[
+\dfrac{6}{12} = \dfrac{1}{2} = 0,5
+\]
+Réponse : $50\%$.
+                        &
+Proportions, pourcentages       
+                                \\
+\hline
+Il y a $50\%$ de sportifs parmi les lycéens, et il y a $50\%$ de footballeurs parmi les sportifs. Quel est le pourcentage de footballeurs parmi les lycéens ? 
+                    &
+\[
+0,5 \times 0,5 = 0,25
+\]
+Réponse : $0,25\%$.
+                        &
+Pourcentages de pourcentages
+                                \\
+\hline
+On passe de $6$ à $9$ sportifs. De quel pourcentage ce nombre a-t-il augmenté ?
+                    &
+\[
+\dfrac{9 - 6}{6} = \dfrac{3}{6} = 0,5
+\] 
+Réponse : $50\%$
+                        &
+Taux d'évolution
+                                \\
+\hline
+Le nombre de sportifs initialement de $6$ a augmenté de $50\%$. Combien y a-t-il de sportifs maintenant ?
+                    &
+\[
+6 \times \left(1 + \dfrac{50}{100}\right) = 6 \times 1,5 = 9
+\] 
+Réponse: $9$.
+                        &
+Taux d'évolution, coefficient multiplicateur.
+                                \\
+\hline
+Le nombre de sportifs initialement de $6$ a diminué de $50\%$. Combien y a-t-il de sportifs maintenant ?
+                    &
+\[
+6 \times \left(1 - \dfrac{50}{100}\right) = 6 \times 0,5 = 3
+\] 
+Réponse: $9$.
+                        &
+Taux d'évolution, coefficient multiplicateur.
+                                \\
+\hline
+Le nombre de sportifs a augmenté de $30\%$, puis a diminué de $20\%$. Donner le pourcentage d'évolution du nombre de sportifs.
+                    &
+\[
+\begin{aligned}
+CM_1 &= 1 + \dfrac{30}{100} = 1,3\\
+CM_2 &= 1 - \dfrac{20}{100} = 0,8\\
+CM_g &= CM_1 \times CM_2 = 1,04\\
+t_g &= CM_g - 1 = 0,04
+\end{aligned}
+\]
+Réponse : $4\%$ d'augmentation.
+                        &
+Taux d'évolution successifs.
+                            \\
+\hline
+Le nombre de sportifs a augmenté de $25\%$. De quel pourcentage diminuer ce nombre afin d'obtenir la valeur initiale ?
+                    &
+\[
+\begin{aligned}
+CM &= 1 + \dfrac{25}{100} = 1,25\\
+CM_r &= \dfrac{1}{CM} = 0,8\\
+t_r &= CM_r - 1 = -0,2
+\end{aligned}
+\]
+Réponse : $20\%$
+                        &
+Taux d'évolution réciproque.
+                            \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

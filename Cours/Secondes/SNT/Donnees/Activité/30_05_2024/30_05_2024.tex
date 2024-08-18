@@ -1,0 +1,48 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Le paradoxe des anniversaires}
+\date{29 Mai 2024}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+\section{Introduction}
+\question 
+\begin{parts}
+\part Y a-t-il dans la classe deux personnes partageant le même jour d'anniversaire (numéro de jour + mois) ?
+\part Dans un lycée, on tire au sort $30$ élèves afin de les mettre dans une classe. On observe les jours d'anniversaire de tous les élèves de cette classe. Combien y a-t-il d'issues dans l'univers $\Omega$ de cette expérience aléatoire ?
+\part Comparer votre résultat avec le nombre d'atomes dans l'univers.
+\part On nomme $A$ l'évenement \og il y a deux personnes ayant le même jour d'anniversaire dans la classe.\fg D'après vous, $P(A)$ est-il proche de $0$ ou de $1$ ? 
+\end{parts}
+\section{Statistiques : utilisation du tableur}
+\question
+Ouvrir \verb|LibreOffice calc|, et créez une nouvelle feuille de calcul. Nous allons créer une classe de $30$ élèves et leur associer un jour d'anniversaire.
+\begin{parts}
+\part Créer une première ligne de tableau de la forme
+\begin{center}
+\begin{tabular}{|c|c|c|ccc|c|}
+\cline{1-3}\cdashline{4-6}\cline{7-7}
+Classe&1&2&&&&30\\
+\cline{1-3}\cdashline{4-6}\cline{7-7}
+\end{tabular}
+\end{center}
+\part Pour chacun des élèves, de $1$ à $30$, mettre un nombre aléatoire correspondant à une date de l'année sur la deuxième ligne. On utilisera la formule \verb|ALEA.ENTRE.BORNES| avec des bornes bien choisies.
+\part Vérifier s'il y a un doublon dans votre classe. On pourra utiliser la formule \verb|MODE| sur l'ensemble des valeurs associées à la classe. Que renvoie la formule s'il n'y a pas de doublons dans la classe ?
+\end{parts}
+\question 
+\begin{parts}
+\item Répéter l'opération sur les lignes du dessous afin de simuler l'expérience sur une centaine de classe. On pourra utiliser le copier-coller, ou la poignée en bas à droite d'une sélection.
+
+\item Combien de classes ont des doublons ? On pourra utiliser la formule \verb|NB| qui compte les valeurs numériques dans une sélection.
+
+\item En déduire la fréquence des classes possédant un doublon. Est-ce cohérent avec la probabilité du premier exercice ? 
+\end{parts}
+\section{Conclusion}
+\question Chercher \og Paradoxe des anniversaires \fg sur Internet. Combien de personnes dans une classe sont nécessaires pour que la probabilité d'avoir deux personnes ayant le même jour d'anniversaire soit supérieur à $0,99$ ?  
+\end{questions}
+
+
+\end{document}

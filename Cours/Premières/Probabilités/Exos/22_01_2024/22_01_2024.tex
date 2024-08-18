@@ -1,0 +1,35 @@
+\documentclass{exam}
+\usepackage{main}
+
+\title{Exercices : Probabilités indépendantes}
+\author{Quentin Canu}
+\date{22 Janvier 2024}
+
+\qformatExos{}
+
+\begin{document}
+\maketitle
+\begin{questions}
+\question On tire une carte dans un jeu de $52$ cartes standards. On note $A=$ \og La carte tirée est un as\fg et $B=$ \og La carte tirée est rouge\fg.
+\begin{parts}
+\part Calculer $P(A)$, $P(B)$, $P(A \cap B)$ et $P_B(A)$.
+\part $A$ et $B$ sont-ils indépendants ?
+\end{parts}
+\vspace*{0.5cm}
+\question On lance deux dé équilibrés. On note les évenements $A =$ \og le numéro du premier dé est impair \fg, $B =$ \og le numéro du deuxième dé est impair \fg et $C =$ \og la somme des numéros des deux dé est impaire \fg. Pour chaque couple d'événements, dire lesquels sont indépendants et lesquels ne le sont pas.
+\vspace*{0.5cm}
+\question On dispose de trois boîtes à l'apparence identique. L'une d'elle contient deux pièces d'or, une autre deux pièces d'argent, et la dernière une pièce d'or et une pièce d'argent. Le jeu se déroule de la manière suivante :
+\begin{enumerate}
+\item On choisit une boite.
+\item On tire au hasard une pièce de la boite.
+\item Si on tire une pièce d'argent, on remet la pièce dans la boite, puis on mélange les boites. On recommence la partie.
+\item Si on tire une pièce d'or, alors on essaie de deviner quelle est l'autre pièce dans la boite. Si on devine juste, on gagne, sinon, on perd. 
+\end{enumerate}
+\begin{parts}
+\part Faire un arbre pondéré qui résume les possibilités à ce jeu. Indication : réfléchir à l'ordre des choix qui sont faits.
+\part Quelle est la probabilité que la deuxième pièce dans la boite est une pièce d'or sachant que la première est une pièce d'or ?
+\part D'après vous, que faut-il dire après avoir tiré votre première pièce d'or ?
+
+\end{parts}
+\end{questions}
+\end{document}

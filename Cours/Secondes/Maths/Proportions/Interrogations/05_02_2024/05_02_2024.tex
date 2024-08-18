@@ -1,0 +1,19 @@
+\documentclass{exam}
+\usepackage{main}
+\qformatExos{}
+\pagestyle{empty}
+
+\title{Interrogation de cours}
+\date{5 Février 2024}
+\author{Quentin Canu}
+
+\begin{document}
+\multido{\i = 1 + 1}{4}{
+\subsection*{Version \i}
+\begin{questions}
+\question Le prix d'un billet pour un concert coûte $\random{1}{30}\%$ de plus pour une place VIP, mais vous bénéficiez d'une remise de $\random{20}{50}\%$ pour votre achat. Une telle offre est-elle avantageuse ?
+\question Aujourd'hui, la température a augmenté de $\random{1}{15}\%$ par rapport à hier. De quel pourcentage la température doit-elle diminuer pour retrouver sa valeur initiale ?
+\end{questions}
+\newpage
+}
+\end{document}

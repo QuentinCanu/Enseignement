@@ -1,0 +1,26 @@
+\documentclass{exam}
+\usepackage{main}
+
+\qformatExos{}
+
+\author{}
+\date{26 Février 2024}
+\title{Evaluation de cours}
+
+\begin{document}
+\multido{\i=1+1}{2}{
+\maketitle
+\thispagestyle{empty}
+\paragraph*{Version \i}
+\begin{questions}
+\question Soit $A,B$ deux points. Pour chacune des situations suivantes, calculer les coordonnées du milieu $I$ du segment $[AB]$.
+\begin{parts}
+\multido{}{3}{
+\part $A(\random{-3}{3};\random{-3}{3})$ et $B(\random{-3}{3};\random{-3}{3})$
+}
+\end{parts}
+\question Soient $A(4;2)$, $B(1;2)$, $C(2;0)$ et $D(5;0)$. En calculant les coordonnées du milieu de $[AC]$ et de $[BD]$, montrer que $ABCD$ est un parallélogramme.
+\end{questions}
+\newpage
+}
+\end{document}

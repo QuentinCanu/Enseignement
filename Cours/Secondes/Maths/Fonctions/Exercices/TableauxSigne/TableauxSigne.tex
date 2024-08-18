@@ -1,0 +1,76 @@
+\documentclass{exam}
+\usepackage{main}
+\usepackage{multicol}
+
+\title{Tableaux de signe}
+\date{11 Décembre 2023}
+\qformatExos{}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+\question
+Donner le tableau de signes des fonctions dont les courbes représentatives sont données ci-dessous :
+\begin{minipage}{0.5\textwidth}
+\vspace{0.5cm}
+\begin{tikzpicture}
+\shorthandoff{:};
+\millirepere[step=0.5](-3.25,-3.25) -- (3.25,3.25);
+\draw (-3, -2) -- (3, 3);
+\draw[thick] (0.5,-0.25) -- (0.5,0.25) node[right] {$2$};
+\draw[thick] (-0.25,0.5) -- (0.25,0.5) node[above] {$2$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vspace{0.5cm}
+\begin{tikzpicture}
+\shorthandoff{:};
+\millirepere[step=0.5](-3.25,-3.25) -- (3.25,3.25);
+\draw[thick] (-3.25,2) -- (-1,1) -- (1.5,-1.5) -- (2.5,1.5) -- (3.25,2); 
+\draw[thick] (0.5,-0.25) -- (0.5,0.25) node[right] {$5$};
+\draw[thick] (-0.25,0.5) -- (0.25,0.5) node[above] {$5$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vspace{0.5cm}
+\begin{tikzpicture}
+\shorthandoff{:};
+\millirepere[step=0.5](-3.25,-3.25) -- (3.25,3.25);
+\draw[thick] (0.5,-0.25) -- (0.5,0.25) node[right] {$0.1$};
+\draw[thick] (-0.25,0.5) -- (0.25,0.5) node[above] {$0.1$};
+\draw[domain=-3.25:3.25] plot (\x,{\x * sin(deg(\x + pi / 2))});
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\vspace{0.5cm}
+\begin{tikzpicture}
+\shorthandoff{:};
+\millirepere[step=0.5](-3.25,-3.25) -- (3.25,3.25);
+\draw[thick] (0.5,-0.25) -- (0.5,0.25) node[right] {$1$};
+\draw[thick] (-0.25,0.5) -- (0.25,0.5) node[above] {$1$};
+\draw[domain=-3.25:3.25] plot (\x, \x*\x / 5 + 1);
+\end{tikzpicture}
+\end{minipage}
+\vspace{0.5cm}
+\question On plante une graine sous $3$ cm de terre meuble. Tous les jours, elle pousse de $0,5$ mm.
+\begin{parts}
+\part On note $f(t)$ l'altitude de la plante en devenir après $t$ jours. L'altitude du sol est de $0$. Donner l'expression de $f(t)$ en fonction de $t$.
+\part Compléter le tableau de valeurs suivant :
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$t$ & $0.5$ & $2$ & $5$ & $10$ \\
+\hline
+$f(t)$ &    &     &     &       \\
+\hline
+\end{tabular}
+\part À partir de la question précédente, tracer la courbe représentative de la fonction $f$.
+\part Résoudre graphiquement $f(t) = 0$, puis le résoudre algébriquement.
+\part En déduire le tableau de signe de $f$.
+\end{parts}
+\question
+\begin{parts}
+\part Tracer la courbe représentative d'une fonction positive sur $[-3;-1]$, negative sur $[-1,1]$ puis positive sur $\left[1;\dfrac{3}{2}\right]$.
+\end{parts}
+\end{questions}
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Activité requêtes HTTP}
+\date{26 Janvier 2024}
+\author{}
+
+\begin{document}
+\maketitle
+Une requête \verb|GET| typique ressemble à
+
+\begin{verbatim}
+GET /mondossier/monFichier.html HTTP/1.1
+User-Agent : Mozilla/5.0
+Accept : text/html
+\end{verbatim}
+
+Une réponse possible est 
+
+\begin{verbatim}
+HTTP/1.1 200 OK
+Date: Thu, 15 feb 2019 12:02:32 GMT
+Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Voici mon site</title>
+</head>
+<body>
+<h1>Hello World! Ceci est un titre</h1>
+<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+</body>
+</html>
+\end{verbatim}
+
+D'après vous,
+\begin{enumerate}[label = \emph{\alph*)}]
+\item Quel type de fichier demande l'utilisateur ?
+\item Quel navigateur utilise-t-il ?
+\item Quel jour est-il ?
+\item Que va afficher le navigateur ? 
+\end{enumerate}
+\end{document}

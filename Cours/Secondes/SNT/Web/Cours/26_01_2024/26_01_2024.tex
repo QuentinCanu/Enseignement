@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Cous : Requête HTTP}
+\author{Quentin Canu}
+\date{26 Janvier 2024}
+
+\begin{document}
+\maketitle
+\section{Rappels}
+\begin{itemize}
+\item IP/TCP : les protocoles d'internet.
+\item HTTP et HTTPS : les protocoles du web.
+\end{itemize}
+\section{Illustration des requêtes HTTP}
+\section{Cours}
+Faire un schéma pour illustrer l'architecture clien-serveur. Différence entre TCP/IP et HTTP : enveloppe-lettre.
+
+Les differents types de requêtes : \verb|GET|, \verb|HEAD| et \verb|POST|.
+
+Une requête \verb|GET| typique ressemble à
+
+\begin{verbatim}
+GET /chemin/vers/le/contenu HTTP/1.1
+Host: site.com
+User-Agent: Chrome/5.0 (Windows 10)
+Accept-Language: en-US
+Accept-encoding: gzip
+\end{verbatim}
+
+Une réponse possible est 
+
+\begin{verbatim}
+HTTP/1.1 200 OK
+Date: Mon, 27 Jul 2022 12:28:53 GMT
+Server: Apache/2.2.14 (Win32)
+Last-Modified: Wed, 22 Jul 2022 19:15:56 GMT
+Content-Length: 88
+Content-Type: text/html
+Connection: Closed</code.
+\end{verbatim}
+
+Importance de la première ligne pour la requête puis pour la réponse. Présentation des entêtes. 
+
+Faire des recherches sur les requêtes \verb|HEAD| et \verb|POST| ainsi que sur leur utilité.
+
+\section{Devoir maison}
+Utiliser les outils de développement d'un navigateur pour analyser les requêtes HTTP permettant d'afficher la page web sur le site de votre choix.
+
+\end{document}

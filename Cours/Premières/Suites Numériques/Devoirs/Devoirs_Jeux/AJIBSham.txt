@@ -1,0 +1,21 @@
+math 
+
+
+jeu de nom:
+la strategie gagnates est de laisser 4,8,18 ou 16 allumettes à l'adversaire.
+donc un multiple de 4
+
+le président:
+gardes des cartes diublettes ssez hautes. et utilise ses crtes les plus basses dès le début.
+Defaut: si il n'y a pas des cartes hautes ou doublettes il yaura moin de chance pour gagner
+
+UNO: changer souvent des couleurs 
+mettres des +4 ou des +2 
+ou mettre la cate pour bloquer 
+
+Defut: peut etre n n'a pas ses cartes la, et on tombe sure seulment des numéro
+
+
+pour a tout prix: il faut retirer la 16eme allumettes car comme ca l'autre joueur sera bloquer 
+on ne peut pas définir à l'avance si l'on va gagner ou pas,pile a l 12eme allumettes on peut savoir.
+donc celui qui pren la 12em allumettes

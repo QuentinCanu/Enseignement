@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{main}
+
+\author{Maths Spécifiques}
+\title{Fonction Exponentielle de base $a>0$}
+\date{18 Mars 2024}
+
+\begin{document}
+\maketitle
+
+\paragraph{Rappels :}
+\begin{enumerate}
+\item Puissance de $a$ par un entier positif.
+\vspace*{0.5cm}
+\item Puissance de $a$ par un entier négatif. 
+\vspace*{0.5cm}
+\end{enumerate}
+\section{Le cas d'une puissance fractionnaire}
+Soit $a>0$, on souhaite définir une notion de puissance fractionnaire, c'est-à-dire
+\begin{equation*}
+a^{p/q}\,,    
+\end{equation*}
+où $p$ est un entier relatif, et $q$ un entier naturel non nul. On souhaite que cette notion de puissance respecte les propriétés déjà vues pour les puissances, comme $a^k \times a^{k'} = a^{k + k'}$.
+\begin{enumerate}
+\item Justifier que notre définition de $a^{p/q}$ devrait être égal à $(a^p)^{1/q}$.
+\end{enumerate}
+On peut donc concentrer nos recherches à donner une définition à $a^{1/q}$. Testons pour $q = 2$.
+\begin{enumerate}[resume*]
+\item Que signifie la notion de racine carrée, \emph{en français} ?
+\item Justifier que $a^{1/2}$ correspond à la racine carrée de $a$, c'est-à-dire $\sqrt{a}$.
+\item Que pourrait bien signifier la notion de racine $q$\ieme{} de $a$, notée $\sqrt[q]{a}$, \emph{en français} ?
+\item Vérifier que cette notion correspond bien à la définition que l'on souhaite donner à $a^{1/q}$.
+\end{enumerate}
+\vspace*{7cm}
+On donne donc la définition suivante pour la puissance $\dfrac{1}{q}$ d'un nombre : 
+\begin{definition}
+Le nombre $a^{1/q}$ est le nombre tel que si on le multipliait $q$ fois par lui-même, on obtiendrait $a$. Il correspond donc à la racine $q$\ieme{} de $a$, notée aussi $\sqrt[q]{a}$.
+\begin{equation*}
+a^{1/q} = \sqrt[q]{a}\,.
+\end{equation*}
+\end{definition}
+\section{Le cas d'une puissance réelle}
+On souhaite aller encore plus loin et définir la puissance de $a>0$ par tout nombre \emph{réel}. Par exemple, quelle définition donner à $2^{\sqrt{2}}$ ?
+\begin{enumerate}[resume*]
+\item Montrer que $(\sqrt{2} + 1)(\sqrt{2} - 1) = 1$. En déduire que $\sqrt{2} = 1 + \dfrac{1}{\sqrt{2} + 1}$.
+\item Une première approximation grossière de $\sqrt{2}$ est $\sqrt{2}=\dfrac{3}{2}$. En utilisant cette égalité dans $1 + \dfrac{1}{\sqrt{2}+1}$, en déduire une autre fraction permettant d'approcher $\sqrt{2}$.
+\end{enumerate}
+En continuant, on obtient ainsi une suite de fractions approchant de plus en plus $\sqrt{2}$ : $\dfrac{3}{2}; \dfrac{7}{5}; \dfrac{17}{12}\dots$
+\begin{enumerate}[resume*]
+\item Utiliser ces fractions pour calculer une valeur approchée de $2^{\sqrt{2}}$ sur votre calculatrice.
+\end{enumerate}
+On pourrait continuer longtemps. Plus les fractions sont précises, moins le résultat bougera. Ce comportement nous permet de déduire une définition pour $2^{\sqrt{2}}$ : c'est la valeur que l'on obtient en continuant ce processus à l'infini.
+\section{Conclusion}
+On a travaillé sur un moyen de parler de la puissance \emph{réelle} d'un nombre $a>0$. Maintenant que nous sommes convaincu que c'est possible, il nous est possible de définir une fonction qui à tout nombre réel $x$ renvoie $a^x$. C'est ce qu'on appelle la \emph{fonction exponentielle de base $a$}.
+\begin{definition}
+Soit $a>0$. La fonction exponentielle de base $a$ est la fonction
+\begin{equation*}
+\function{f}{\R}{\R}{x}{a^x}\,.    
+\end{equation*}    
+\end{definition} 
+\end{document}

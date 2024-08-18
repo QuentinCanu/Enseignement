@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Cours : Indépendance d'événements}
+\author{Quentin Canu}
+\date{15 Janvier 2024}
+
+\begin{document}
+\maketitle
+\section{Questions Flash}
+Formule de $P_B(A)$ ?
+\section{Correction}
+\section{Exercice}
+Dans une urne, il y a $3$ boules blanches, $5$ boules noires et $4$ boules rouges. On tire deux boules l'une après l'autre de l'urne sans les remettre. Quelle est la probabilité que la deuxième boule tirée soit une boule rouge ?
+Que se passe-t-il si on remet les boules tirées ?
+\section{Cours}
+\subsection*{\'Evénements indépendants}
+\subsubsection*{Définition et exemples}
+\begin{definition}
+Soit $A$ et $B$ deux événements, tel que $P(B) \neq 0$. Les événements $A$ et $B$ sont indépendants $P_B(A) = P(A)$   
+\end{definition}
+\begin{remark}
+En clair, cela signifie que la réalisation de $B$ n'a aucune influence sur la probable réalisation de $A$.
+\end{remark}
+\begin{proposition}
+Si on a aussi $P(A) \neq 0$, alors $A$ et $B$ indépendants implique $B$ et $A$ indépendants.
+\end{proposition}
+\begin{proof}
+On veut donc montrer que $P_A(B) = P(B)$. Or
+\begin{align*}
+P_A(B) &= \dfrac{P(A \cap B)}{P(A)}\\
+&= \dfrac{P(A \cap B)}{P_B(A)} \text{ (Par hypothèse)}\\
+&= \dfrac{P(A \cap B)}{\dfrac{P(A \cap B)}{P(B)}} \\
+&= P(B)
+\end{align*}
+ce qui conclut.
+\end{proof}
+\begin{example}
+On lance $3$ pièces équilibrées. Quelle est la probabilité que la troisième pièce donne face ? On voit bien que cela ne dépend pas du résultat obtenu par les deux autres pièces. 
+\end{example}
+\section{Exercice ?}
+\end{document}

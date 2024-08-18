@@ -1,0 +1,42 @@
+\documentclass{exam}
+\usepackage[exos]{main}
+
+\title{Exercices : fonction exponentielle}
+\date{29 Avril 2024}
+\author{Maths Spécifiques}
+
+\begin{document}
+\maketitle
+\begin{definition}
+Soit $X$ une quantité initiale, et $n$ un entier naturel. Au bout de $n$ étapes, la quantité $X$ a augmenté de $t\%$ ($t$ peut-être négatif dans le cas d'une diminution). On définit le \emph{taux d'évolution moyen} de cette augmentation par
+\begin{equation*}
+\left(1+\dfrac{t}{100}\right)^{\dfrac{1}{n}} - 1    
+\end{equation*} 
+\end{definition}
+Les exercices suivants consistent à explorer cette notion.
+\begin{questions}
+\question
+\begin{parts}
+\part Par combien doit-on multiplier une quantité pour augmenter cette quantité de $12\%$ ?
+\part On augmente une quantité de $47\%$, puis de $23\%$. Par quel coefficient multiplie-t-on la quantité initiale pour obtenir le résultat ?
+\part Quel est le taux d'évolution associé ?
+\end{parts}
+\makeemptybox{5cm}
+\question On a augmenté une valeur $X_0$ de $t_1 = 30\%$, puis de $t_2 = 6\%$. On note $X_1$ le résultat.
+\begin{parts}
+\part De quel pourcentage doit-on augmenter $X_0$ pour directement obtenir $X_1$ ? On note ce taux d'évolution $T$.
+\part On note $m$ la moyenne de $t_1$ et de $t_2$. Calculer $m$.
+\part On augmente deux fois la même valeur initiale $X_0$ de $m\%$. Obtient-on $X_1$?
+\part On note $m'$ la valeur obtenue en appliquant la définition à $T$. Calculer $m'$.
+\part On augmente deux fois la même valeur initiale $X$ de $m'\%$. Obtient-t-on $X_1$?
+\end{parts}
+\makeemptybox{5cm}
+\newpage
+\question La population d'une ville a doublé en $20$ ans. Donner son taux d'évolution annuel moyen en arrondissant le résultat à $0,1\%$ près.
+\makeemptybox{3cm}
+\question Les bénéfices d'une entreprise ont chuté de $40\%$ en un an. Déterminer son taux d'évolution trimestriel moyen en arrondissant le résultat à $0,1\%$ près.
+\makeemptybox{3cm}
+\question Entre 2015 et 2018, le record de hauteur du perchiste Armand Duplentis s'est amélioré chaque année passant de $\qty{5,30}{\meter}$ à $\qty{6,05}{\meter}$. Déterminer le taux d'évolution annuel moyen de son record.
+\makeemptybox{3cm}
+\end{questions}
+\end{document}

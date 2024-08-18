@@ -1,0 +1,111 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : Probabilités}
+\date{27 Mai 2024}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+\thispagestyle{head}
+\instructions
+\begin{questions}
+\titledquestion{Équations et inéquations produit-nul}[5]
+\begin{parts}
+\part Résoudre dans $\R$ les équations suivantes :
+\begin{subparts}
+\subpart $(17x+34)(-x + 6) = 0$
+\subpart $(-16a+8)(a - 5) = 0$
+\subpart $(y+4)^2 - (3y + 1)^2 = 0$ \emph{(Indication : on utilisera une identité remarquable bien choisie)}
+\end{subparts}
+\part Résoudre, en précisant les éventuelles valeurs interdites, les équations suivantes :
+\begin{subparts}
+\subpart $\dfrac{17x+34}{-x + 6} = 0$
+\subpart $\dfrac{y^2 - 16}{y + 4} = 0$ \emph{(Indication : on utilisera une identité remarquable bien choisie)}
+\end{subparts}
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Langage des probabilités}[5]
+Un site web d'achat en ligne spécialisé dans le smartphone souhaite mener une enquête sur les achats de ses clients. L'administrateur du site consulte donc les cent dernière commandes et constate que seuls trois marques sont représentées : Apple, Huawei et Samsung. De plus, les smartphones considérés sont rouges, bleus ou verts. On tire au sort une commande et on regarde la marque et la couleur du smartphone associé.
+\begin{parts}
+\part Décrire à l'aide d'un ensemble l'univers $\Omega$ de cette expérience aléatoire. \emph{(Indication : un Samsung Rouge pourra être représenté par le couple $(S;R)$.)}
+\part On note les événements
+\begin{itemize}
+\item $A$\og La marque associée à la commande est Apple. \fg 
+\item $H$\og La marque associée à la commande est Huawei. \fg 
+\item $S$\og La marque associée à la commande est Samsung. \fg
+\item $R$ \og Le smartphone de la commande choisie est rouge. \fg
+\item $B$ \og Le smartphone de la commande choisie est bleu. \fg
+\item $V$ \og Le smartphone de la commande choisie est vert. \fg
+\end{itemize}
+Décrire avec une \emph{phrase} \textsc{et} avec un \emph{ensemble} les événements
+\begin{subparts}
+\subpart $S \cup B$
+\subpart $V \cap A$
+\subpart $\overline{H}$
+\subpart $\overline{B} \cup \overbar{R}$
+\end{subparts}
+\end{parts}
+\newpage
+\titledquestion{Majorité de pièces}[4]
+On lance trois pièces équilibrées : une rouge, une bleue et une verte. On regarde le résultat renvoyé par les trois pièces.
+\begin{parts}
+\part Compléter l'arbre de dénombrement suivant.
+\begin{center}
+\begin{tikzpicture}
+\tikzstyle{level 1}=[level distance=1cm, sibling distance=2cm]
+\tikzstyle{level 2}=[level distance=1.5cm, sibling distance=1cm]
+\node {} [grow=right]
+    child {node {\textsc{Pile}}
+        child {node {\dots}}
+        child {node {\dots}}}
+    child {node {\textsc{Face}}
+        child {node {\dots}}
+        child {node {\dots}}};
+\node (R) at (1,-2.5) {Rouge};
+\node (B) at (2.5,-2.5) {Bleu};
+\node (V) at (4,-2.5) {Vert};
+\end{tikzpicture}
+\end{center}
+\part En déduire l'univers $\Omega$ de cette expérience aléatoire.
+\part Justifier que l'on est dans une situation d'équiprobabilité.
+\part Soit $A$ l'événement \og On obtient une majorité de \textsc{Pile}\fg et $B$ l'événement \og La pièce rouge donne le même résultat que la pièce verte\fg. Calculer les probabilités de $A$, de $B$, de $A \cap B$.
+\part Calculer la probabilité de $A \cup B$. On pourra utiliser les réponses précédentes. 
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Tourisme à Paris}[4]
+Lors d'un micro trottoir devant Notre-Dame, on interroge des touristes sur leur monument parisien préféré, et on leur demande leur nationalité. Les résultats sont donnés par le tableau suivant :
+\begin{center}
+\begin{tabular}{|*{6}{C{2cm}|}}
+\hline\rule{0cm}{1cm}
+&Européen&Américain&Asiatique&Africain&Total\\
+\hline\rule[-0.4cm]{0cm}{1cm}
+Notre-Dame&$48$&$95$&$29$&$5$&$177$\\
+\hline\rule[-0.4cm]{0cm}{1cm}
+Tour Eiffel&$276$&$16$&$66$&$57$&$399$\\
+\hline\rule[-0.4cm]{0cm}{1cm}
+Louvre&$34$&$31$&$85$&$374$&$524$\\
+\hline\rule[-0.4cm]{0cm}{1cm}
+Total&$358$&$142$&$180$&$586$&$1000$\\
+\hline
+\end{tabular}
+\end{center}
+On sélectionne une des réponses au hasard.
+\begin{parts}
+\part Soit $\Omega$ l'univers de cette expérience aléatoire. Combien d'issues comporte-t-il ?
+\part A-t-on équiprobabilité ?
+\part On note 
+\begin{itemize}
+\item $N$ l'événement \og le touriste sélectionné préfère Notre-Dame \fg.
+\item $T$ l'événement \og le touriste sélectionné préfère la Tour Eiffel \fg.
+\item $L$ l'événement \og le touriste sélectionné préfère le Louvre \fg.
+\item $U$ l'événement \og le touriste sélectionné est originaire d'Europe \fg.
+\item $M$ l'événement \og le touriste sélectionné est originaire d'Amérique \fg.
+\item $S$ l'événement \og le touriste sélectionné est originaire d'Asie \fg.
+\item $F$ l'événement \og le touriste sélectionné est originaire d'Afrique \fg.
+\end{itemize}
+Donner la probabilité de $S$, de $N \cap M$, de $F \cup L$ et de $U \cap \overbar{T}$.
+\part On choisit la réponse d'une américaine. Quelle est la probabilité qu'elle préfère le Louvre ?
+\end{parts}
+\end{questions}
+\end{document}

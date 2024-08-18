@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Cours : Taux d'évolution réciproque}
+\date{2 Février 2024}
+\author{Quentin Canu}
+
+\begin{document}
+\maketitle
+\section{Questions Flash}
+Une quantité subit deux évolutions, dont le taux est donné par $t_1$ puis par $t_2$. Donner le taux d'évolution global correspondant pour :
+\begin{enumerate}
+\multido{}{3}{
+\item $t_1 = \random{1}{99}\%$ et $t_2 = \random{1}{99}\%$.
+}
+\end{enumerate}
+\section{Vérification des cahiers}
+\section{Correction de l'exercice 64 page 323}
+\section{Cours}
+\subsection*{Taux d'évolution réciproque}
+Faire un schéma.
+\begin{definition}
+Soit $t$ un taux d'évolution de coefficient multiplicateur $CM$. Alors, le coefficient directeur \emph{réciproque} est donné par $CM_r = \dfrac{1}{CM}$. Le taux d'évolution \emph{réciproque} est alors défini par $t_r = CM_r - 1$.
+\end{definition}
+\begin{example}
+Pour faciliter les ventes, un maraîcher vend ses tomates $20\%$ moins cher. De quel pourcentage doit-il les augmenter pour qu'elles retrouvent leur prix d'origine ?
+\end{example}
+
+\section{Révisions}
+\begin{itemize}
+\item \og Il y a $6$ sportifs parmi $12$ personnes\fg $= \dfrac{6}{12} = 0,5$ ou $50\%$ de sportifs (proportion). 
+\item \og $50\%$ de sportifs, parmi ces sportifs, $50\%$ de footballeurs \fg $= 0,5 \times 0,5 = 0,25$ ou $25\%$ de footballeurs (proportions de proportions).
+\item \og On passe de $6$ à $9$ sportifs \fg $=$ Augmentation de $\dfrac{9 - 6}{6} = 0,5$ ou $50\%$ du nombre de sportifs (taux d'évolution).
+\item \og On augmente le nombre de sportifs initialement à $6$ de $50\%$ \fg $=$ Il y a $6 \times (1 + \dfrac{50}{100}) = 6 \times 1,50 = 9$ sportifs.
+\item \og On augmente le nombre de sportifs de $50\%$, puis de $50\%$ encore\fg $=$ Au final, on augmente de $(CM_1 \times CM_2) - 1 = (1,5 \times 1,5) - 1 = 2,25 - 1 = 1,25$, ou $125\%$ (taux d'évolution global).
+\item \og On a augmenté le nombre de sportifs de $50\%$, et on souhaite retrouver la quantité initiale\fg $=$ On calcule $\dfrac{1}{CM} - 1 = \dfrac{1}{1,5} - 1 = 0,66 - 1 = -0,33$ ou $-33\%$  
+\end{itemize}
+
+\section{Problème}
+
+Dans une boîte de Pétri, on fait grandir une population de bactéries. Chaque jour, cette population augmente de $7\%$. Mais en cas de surpopulation dans la boite de Pétri (si la population a augmenté de plus de $40\%$ par rapport à la population initiale), les bactéries meurent, et la population diminue alors de $32\%$. La population de bactérie a-t-elle augmentée ou diminuée au bout de 10 jours ?
+
+\section{Devoirs}
+
+Exercice 67 page 323.
+
+\end{document}

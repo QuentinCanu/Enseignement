@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Fichiers d'images : Compression}
+\date{15 Mars 2024}
+\author{Seconde 9}
+
+\newcommand{\Rien}{Blanc $(255,255,255)$}
+\newcommand{\Noir}{Noir $(0,0,0)$}
+\newcommand{\Fonce}{Bleu $(35,39,83)$}
+\newcommand{\Orange}{Orange $(255,162,5)$}
+\newcommand{\Jaune}{Jaune $(254,255,36)$}
+\newcommand{\Rouge}{Rouge $(251,1,70)$}
+\newcommand{\Marron}{Marron $(170,82,48)$}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+Nous allons aujourd'hui étudier la manière dont sont stockées les images dans un ordinateur.
+
+\section{Image non compressée}
+L'une des manières de décomposer une image est de considérer ses \emph{pixels} : une image est alors vue comme un tableau de cellules, chacune affichant une couleur. Chaque pixel contient des données définissant la couleur à afficher.
+
+La suite d'instructions au dos de la feuille décrit les pixels d'une image de dimension $8 \times 8$, de gauche à droite, de haut en bas.
+
+\paragraph{Questions préliminaires}
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Combien de pixels cette image comporte-t-elle ?
+\item À quoi correspondent les trois nombres à côté de chacune des couleurs indiquées ? 
+\end{enumerate}
+
+\paragraph{À l'aide des intructions, on peut dessiner l'image sur un logiciel dédié. Quel est le personnage représenté ?}
+\section{Image compressée}
+Le problème de stocker l'information \og pixel par pixel\fg, c'est le volume de données. Il faut un octet pour stocker un nombre entre $0$ et $255$.
+\paragraph{Questions préliminaires}
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Combien d'octets sont nécessaire pour stocker notre image ?
+\item Et pour une image de dimension $1920 \times 1080$ ?
+\end{enumerate}
+Il nous fait donc chercher à compresser l'image. Dans notre cas, cela peut signifier une réduction des intructions nécessaires à dessiner l'image.
+\paragraph{Proposer une série d'instructions permettant de dessiner la même image, mais de façon plus efficace que la série d'instructions initiale.}
+
+\newpage 
+\section*{Instructions}
+\begin{multicols}{3}
+\begin{enumerate}
+\multido{}{1}{\item \Rien}
+\multido{}{2}{\item \Fonce}
+\multido{}{4}{\item \Rien}
+\multido{}{1}{\item \Fonce}
+\multido{}{2}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{3}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{3}{\item \Rien}
+\multido{}{4}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{2}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Noir}
+\multido{}{2}{\item \Jaune}
+\multido{}{1}{\item \Noir}
+\multido{}{2}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Rouge}
+\multido{}{3}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{3}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Rien}
+\multido{}{2}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{2}{\item \Marron}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\item[\vspace{\fill}]
+\end{enumerate}
+\end{multicols}
+\newpage
+\section{Les fichiers d'images}
+Différents formats de fichiers sont donc possibles pour stocker des images. Certains sont des formats dits \og compressés \fg, c'est-à-dire qu'ils sont en général plus légers.
+\paragraph{Comparer les formats de fichiers d'image suivants. Préciser pour chacun leur nom complet, un avantage et un défaut.}
+\begin{itemize}
+\item \verb|raw|
+\item \verb|bmp|
+\item \verb|png|
+\item \verb|jpg|
+\item \verb|tiff| 
+\end{itemize}
+Mais un fichier ne contient pas que l'image en tant que tel. On y ajoute généralement des \emph{métadonnées}, qui apportent des informations supplémentaires à propos de l'image. Par exemple, si c'est une photographie, la plupart des appareils photographiques ajoutent des information sur le modèle de photographie ou sur la localisation.
+\paragraph{Vous trouverez sur pronote une photographie d'une statue de chien. En faisant des recherches sur les métadonnées, trouver l'endroit exact où a été prise la photo.}
+\end{document}

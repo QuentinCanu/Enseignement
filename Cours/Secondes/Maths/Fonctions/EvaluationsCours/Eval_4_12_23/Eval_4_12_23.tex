@@ -1,0 +1,35 @@
+\documentclass{exam}
+\usepackage{main}
+\title{Evaluation de Cours}
+\qformat{\textbf{Exercice \thequestion :} \emph{(\thequestiontitle)\hfill}}
+
+\begin{document}
+\maketitle
+\begin{questions}
+\titledquestion{Vrai ou Faux ?}
+Répondre à chacune des questions suivantes par vrai ou faux.
+
+Soit $\function{f}{\R}{\R}{t}{3t + 1}$.
+\begin{parts}
+\part L'ensemble de définition de $f$ est $\R$.
+\part L'image de $2$ par $f$ est $9$.
+\part Un antécédent de $10$ par $f$ est $3$.
+\end{parts}
+\vspace{0.5cm}
+\titledquestion{Courbes représentatives}
+Soit $f$ une fonction dont la courbe représentative est donnée sur le repère ci-dessous.
+\begin{center}
+\begin{tikzpicture}
+\shorthandoff{:}
+\millirepere[step=0.5](-3.25,-3.5) -- (3.25,3.25);
+\draw[domain=-3:3] plot (\x,{(2/5)*\x^3 - (13/5)*\x});
+\draw[thick] (1,-0.25) -- (1, 0.25) node[right] {$1$};
+\draw[thick] (-0.25,1) -- (0.25,1) node[above] {$1$};
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part Par lecture graphique, quelle est l'image de $3$ par $f$ ?
+\part Faire apparaître sur l'axe des abscisses les antécédents de $2$.
+\end{parts}
+\end{questions}
+\end{document}

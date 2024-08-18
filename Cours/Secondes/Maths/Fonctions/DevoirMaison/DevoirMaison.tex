@@ -1,0 +1,86 @@
+\documentclass{exam}
+\usepackage{main}
+\title{Fonctions : Devoir Maison}
+\date{22 Décembre 2023}
+\author{Quentin Canu}
+
+\qformat{\textbf{Exercice \thequestion : \thequestiontitle} \hfill}
+\begin{document}
+\maketitle
+\begin{questions}
+\titledquestion{\og Dessine-moi une fonction \fg}
+Il existe de nombreuses propriétés de fonctions qui peuvent être observées sur leurs courbes représentatives. Pour chacune des affirmations suivantes, dessiner un repère orthonormé, ainsi que la courbe représentive $\mathcal{C}_f$ telle que la fonction $f$ vérifie cette affirmation.
+\begin{parts}
+\part $f(0) = 3$
+\part $f(-1) = f(2)$;
+\part $f(x) \leq 5$ pour tout $x$ sur l'ensemble de définition de $f$;
+\part $1$ a exactement $3$ antécédents par la fonction $f$.
+\part L'équation $f(x) = x$ a exactement deux solutions.
+\end{parts}
+Pour vous aider, voici une réponse possible pour la première affirmation.
+\begin{center}
+\begin{tikzpicture}
+\shorthandoff{:};
+\millirepere[step=0.5](-3.25,-3.25) -- (3.25,3.25);
+\draw[thick] (0.5,-0.25) -- (0.5,0.25) node[right] {$1$};
+\draw[thick] (-0.25,0.5) -- (0.25,0.5) node[above] {$1$};
+\draw[domain=-3.25:3.25] plot (\x,{0.5*\x + 1.5});
+\draw (-3,0) node[above] {$\mathcal{C}_f$};
+\end{tikzpicture}
+\end{center}
+\vspace*{0.5cm}
+\titledquestion{Triangle et racines}
+Soit $\function{r}{[0,+\infty]}{\R}{x}{\sqrt{x}}$ la fonction racine carré.
+\begin{parts}
+\part Donner l'image de $36$ et de $9$ par la fonction $r$.
+\part Le nombre $-2$ a-t-il un antécédent par la fonction $r$ ?
+\part La courbe représentative de $r$ est représentée ci-dessous :
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (1.6,0);
+\coordinate (B) at (2.6,0);
+\coordinate (C) at (2.1,0.86);
+\shorthandoff{:};
+\millirepere[step=0.5](-0.25,-0.25) -- (7.25,4.25);
+\draw[domain=0:7.25] plot (\x,{sqrt(\x)});
+\draw (0,0) node {$\bullet$};
+\draw (1,-0.25) -- (1,0.25) node[right] {$1$};
+\draw (-0.25,1) -- (0.25,1) node[above] {$1$};
+\draw (7.25, 2.7) node[right] {$\mathcal{C}_r$};
+\draw (A) node {$\bullet$} node[below] {$A$};
+\draw (B) node {$\bullet$} node[below] {$B$};
+\draw (C) node {$\bullet$} node[above] {$C$};
+\draw (A) -- (B) -- (C) -- cycle;
+\end{tikzpicture}
+\end{center}
+On a aussi représenté un triangle équilatéral $ABC$ de côté $1$. Les points $A$ et $B$ sont sur l'axe des abscisses. Trouver les abscisses de $A$ et de $B$ pour que $C$ appartienne à la courbe $\mathcal{C}_r$. 
+
+\emph{Indication : on coupera le triangle en deux parts égales, et on pensera au théorème de Pythagore\dots}
+\end{parts}
+\vspace{0.5cm}
+\titledquestion{Le sac magique (facultatif)}
+Lors d'une balade dans la forêt de Rambouillet, vous tombez nez-à-nez avec un lutin. Celui-ci souhaite vous faire cadeau d'un sac incroyable, capable de démultiplier l'argent. Il vous fait la démonstration suivante : il sort de sa poche cinq pièces de $1$ \euro{}, les plonge dans le sac, puis en ressort une certaine quantité de pièces de $1$ \euro{}. Il plonge alors ce qu'il vient de gagner dans le sac, et en sort alors $15$ \euro{} (en pièces de $1$ \euro). Il vous explique alors le principe du fonctionnement du sac :
+\begin{enumerate}
+\item On ne peut utiliser le sac que sur des pièces de $1$ \euro.
+\item Le fonctionnement du sac est déterministe : autrement dit, si l'on utilise deux fois le sac sur une même somme, le sac produira toujours le même montant.
+\item Plus on met de pièces dans le sac, et plus on obtiendra de pièces. Par exemple, utiliser le sac sur trois pièces renverra plus de pièces que si on avait utilisé le sac sur deux pièces.
+\item Si l'on utilise le sac sur une somme, que l'on recupère ce que le sac a produit, puis que l'on réutilise le sac sur ce qui a été renvoyé, on obtient le triple de la somme de départ.
+\end{enumerate}
+Le lutin vous demande combien de pièces sortiront du sac s'il en met $13$ à l'intérieur.
+
+Indication : on pourra utiliser un schéma de la forme suivante.
+\begin{equation*}
+\begin{tabular}{ccccccccccc}
+$1$&$\to$&$\dots$&$\to$&$3$&&$8$&$\to$&$\dots$&$\to$&$\dots$\\
+$2$&$\to$&$\dots$&$\to$&$6$&&$9$&$\to$&$\dots$&$\to$&$\dots$\\
+$3$&$\to$&$\dots$&$\to$&$9$&&$10$&$\to$&$\dots$&$\to$&$\dots$\\
+$4$&$\to$&$\dots$&$\to$&$12$&&$11$&$\to$&$\dots$&$\to$&$\dots$\\
+$5$&$\to$&$\dots$&$\to$&$15$&&$12$&$\to$&$\dots$&$\to$&$\dots$\\
+$6$&$\to$&$\dots$&$\to$&$\dots$&&$13$&$\to$&$\dots$&$\to$&$\dots$\\
+$7$&$\to$&$\dots$&$\to$&$\dots$&&$14$&$\to$&$\dots$&$\to$&$\dots$\\
+&&&&&&$15$&$\to$&$\dots$&$\to$&$\dots$\\
+    
+\end{tabular}
+\end{equation*}
+\end{questions}
+\end{document}

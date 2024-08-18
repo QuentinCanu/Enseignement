@@ -1,0 +1,56 @@
+\documentclass{article}
+\title{Le jeu du Bunco}
+\date{18 Décembre 2023}
+
+\begin{document}
+\maketitle
+\section*{À rendre le 8 Janvier}
+\section{Règles du jeu}
+Le jeu du bunco est un jeu à deux joueurs (ou deux équipes) se jouant à l'aide de cinq dés. Le jeu se déroule en six tours, numérotés de $1$ à $6$. Durant chaque tour, le premier joueur lance les cinq dés. Il marque un point pour chaque dé correspondant au numéro du tour. Par exemple, s'il obtient exactement trois $2$ durant le tour $2$, il gagne trois points. Le premier joueur continue de jouer tant qu'il gagne des points. Quand il ne gagne aucun point après un lancer, c'est alors au second joueur de jouer son tour. La partie se termine à la fin des six tours. Celui qui a le plus de points gagne.
+\section{Exemple de déroulement d'une partie}
+Alice et Bob jouent au Bunco. 
+\begin{enumerate}
+    \item Alice commence le tour $1$. Elle lance ses $5$ dés et obtient deux $1$ et trois $5$. Elle gagne deux points et peut donc relancer les dés.
+    \item Alice relance ses dés et obtient un $1$, deux $3$, un $4$ et un $6$. Elle gagne donc un point et peut relancer les dés.
+    \item Alice n'obtient aucun $1$ durant ce lancer. Elle ne gagne aucun point et c'est donc au tour de Bob.
+    \item Bob lance les cinq dés. Dommage pour lui, il n'obtient aucun $1$. Il ne marque aucun point et on passe donc au tour $2$.
+\end{enumerate}
+Et la partie continue jusqu'à la fin du tour $6$.
+\section{Exercices}
+\begin{enumerate}
+\item Faites plusieurs parties de Bunco (avec votre famille, avec un ami, une camarade\dots). Durant chaque partie, complétez le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Tour & Points gagnés par le joueur $1$ & Point gagnés par le joueur $2$\\
+\hline
+1 & &\\ 
+\hline
+2 & &\\ 
+\hline
+3 & &\\ 
+\hline
+4 & &\\ 
+\hline
+5 & &\\ 
+\hline
+6 & &\\ 
+\hline     
+\end{tabular} 
+\end{center}
+L'idéal serait de faire $15$ parties, il vous faudra donc $15$ tableaux comme celui-ci. Tenez aussi une liste des vainqueurs de chaque partie.
+\item Le jeu vous semble-t-il équilibré ? Vérifiez vos propos en donnant les fréquences de victoire de chacun des deux joueurs.
+\item Quelle est la probabilité de ne gagner aucun point durant un tour ? Vérifier votre réponse en calculant la fréquence de $0$ apparaissant dans vos tableaux.
+\item Pour regarder les probabilités des points gagnés durant un tour, on dresse le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Nombre de points $N$ & 0 & 1 & 2 & 3 & \dots & Total\\
+\hline
+Tours ayant remporté $N$ points & & & & & &\\
+\hline
+\end{tabular}    
+\end{center}
+Calculer les fréquences correspondantes. Combien de points avez-vous le plus de chances d'obtenir à chaque tour ?
+\end{enumerate}
+\end{document}
