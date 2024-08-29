@@ -33,21 +33,81 @@ Pour bien apprendre un cours de maths, il faut identifier les différentes parti
 \end{itemize}
 \end{remark}
 \newpage
-\section{Développement}
+\section{Développement et factorisation}
 \begin{tcolorbox}
 \begin{definition}
-Une \emph{expression littérale} permet de représenter une quantité dépendant de nombres dont les valeurs ne sont pas connues.
+\begin{itemize}
+\item Une expression littérale est sous forme \emph{développée} si elle correspond à une \textbf{somme} de termes.
+\item Une expression littérale est sous forme \emph{factorisée} si elle correspond à un \textbf{produit} de facteurs.
+\end{itemize}
 \end{definition}
 \end{tcolorbox}
 \begin{example}
-L'aire d'un triangle rectangle dont la longueur est donnée par $L$ et la largeur par $l$ correspond à l'expression
+L'aire du rectangle suivant
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (5,2);
+\coordinate (D) at (0,2);
+\coordinate (E) at (2,0);
+\coordinate (F) at (2,2);
+
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (E) -- (F);
+\draw[<->] (A) ++ (-0.25,0) -- ++(0,2) node[midway,left] {$a$};
+\draw[<->] (A) ++ (0,-0.25) -- ++(2,0) node[midway, below] {$b$};
+\draw[<->] (E) ++ (0,-0.25) -- ++(3,0) node[midway,below] {$c$};
+\end{tikzpicture}
+\end{center}
+peut être calculée de deux façons.
+\begin{itemize}
+\item En \textbf{multipliant} sa largeur ($a$) et sa longueur ($b + c$):
 \begin{equation*}
-lL
+a(b + c)    
 \end{equation*}
-Si le prix $P$ d'une baguette de pain augmente de $20 \%$, alors le nouveau prix est donné par
+\item En \textbf{ajoutant} les aires des deux rectangles:
 \begin{equation*}
-1,20P
-\end{equation*}
+ab + bc
+\end{equation*}  
+\end{itemize}
 \end{example}
-Une expression littérale décrit donc comment calculer une quantité.
+\subsection{Développement}
+Pour développer un produit, on utilise la distributivité de la multiplication sur l'addition.
+
+
+\begin{equation*}
+\tikzmarknode{a}{a}(\tikzmarknode{b}{b}+\tikzmarknode{c}{c}) = ab + ac
+\end{equation*}
+\begin{tikzpicture}[overlay, remember picture]
+\draw (a.north) to[bend left=75] (b.north);
+\draw (a.north) to[bend left=75] (c.north);
+\end{tikzpicture}
+
+\begin{equation*}
+(\tikzmarknode{a1}{a} + \tikzmarknode{b1}{b})(\tikzmarknode{c1}{c} + \tikzmarknode{d1}{d}) =
+ac + ad + bc + bd
+\end{equation*}
+\begin{tikzpicture}[overlay, remember picture]
+\draw (a1.north) to[bend left=75] (c1.north);
+\draw (a1.north) to[bend left=75] (d1.north);
+\draw (b1.south) to[bend right=75] (c1.south);
+\draw (b1.south) to[bend right=75] (d1.south);
+\end{tikzpicture}
+\begin{tcolorbox}
+Pour développer un produit de sommes, on \og distribue \fg chaque terme de la somme de gauche vers chaque terme de la somme de droite.
+\end{tcolorbox}
+\begin{example}
+Développer chacune des expressions suivantes. On fera apparaître les traits de construction de la distributivité.
+\begin{enumerate}[label=\alph*), parsep=0.5cm, topsep=0.5cm]
+\item $4x(2y + 5z) = $ \answerline
+\item $3x(-10x + 2) = $ \answerline
+\item $-(-4a + 2b) = $ \answerline
+\item $(17x - 5)(12x + 7) = $ \answerline
+\item $(l + L)(l - L) = $ \answerline
+\end{enumerate}
+\end{example}
+
+\newpage
+\subsection{Factorisation}
 \end{document}
