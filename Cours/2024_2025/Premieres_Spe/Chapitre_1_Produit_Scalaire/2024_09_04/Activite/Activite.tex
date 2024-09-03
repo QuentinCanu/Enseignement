@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Théorème de Pythagore \og général \fg}
+\date{4 Septembre 2024}
+\author{Première Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+
+On pose un triangle $ABC$ quelconque. Si le triangle est rectangle en $A$, alors le théorème de Pythagore nous assure que $BC^2 = AB^2 + AC^2$. On se pose la question de la valeur $P$ définie par
+\begin{equation*}
+P = \dfrac{1}{2}\left(AB^2 + AC^2 - BC^2\right)
+\end{equation*}
+dans le cas où $ABC$ est quelconque. On suppose pour commencer que l'angle $\widehat{BAC}$ est aigu ($\alpha < 90°$), comme représenté ci-dessous.
+
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (2,3);
+
+\draw (A) node[below left] {$A$} -- (B) node[right] {$B$} -- (C) node[above] {$C$} -- cycle;
+\draw (A) ++ (0.5,0) arc (0:55:0.5) node[midway, above right] {$\alpha$};
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\emph{\arabic*)}]
+\item Tracer le cas où l'angle $\widehat{BAC}$ est obtu ($\alpha > 90°$).
+\item Rappeler la définition de projeté orthogonal d'un point sur une droite. Placer le point $H$, projeté orthogonal de $C$ sur la droite $(AB)$.
+\item Démontrer que 
+\begin{equation*}
+P = \dfrac{1}{2}\left(AH^2 + AB^2 - BH^2\right)
+\end{equation*}
+\item En déduire que $P = AB \times AH$. \emph{(Indication : écrire $BH$ en fonction de $AH$ et de $AB$)}
+\item En déduire que $P = AB \times AC \times \cos(\alpha)$.
+\item Que dire du cas où l'angle $\widehat{BAC}$ est obtu ?
+\end{enumerate}
+\end{document}
