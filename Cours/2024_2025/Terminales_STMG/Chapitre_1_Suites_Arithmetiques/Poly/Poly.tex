@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{mainPoly}
+
+\title{Suites arithmétiques}
+\date{}
+\author{Terminale STMG 2}
+
+\begin{document}
+\maketitle
+\section{Termes d'une suite arithmétique}
+\begin{tcolorbox}
+\begin{definition}[Rappel]
+Une suite arithmétique est une suite numérique $\left(u_n\right)_{n \in \N}$ définie par son \textbf{premier terme} $u_0$ et un nombre $r$ appelé la \textbf{raison}, tel que chaque terme $u_n$ pour $n > 0$ est obtenu en ajoutant $r$ au terme précédent :
+\begin{equation*}
+u_n = u_{n-1} + r
+\end{equation*} 
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+\begin{itemize}
+\item La suite
+\begin{equation*}
+0; 2; 4; 6; 8; 10; \dots
+\end{equation*}
+est la suite de premier terme $0$ et de raison $2$.
+\item La suite 
+\begin{equation*}
+10; 9; 8; 7; 6; 5; \dots    
+\end{equation*}
+est la suite de premier terme $10$ et de raison $-1$.
+\end{itemize}
+\end{example}
+\begin{remark}
+Une suite arithmétique est constante (tous ses termes sont égaux) si et seulement si sa raison est égale à $0$.
+\end{remark}
+\begin{proposition}
+Soit $\left(u_n\right)_{n \in \N}$ une suite arithmétique de raison $r$. Alors, son $n$\ieme terme est donné par la formule
+\begin{equation*}
+u_0 + n \times r
+\end{equation*}
+\end{proposition}
+\begin{example}
+\hfill
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Donner le $5$\ieme terme de la suite arithmétique de premier terme $3,5$ et de raison $3$ : \answersline
+\item Donner le $10$\ieme terme de la suite arithmétique de premier terme $12$ et de raison $-5$ : \answersline 
+\end{enumerate}
+\end{example}
+\end{document}
