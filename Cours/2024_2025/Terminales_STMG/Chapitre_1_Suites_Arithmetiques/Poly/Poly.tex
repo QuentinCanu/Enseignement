@@ -23,11 +23,42 @@ u_n = u_{n-1} + r
 0; 2; 4; 6; 8; 10; \dots
 \end{equation*}
 est la suite de premier terme $0$ et de raison $2$.
+\begin{center}
+\begin{tikzpicture}
+\node (A) at (0,0) {$0$};
+\node (B) at (1.5,0) {$2$};
+\node (C) at (3,0) {$4$};
+\node (D) at (4.5,0) {$6$};
+\node (E) at (6,0) {$8$};
+\node (F) at (7.5,0) {$10$};
+
+\draw[->, bend left] (A) -- (B) node[midway, above] {$+2$}; 
+\draw[->, bend left] (B) -- (C) node[midway, above] {$+2$};
+\draw[->, bend left] (C) -- (D) node[midway, above] {$+2$};
+\draw[->, bend left] (D) -- (E) node[midway, above] {$+2$};
+\draw[->, bend left] (E) -- (F) node[midway, above] {$+2$};
+\end{tikzpicture}
+\end{center}
 \item La suite 
 \begin{equation*}
 10; 9; 8; 7; 6; 5; \dots    
 \end{equation*}
 est la suite de premier terme $10$ et de raison $-1$.
+\item La suite $1;2;4;7;11;\dots$ n'est pas une suite arithmétique. En effet,
+\begin{center}
+\begin{tikzpicture}
+\node (A) at (0,0) {$1$};    
+\node (B) at (1.5,0) {$2$};
+\node (C) at (3,0) {$4$};
+\node (D) at (4.5,0) {$7$};
+\node (E) at (6,0) {$11$};
+
+\draw[->] (A) -- (B) node[midway, above] {$+1$};
+\draw[->] (B) -- (C) node[midway, above] {$+2$};
+\draw[->] (C) -- (D) node[midway, above] {$+3$};
+\draw[->] (D) -- (E) node[midway, above] {$+4$};
+\end{tikzpicture}
+\end{center}
 \end{itemize}
 \end{example}
 \begin{remark}
@@ -46,4 +77,11 @@ u_0 + n \times r
 \item Donner le $10$\ieme terme de la suite arithmétique de premier terme $12$ et de raison $-5$ : \answersline 
 \end{enumerate}
 \end{example}
+\begin{tcolorbox}
+En résumé, il y a deux types d'écriture pour le $n$\ieme terme d'une suite arithmétique :
+\begin{itemize}
+\item La formule de récurrence $u_n = u_{n - 1} + r$. Pour vérifier qu'une suite est arithmétique, on vérifie qu'on obtient chaque terme en ajoutant $r$ au terme précédent.
+\item La formule explicite $u_n = u_0 + n \times r$. On l'utilise une fois qu'on sait qu'une suite arithmétique, pour calculer directement le $n$\ieme terme.
+\end{itemize} 
+\end{tcolorbox}
 \end{document}
