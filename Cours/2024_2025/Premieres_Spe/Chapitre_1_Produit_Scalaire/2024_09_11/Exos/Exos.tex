@@ -14,6 +14,9 @@
 \question Soit $\vect{p}$ et $\vect{q}$ tels que $\norm{\vect{p}} = 5$, $\norm{\vect{q}} = \sqrt{3}$ et $\widehat{\vect{p},\vect{q}} = 135°$. Calculer le produit scalaire $\vect{p} \cdot \vect{q}$.
 \vspace*{0.5cm}
 
+\question Soit deux vecteurs $\vect{y}$ et $\vect{z}$ tels que $\norm{\vect{y}} = 6$, $\norm{\vect{z}} = 2$ et $\vect{y} \cdot \vect{z} = -2$. Déterminer une mesure de l'angle $\widehat{\vect{y};\vect{z}}$.
+\vspace*{0.5cm}
+
 \question Soit $ABC$ un triangle équilatéral de côté $5$. Calculer le produit scalaire $\vect{AB} \cdot \vect{AC}$.
 \vspace*{0.5cm}
 
@@ -26,6 +29,38 @@
 \part $\vect{CJ} \cdot \vect{LJ}$
 \part $\vect{IJ} \cdot \vect{KL}$
 \part $\vect{IJ} \cdot \vect{IL}$
-\end{parts} 
+\end{parts}
+\vspace*{0.5cm}
+
+\question Soit $ABCD$ un rectangle de centre $E$. On pose $F$ le symétrique de $E$ par rapport à la droite $(AB)$.
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (4,2);
+\coordinate (D) at (0,2);
+\coordinate (E) at (2,1);
+\coordinate (F) at (6,1);
+
+\draw (A) -- (B) node[midway,below] {$L$} -- (C) -- (D) -- cycle node[midway, left] {$l$};
+\draw (A) -- (C);
+\draw (B) -- (D);
+\draw (B) -- (F) -- (C);
+\draw (A) node[below left] {$A$};
+\draw (B) node[below] {$B$};
+\draw (C) node[above] {$C$};
+\draw (D) node[above left] {$D$};
+\draw (E) node[above] {$E$};
+\draw (F) node[right] {$F$};
+\end{tikzpicture}
+\end{center}
+Calculer les produits scalaires suivants en fonction de $L$ et de $l$ :
+\begin{parts}
+\part $\vect{BA} \cdot \vect{BE}$
+\part $\vect{CF} \cdot \vect{CD}$
+\part $\vect{AF} \cdot \vect{AB}$
+\part $\vect{AB} \cdot \vect{BE}$
+\part $\vect{BF} \cdot \vect{DC}$
+\end{parts}
 \end{questions}
 \end{document}

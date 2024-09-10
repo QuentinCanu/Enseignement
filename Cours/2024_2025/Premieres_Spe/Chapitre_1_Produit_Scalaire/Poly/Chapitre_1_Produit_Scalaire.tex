@@ -80,6 +80,69 @@ Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. On appelle \textbf{produit scalai
 \end{definition}    
 \end{tcolorbox}
 
+\newpage
 
+\section{Premières propriétés}
+\subsection{Propriétés algébriques}
+\begin{proposition}
+Soient $\vect{u}$, $\vect{v}$ deux vecteurs du plan, ainsi que $k \in \R$.
+\begin{enumerate}
+\item On a $\vect{u} \cdot \vect{v} = \vect{v} \cdot \vect{u}$. (Le produit scalaire est \emph{symétrique})
+\item On a $(k\vect{u}) \cdot \vect{v} = \vect{u} \cdot (k\vect{v}) = k \times (\vect{u} \cdot \vect{v})$.
+\end{enumerate}
+\end{proposition}
+\begin{remark}
+Attention à l'usage de $\cdot$ et de $\times$ : l'un concerne deux vecteurs, et l'autre deux nombres.
+\end{remark}
+\emptybox{2.5cm}
+\begin{example}
+Soit $\vect{u}$ et $\vect{v}$ deux vecteurs tels que $\norm{\vect{u}} = 2$, $\norm{\vect{v}} = 3$ et $\widehat{\vect{u};\vect{v}} = 30°$. Calculer les produits scalaires suivants.
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $\vect{u} \cdot \vect{v} = $\answersline
+\item $\vect{u} \cdot \vect{u} =$\answersline
+\item $\vect{v} \cdot (2\vect{u}) =$\answersline
+\item $(-4\vect{u}) \cdot (3\vect{v}) = $\answersline
+\end{enumerate}
+\end{example}
+\subsection{Propriétés géométriques}
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs.
+\begin{itemize}
+\item Si $\vect{u}$ et $\vect{v}$ sont colinéaires de même sens, alors $\vect{u} \cdot \vect{v} = \norm{\vect{u}} \times \norm{\vect{v}}$; 
+\item Si $\vect{u}$ et $\vect{v}$ sont colinéaires de sens opposés, alors $\vect{u} \cdot \vect{v} = - \norm{\vect{u}} \times \norm{\vect{v}}$; 
+\end{itemize}    
+\end{proposition}
+\begin{tcolorbox}
+\begin{definition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors ces deux vecteurs sont dit \textbf{orthogonaux} si l'un des deux vecteurs est nul; ou si l'angle $\widehat{\vect{u};\vect{v}}$.
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors, $\vect{u}$ et $\vect{v}$ sont orthogonaux si et seulement si $\vect{u} \cdot \vect{v} = 0$.    
+\end{proposition}
+\begin{remark}
+\begin{itemize}
+\item Cette proposition est facile à démontrer avec notre définition, mais sera surtout utile avec les définitions suivantes.
+\item Le vecteur nul est donc orthogonal à tous les vecteurs.
+\end{itemize}
+\end{remark}
+\subsection{Définition avec le projeté orthogonal}
+\begin{tcolorbox}
+    
+\begin{definition}[Rappel]
+Soit $M$ un point du plan et $(d)$ une droite. Le \textbf{projeté orthogonal} de $M$ par rapport à la droite $(d)$ est l'unique point $M'$ appartenant à la droite $(d)$ et tel que les droite $(MM')$ et $(d)$ sont perpendiculaires.
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs non nuls. On pose $A$, $B$ et $C$ tels que $\vect{u} = \vect{AB}$ et $\vect{v} = \vect{AC}$. De plus, on pose $H$ le projeté orthogonal de $C$ par rapport à la droite $AB$. Alors,
+\begin{equation*}
+\vect{u} \cdot \vect{v} = 
+\begin{cases}
+AB \times AH & \text{ si $\vect{AB}$ et $\vect{AH}$ sont de même sens;}\\
+- AB \times AH& \text{ si $\vect{AB}$ et $\vect{AH}$ sont de sens opposés.}
+\end{cases}
+\end{equation*}
+\end{proposition}
+\emptybox{3cm}
 
 \end{document}
