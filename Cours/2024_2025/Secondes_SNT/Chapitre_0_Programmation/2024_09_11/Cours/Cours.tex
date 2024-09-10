@@ -13,7 +13,96 @@
 \item Exemple du distributeur de boissons  
 \item Corriger le programme "SWAP"
 \end{itemize}
+\begin{enumerate}
+\item $a \leftarrow 10$
+\item $b \leftarrow 42$
+\item $c \leftarrow a$
+\item $a \leftarrow b$
+\item $b \leftarrow c$ 
+\end{enumerate}
 
-\section{Questions Flash}
+\section{Exo rapide}
 Programmes simples avec plusieurs affectations de variables.
+
+\begin{enumerate}
+\item $a \leftarrow 10$
+\item $b \leftarrow 42$
+\item $a \leftarrow a + b$
+\item $b \leftarrow a - b$
+\item $a \leftarrow a - b$ 
+\end{enumerate}
+
+\section{Cours}
+\subsection{Instructions conditionnelles}
+L'instruction \emph{Si\dots Alors} permet de conditionner l'execution de certaines instructions.
+
+\begin{enumerate}
+\item Si $a > 0$ Alors
+\item Affiche \og Hello World! \fg
+\end{enumerate}
+Si la variable $a$ est supérieure à $0$, alors on affiche \og Hello World! \fg. Sinon, on n'affiche rien. 
+
+Du point de vue du pointeur, la flèche saute directement après les intructions concernées (visibles à l'aide d'une barre verticale) si la condition n'est pas remplie.
+
+\begin{example}
+\hfill
+\begin{enumerate}
+\item $Note \leftarrow 10$
+\item $Coeff \leftarrow 1$
+\item Si $Note * 2 \geq 15$ Alors
+\item $\vert Coeff \leftarrow 2$
+\end{enumerate}
+\end{example}
+
+L'instruction \emph{Sinon} peut-être ajoutée après les instructions conditionnées par le \emph{Si}. Si la condition n'est pas vérifiée alors le pointeur pointe vers les instructions correspondant au \emph{Sinon}.
+
+\begin{example}
+\hfill
+\begin{enumerate}
+\item $Note \leftarrow 5$
+\item $Coeff \leftarrow 1$
+\item Si $Note * 2 \geq 15$ Alors
+\item $\vert Coeff \leftarrow 2$
+\item Sinon
+\item $\vert Coeff \leftarrow 0,5$
+\end{enumerate}
+\end{example}
+
+\subsection{Boucle non Bornées}
+Au lieu d'écrire à l'infini une séquence d'instruction identiques, on utilise une \emph{Boucle non Bornée}.
+
+L'instruction \emph{Tant Que \dots} permet de répéter des instructions tant qu'une condition est vraie.
+
+\begin{example}
+\hfill
+\begin{enumerate}
+\item $i \leftarrow 0$
+\item Tant que $i < 10$
+\item $\vert i \leftarrow i + 1$ 
+\end{enumerate}
+
+Quelles valeurs vont prendre $i$ avant que le programme ne s'arrête ?
+\end{example}
+
+\begin{remark}
+Attention ! Quand on utilise une boucle non bornée dans un langage de programmation, on prend le risque que la condition soit toujours vérifiée, et donc que la boucle exécute éternellement le programme. Dans ce cas, il faut demander à l'ordinateur de \og tuer \fg le programme pour qu'il s'arrête.
+\end{remark}
+
+\begin{exercize}
+\hfill
+\begin{enumerate}
+\item $a \leftarrow 35$
+\item Tant que $a > 1$
+\item Afficher $a$
+\item $\vert$ Si $a$ est pair
+\item $\vert \vert a \leftarrow a \div 2$
+\item $\vert$ Sinon
+\item $\vert \vert a \leftarrow 3 \times a + 1$  
+\end{enumerate}
+
+Ce programme termine-t-il ?
+
+Essayez d'exécuter ce programme de nouveau en changeant $35$ en $58$.  
+\end{exercize}
+
 \end{document}
