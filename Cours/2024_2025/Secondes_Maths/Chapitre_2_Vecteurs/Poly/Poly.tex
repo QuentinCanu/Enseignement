@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{mainPoly}
+
+\title{Vecteurs et translations du plan}
+\date{}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+\section{Définition}
+\begin{tcolorbox}
+\begin{definition}
+Soient $A$ et $B$ deux points du plan. La \textbf{translation transformant $A$ en $B$} est une transformation géométrique qui à chaque point $C$ associe un point $D$ tel que $ABDC$ est un parallélogramme (éventuellement applati).     
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) node[left] {$A$} -- (3,1) node[right] {$B$} -- (4,3) node[right] {$D$} -- (1,2) node[left] {$C$} -- cycle;
+
+\draw (1,-1) node {$\bullet$} node[below left] {$E$};
+\end{tikzpicture}
+\end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+La translation correspond à l'idée de \og glissement \fg sans rotation. La translation transformant $A$ en $B$ envoie n'importe quel point $C$ dans la même direction, le même sens et la même longueur que si l'on partait de $A$ pour arriver en $B$.
+
+Tracer l'image de $E$ par la translation transformant $A$ en $B$.
+\end{minipage}
+\end{example}
+\begin{remark}
+Une translation dépend donc uniquement d'une \emph{direction} (car $(AB)$ et $(DC)$ sont parallèles), d'un \emph{sens} (car on s'intéresse à $ABDC$ et non pas $ABCD$) et d'une \emph{longueur} (car les longueurs $AB$ et $DC$ sont les mêmes). 
+
+Ces trois caractéristiques sont regroupées derrière la notion de vecteur. 
+\end{remark}
+\begin{tcolorbox}
+\begin{definition}
+Un \textbf{vecteur} est un objet géométrique caractérisé par trois informations:
+\begin{itemize}
+\item Une direction
+\item Un sens
+\item Une longueur (que l'on appelle \textbf{norme})
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{definition}
+Soient deux points $A$ et $B$. Le vecteur caractérisant la translation transformant $A$ en $B$ est noté $\vect{AB}$.
+\end{definition}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item La translation transformant $A$ en $B$ sera plutôt appelée \textbf{translation de vecteur $\vect{AB}$}.
+\item Parmi les caractéristiques définissant un vecteur, il n'y a pas la \textbf{position} du vecteur dans le plan.
+\end{itemize}
+\end{remark}
+\begin{example}
+On représente un vecteur quelconque $\vect{u}$ à l'aide d'une flèche dans la plan.
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (0,0) -- (2,1.5) node[right] {$\vect{u}$};
+\end{tikzpicture}
+\end{center}
+\end{example}
+\begin{tcolorbox}
+Le vecteur nul est un cas particulier de vecteur de norme nulle. Un tel vecteur n'a \textbf{ni direction, ni sens}.
+\end{tcolorbox}
+\end{document}
