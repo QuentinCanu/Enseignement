@@ -114,7 +114,7 @@ Soient $\vect{u}$ et $\vect{v}$ deux vecteurs.
 \end{proposition}
 \begin{tcolorbox}
 \begin{definition}
-Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors ces deux vecteurs sont dit \textbf{orthogonaux} si l'un des deux vecteurs est nul; ou si l'angle $\widehat{\vect{u};\vect{v}}$.
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors ces deux vecteurs sont dit \textbf{orthogonaux} si l'un des deux vecteurs est nul; ou si l'angle $\widehat{\vect{u};\vect{v}} = 90°$.
 \end{definition}
 \end{tcolorbox}
 \begin{proposition}
@@ -162,11 +162,8 @@ Soient trois vecteurs $\vect{u}$, $\vect{v}$ et $\vect{w}$. Alors,
 Ce résultat correspond donc à la distributivité du produit scalaire sur l'addition de vecteurs.
 \end{remark}
 \begin{example}
-Soient trois vecteurs $\vect{u}$, $\vect{v}$ et $\vect{w}$ de norme $1$ tels que $\vect{u} \cdot \vect{v}$ = $\dfrac{\sqrt{3}}{2}$  et $\vect{u} \cdot \vect{w}$ = $\dfrac{1}{\sqrt{2}}$.
-\begin{enumerate}[label=\emph{\alph*)}]
-\item Que vaut $\vect{u} \cdot (\vect{v} + \vect{w})$ ? \answersline
-\item En déduire une mesure possible de l'angle formé par les vecteurs $\vect{u}$ et $(\vect{v} + \vect{w})$ : \hfill
-\end{enumerate}
+Soient trois vecteurs $\vect{u}$, $\vect{v}$ et $\vect{w}$ de norme $1$ tels que $\vect{u} \cdot \vect{v}$ = $\dfrac{\sqrt{3}}{2}$  et $\vect{u} \cdot \vect{w}$ = $\dfrac{1}{\sqrt{2}}$. Que vaut $\vect{u} \cdot (\vect{v} + \vect{w})$ ?
+
 \answersline
 \end{example}
 \subsection{Définition en géométrie repérée}
@@ -176,5 +173,43 @@ Soient deux vecteurs $\vect{u}\vcoord{x_u}{y_u}$ et $\vect{v}\vcoord{x_v}{y_v}$.
 x_u \times x_v + y_u \times y_v    
 \end{equation*}
 \end{proposition}
-
+\begin{example}
+Calculer le produit scalaire des vecteurs $\vect{u}$ et $\vect{v}$ suivants
+\begin{enumerate}[label=\emph{\alph*)}]
+\begin{minipage}{0.45\textwidth}
+\item $\vect{u}\vcoord{2}{3}$ et $\vect{v}\vcoord{3}{4}$ : $\vect{u} \cdot \vect{v} =$ \answersline
+\item $\vect{u}\vcoord{1}{-7}$ et $\vect{v}\vcoord{3}{4}$ : $\vect{u} \cdot \vect{v} =$ \answersline
+\end{minipage}
+\hfill    
+\begin{minipage}{0.45\textwidth}
+\item $\vect{u}\vcoord{-4}{5}$ et $\vect{v}\vcoord{5}{4}$ : $\vect{u} \cdot \vect{v} =$ \answersline
+\item $\vect{u}\vcoord{6}{9}$ et $\vect{v}\vcoord{9}{12}$ : $\vect{u} \cdot \vect{v} =$ \answersline
+\end{minipage}
+\end{enumerate}
+\end{example}
+\subsection{Produit scalaire et norme}
+\begin{proposition}
+Soit $\vect{u}\vcoord{x}{y}$ un vecteur. Alors,
+\begin{equation*}
+\norm{\vect{u}}^2 = \vect{u} \cdot \vect{u} = x^2 + y^2
+\end{equation*}
+\end{proposition}
+\begin{proposition}[Identités remarquables]
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors
+\begin{equation*}
+\begin{cases}
+\norm{\vect{u} + \vect{v}}^2 &= \norm{\vect{u}}^2 + 2(\vect{u} \cdot \vect{v})+ \norm{\vect{v}}^2\\
+\norm{\vect{u} - \vect{v}}^2 &= \norm{\vect{u}}^2 - 2(\vect{u} \cdot \vect{v})+ \norm{\vect{v}}^2\\
+(\vect{u} - \vect{v}) \cdot (\vect{u} + \vect{v}) &= \norm{\vect{u}}^2 - \norm{\vect{v}}^2
+\end{cases}
+\end{equation*}
+\end{proposition}
+\begin{tcolorbox}
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors,
+\begin{equation*}
+\vect{u} \cdot \vect{v} = \dfrac{1}{2}(\norm{\vect{u} + \vect{v}}^2 - \norm{\vect{u}}^2 - \norm{\vect{v}}^2) = \dfrac{1}{2}(\norm{\vect{u}}^2 + \norm{\vect{v}}^2 - \norm{\vect{u - v}}^2)
+\end{equation*}
+\end{proposition}
+\end{tcolorbox}
 \end{document}

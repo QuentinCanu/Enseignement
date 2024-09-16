@@ -62,5 +62,25 @@ Calculer les produits scalaires suivants en fonction de $L$ et de $l$ :
 \part $\vect{AB} \cdot \vect{BE}$
 \part $\vect{BF} \cdot \vect{DC}$
 \end{parts}
+
+\newpage
+
+\question Calculer à l'aide des indications suivantes le produit scalaire $\vect{AN} \cdot \vect{AM}$.
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (N) at (0,3);
+\coordinate (B) at (6,0);
+\coordinate (M) at (6,4);
+
+\draw (A) node[below] {$A$} -- (N) node[midway,left] {$3$} node[above] {$N$};
+\draw (A) -- (B) node[midway, below] {$6$} node[right] {$B$};
+\draw (B) -- (M) node[midway,right] {$4$} node[above] {$M$};
+\draw (A) -- (M);
+\draw (B) -- (N);
+\draw[thin] (A) ++(0,0.25) -- ++(0.25,0) -- ++(0,-0.25);
+\draw[thin] (B) ++(0,0.25) -- ++(-0.25,0) -- ++(0,-0.25);
+\end{tikzpicture}
+\end{center} 
 \end{questions}
 \end{document}
