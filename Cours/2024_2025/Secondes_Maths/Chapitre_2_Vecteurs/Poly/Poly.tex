@@ -67,4 +67,47 @@ On représente un vecteur quelconque $\vect{u}$ à l'aide d'une flèche dans le 
 \begin{tcolorbox}
 Le vecteur nul est un cas particulier de vecteur de norme nulle. Un tel vecteur n'a \textbf{ni direction, ni sens}.
 \end{tcolorbox}
+\newpage
+\section{Opérations sur les vecteurs}
+\subsection{Égalité entre vecteurs}
+\begin{tcolorbox}
+\begin{definition}
+Deux vecteurs sont égaux si et seulement si ils ont la même direction, le même sens et la même norme.
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+Soit l'héxagone régulier $ABCDEF$ de centre $O$.
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at ({3*cos(0)},{3*sin(0)});
+\coordinate (B) at ({3*cos(60)},{3*sin(60)});
+\coordinate (C) at ({3*cos(120)},{3*sin(120)});
+\coordinate (D) at ({3*cos(180)},{3*sin(180)});
+\coordinate (E) at ({3*cos(240)},{3*sin(240)});\coordinate (F) at ({3*cos(300)},{3*sin(300)});
+\draw (A) node[right] {$A$} 
+    -- (B) node[above right] {$B$}
+    -- (C) node[above left] {$C$}
+    -- (D) node[left] {$D$}
+    -- (E) node[below left] {$E$}
+    -- (F) node[below right] {$F$}
+    -- cycle;
+\draw (0,0) node {$\cdot$} node[above] {$O$};
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Représenter le vecteur $\vect{BC}$.
+\item Représenter deux autres vecteurs égaux à $\vect{BC}$.
+\item Représenter \textsc{le} représentant de $\vect{DC}$ ayant pour \textbf{origine} $F$.
+\item Représenter \textsc{le} représentant de $\vect{BA}$ ayant pour \textbf{extrémité} $F$.
+\end{enumerate}
+\end{example}
+\subsection{Opposé d'un vecteur}
+\begin{tcolorbox}
+\begin{definition}
+Soit $\vect{u}$ un vecteur. Alors l'opposé de $\vect{u}$, noté $- \vect{u}$, est le vecteur ayant la même direction que $\vect{u}$, la même norme que $\vect{u}$, mais le sens \textbf{opposé} au vecteur $\vect{u}$.  
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soient $A$ et $B$ deux points du plan. Alors $- \vect{AB} = \vect{BA}$.
+\end{proposition}
 \end{document}
