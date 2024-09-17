@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Colles : Suites et Séries}
+\author{Quentin Canu}
+\date{19 Septembre 2024}
+
+\begin{document}
+\maketitle
+\section{Questions de cours}
+\begin{enumerate}
+\item 
+\begin{enumerate}[label=\alph*.]
+\item Définition d'une suite convergente vers une limite réelle $l$.
+\item Convergence et somme des séries exponentielles.
+\end{enumerate}
+\item 
+\begin{enumerate}[label=\alph*.]
+\item Définition de suites adjacentes. Condition de convergence et limite.
+\item Séries géométriques, dérivée et dérivée seconde de raison $q$. Convergence et somme.
+\end{enumerate}
+\item 
+\begin{enumerate}[label=\alph*.]
+\item Somme des $n$ premiers entiers.
+\item Théorèmes de comparaison de séries à termes positifs.
+\end{enumerate}
+\end{enumerate}
+\section{Exercices}
+\begin{enumerate}
+\item Étudier la convergence de la série de terme général $u_n = \dfrac{(n!)^3}{3n!}$.
+\item 
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Montrer que la suite $(x_n)_{n \in \N}$ définie par
+\begin{equation*}
+x_n = \cos\left(\left(n + \dfrac{1}{n}\right)\pi\right)
+\end{equation*}
+est divergente.
+\item En montrant que $\left(3 + \sqrt{5}\right)^n + \left(3 - \sqrt{5}\right)^n$ est un entier pair pour tout $n \in \N$, en déduire que la suite $(y_n)_{n \in \N}$ définie par
+\begin{equation*}
+y_n = \sin\left(\left(3 + \sqrt{5}\right)^n \pi \right)
+\end{equation*}
+converge et donner sa limite.
+\end{enumerate}
+\item Soit $u_n = \sqrt{n + \sqrt{n - 1 + \sqrt{n - 2 + \sqrt{\dots + \sqrt{1}}}}}$ pour $n \geq 1$.
+\begin{enumerate}[label=\emph{\alph*)}]
+\item Déduire une relation de récurrence entre $u_n$ et $u_{n+1}$.
+\item Montrer que la suite $\left(\dfrac{u_n}{\sqrt{n}}\right)$ est bornée.
+\item En déduire la convergence et la limite de cette suite. 
+\end{enumerate}
+\item Soit $(u_n)_{n \in \N}$ une suite de réels positifs. On pose $v_n = \dfrac{u_n}{1 + u_n}$. Démontrer que $\sum u_n$ et $\sum v_n$ sont de même nature. (Indication : on étudiera la croissance de la fonction $x \mapsto \dfrac{x}{1+x}$ sur $\R_+$)
+\end{enumerate}
+\end{document}
