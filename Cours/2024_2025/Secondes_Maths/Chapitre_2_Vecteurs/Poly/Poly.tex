@@ -110,4 +110,62 @@ Soit $\vect{u}$ un vecteur. Alors l'opposé de $\vect{u}$, noté $- \vect{u}$, e
 \begin{proposition}
 Soient $A$ et $B$ deux points du plan. Alors $- \vect{AB} = \vect{BA}$.
 \end{proposition}
+
+\newpage
+
+\subsection{Addition de vecteurs}
+\begin{tcolorbox}
+\begin{definition}
+Soit $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors la \textbf{somme de $\vect{u}$ et de $\vect{v}$}, notée $\vect{u} + \vect{v}$, est le vecteur associé à la translation résultant de l'enchaînement de la translation de vecteur $\vect{u}$ suivie de la translation de vecteur $\vect{v}$.
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Autrement dit, $\vect{u} + \vect{v}$ décrit le glissement obtenu si l'on parcourt le trajet donné par $\vect{u}$ puis celui parcouru par $\vect{v}$.
+\end{remark}
+\begin{example}
+Les quadrilatères $ABEF$ et $BCDE$ sont des carrés.
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (4,0);
+\coordinate (D) at (4,2);
+\coordinate (E) at (2,2);
+\coordinate (F) at (0,2);
+
+\draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+\draw (B) -- (E);
+\draw (A) node[below left] {$A$};
+\draw (B) node[below] {$B$};
+\draw (C) node[below right] {$C$};
+\draw (D) node[above right] {$D$};
+\draw (E) node[above] {$E$};
+\draw (F) node[above left] {$F$};
+\end{tikzpicture}
+\end{center}
+Tracer sur la figure les vecteurs suivants :
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $\vect{AB} + \vect{BE}$
+\item $\vect{FE} + \vect{DC}$
+\item $\vect{FA} + (- \vect{DE}) + \vect{BE}$
+\end{enumerate}
+\end{example}
+\begin{tcolorbox}
+\begin{proposition}[Relation de Chasles]
+Soient $A$, $B$ et $C$ trois points quelconques du plan. Alors,
+\begin{equation*}
+\vect{AB} + \vect{BC} = \vect{AC}\,.
+\end{equation*}
+\end{proposition}
+\end{tcolorbox}
+\begin{proposition}
+Soient $\vect{u}$, $\vect{v}$ et $\vect{w}$ trois vecteurs du plan. Alors,
+\begin{itemize}
+\item $(\vect{u} + \vect{v}) + \vect{w} = \vect{u} + (\vect{v} + \vect{w})$
+\item $\vect{u} + \vect{v} = \vect{v} + \vect{u}$
+\item $\vect{u} + (- \vect{u}) = \vect{0}$ ($\vect{0}$ est le vecteur nul)
+\item $\vect{u} + \vect{0} = \vect{0} + \vect{u} = \vect{u}$
+\end{itemize}
+\end{proposition}
+
 \end{document}

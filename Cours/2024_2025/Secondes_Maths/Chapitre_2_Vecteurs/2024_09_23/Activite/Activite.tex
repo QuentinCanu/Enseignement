@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Saut du Cavalier}
+\author{Seconde 9}
+\date{23 Septembre 2024}
+
+\begin{document}
+\maketitle
+\section*{Le problème du cavalier}
+Au jeu d'échecs, le cavalier a un déplacement un peu particulier~: il se déplace de deux cases en avant, puis se \og décale \fg d'une case sur le côté. Ce déplacement a initié une classe de problèmes d'échecs appelés \emph{\og Tour du Cavalier \fg} : le cavalier doit se déplacer sur toutes les cases d'un échiquier vide, sans repasser sur une case déjà visitée. Certaines versions du problèmes imposent des contraintes supplémentaires, comme la nécessité d'un circuit fermé.
+
+\begin{center}
+\setmainfont{DejaVu Sans}
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (8,8);
+\node (O) at (3.5,3.5) {\huge{♞}};
+\node (NO) at (2.5,5.5) {\huge{♘}};
+\node (NE) at (4.5,5.5) {\huge{♘}};
+\node (EN) at (5.5,4.5) {\huge{♘}};
+\node (ES) at (5.5,2.5) {\huge{♘}};
+\node (SE) at (4.5,1.5) {\huge{♘}};
+\node (SO) at (2.5,1.5) {\huge{♘}};
+\node (ON) at (1.5,4.5) {\huge{♘}};
+\node (OS) at (1.5,2.5) {\huge{♘}};
+
+\draw[->] (O) -- (NO) node[yshift=16] {\small{$\vect{NO}$}};
+\draw[->] (O) -- (NE) node[yshift=16] {\small{$\vect{NE}$}};
+\draw[->] (O) -- (EN) node[xshift=16] {\small{$\vect{EN}$}};
+\draw[->] (O) -- (ES) node[xshift=16] {\small{$\vect{ES}$}};
+\draw[->] (O) -- (SE) node[yshift=-16] {\small{$\vect{SE}$}};
+\draw[->] (O) -- (SO) node[yshift=-16] {\small{$\vect{SO}$}};
+\draw[->] (O) -- (OS) node[xshift=-16] {\small{$\vect{OS}$}};
+\draw[->] (O) -- (ON) node[xshift=-16] {\small{$\vect{ON}$}};
+\end{tikzpicture}
+\end{center}
+
+Les huit déplacements possibles du cavalier sont notés à l'aide des quatres points cardinaux : \emph{Nord}, \emph{Ouest}, \emph{Sud} et \emph{Est}. On utilise d'abord le point cardinal du déplacement de deux cases.
+
+\section*{Exercices}
+\begin{enumerate}[label= \textbf{Exercice \arabic* : }]
+\item Pour chacun des points de départ et points d'arrivée suivants, représenter puis écrire sous forme de liste la suite de déplacements du cavalier permettant ce trajet.
+
+\vspace*{0.5cm}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\setmainfont{DejaVu Sans}
+\begin{tikzpicture}[scale=0.75]
+\draw[help lines] (0,0) grid (5,5);
+\draw (0.5,0.5) node {\large{♞}};
+\draw (2.5,4.5) node {\large{♘}};
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\setmainfont{DejaVu Sans}
+\begin{tikzpicture}[scale=0.75]
+\draw[help lines] (0,0) grid (5,5);
+\draw (2.5,2.5) node {\large{♞}};
+\draw (3.5,2.5) node {\large{♘}};
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\setmainfont{DejaVu Sans}
+\begin{tikzpicture}[scale=0.75]
+\draw[help lines] (0,0) grid (5,5);
+\draw (0.5,4.5) node {\large{♞}};
+\draw (4.5,0.5) node {\large{♘}};
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\newpage
+\item On se propose de réfléchir au problème plus \og simple \fg des supers cavalier. Un super cavalier peut faire tous les déplacements qu'un cavalier peut faire en \textbf{un, deux ou trois tours}. Représenter par des vecteurs tous les déplacements possible pour le super cavalier représenté au centre.
+\begin{center}
+\setmainfont{DejaVu Sans}
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (9,9);
+\node (O) at (4.5,4.5) {\huge{♞}};  
+\end{tikzpicture}    
+\end{center}
+\item Montrer que l'on est capable de construire une solution au problème du super cavalier, qui consiste à visiter toutes les cases d'un échiquier (de dimension $8 \times 8$) une seule et unique fois à partir de n'importe quel point de départ. 
+\item Se renseigner sur le problème du cavalier : par exemple, on dira quelles variantes ont été étudiées historiquement, et pour quels cas (dimension de l'échiquier, déplacements possibles \dots) une solution a été trouvée, ou les cas où il a été montré qu'il n'y a eu aucune solution. 
+\end{enumerate}
+
+\end{document}
