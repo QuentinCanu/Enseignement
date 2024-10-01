@@ -168,4 +168,56 @@ Soient $\vect{u}$, $\vect{v}$ et $\vect{w}$ trois vecteurs du plan. Alors,
 \end{itemize}
 \end{proposition}
 
+\newpage
+
+\section{Vecteurs et configurations géométriques}
+
+\subsection{Parallélogrammes}
+
+\begin{tcolorbox}
+\begin{definition}[Rappels]
+Un quadrilatère $ABCD$ est un parallélogramme si et seulement si :
+\begin{itemize}
+\item Les côtés opposés sont parallèles $2$ à $2$ : $(AB) \parallel (CD)$ et $(BC) \parallel (AD)$.
+\item Les côtés opposés sont de même longueur $2$ à $2$: $AB = CD$ et $BC = AD$.
+\item Deux côtés opposés sont parallèles et de même longueur: ($(AB) \parallel (CD)$ et $AB = CD$) ou ($(BC) \parallel (AD)$ et $BC = AD$)
+\item Les diagonales $[AC]$ et $[BD]$ se coupent en leur milieu.
+\end{itemize} 
+\end{definition}
+\end{tcolorbox}
+
+\begin{proposition}
+Soit un quadrilatère $ABCD$. Alors $ABCD$ est un parallélogramme si et seulement si $\vect{AB} = \vect{DC}$.
+\end{proposition}
+
+\begin{tcolorbox}
+\begin{remark}
+Attention, il ne faut \textbf{pas} vérifier $\vect{AB} = \vect{CD}$.        
+\end{remark}
+\end{tcolorbox}
+
+\begin{proposition}
+Soit un parallélogramme $ABCD$. Alors,
+\begin{equation*}
+\vect{AB} + \vect{AD} = \vect{AC}
+\end{equation*}
+\end{proposition}
+
+\begin{example}
+Soit $ABCD$ un parallélogramme.
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) node[below left] {$A$} -- (3,0) node[below right] {$B$} -- (4,2) node[above right] {$C$} -- (1,2) node[above left] {$D$} -- cycle;
+\draw (0,4) node {};
+\end{tikzpicture}
+\end{center}
+\begin{enumquestions}
+\item Placer sur la figure $E$, le point symétrique de $A$ par rapport à $B$. Placer sur la figure $F$, le point symétrique de $A$ par rapport à $D$.
+\item Placer le point $G$ tel que $\vect{AG} = \vect{AE} + \vect{AF}$.
+\item Donner la nature du quadrilatère $AEGF$.
+\end{enumquestions}
+\emptybox{6cm}
+\end{example}
+
+
 \end{document}
