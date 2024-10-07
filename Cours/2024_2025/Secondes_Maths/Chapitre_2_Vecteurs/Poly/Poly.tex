@@ -219,5 +219,103 @@ Soit $ABCD$ un parallélogramme.
 \emptybox{6cm}
 \end{example}
 
+\newpage
+\subsection{Milieu d'un segment}
 
+\begin{proposition}
+Soient $A$ et $B$ deux points du plan. Alors $I$ est le milieu du segment $[AB]$ si et seulement si $\vect{AI} = \vect{IB}$.
+\end{proposition}
+
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[->,thick] (0,0) node[below] {$A$} node {$\bullet$} -- (2,0) node[below] {$I$};
+\draw[->,thick] (2,0) -- (4,0) node[below] {$B$} node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\end{example}
+
+\begin{example}
+Placer le milieu $I$ du segment $[AB]$ dans la figure suivante.
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-0.25,-0.25) grid[step=0.5] (4.25,4.25);
+\draw (0.5,1) node {$\bullet$} node[below left] {$A$};
+\draw (3.5,3) node {$\bullet$} node[above right] {$B$};
+\end{tikzpicture}
+\end{center}
+\end{example}
+
+\section{Vecteurs colinéaires}
+
+\subsection{Multiplication d'un vecteur par un nombre réel}
+
+\begin{tcolorbox}
+\begin{definition}
+Soit $\vect{u}$ un vecteur, et $k$ un nombre réel. Alors la multiplication de $\vect{u}$ par $k$ est un vecteur, noté $k\vect{u}$, vérifiant:
+\begin{itemize}
+\item $k\vect{u}$ est de même direction que $\vect{u}$.
+\item Si $k > 0$, alors $k\vect{u}$ est de même sens que $\vect{u}$. Si $k < 0$, alors $k\vect{u}$ est de sens opposé à $\vect{u}$.
+\item La norme de $k\vect{u}$ est donnée par $\abs{k}$ multiplié par la norme de $\vect{u}$.
+\end{itemize}        
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+Placer sur ce repére les vecteurs $2\vect{u}$ et $-3\vect{u}$.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-0.25,-0.25) grid[step=0.5] (4.25,4.25);
+\draw[thick,->] (0.5,2.5) -- (1.5,4) node[above right] {$\vect{u}$};
+\end{tikzpicture}
+\end{center}
+\end{example}
+
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs, et $k$ et $k'$ deux nombres réels. Alors,
+\begin{itemize}
+\item $k \vect{u} + k' \vect{u} = (k + k') \vect{u}$
+\item $k \vect{u} + k \vect{v} = k (\vect{u} + \vect{v})$
+\item $k \vect{0} = \vect{0}$
+\item $0 \vect{u} = \vect{0}$
+\end{itemize}
+\end{proposition}
+
+\begin{example}
+Soient $A$, $B$ et $I$ trois points tels que $\vect{AI} = \dfrac{1}{2}\vect{AB}$. Montrer que $I$ est le milieu de $[AB]$.
+
+\emptybox{2cm}
+\end{example}
+
+
+
+\newpage
+\subsection{Vecteurs colinéaires et applications}
+\begin{tcolorbox}
+\begin{definition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Ces deux vecteurs sont dits \textbf{colinéaires} si et seulement s'ils ont la même direction.
+\end{definition}
+\end{tcolorbox}
+
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors, $\vect{u}$ et $\vect{v}$ sont colinéaires si et seulement si il existe $k$ tel que $\vect{u} = k \vect{v}$. 
+\end{proposition}
+
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Pour prouver que deux vecteurs sont colinéaires, il faut donc prouver que l'un est le \textbf{multiple} de l'autre.
+\item Le vecteur nul $\vect{0}$ est donc colinéaire à tous les vecteurs.
+\end{itemize}
+\end{remark}
+
+\begin{proposition}
+Soient $A$, $B$, $C$ et $D$ quatre points plan. Alors les droites $(AB)$ et $(CD)$ sont parallèles si et seulement si les vecteurs $\vect{AB}$ et $\vect{CD}$ sont colinéaires. 
+\end{proposition}
+
+\begin{proposition}
+Soient $A$, $B$ et $C$ trois points du plan. Alors les point $A$, $B$ et $C$ sont alignés si et seulement si les vecteurs $\vect{AB}$ et $\vect{AC}$ sont colinéaires.
+\end{proposition}
+    
 \end{document}
