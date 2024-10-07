@@ -8,7 +8,7 @@
 \begin{document}
 \maketitle
 
-\section{Fonctions polynomiales du second degré}
+\section{Définition}
 
 \begin{tcolorbox}
 \begin{definition}
@@ -23,7 +23,53 @@ où $a$, $b$ et $c$ sont des réels avec $a \neq 0$.
 L'hypothèse $a \neq 0$ est essentielle, sinon la fonction est polynomiale de degré au plus $1$.    
 \end{remark}
 L'objectif de ce chapitre est d'étudier les fonctions polynomiales du second degré : l'allure de leur courbe représentative, leur extremum, leurs racines\dots
-\subsection{Forme canonique}
+\section{Allure du graphique}
+On trace la courbe représentative de deux fonctions polynomiales du second degré : une avec $a > 0$ et une avec $a < 0$.
+
+\vspace*{1cm}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-2.25,-2.25) grid[step=0.5] (2.25,2.25);
+\draw[->] (-2.25,0) -- (2.25,0) node[right] {$x$};
+\draw[->] (0,-2.25) -- (0,2.25) node[above] {$y$};
+\draw[domain=-1.5:1.5] plot (\x, \x*\x);
+\end{tikzpicture}
+\end{center}   
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-2.25,-2.25) grid[step=0.5] (2.25,2.25);
+\draw[domain=-1.5:1.5] plot (\x, -\x*\x);
+\draw[->] (-2.25,0) -- (2.25,0) node[right] {$x$};
+\draw[->] (0,-2.25) -- (0,2.25) node[above] {$y$};
+\end{tikzpicture}
+\end{center}    
+\end{minipage}
+\vspace*{0.5cm}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction polynomiale de degré $2$. Sa courbe représentative est appelée une \textbf{parabole}.
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soit $f$ une fonction polynomiale de degré $2$. telle que $f(x) = ax^2 + bx + c$. Alors:
+\begin{itemize}
+\item Si $a > 0$, il existe une valeur de $x$, notée $x_m$ telle que $f$ est décroissante sur $\left] - \infty; x_m \right]$ et croissante sur $\left[x_m; + \infty \right[$
+\item Si $a < 0$, il existe une valeur de $x$, notée $x_M$ telle que $f$ est croissante sur $\left] - \infty; x_M \right]$ et décroissante sur $\left[x_M; + \infty \right[$
+\end{itemize}
+\end{proposition}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Dans le cas $a > 0$, les \emph{\og branches de la paraboles sont tournées vers le haut \fg}. Dans le cas contraire ($a < 0$), elles sont \emph{\og tournées vers le bas \fg}.
+\item Dans le cas $a > 0$, $f$ admet un unique minimum, et ce minimum est atteint en $x_m$. Dans le cas contraire ($a < 0$), $f$ admet un maximum, et ce maximum est atteint en $x_M$. 
+\end{itemize}
+\end{remark}
+\newpage
+\section{Recherche de l'extremum}
 \begin{tcolorbox}
 \begin{proposition}
 Soit $f$ une fonction polynomiale du second degré telle que $f(x) = ax^2 + bx + c$. Alors il existe $\alpha$ et $\beta$ tel que

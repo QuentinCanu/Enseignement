@@ -1,0 +1,105 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : calcul littéral, vecteurs}
+\date{4 Octobre 2024}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+\instructions{Interdite}
+\vspace*{1cm}
+
+\begin{questions}
+\titledquestion{Les identités remarquables}[4]
+\begin{parts}
+\part Compléter les identités suivantes:
+\begin{subparts}
+\subpart $(a + b)^2 =$
+\subpart $a^2 - b^2 =$
+\end{subparts}
+\part Appliquer les identités remarquables pour simplifier les expressions suivantes :
+\begin{subparts}
+\subpart $x^2 - 4$
+\subpart $(3y - 4)^2$
+\subpart $16z^2 + 40z + 25$
+\subpart $36c^2 - 81d^2$
+\end{subparts}
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Vecteurs}[4]
+\begin{parts}
+\part Rappeler les trois composantes définissant un vecteur.
+\part Dans la figure ci-après, les triangles $ABC$, $BDE$ et $CEF$ sont équilatéraux.
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) node[below left] {$A$} -- (0:3) node[below] {$B$} -- (60:3) node[left] {$C$} -- cycle;
+\draw (0:3) -- ++(0:3) node[below right] {$D$} -- ++(120:3) node[right] {$E$} -- cycle;
+\draw (60:3) -- ++(0:3) -- ++(120:3) node[above] {$F$} -- cycle;
+\end{tikzpicture}
+\end{center}
+Donner (sans justifier) un vecteur correspondant à chacun des critères suivants :
+\begin{subparts}
+\subpart Un vecteur égal à $\vect{AB}$;
+\subpart Un vecteur égal à $\vect{CF}$;
+\subpart Un vecteur égal à $\vect{DB}$;
+\subpart Un représentant de $\vect{BC}$ d'origine $E$;
+\subpart Un représentant de $\vect{FE}$ d'extrémité $E$;
+\subpart Un vecteur de même direction que $\vect{DE}$ mais pas de même norme ni de même sens.
+\end{subparts}
+\end{parts}
+
+\newpage
+\titledquestion{Sciences expérimentales}[5]
+\begin{parts}
+\part Pour déterminer une masse volumique $M$ d'un échantillon, en \unit{\kilo\gram\per \centi\meter}, on divise sa masse $m$ par son volume $V$ :
+\begin{equation*}
+M = \dfrac{m}{V}    
+\end{equation*}
+\begin{subparts}
+\subpart Exprimer le volume $V$ d'un échantillon en fonction de sa masse $m$ et de sa masse volumique $M$.
+\subpart En déduire le volume total de deux échantillons, le premier de masse $m = \qty{36}{\kilo\gram}$ et de masse volumique $M = \qty{48}{\kilo\gram\per\centi\meter}$, le deuxième de masse $m' = \qty{5}{\kilo\gram}$ et de masse volumique $M' = \qty{25}{\kilo\gram\per\centi\meter}$.
+\end{subparts}
+\part La force de poussée permettant la flotaison des bateaux est appelée la poussée d'Archimède. Son intensité est donnée par la formule :
+\begin{equation*}
+F = M \times v \times g
+\end{equation*}
+où $F$ est la force, $M$ est la masse volumique de l'objet immergé, $v$ le volume immergé et $g$ l'accélération de la pesanteur.
+\begin{subparts}
+\subpart Nous nous plaçons dans le cas où l'objet est entièrement immergé (dans ce cas, $v = V$). En utilisant l'expression de la masse volumique $M$ de la question précédente, montrer que l'intensité de la force peut être simplifié en $F = mg$, où $m$ est la masse de l'objet immergé.
+\subpart En déduire une expression de $g$ en fonction de $m$ et de $F$.   
+\end{subparts}
+\part La \emph{loi des gaz parfaits} est une égalité mettant en relation différents paramètres caractérisant un gaz dit \og parfait \fg : la pression ($P$), la température ($T$), la quantité de matière ($n$) et le volume occupé ($V$). Elle dépend de la \emph{constante des gaz parfaits}, notée $R$, et est donnée par :
+\begin{equation*}
+P \times V = n \times R \times T\,.
+\end{equation*}
+Exprimer $R$ en fonction de $P$, $V$, $n$ et $T$. 
+\end{parts}
+
+\vspace*{1cm}
+\titledquestion{Développements, factorisations}[5]
+\begin{parts}
+\part Développer et simplifier les expressions suivantes :
+\begin{subparts}
+\subpart $(5a + 3)(9a + 4)$
+\subpart $(y - 2)(y + 3) + (2y + 1)(y + 3)$
+\end{subparts}
+\part Factoriser les expressions suivantes :
+\begin{subparts}
+\subpart $35p + 42q$
+\subpart $(y - 2)(y + 3) + (2y + 1)(y + 3)$
+\end{subparts}
+\part Simplifier $(x + 1)^2 - (x - 1)^2$. En déduire $10001^2 - 9999^2$.
+\part Montrer que les trois expressions suivantes sont égales, quelque soit la valeur de $t$.
+\begin{subparts}
+\subpart $A = (2t - 4)^2 + 12$
+\subpart $B = 4(t - 2)^2 + 12$
+\subpart $C = 4(t - 3)(t - 1) + 16$
+\end{subparts}
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Bonus}[2]
+Développer et simplifier $(a+b)^3$. En déduire $101^3$.
+\end{questions}
+\end{document}
