@@ -116,4 +116,33 @@ Soit la fonction polynomiale $g : x \mapsto 4x^2 + 32x - 5$.
 \begin{proposition}
 Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. On suppose que $f(x) = a(x - \alpha)^2 + \beta$. Alors la courbe représentative $\mathcal{C}_f$ est une parabole admettant comme axe de symétrie la droite $x = \alpha$.
 \end{proposition}
+\begin{example}
+Soit $f : x \mapsto x^2 - 2x + 1$. Alors $f$ admet un minimum (car $a > 0$) atteint en $\alpha = - \dfrac{b}{2a} = - \dfrac{-2}{2} = 1$. Alors $\mathcal{C}_f$ admet la droite $x = 1$ comme axe de symétrie.
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-5.25,-1.25) grid[step=0.5] (5.25,6.25);
+\draw[->,thick] (-5.25,0) -- (5.25,0) node[right] {$x$};
+\draw[->,thick] (0,-1.25) -- (0,6.25) node[above] {$y$};
+\draw plot[domain=-1.5:3.5] (\x, \x * \x - 2 * \x + 1) node[above right] {$\mathcal{C}_f$};
+\draw[dashed,thick] (1,-1.25) -- (1,6.25) node[above] {$x = 1$};
+\end{tikzpicture}
+\end{center}
+\end{example}
+
+\newpage
+
+\section{Racines}
+
+\subsection{Définition}
+
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction. On appelle \textbf{racine} de la fonction $f$ un nombre $r$ tel que $f(r) = 0$.
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+Montrer que $r_1 = 1$ et $r_2 = - 3$ sont deux racines de la fonction $f : x \mapsto 2x^2 + 4x - 6$.
+
+\emptybox{3cm}
+\end{example}
 \end{document}
