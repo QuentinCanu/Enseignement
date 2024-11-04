@@ -197,4 +197,52 @@ En reprenant l'exemple précédent, donner le tableau de signes des fonctions $f
 
 \emptybox{5cm}
 \end{example}
+\subsection{Calcul des racines}
+\subsubsection{En identifiant une racine évidente}
+Soit $f(x) = -x^2 + 6x$ pour $x \in \R$. Alors, l'équation $f(x) = 0$ admet deux solutions évidentes : $0$ et $6$. Comme $f$ est une fonction polynomiale du second degré, alors on sait que ce sont les seules solutions réelles possibles.
+\subsubsection{En utilisant une identité remarquable}
+Soit $f(x)= 2x^2 - 128$ pour $x \in \R$. Alors, la troisième identité remarquable nous donne un factorisation de $f(x) = 2(x - 8)(x + 8)$. Donc les deux racines distinctes de la fonction polynomiale du second degré $f$ sont $8$ et $-8$.
+
+\subsubsection{Avec le produit et la somme des racines}
+\begin{proposition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Si $r_1$ et $r_2$ sont les deux racines (possiblement confondues) de $f$, alors
+\begin{equation*}
+r_1 + r_2 = \dfrac{-b}{a} \qquad r_1 \times r_2 = \dfrac{c}{a}
+\end{equation*}
+\end{proposition}
+\begin{example}
+Soit $f(x) = x^2 + x - 20$. On remarque que $4$ est une racine de $f$. En déduire une autre racine de $f$, puis une factorisation de $f$.
+\vspace*{0.5cm}
+
+\emptybox{3cm}
+\end{example}
+\newpage
+\subsubsection{Avec le discriminant}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors on appelle \textbf{discriminant de f}, noté $\Delta$, la quantité
+\begin{equation*}
+\Delta = b^2 - 4ac
+\end{equation*} 
+\end{definition}
+\end{tcolorbox}
+\begin{theorem}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale de second degré, et $\Delta$ son discriminant. Alors:
+\begin{enumquestions}
+\item Si $\Delta < 0$, alors $f$ n'admet pas de racine réelle.
+\item Si $\Delta = 0$, alors $f$ admet une unique racine réelle $r$, telle que
+\begin{equation*}
+r = - \dfrac{b}{2a}
+\end{equation*}
+\item Si $\Delta > 0$, alors $f$ admet deux racines réelles distinctes $r_1 < r_2$, telles que
+\begin{equation*}
+r_1 = \dfrac{- b - \sqrt{\Delta}}{2a} \qquad r_2 = \dfrac{- b + \sqrt{\Delta}}{2a}
+\end{equation*}
+\end{enumquestions}
+\end{theorem}
+\paragraph{Démonstration}
+\hfill
+\vspace*{0.2cm}
+
+\emptybox{15cm}
 \end{document}
