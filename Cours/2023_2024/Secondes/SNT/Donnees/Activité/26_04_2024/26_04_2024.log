@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.17)  26 APR 2024 13:41
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.17)  6 NOV 2024 01:11
  restricted system commands enabled.
  file:line:error style messages enabled.
-**c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/SNT/Donnees/Activité/26_04_2024/26_04_2024.tex
-(c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/SNT/Donnees/Activité/26_04_2024/26_04_2024.tex
+**c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/SNT/Donnees/Activité/26_04_2024/26_04_2024.tex
+(c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/SNT/Donnees/Activité/26_04_2024/26_04_2024.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
@@ -657,6 +657,17 @@ File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \c@tkz@cnt@pair=\count381
 \c@tkz@cnt@impair=\count382
 \c@tkz@cnt@aw=\count383
+) (c:/texlive/2024/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking positions in a document
+ (c:/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-03-14 LaTeX2e option processing using LaTeX3 keys
+)
+\l__sn_x_dim=\dimen296
+\l__sn_y_dim=\dimen297
+\l__sn_xa_dim=\dimen298
+\l__sn_ya_dim=\dimen299
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `amsthm' support loaded on input line 3026.
@@ -678,20 +689,11 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 \multido@stuff=\toks50
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
-) (c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen296
-\ar@mcellbox=\box115
-\extrarowheight=\dimen297
-\NC@list=\toks51
-\extratabsurround=\skip88
-\backup@length=\skip89
-\ar@cellbox=\box116
 ) (c:/texlive/2024/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip90
-\thanksmargin=\skip91
-\droptitle=\skip92
+\thanksmarkwidth=\skip88
+\thanksmargin=\skip89
+\droptitle=\skip90
 ) (c:/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
 \l__siunitx_number_uncert_offset_int=\count390
@@ -704,35 +706,44 @@ Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
 \l__siunitx_number_group_first_int=\count397
 \l__siunitx_number_group_size_int=\count398
 \l__siunitx_number_group_minimum_int=\count399
-\l__siunitx_angle_tmp_dim=\dimen298
-\l__siunitx_angle_marker_box=\box117
-\l__siunitx_angle_unit_box=\box118
+\l__siunitx_angle_tmp_dim=\dimen300
+\l__siunitx_angle_marker_box=\box115
+\l__siunitx_angle_unit_box=\box116
 \l__siunitx_compound_count_int=\count400
-\l__siunitx_table_tmp_box=\box119
-\l__siunitx_table_tmp_dim=\dimen299
-\l__siunitx_table_column_width_dim=\dimen300
-\l__siunitx_table_integer_box=\box120
-\l__siunitx_table_decimal_box=\box121
-\l__siunitx_table_uncert_box=\box122
-\l__siunitx_table_before_box=\box123
-\l__siunitx_table_after_box=\box124
-\l__siunitx_table_before_dim=\dimen301
-\l__siunitx_table_carry_dim=\dimen302
+\l__siunitx_table_tmp_box=\box117
+\l__siunitx_table_tmp_dim=\dimen301
+\l__siunitx_table_column_width_dim=\dimen302
+\l__siunitx_table_integer_box=\box118
+\l__siunitx_table_decimal_box=\box119
+\l__siunitx_table_uncert_box=\box120
+\l__siunitx_table_before_box=\box121
+\l__siunitx_table_after_box=\box122
+\l__siunitx_table_before_dim=\dimen303
+\l__siunitx_table_carry_dim=\dimen304
 \l__siunitx_unit_tmp_int=\count401
 \l__siunitx_unit_position_int=\count402
 \l__siunitx_unit_total_int=\count403
-) (c:/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen305
+\ar@mcellbox=\box123
+\extrarowheight=\dimen306
+\NC@list=\toks51
+\extratabsurround=\skip91
+\backup@length=\skip92
+\ar@cellbox=\box124
+)) (c:/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (c:/texlive/2024/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
  (c:/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen303
-\ESO@tempdimb=\dimen304
+\ESO@tempdima=\dimen307
+\ESO@tempdimb=\dimen308
 )
-\AM@pagewidth=\dimen305
-\AM@pageheight=\dimen306
-\AM@fboxrule=\dimen307
+\AM@pagewidth=\dimen309
+\AM@pageheight=\dimen310
+\AM@fboxrule=\dimen311
  (c:/texlive/2024/texmf-dist/tex/latex/pdfpages/ppluatex.def
 File: ppluatex.def 2024/01/21 v0.5y Pdfpages driver for LuaTeX (AM)
 )
@@ -748,14 +759,14 @@ File: ppluatex.def 2024/01/21 v0.5y Pdfpages driver for LuaTeX (AM)
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen308
-\captionmargin=\dimen309
-\caption@leftmargin=\dimen310
-\caption@rightmargin=\dimen311
-\caption@width=\dimen312
-\caption@indent=\dimen313
-\caption@parindent=\dimen314
-\caption@hangindent=\dimen315
+\caption@tempdima=\dimen312
+\captionmargin=\dimen313
+\caption@leftmargin=\dimen314
+\caption@rightmargin=\dimen315
+\caption@width=\dimen316
+\caption@indent=\dimen317
+\caption@parindent=\dimen318
+\caption@hangindent=\dimen319
 Package caption Info: Standard document class detected.
 Package caption Info: french babel package is loaded.
 )
@@ -771,14 +782,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@cnth=\count409
 \Gm@cntv=\count410
 \c@Gm@tempcnt=\count411
-\Gm@bindingoffset=\dimen316
-\Gm@wd@mp=\dimen317
-\Gm@odd@mp=\dimen318
-\Gm@even@mp=\dimen319
-\Gm@layoutwidth=\dimen320
-\Gm@layoutheight=\dimen321
-\Gm@layouthoffset=\dimen322
-\Gm@layoutvoffset=\dimen323
+\Gm@bindingoffset=\dimen320
+\Gm@wd@mp=\dimen321
+\Gm@odd@mp=\dimen322
+\Gm@even@mp=\dimen323
+\Gm@layoutwidth=\dimen324
+\Gm@layoutheight=\dimen325
+\Gm@layouthoffset=\dimen326
+\Gm@layoutvoffset=\dimen327
 \Gm@dimlist=\toks55
 ) (c:/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
@@ -803,7 +814,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \c@tcblayer=\count414
 \c@tcolorbox@number=\count415
 \l__tcobox_tmpa_box=\box131
-\l__tcobox_tmpa_dim=\dimen324
+\l__tcobox_tmpa_dim=\dimen328
 \tcb@temp=\box132
 \tcb@temp=\box133
 \tcb@temp=\box134
@@ -824,9 +835,43 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
-\c@definition=\count422
-\c@proposition=\count423
+)) (c:/texlive/2024/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen329
+\dashlinegap=\dimen330
+\adl@box=\box136
+\adl@height=\dimen331
+\adl@heightsave=\dimen332
+\adl@depth=\dimen333
+\adl@depthsave=\dimen334
+\adl@finaldepth=\dimen335
+\adl@columns=\count422
+\adl@ncol=\count423
+\adl@currentcolumn=\count424
+\adl@currentcolumnsave=\count425
+\adl@totalheight=\count426
+\adl@totalheightsave=\count427
+\adl@dash=\count428
+\adl@gap=\count429
+\adl@cla=\count430
+\adl@clb=\count431
+\adl@everyvbox=\toks59
+\adl@LTpagetotal=\dimen336
+) (c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.sty (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count432
+\xs_countb=\count433
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.tex
+\SYS_systemecode=\toks60
+\SYS_systempreamble=\toks61
+\SYSeqnum=\count434
+)
+Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
+)
+\c@definition=\count435
+\c@proposition=\count436
+\c@theorem=\count437
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -920,17 +965,17 @@ Package french.ldf Info: Setting StandardEnumerateEnv=true for
 LaTeX Info: Redefining \up on input line 8.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count424
-\scratchdimen=\dimen325
-\scratchbox=\box136
-\nofMPsegments=\count425
-\nofMParguments=\count426
-\everyMPshowfont=\toks59
-\MPscratchCnt=\count427
-\MPscratchDim=\dimen326
-\MPnumerator=\count428
-\makeMPintoPDFobject=\count429
-\everyMPtoPDFconversion=\toks60
+\scratchcounter=\count438
+\scratchdimen=\dimen337
+\scratchbox=\box137
+\nofMPsegments=\count439
+\nofMParguments=\count440
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count441
+\MPscratchDim=\dimen338
+\MPnumerator=\count442
+\makeMPintoPDFobject=\count443
+\everyMPtoPDFconversion=\toks63
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (c:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
@@ -950,7 +995,7 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks61
+\pdftexcmds@toks=\toks64
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
@@ -1023,14 +1068,14 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 31965 strings out of 476435
+ 32960 strings out of 476435
  100000,1977958 words of node,token memory allocated
  1015 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 19 glue, 4 kern, 1 penalty, 2 glyph, 102 attribute, 87 glue_spec, 16 attribute_list, 3 write nodes
-   avail lists: 2:869,3:82,4:30,5:75,6:16,7:980,8:1,9:172,10:6,11:46
- 53369 multiletter control sequences out of 65536+600000
+   avail lists: 2:909,3:82,4:30,5:75,6:16,7:1002,8:1,9:186,10:6,11:46
+ 54320 multiletter control sequences out of 65536+600000
  38 fonts using 2498359 bytes
- 117i,10n,128p,506b,406s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,128p,516b,406s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf>
 Output written on 26_04_2024.pdf (2 pages, 16703 bytes).
 
