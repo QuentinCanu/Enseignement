@@ -106,4 +106,43 @@ N = \dfrac{n}{p}100
 
 \emptybox{4cm}
 \end{example}
+
+\newpage
+\subsection{Proportions de proportions}
+
+\begin{example}
+Dans un stade de $1600$ spectateurs, $40\%$ sont venus supporter l'équipe bleue. Parmi les supporteurs de l'équipe bleue, seul $60\%$ d'entre eux ont acheté une boisson. Combien de spectateurs sont à la fois supporteur de l'équipe bleue et ont acheté une boisson ?
+
+\vspace*{0.2cm}
+\emptybox{2cm}
+\end{example}
+\begin{proposition}
+Soit $P$ une population, $S_1$ une sous-population de $P$, et $S_2$ une sous-population de $S_1$. Alors, $S_2$ est une sous-population de $P$.
+
+De plus, si on note $p_1$ la proportion de $S_1$ par rapport à $P$ et $p_2$ la proportion de $S_2$ par rapport à $S_1$, alors la proportion de $S_2$ par rapport à $P$ est donnée par
+
+\begin{equation*}
+p = p_1 \times p_2
+\end{equation*}
+\end{proposition}
+\begin{remark}
+\begin{enumquestions}
+\item La situation peut-être schématisée ainsi :
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (2) (0,2) node[below]{$P$};
+\draw (0,-0.5) circle (1.5) ++(0,1.5) node[below] {$S_1$};
+\begin{scope}[xshift = 5cm]
+\draw (0,-0.5) circle (1.5) ++(0,1.5) node[below] {$S_1$};
+\draw (0,-1) circle (1) ++(0,1) node[below] {$S_2$};
+\end{scope}
+\begin{scope}[xshift = 10cm]
+\draw (0,0) circle (2) (0,2) node[below]{$P$};
+\draw (0,-1) circle (1) ++(0,1) node[below] {$S_2$};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+\end{enumquestions}
+\end{remark}
 \end{document}
