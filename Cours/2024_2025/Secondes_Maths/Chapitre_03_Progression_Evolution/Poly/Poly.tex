@@ -133,16 +133,29 @@ p = p_1 \times p_2
 \begin{tikzpicture}
 \draw (0,0) circle (2) (0,2) node[below]{$P$};
 \draw (0,-0.5) circle (1.5) ++(0,1.5) node[below] {$S_1$};
+\draw (0, -2.5) node {Proportion = $p_1$};
 \begin{scope}[xshift = 5cm]
 \draw (0,-0.5) circle (1.5) ++(0,1.5) node[below] {$S_1$};
 \draw (0,-1) circle (1) ++(0,1) node[below] {$S_2$};
+\draw (0, -2.5) node {Proportion = $p_2$};
 \end{scope}
 \begin{scope}[xshift = 10cm]
 \draw (0,0) circle (2) (0,2) node[below]{$P$};
 \draw (0,-1) circle (1) ++(0,1) node[below] {$S_2$};
+\draw (0, -2.5) node {Proportion = $p_1 \times p_2$};
 \end{scope}
 \end{tikzpicture}
 \end{center}
+\item \textbf{Attention si les proportions sont données en pourcentages !} Dans ce cas, si l'on a $p_1 \%$ et $p_2\%$, la proportion de proportions correspondante est
+\begin{equation*}
+\dfrac{p_1}{100} \times \dfrac{p_2}{100}
+\end{equation*} 
 \end{enumquestions}
 \end{remark}
+\begin{example}
+Dans un autre stade (\textbf{dont on ignore le nombre de spectateurs}), $40\%$ sont venus supporter l'équipe bleue. Parmi les supporteurs de l'équipe bleue, seul $60\%$ d'entre eux ont acheté une boisson. \textbf{Quelle est la proportion de spectateurs étant à la fois supporteur de l'équipe bleue et ayant acheté une boisson} ?
+
+\vspace*{0.2cm}
+\emptybox{3cm}
+\end{example}
 \end{document}
