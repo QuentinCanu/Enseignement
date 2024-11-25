@@ -44,4 +44,69 @@ La fonction inverse est \textbf{décroissante} sur $\left]-\infty;0\right[$, et 
 \end{tikzpicture}
 \end{center}
 
+\newpage
+
+\section{Comportement assymptotique}
+
+\begin{tcolorbox}
+\begin{remark}
+On appelle $f$ la fonction inverse définie sur $\R^*$. Alors,
+\begin{itemize}
+\item Plus les valeurs de $x$ augmentent, et plus la valeur de $f(x)$ diminue et se rapproche de $0$.
+\item Plus les valeurs de $x$ se rapprochent de $0$ \textbf{en restant positives}, et plus la valeur de $f(x)$ est grande. 
+\end{itemize}
+On constate un comportement similaire quand on observe le comportement de $f(x)$ pour des valeurs de $x$ négatives.       
+\end{remark}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\begin{proposition}
+Soit $f$ la fonction inverse. Alors,
+
+\begin{minipage}{0.2\textwidth}
+\begin{equation*}
+\lim_{x \to -\infty} = 0
+\end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+\begin{equation*}
+\lim_{x \to 0^-} = -\infty
+\end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+\begin{equation*}
+\lim_{x \to 0^+} = +\infty
+\end{equation*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+\begin{equation*}
+\lim_{x \to +\infty} = 0
+\end{equation*}
+\end{minipage}
+\end{proposition}
+\end{tcolorbox}
+\begin{center}
+\includegraphics[width=\textwidth]{Assymptotes.png}
+\end{center}
+\begin{definition}
+On dit que la courbe représentative de la fonction inverse :
+\begin{itemize}
+\item admet une assymptote horizontale d'équation $y = 0$ en $-\infty$ et en $+\infty$;
+\item admet une assymptote verticale d'équation $x = 0$. 
+\end{itemize}
+\end{definition}
+
+\begin{remark}
+Le tableau de variation de la fonction inverse peut être complété ainsi.
+\end{remark}
+\begin{center}
+\begin{tikzpicture}
+\tkzTabInit{$x$/1, Variations de $f$/2}{$-\infty$, $0$, $+\infty$};
+\tkzTabVar{+ / 0, -D+ /-\infty / +\infty, - / 0};
+\end{tikzpicture}
+\end{center}
+    
 \end{document}
