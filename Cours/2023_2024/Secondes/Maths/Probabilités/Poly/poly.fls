@@ -1,6 +1,6 @@
-PWD c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/Maths/Probabilités/Poly
+PWD c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/Maths/Probabilités/Poly
 INPUT c:/texlive/2024/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/Maths/Probabilités/Poly/poly.tex
+INPUT c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/Maths/Probabilités/Poly/poly.tex
 OUTPUT poly.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/ltluatex.lua
@@ -193,6 +193,11 @@ INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
 INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
 INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+INPUT c:/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/lcg/lcg.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/multido/multido.sty
@@ -217,6 +222,11 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/arydshln/arydshln.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
+INPUT c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+INPUT c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.tex
 INPUT c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT C:/texlive/2024/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc
 INPUT C:/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/texgyrepagella-regular.luc

@@ -9,13 +9,13 @@
 \maketitle
 \section{Vocabulaire des probabilités}
 \subsection{Univers}
-\begin{definitionbox}
+\begin{definition}
 Une \emph{expérience aléatoire} est une expérience\dots
 \begin{itemize}
 \item dont les résultats \emph{possibles} sont connus;
 \item mais dont le résultat \emph{obtenu} n'est pas prévisible.
 \end{itemize}
-\end{definitionbox}
+\end{definition}
 \begin{example} Les exemples suivants sont des expériences aléatoires :
 \begin{enumerate}
 \item On lance un dé équilibré à six faces, et on regarde le nombre obtenu.
@@ -24,12 +24,12 @@ Une \emph{expérience aléatoire} est une expérience\dots
 \label{cards}
 \end{enumerate}
 \end{example}
-\begin{definitionbox}
+\begin{definition}
 \begin{itemize}
 \item L'un des résultats possible d'une expérience aléatoire est appelé \emph{issue}.
 \item L'\emph{univers} d'une expérience aléatoire est l'ensemble de ses issues.
 \end{itemize}
-\end{definitionbox}
+\end{definition}
 \begin{example}
 Pour définir l'univers d'une expérience aléatoire, on met entre accolades toutes ses issues. On appelle cet univers $\Omega$ qui se lit \og Oméga \fg.
 \begin{enumerate}
@@ -48,9 +48,9 @@ Donner l'univers des expériences aléatoire suivantes.
 \emptybox{7cm}
 \newpage
 \subsection{\'Evénements}
-\begin{definitionbox}
+\begin{definition}
 Un \emph{événement} d'une expérience aléatoire est un ensemble contenant tout ou partie des issues de l'expérience aléatoire.
-\end{definitionbox}
+\end{definition}
 \begin{example}
 \begin{enumerate}
 \item Soit $A = \{1;3;5\}$. C'est un événement de l'expérience \ref{dice} (lancer de dé) : il correspond à \og Obtenir un impair \fg.
@@ -88,12 +88,12 @@ On lance deux pièces équilibrées. & $\{(P,P);(F,F),(P,F),(F,P)\}$ & Les deux 
 \newpage
 \section{Combinaison d'événements}
 Soit une expérience aléatoire d'univers $\Omega$, et deux événements $A$ et $B$.
-\begin{definitionbox}
+\begin{definition}
 \begin{itemize}
 \item La \emph{réunion} de $A$ et de $B$, notée $A \cup B$, est l'événement contenant toutes les issues de $A$ ainsi que celles de $B$.
 \item L'\emph{intersection} de $A$ et $B$, notée $A \cap B$, est l'événement contenant les issues présentes à la fois dans $A$ et dans $B$ 
 \end{itemize} 
-\end{definitionbox}
+\end{definition}
 \begin{center}
 \begin{tikzpicture}[scale = 0.8]
 \draw (-4,-2) rectangle (4,4) node[below left] {$\Omega$};
@@ -114,9 +114,9 @@ Soit une expérience aléatoire d'univers $\Omega$, et deux événements $A$ et 
 \end{scope}
 \end{tikzpicture}
 \end{center}
-\begin{definitionbox}
+\begin{definition}
 Le \emph{complémentaire} de $A$, noté $\overbar{A}$, est l'ensemble des élément de $\Omega$ qui ne sont pas des éléments de $A$.
-\end{definitionbox}
+\end{definition}
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
 \fill[color=gray!40] (-4,-2) rectangle (4,4);
@@ -154,14 +154,14 @@ On obtient un $4$ & On obtient un $3$ & & & \\
 \newpage
 \section{Probabilités sur un univers fini}
 \subsection{Loi de probabilité}
-\begin{definitionbox}
+\begin{definition}
 Soit une expérience aléatoire dont l'univers est \emph{fini} : il est de la forme
 \begin{equation*}
 \Omega = \left\{e_1; e_2; \dots; e_n \right\}, \text{ avec } n \geq 1.
 \end{equation*}
 
 Une \emph{loi de probabilité} sur $\Omega$ est l'association de chaque issue $e_i$ à un nombre $p_i$ compris entre $0$ et $1$ inclus. De plus, la somme de tous ces nombres doit être égale à $1$.
-\end{definitionbox}
+\end{definition}
 \begin{example}
 On lance un dé équilibré et on observe le résultat. Les deux associations ci-dessous sont des lois de probabilité.
 
@@ -210,9 +210,9 @@ Les expériences aléatoires suivantes sont en situation d'équiprobabilité :
 \item Le tirage d'un jeton parmi des jetons indiscernables au toucher dans une urne opaque.  
 \end{itemize}
 \end{example}
-\begin{definitionbox}
+\begin{definition}
 Soit $A$ un événement. La probabilité de $A$, notée $P(A)$, est la somme des probabilités des issues contenues par $A$.
-\end{definitionbox}
+\end{definition}
 \begin{example}
 Pour la loi de probabilité donnée par l'exercice précédent, quelle est la probabilité de l'événement $A$\og Obtenir un nombre pair\fg ?
 \end{example}
@@ -400,9 +400,9 @@ La figure suivante permet d'illustrer une idée de la démonstration de cette fo
 \end{tikzpicture}
 \end{center}
 \end{remark}
-\begin{definitionbox}
+\begin{definition}
 Soit une expérience aléatoire d'univers fini $\Omega$, et deux événements $A$ et $B$. Ces deux événements sont dits \emph{incompatibles} si et seulement s'ils n'ont pas d'issues en commun. Autrement dit, si et seulement si $A \cap B = \emptyset$.
-\end{definitionbox}
+\end{definition}
 \begin{proposition}
 Avec deux événements incompatibles $A$ et $B$, la formule précédente devient
 \begin{equation*}

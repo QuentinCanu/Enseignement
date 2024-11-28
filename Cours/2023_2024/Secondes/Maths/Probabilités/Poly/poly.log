@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.17)  10 MAY 2024 16:49
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.3.17)  25 NOV 2024 11:23
  restricted system commands enabled.
  file:line:error style messages enabled.
-**c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/Maths/Probabilités/Poly/poly.tex
-(c:/Users/quentincanu/Desktop/Enseignement/Cours/Secondes/Maths/Probabilités/Poly/poly.tex
+**c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/Maths/Probabilités/Poly/poly.tex
+(c:/Users/quentincanu/Desktop/Enseignement/Cours/2023_2024/Secondes/Maths/Probabilités/Poly/poly.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
@@ -580,6 +580,17 @@ File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \c@tkz@cnt@pair=\count339
 \c@tkz@cnt@impair=\count340
 \c@tkz@cnt@aw=\count341
+) (c:/texlive/2024/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking positions in a document
+ (c:/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-03-14 LaTeX2e option processing using LaTeX3 keys
+)
+\l__sn_x_dim=\dimen293
+\l__sn_y_dim=\dimen294
+\l__sn_xa_dim=\dimen295
+\l__sn_ya_dim=\dimen296
+) (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `amsthm' support loaded on input line 3026.
@@ -618,28 +629,28 @@ Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
 \l__siunitx_number_group_first_int=\count355
 \l__siunitx_number_group_size_int=\count356
 \l__siunitx_number_group_minimum_int=\count357
-\l__siunitx_angle_tmp_dim=\dimen293
+\l__siunitx_angle_tmp_dim=\dimen297
 \l__siunitx_angle_marker_box=\box114
 \l__siunitx_angle_unit_box=\box115
 \l__siunitx_compound_count_int=\count358
 \l__siunitx_table_tmp_box=\box116
-\l__siunitx_table_tmp_dim=\dimen294
-\l__siunitx_table_column_width_dim=\dimen295
+\l__siunitx_table_tmp_dim=\dimen298
+\l__siunitx_table_column_width_dim=\dimen299
 \l__siunitx_table_integer_box=\box117
 \l__siunitx_table_decimal_box=\box118
 \l__siunitx_table_uncert_box=\box119
 \l__siunitx_table_before_box=\box120
 \l__siunitx_table_after_box=\box121
-\l__siunitx_table_before_dim=\dimen296
-\l__siunitx_table_carry_dim=\dimen297
+\l__siunitx_table_before_dim=\dimen300
+\l__siunitx_table_carry_dim=\dimen301
 \l__siunitx_unit_tmp_int=\count359
 \l__siunitx_unit_position_int=\count360
 \l__siunitx_unit_total_int=\count361
  (c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen298
+\col@sep=\dimen302
 \ar@mcellbox=\box122
-\extrarowheight=\dimen299
+\extrarowheight=\dimen303
 \NC@list=\toks46
 \extratabsurround=\skip66
 \backup@length=\skip67
@@ -650,12 +661,12 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
  (c:/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen300
-\ESO@tempdimb=\dimen301
+\ESO@tempdima=\dimen304
+\ESO@tempdimb=\dimen305
 )
-\AM@pagewidth=\dimen302
-\AM@pageheight=\dimen303
-\AM@fboxrule=\dimen304
+\AM@pagewidth=\dimen306
+\AM@pageheight=\dimen307
+\AM@fboxrule=\dimen308
  (c:/texlive/2024/texmf-dist/tex/latex/pdfpages/ppluatex.def
 File: ppluatex.def 2024/01/21 v0.5y Pdfpages driver for LuaTeX (AM)
 )
@@ -671,14 +682,14 @@ File: ppluatex.def 2024/01/21 v0.5y Pdfpages driver for LuaTeX (AM)
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen305
-\captionmargin=\dimen306
-\caption@leftmargin=\dimen307
-\caption@rightmargin=\dimen308
-\caption@width=\dimen309
-\caption@indent=\dimen310
-\caption@parindent=\dimen311
-\caption@hangindent=\dimen312
+\caption@tempdima=\dimen309
+\captionmargin=\dimen310
+\caption@leftmargin=\dimen311
+\caption@rightmargin=\dimen312
+\caption@width=\dimen313
+\caption@indent=\dimen314
+\caption@parindent=\dimen315
+\caption@hangindent=\dimen316
 Package caption Info: Standard document class detected.
 Package caption Info: french babel package is loaded.
 )
@@ -694,14 +705,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@cnth=\count367
 \Gm@cntv=\count368
 \c@Gm@tempcnt=\count369
-\Gm@bindingoffset=\dimen313
-\Gm@wd@mp=\dimen314
-\Gm@odd@mp=\dimen315
-\Gm@even@mp=\dimen316
-\Gm@layoutwidth=\dimen317
-\Gm@layoutheight=\dimen318
-\Gm@layouthoffset=\dimen319
-\Gm@layoutvoffset=\dimen320
+\Gm@bindingoffset=\dimen317
+\Gm@wd@mp=\dimen318
+\Gm@odd@mp=\dimen319
+\Gm@even@mp=\dimen320
+\Gm@layoutwidth=\dimen321
+\Gm@layoutheight=\dimen322
+\Gm@layouthoffset=\dimen323
+\Gm@layoutvoffset=\dimen324
 \Gm@dimlist=\toks50
 ) (c:/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
@@ -726,7 +737,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \c@tcblayer=\count372
 \c@tcolorbox@number=\count373
 \l__tcobox_tmpa_box=\box130
-\l__tcobox_tmpa_dim=\dimen321
+\l__tcobox_tmpa_dim=\dimen325
 \tcb@temp=\box131
 \tcb@temp=\box132
 \tcb@temp=\box133
@@ -747,9 +758,43 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (c:/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
-\c@definition=\count380
-\c@proposition=\count381
+)) (c:/texlive/2024/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen326
+\dashlinegap=\dimen327
+\adl@box=\box135
+\adl@height=\dimen328
+\adl@heightsave=\dimen329
+\adl@depth=\dimen330
+\adl@depthsave=\dimen331
+\adl@finaldepth=\dimen332
+\adl@columns=\count380
+\adl@ncol=\count381
+\adl@currentcolumn=\count382
+\adl@currentcolumnsave=\count383
+\adl@totalheight=\count384
+\adl@totalheightsave=\count385
+\adl@dash=\count386
+\adl@gap=\count387
+\adl@cla=\count388
+\adl@clb=\count389
+\adl@everyvbox=\toks54
+\adl@LTpagetotal=\dimen333
+) (c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.sty (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count390
+\xs_countb=\count391
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (c:/texlive/2024/texmf-dist/tex/generic/systeme/systeme.tex
+\SYS_systemecode=\toks55
+\SYS_systempreamble=\toks56
+\SYSeqnum=\count392
+)
+Package: systeme 2020/05/03 v0.34 Mise en forme de systemes d'equations (CT)
+)
+\c@definition=\count393
+\c@proposition=\count394
+\c@theorem=\count395
 ) (c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip68
@@ -880,17 +925,17 @@ Package french.ldf Info: Setting StandardEnumerateEnv=true for
 LaTeX Info: Redefining \up on input line 8.
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count382
-\scratchdimen=\dimen322
-\scratchbox=\box135
-\nofMPsegments=\count383
-\nofMParguments=\count384
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count385
-\MPscratchDim=\dimen323
-\MPnumerator=\count386
-\makeMPintoPDFobject=\count387
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count396
+\scratchdimen=\dimen334
+\scratchbox=\box136
+\nofMPsegments=\count397
+\nofMParguments=\count398
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count399
+\MPscratchDim=\dimen335
+\MPnumerator=\count400
+\makeMPintoPDFobject=\count401
+\everyMPtoPDFconversion=\toks58
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -957,7 +1002,7 @@ Overfull \hbox (25.81361pt too wide) in paragraph at lines 69--86
  []
 
 [2] [3] [4]
-Overfull \hbox (13.87799pt too wide) in paragraph at lines 254--265
+Overfull \hbox (13.87791pt too wide) in paragraph at lines 254--265
  [] 
  []
 
@@ -979,16 +1024,16 @@ L3 programming layer <2024-03-14>
 )
 
 Here is how much of LuaTeX's memory you used:
- 31023 strings out of 476435
+ 32000 strings out of 476435
  100000,1977958 words of node,token memory allocated
  1169 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 29 glue, 4 kern, 1 penalty, 2 glyph, 186 attribute, 66 glue_spec, 28 attribute_list, 2 write nodes
-   avail lists: 1:2,2:10484,3:1525,4:102,5:398,6:130,7:4916,8:37,9:1240,10:14,11:284
- 52460 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:10020,3:1435,4:86,5:398,6:126,7:5178,8:37,9:1578,10:14,11:284
+ 53393 multiletter control sequences out of 65536+600000
  76 fonts using 9046239 bytes
- 132i,12n,141p,518b,1172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,14n,141p,528b,1174s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf><c:/texlive/2024/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on poly.pdf (6 pages, 88658 bytes).
+Output written on poly.pdf (6 pages, 86157 bytes).
 
 PDF statistics: 67 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
