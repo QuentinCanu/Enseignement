@@ -64,7 +64,7 @@ Proposer deux événements $A$ et $B$ dont l'intersection et l'union sont non-vi
 \end{example}
 \newpage
 \begin{definition}
-Soient $A$ et $B$ deux événements d'une expérience aléatoire d'univers $\Omega$. Alors $A$ et $B$ sont \textbf{disjoints} si et seulement si $A \cup B = \emptyset$.
+Soient $A$ et $B$ deux événements d'une expérience aléatoire d'univers $\Omega$. Alors $A$ et $B$ sont \textbf{disjoints} si et seulement si $A \cap B = \emptyset$.
 \end{definition}
 \begin{definition}
 Soit une expérience aléatoire d'univers $\Omega$. Une \textbf{probabilité} sur $\Omega$ associe à tout événement $A$ un nombre réel $P(A)$ compris entre $0$ et $1$, et vérifie deux propriétés :
@@ -157,6 +157,160 @@ Soit une expérience aléatoire d'univers $\Omega$, et deux événements $A$ et 
 \end{proposition}
 \end{tcolorbox}
 
+\subsection{Tableau}
+
+Certaines expériences aléatoires se prêtent bien à l'utilisation de tableaux à double entrée.
+\begin{example}
+La somme du résultat du lancer de deux dés est un bon exemple, car il peut être résumé comme ceci :
+\begin{center}
+\begin{tabular}{|c|*{6}{p{1.5cm}|}}
+\hline
+ &1&2&3&4&5&6\\
+\hline
+1&2&3&4&5&6&7\\
+\hline
+2&3&4&5&6&7&8\\
+\hline
+3&4&5&6&7&8&9\\
+\hline
+4&5&6&7&8&9&10\\
+\hline
+5&6&7&8&9&10&11\\
+\hline
+6&7&8&9&10&11&12\\
+\hline
+\end{tabular}
+\end{center}
+Puisque toutes les cases correspondent à des situations équiprobables, il devient très facile de calculer la probabilité d'obtenir la somme de votre choix.
+\end{example}
+
+\newpage
+
+\section{Théorie des probabilités}
+Nous allons chercher à comprendre les règles de calculs donnés par l'arbre pondéré.
+
+\subsection{Probabilités conditionnelles}
+
+\begin{tcolorbox}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$, et $A$ et $B$ deux événenements de $\Omega$. On suppose de plus que $P(A) \neq 0$.
+
+Alors, la \textbf{probabilité de $A$ sachant $B$}, notée $P_{A}(B)$, est la probabilité que $B$ se réalise \textbf{sachant} que $A$ s'est déjà réalisé.
+\end{definition}
+\end{tcolorbox}
+
+\begin{example}
+Une usine produit des vis et des clous. Certaines pièces ont une défaut de fabrication. On prend une pièce produite par cette usine au hasard.
+
+On note $V$\og La pièce choisie est une vis\fg et $D$\og La pièce choisie a un défaut de fabrication\fg. Dans chacune des situations suivantes, donner la probabilité correspondante (en choisissant bien la bonne notation)
+
+\begin{enumquestions}
+\item Il y a $4\%$ de vis présentant un défaut de fabrication parmi toutes les pièces produites par l'usine.
+\item Il y a $2\%$ de vis présentant un défaut de fabrication parmi les vis produites par l'usine.     
+\end{enumquestions}
+\vspace*{0.5cm}
+
+\emptybox{2cm}
+\end{example}
+
+\begin{proposition}[Formule des probabilités composées]
+Soit $A$ et $B$ deux événements de $\Omega$ tels que $P(A) \neq 0$. Alors 
+\begin{equation*}
+P(A \cap B) = P(A) \times P_A(B)
+\end{equation*}
+\end{proposition}
+
+\begin{remark}
+Il s'agit de la règle de calcul de la probabilité d'une branche dans un arbre pondéré.
+\end{remark}
+
+\begin{tcolorbox}
+\begin{proposition}
+Soit $A$ et $B$ deux événements de $\Omega$ tels que $P(A) \neq 0$. Alors 
+\begin{equation*}
+P_A(B) = \dfrac{P(A \cap B)}{P(A)}
+\end{equation*}
+\end{proposition}
+\end{tcolorbox}
+\begin{example}
+On tire une bille au hasard dans un sac. Chaque bille est grosse ou petite, et chaque bille est rouge ou verte. On note $R$ \og La bille est rouge\fg, et $G$ \og la bille est grosse \fg. Alors le tableau suivant donne la répartition du sac.
+\begin{center}
+\begin{tabular}{|c|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+\hline
+ &$R$&$\overbar{R}$&Total\\
+\hline
+$G$&12&8&20\\
+\hline
+$\overbar{G}$&7&13&20\\
+\hline
+Total&19&21&40\\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumquestions}
+\item Quelle est la probabilité d'obtenir une grosse bille rouge ?
+\item Quelle est la probabilité d'obtenir une petite bille, sachant que la bille tirée est verte ?
+\end{enumquestions}
+\vspace*{0.5cm}
+
+\emptybox{3cm}
+\end{example}
+
+\newpage
+\subsection{Partition de l'univers}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$. On dit que des événements $A_1$, $A_2$, \dots $A_n$ forment une \textbf{partition de $\Omega$} si et seulement si
+\begin{equation*}
+\begin{cases}
+A_1 \cup A_2 \cup \dots \cup A_n = \Omega\\
+\text{$A_1$, $A_2$ \dots $A_n$ sont disjoints deux à deux} 
+\end{cases}
+\end{equation*}
+\end{definition}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Créer une partition de $\Omega$, c'est regrouper chaque issue de $\Omega$ dans un unique paquet.
+\item Soit $A$ un événement de $\Omega$, alors $A$ et $\overbar{A}$ forment une partition de $\Omega$. 
+\end{itemize}
+\end{remark}
+
+\begin{example}
+On considère le lancer d'un seul dé équilibré. Alors si $A$\og le résultat est pair\fg, $B$\og le résultat est $1$\fg et $C$ \og le résultat est impair supérieur ou égal à $3$\fg, on en déduit que $A$, $B$ et $C$ forment une partition de l'univers de l'expérience.
+\end{example}
+
+\begin{proposition}[formule des probabilités totales]
+Soit $B$ un évenement, et $A_1$, $A_2$, \dots, $A_n$ une partition de $\Omega$. Alors,
+\begin{equation*}
+P(B) = P(B \cap A_1) + P(B \cap A_2) + \dots + P(B \cap A_n)
+\end{equation*}
+\end{proposition}
+
+\begin{remark}
+Le schéma suivant permet de visualiser la situation.
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) ellipse (4.5 and 1.5);
+\draw (0,0) ellipse (3 and 1);
+\draw (4.5,0) node[right] {$\Omega$};
+\draw (3,0) node[right] {$B$};
+\draw (-3,1.5) node {$A_1$};
+\draw (-0.5,1.8) node {$A_2$};
+\draw (1.5,1.8) node {$A_3$};
+\draw (3,1.5) node {$A_4$};
+\clip (0,0) ellipse (4.5 and 1.5);
+\draw (1,1.5) -- (1,-1.5);
+\draw (2.5,1.5) -- (2.5,-1.5);
+\draw (-2.5,1.5) -- (-2.5,-1.5);
+\end{tikzpicture}
+\end{center}
+\end{remark}
+
+\begin{remark}
+La formule des probabilité totale correspond à la méthode de calcul de la probabilité de plusieurs branches d'un arbre pondéré.
+
+À chaque hauteur de l'arbre, il faut donc s'assurer que tous les événements originaires d'une même branche forment une partition de l'univers $\Omega$. 
+\end{remark}
 % \begin{definition}
 % Soit une expérience aléatoire d'univers $\Omega$. Des événements $A_1, \dots, A_k$ forment une \textbf{partition} d'$\Omega$ si et seulement si :
 % \begin{itemize}
