@@ -311,36 +311,51 @@ La formule des probabilité totale correspond à la méthode de calcul de la pro
 
 À chaque hauteur de l'arbre, il faut donc s'assurer que tous les événements originaires d'une même branche forment une partition de l'univers $\Omega$. 
 \end{remark}
-% \begin{definition}
-% Soit une expérience aléatoire d'univers $\Omega$. Des événements $A_1, \dots, A_k$ forment une \textbf{partition} d'$\Omega$ si et seulement si :
-% \begin{itemize}
-% \item Les $A_i$ sont deux à deux disjoints : il n'y a pas d'issue commune entre deux événements $A_i$.
-% \item L'union $A_1 \cup \dots \cup A_k$ vaut $\Omega$ : toutes les issues possibles sont réalisées par un unique événement $A_i$.
-% \end{itemize}
-% \end{definition}
-% \begin{center}
-% \begin{tikzpicture}
-% \draw (0,0) -- (5,0) -- (5,4) node[below left] {$\Omega$} -- (0,4) -- cycle;
-% \draw (1,0) -- (2,4);
-% \draw (3,0) -- (3,4);
-% \draw (0.5,2) node {$A_1$};
-% \draw (2,2) node {$A_2$};
-% \draw (4,2) node {$A_3$};
-% \end{tikzpicture}
 
-% \textbf{$A_1$, $A_2$ et $A_3$ forment une partition d'$\Omega$}
-% \end{center}
-% \begin{remark}
-% Si $A$ est un événement, alors $A$ et $\overbar{A}$ est une partition de $\Omega$.
-% \end{remark}
-% \begin{proposition}
-% Soit $A_1, \dots, A_k$ une partition de $\Omega$, et $B$ un événement de $\Omega$. Alors, les événements $(B \cap A_1)$, \dots, $(B \cap A_k)$ sont disjoints, et 
-% \begin{equation*}
-% B = (B \cap A_1) \cup \dots \cup (B \cap A_k)
-% \end{equation*}
-% \end{proposition}
-% \begin{definition}
-% Un \textbf{arbre pondéré} permet de représenter plusieurs événements
-% \end{definition}
+\newpage
+
+\section{Indépendance}
+
+\begin{tcolorbox}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$, et $P$ une probabilité sur $\Omega$.
+
+Soit $A$ et $B$ deux événements de $\Omega$. Alors, $A$ et $B$ sont dits \textbf{indépendants} si et seulement si $P(A \cap B) = P(A)P(B)$.
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+On lance deux dés : un dé rouge et un dé bleu. On pose les événements $A$ \og le dé rouge renvoie un résultat pair\fg, et $B$ \og le dé bleu renvoie un résulat supérieur ou égal à $4$\fg. Les événements $A$ et $B$ sont-ils indépendants ?
+\vspace*{0.5cm}
+
+\emptybox{2cm}
+\end{example}
+\begin{proposition}
+Soit $A$ et $B$ deux événements, tels $P(A) \neq 0$. Alors, si $A$ et $B$ sont indépendants, on a
+\begin{equation*}
+P_A(B) = P(B)
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Quand deux événements sont indépendants, cela signifie que la réalisation de l'un n'a pas d'influence sur la réalisation de l'autre.
+
+À ne pas confondre avec des événements \textbf{incompatibles} ($P(A \cap B) = 0$).
+\end{remark}
+\begin{proof}
+\hfill
+\vspace*{0.5cm}
+\hfill
+
+\emptybox{3cm}
+\end{proof}
+\begin{proposition}
+Soit $A$ et $B$ deux événenements indépendants de $\Omega$. Alors $\overbar{A}$ et $B$ sont indépendants.
+\end{proposition}
+\begin{proof}
+\hfill
+\vspace*{0.5cm}
+\hfill
+
+\emptybox{3cm}
+\end{proof}
 
 \end{document}
