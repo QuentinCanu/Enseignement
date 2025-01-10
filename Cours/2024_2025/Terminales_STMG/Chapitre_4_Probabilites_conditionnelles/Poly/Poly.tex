@@ -49,4 +49,33 @@ Soit une expérience aléatoire d'univers $\Omega$, et deux événements $A$ et 
 \end{itemize}        
 \end{proposition}
 \end{tcolorbox}
+
+\newpage
+\section{Probabilités conditionnelles}
+\begin{tcolorbox}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$, et $A, B$ deux événements de $\Omega$. On suppose de plus que $P(A) \neq 0$. Alors, la \textbf{probabilité de $B$ sachant $A$}, noté $P_A(B)$, est la probabilité que $B$ se réalise tout en sachant que $A$ s'est déjà réalisé.
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soit une expérience aléatoire d'univers $\Omega$, et $A, B$ deux événements de $\Omega$. On suppose de plus que $P(A) \neq 0$. Alors, on a la formule
+\begin{equation*}
+P_A(B) = \dfrac{P(A \cap B)}{P(A)}    
+\end{equation*}
+\end{proposition}
+\begin{proposition}[Formule des probabilités composées] Soit une expérience aléatoire d'univers $\Omega$, et $A, B$ deux événements de $\Omega$. On suppose de plus que $P(A) \neq 0$. Alors,
+\begin{equation*}
+P(A \cap B) = P(A)P_A(B)
+\end{equation*}    
+\end{proposition}
+\begin{example}
+Il y a dans une urne trois boules rouges et deux boules noires. On tire deux boules successivement, sans remise. On pose $A$ l'événement \og la première boule est rouge\fg et $B$ l'événement \og la deuxième boule est rouge \fg.
+\begin{enumquestions}
+\item Donner $P_A(B)$ à l'aide du contexte.
+\item Calculer $P(A \cap B)$.
+\end{enumquestions}
+
+\emptybox{2cm}
+\end{example}
+
 \end{document}
