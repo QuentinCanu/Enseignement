@@ -1,0 +1,89 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : Probabilités conditionnelles, indépendance}
+\author{Première Spécialité Mathématiques}
+\date{15 Janvier 2024}
+
+\begin{document}
+\maketitle
+\begin{questions}
+\titledquestion{Arbre pondéré}[5]
+Un prof de maths prépare deux contrôles pour ses élèves : le contrôle de Décembre et le contrôle de Janvier.
+
+Il y a une probabilité de $60\%$ qu'il inclut en décembre un exercice de géométrie :
+\begin{itemize}
+\item Si c'est le cas, alors il inclura un exercice de géométrie en Janvier avec une probabilité de $12\%$.
+\item Si ce n'est pas le cas, alors il inclura un exercice de géométrie en Janvier avec une probabilité de $45\%$.
+\end{itemize}
+
+On note $D$ \og Le contrôle de décembre comporte un exercice de géométrie \fg et $J$ \og Le contrôle de janvier comporte un exercice de géométrie \fg.
+
+\begin{parts}
+\part[1] Dessiner un arbre pondéré présentant la situation.
+\part[1] Dire en français à quoi correspond la probabilité $P_D(J)$, puis donner sa valeur.
+\part[1] Dire en français à quoi correspond l'événement $D \cap J$, puis calculer $P(D \cap J)$.
+\part[1] Calculer $P(J)$.
+\part[1] Dire en français à quoi correspond l'événement $D \cup J$, puis calculer $P(D \cup J)$.
+\end{parts}
+\vspace*{1cm}
+
+\titledquestion{Football}[5]
+On considère les 23 joueurs vainqueurs de la coupe du monde de Football, et on regarde leur poste et s'ils jouaient en France ou à l'étranger durant la saison 2017-2018.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&France&Étranger&Total\\
+\hline
+Gardien&$2$&$1$&$3$\\
+\hline
+Défenseur&$3$&$5$&$8$\\
+\hline
+Milieu&$1$&$5$&$6$\\
+\hline
+Attaquant&$3$&$3$&$6$\\
+\hline
+Total&$9$&$14$&$23$\\
+\hline
+\end{tabular}
+\end{center}
+On tire un joueur au hasard. On définit les événements suivants :
+\begin{itemize}
+\item $G$ \og Le joueur est gardien \fg
+\item $D$ \og Le joueur est défenseur \fg
+\item $M$ \og Le joueur est milieu \fg
+\item $A$ \og Le joueur est attaquant \fg
+\item $F$ \og Le joueur a joué en France durant la saison 2017-2018 \fg 
+\end{itemize}
+\begin{parts}
+\part[1] Calculer $P(G)$ et $P(F)$.
+\part[1] Calculer $P_M(F)$, $P_F(M)$ et $P_F(A)$.
+\part[1] Calculer $P_G(\overbar{F})$ et $P_{\overbar{F}}(D)$.
+\part[1] Trouver une probabilité conditionnelle valant $\dfrac{5}{8}$.
+\part[1] Calculer $P_{G \cup D}(F)$ et $P_{\overbar{F}}(M \cup A)$.
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Formule de Bayes}[5]
+\begin{parts}
+\part[1] Soit une expérience aléatoire d'univers $\Omega$, et $A$ et $B$ deux événements d'$\Omega$. On suppose de plus que $P(A) \neq 0$ et $P(B) \neq 0$. Rappeler l'expression de $P_A(B)$ en fonction de $P(A \cap B)$ et de $P(A)$.
+\part[2] En déduire que $P_B(A) = \dfrac{P(A)}{P(B)}P_A(B)$ (Théorème de Bayes).
+\part[2] Soit une urne opaque contenant deux boules rouges et trois boules vertes. On tire deux boules successivement sans remise. On note $A$ \og la première boule est verte\fg et $B$ la deuxième boule est verte.
+\begin{subparts}
+\subpart[1] Calculer $P(B)$.
+\subpart[1] En déduire $P_B(A)$ à l'aide du théorème de Bayes.
+\end{subparts}
+\end{parts}
+\titledquestion{Urnes}[5]
+Une urne contient 3 boules : 1 rouge, 1 verte et une bleue. On vide l'urne après tirages successifs des boules (sans remise). On considère les événements suivants :
+\begin{itemize}
+\item $A$ \og La boule rouge est tirée avant la boule bleue\fg;
+\item $B$ \og La boule rouge est tirée lors du premier tirage\fg;
+\item $C$ \og La boule rouge est tirée lors du deuxième tirage\fg;
+\end{itemize}
+\begin{parts}
+\part[1] Déterminer les probabilités de ces trois événements.
+\part[2] Les événements $A$ et $B$ sont-ils indépendants ?
+\part[2] Les événements $A$ et $C$ sont-ils indépendants ?
+\end{parts}
+\end{questions}
+\end{document}

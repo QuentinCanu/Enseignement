@@ -78,4 +78,53 @@ Il y a dans une urne trois boules rouges et deux boules noires. On tire deux bou
 \emptybox{2cm}
 \end{example}
 
+\newpage
+\section{Indépendance}
+\begin{tcolorbox}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$. On considère $A, B$ deux événements de $\Omega$. On dit que $A$ et $B$ sont \textbf{indépendants} si et seulement si
+\begin{equation*}
+P(A \cap B) = P(A) \times P(B)
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+\begin{proposition}
+Soit une expérience aléatoire d'univers $\Omega$. On considère $A, B$ deux événements de $\Omega$. On suppose de plus que $P(A) \neq 0$ et $P(B) \neq 0$. Alors, $A$ et $B$ sont indépendants si et seulement si
+\begin{equation*}
+P_A(B) = P(B) \text{ ou } P_B(A)=P(A)
+\end{equation*}
+\end{proposition}
+\begin{remark}
+\emph{Deux événements sont indépendants si le fait de savoir la réalisation de l'un n'a pas d'influence sur la réalisation de l'autre} 
+\end{remark}
+\begin{example}
+On lance deux fois une pièce équilibrée, les événements $A$ \og le premier lancer a donné face\fg et $B$ \og le deuxième lancer a donné pile \fg sont-ils indépendants ?
+\vspace*{0.5cm}
+
+\emptybox{2cm}
+
+On lance un dé rouge et un dé bleu, et on regarde le résultat des deux dés. On pose les événements suivants :
+\begin{itemize}
+\item $A$ \og le dé rouge renvoie $2$ \fg
+\item $B$ \og la somme des deux dés vaut $5$ \fg
+\item $C$ \og la somme des deux dés vaut $7$ \fg
+\end{itemize}
+\begin{enumquestions}
+\item Les événements $A$ et $B$ sont-ils indépendants ?
+\item Les événements $A$ et $C$ sont-ils indépendants ?
+\end{enumquestions}
+\vspace*{0.5cm}
+
+\emptybox{5cm}
+\end{example}
+\section{Résumé des formules en probabilités}
+Soient $A$ et $B$ deux événements d'une expérience aléatoire d'univer $\Omega$.
+\begin{itemize}
+\item $P(\overbar{A}) = 1 - P(A)$
+\item $P(A \cap B) = P(A)P_A(B)$ (quand $P(A) \neq 0$)
+\item $P(A \cap B) = P(A)P(B)$ (quand $A$ et $B$ sont indépendants)
+\item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+\item $P(A \cup B) = P(A) + P(B)$ (quand $A$ et $B$ sont disjoints).
+\end{itemize}
+
 \end{document}
