@@ -417,5 +417,84 @@ Représenter $]-3;-1[$.
 \end{tikzpicture}
 \end{center}
 \end{remark}
+\newpage
+\subsection{Valeur absolue, distance}
+\begin{tcolorbox}
+\begin{definition}
+Soit $x$ un nombre réel. La \textbf{valeur absolue} de $x$, notée $\abs{x}$, est un nombre donné par :
+\begin{equation*}
+\abs{x} = \begin{cases}
+x&\text{ si }x \geq 0\\
+-x&\text{ si }x < 0\\
+\end{cases}
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+\begin{example}
+Calculer les valeurs absolues suivantes :
+\begin{enumquestions}
+\item $\abs{7} = $ \answersline
+\item $\abs{-8} = $ \answersline
+\item $\abs{3,7} = $ \answersline
+\item $\abs{- 6,575757\dots} = $ \answersline
+\item $\abs{\pi} = $ \answersline
+\item $\abs{-\sqrt{5}} = $ \answersline
+\end{enumquestions}
+\end{example}
+\begin{remark}
+La valeur absolue d'un nombre est ce même nombre, \textbf{éventuellement débarassé du signe moins}.
+\end{remark}
+\begin{tcolorbox}
+\begin{definition}
+Soient $a$ et $b$ deux nombres réels. La \textbf{distance} entre $a$ et $b$ est donnée par la grandeur $\abs{a - b}$.
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Cette notion de distance est équivalente à la longueur du segment entre les points correspondant à $a$ et $b$ sur la droite des réels.
+\end{remark}
+\begin{proposition}
+Soit $x$ un nombre réel, et $n$ un entier naturel. Alors il existe $d \in \D$ tel que
+\begin{equation*}
+\abs{x - d} \leq 10^{-n}
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Le nombre $d$ est appelé \textbf{approximation de $x$} jusqu'à la $n$\ieme{} décimale.
+\end{remark}
+\begin{example}
+Donner l'approximation correspondante aux nombres suivants, jusqu'à la $n$\ieme{} décimale :
+\begin{enumquestions}
+\item $x = 7,333\dots$ et $n = 2$ : $d = 7,33$
+\item $x = \pi$ et $n = 5$ : $d = $ \answersline 
+\item $x = \dfrac{12}{7}$ et $n = 3$ : $d = $ \answersline 
+\end{enumquestions}
+\end{example}
+\begin{proposition}
+Soit $c$ un nombre réel et $r$ un nombre réel \textbf{positif}. Alors, l'ensemble des nombres $x$ vérifiant $\abs{x - c} \leq r$ est donné par l'intervalle
+\begin{equation*}
+\left[c-r;c+r\right]
+\end{equation*}
+\end{proposition}
+\begin{remark}
+En français, l'inégalité $\abs{x - c} \leq r$ signifie que \og la distance entre $x$ et $c$ est inférieure à $r$ \fg. Cela se traduit de la façon suivante sur la droite des réels.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->, thick] (-5,0) -- (5,0);
+\draw (1,-0.25) -- (1,0.25) node[above] {$c$}; 
+\draw (3,-0.25) -- (3,0.25) node[above] {$c+r$}; 
+\draw (-1,-0.25) -- (-1,0.25) node[above] {$c-r$};
+\draw[<->] (-1,-0.4) -- (1,-0.4) node[midway,below] {$r$}; 
+\draw[<->] (1,-0.4) -- (3,-0.4) node[midway,below] {$r$}; 
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{example}
+Donner l'ensemble $S$ des solutions  de toutes les inéquations suivantes d'inconnue $x$ :
+\begin{enumquestions}
+\item $\abs{x-6} \leq 3$; $S = $ \answersline
+\item $\abs{x + \dfrac{3}{4}} \leq 1$; $S = $ \answersline
+\end{enumquestions}
+\end{example}
 \end{document}
 
