@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Activité : La légende de Sissa}
+\author{TSTMG2}
+\date{4 Mars 2024}
+
+\begin{document}
+\maketitle
+
+\begin{tcolorbox}
+L'origine du jeu d'échecs a donné lieu a diverses légendes et mythes (le consenssus scientifique est que le jeu a vu le jour en Inde au VI\ieme{} siècle). L'une de ces légendes est celle attribué au sage Sissa. Il y est raconté que pour récompenser ce sage à l'origine de la création du jeu, son roi lui a offert de choisir sa récompense. Sissa formula alors la requête suivante :
+\begin{quote}
+Il suffit de poser des grains de riz sur chaque case d'un échiquier: 1 grain de riz sur la 1\iere{} case; 2 sur la 2\ieme{}; 4 sur la 3\ieme{}; 8 sur la 4\ieme{}; et ainsi de suite\dots
+\end{quote}
+\end{tcolorbox}
+\begin{enumquestions}
+\item Combien y a-t-il de cases en tout sur un échiquier de jeu d'échecs ?
+\item Soit $u_n$ la quantité de grain de riz sur la $n$\ieme{} case. Justifier que la suite $(u_n)_{n \in \N^*}$ est géométrique, en précisant son premier terme et sa raison.
+\item En déduire une expression de $u_n$ en fonction de $n$.
+\item Justifier que la quantité totale de riz correspondant à la récompense de Sissa est donnée par
+\begin{equation*}
+S = 1 + 2 + 2^2 + 2^3 + \dots + 2^{63}
+\end{equation*}
+\item Justifier que $2S = 2 + 2^2 + 2^3 + \dots + 2^{63} + 2^{64}$
+\item En déduire que $S - 2S = 1 - 2^{64}$, puis en déduire la valeur exacte de $S$.
+\item Sachant qu'un grain de riz mesure \qty{5,2}{\milli\meter}, si l'on pose bout à bout tout le riz de la récompense de Sissa, quelle longueur obtient-on ? Comparer cette longueur à la distance Terre-Soleil.
+\end{enumquestions}
+\end{document}

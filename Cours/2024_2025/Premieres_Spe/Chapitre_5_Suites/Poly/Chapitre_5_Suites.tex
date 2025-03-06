@@ -112,4 +112,212 @@ Soit $(u_n)_{n \in \N}$ une suite numérique.
 \end{enumquestions}
 \emptybox{6cm}
 \end{example}
+\newpage
+\section{Suites arithmétiques}
+\begin{tcolorbox}
+\begin{definition}
+Soit $(u_n)_{n \in \N}$ une suite numérique. On dit que la suite est \textbf{arithmétique} si et seulement il existe $r \in \R$ tel que
+\begin{equation*}
+u_{n+1} = u_n + r
+\end{equation*}
+Dans ce cas, on dit que $(u_n)_{n \in \N}$ est la suite arithmétique de \textbf{premier terme} $u_0$ et de \textbf{raison} $r$.
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Le calcul des termes d'une suite arithmétique de raison $r \in \R$ peut être schématisé comme suit :
+\begin{center}
+\begin{tikzpicture}
+\node[draw,circle] (0) at (0,0) {$u_0$};
+\node[draw,circle] (1) at (2,0) {$u_1$};
+\node[draw,circle] (2) at (4,0) {$u_2$};
+\node[draw,circle] (3) at (6,0) {$u_3$};
+\node[draw,circle] (4) at (8,0) {$u_4$};
+\node (5) at (10,0) {$\dots$};
+\draw[->] 
+    (0) -- node[midway,above] {$+r$} 
+    (1) -- node[midway,above] {$+r$}
+    (2) -- node[midway,above] {$+r$}
+    (3) -- node[midway,above] {$+r$}
+    (4) -- node[midway,above] {$+r$}
+    (5);
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{example}
+Calculer les termes $u_1$, $u_2$ et $u_3$ pour chaque définition suivante :
+\begin{enumquestions}
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $0$ et de raison $1$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $1$ et de raison $2$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $10$ et de raison $-\dfrac{1}{2}$ : \answersline
+\end{enumquestions}
+\end{example}
+\begin{proposition}[Variation d'une suite arithmétique]
+Soit $(u_n)_{n \in \N}$ une suite arithmétique de raison $r \in \R$.
+\begin{itemize}
+\item La suite $(u_n)_{n \in \N}$ est croissante si et seulement si $r \geq 0$. 
+\item La suite $(u_n)_{n \in \N}$ est décroissante si et seulement si $r \leq 0$. 
+\end{itemize}
+\end{proposition}
+\begin{remark}
+Dans le cas particulier où $r = 0$, on dit que la suite $(u_n)_{n \in \N}$ est \textbf{constante}.
+\end{remark}
+\begin{proposition}[Formule explicite d'une suite arithmétique]
+Soit $(u_n)_{n \in \N}$ une suite arithmétique de raison $r \in \R$. Alors, pour tout $n \in \N$, on observe
+\begin{equation*}
+u_n = u_0 + n \times r
+\end{equation*}
+\end{proposition}
+\begin{remark}
+On peut résumer cette formule à l'aide du schéma suivant :
+\begin{center}
+\begin{tikzpicture}
+\node[draw,circle] (0) at (0,0) {$u_0$};
+\node[draw,circle] (1) at (2,0) {$u_1$};
+\node[draw,circle] (2) at (4,0) {$u_2$};
+\node[draw,circle] (3) at (6,0) {$u_3$};
+\node[draw,circle] (4) at (8,0) {$u_4$};
+\node (5) at (10,0) {$\dots$};
+\draw[->] 
+    (0) -- node[midway,above] {$+r$} 
+    (1) -- node[midway,above] {$+r$}
+    (2) -- node[midway,above] {$+r$}
+    (3) -- node[midway,above] {$+r$}
+    (4) -- node[midway,above] {$+r$}
+    (5);
+\draw[->] (0) to[bend right] node[midway,below] {$4 \times r$} (4);
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{example}
+Pour chacune des définitions suivantes de $(u_n)_{n \in \N}$, calculer $u_{10}$ :
+\begin{enumquestions}
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $6$ et de raison $5$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $0$ et de raison $-2$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $1$ et de raison $\dfrac{1}{5}$ : \answersline
+\end{enumquestions}
+\end{example}
+\begin{tcolorbox}
+\begin{proposition}
+Si $(u_n)_{n \in \N}$ est une suite arithmétique, alors les points de sa représentation graphique sont alignés sur la droite d'équation $y = rx + u_0$ :
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-0.25,-0.25) grid[step=0.5] (8.25,5.25);
+\draw[thick,->] (0,-0.25) -- (0,5.25) node[above] {$u_n$};
+\draw[thick,->] (-0.25,0) -- (8.25,0) node[right] {$n$};
+\foreach \x in {1,...,7}
+{\draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};}
+\foreach \x in {1,...,4}
+{\draw[thick] (0.1,\x) -- (-0.1,\x) node[left] {$\x$};}
+\draw (0,0) node[below left] {$O$};
+
+\draw (0,3) node {$\times$};
+\draw (1,2.5) node {$\times$};
+\draw (2,2) node {$\times$};
+\draw (3,1.5) node {$\times$};
+\draw (4,1) node {$\times$};
+\draw (5,0.5) node {$\times$};
+\draw (6,0) node {$\times$};
+\draw[dashed] (-0.25,3.125) -- (6.5,-0.25);
+\end{tikzpicture}
+\end{center}
+On dit que les suites arithmétiques permettent de modéliser des \textbf{évolutions linéaires}. 
+\end{proposition}
+\end{tcolorbox}
+
+\newpage
+\section{Suites géométriques}
+\begin{tcolorbox}
+\begin{definition}
+Soit $(u_n)_{n \in \N}$ une suite numérique. On dit que la suite est \textbf{géométrique} si et seulement il existe $q \in \R$ tel que
+\begin{equation*}
+u_{n+1} = u_n \times q
+\end{equation*}
+Dans ce cas, on dit que $(u_n)_{n \in \N}$ est la suite géométrique de \textbf{premier terme} $u_0$ et de \textbf{raison} $q$.
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Le calcul des termes d'une suite géométrique de raison $q \in \R$ peut être schématisé comme suit :
+\begin{center}
+\begin{tikzpicture}
+\node[draw,circle] (0) at (0,0) {$u_0$};
+\node[draw,circle] (1) at (2,0) {$u_1$};
+\node[draw,circle] (2) at (4,0) {$u_2$};
+\node[draw,circle] (3) at (6,0) {$u_3$};
+\node[draw,circle] (4) at (8,0) {$u_4$};
+\node (5) at (10,0) {$\dots$};
+\draw[->] 
+    (0) -- node[midway,above] {$\times q$} 
+    (1) -- node[midway,above] {$\times q$}
+    (2) -- node[midway,above] {$\times q$}
+    (3) -- node[midway,above] {$\times q$}
+    (4) -- node[midway,above] {$\times q$}
+    (5);
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{example}
+Calculer les termes $u_1$, $u_2$ et $u_3$ pour chaque définition suivante :
+\begin{enumquestions}
+\item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $1$ et de raison $2$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $64$ et de raison $\dfrac{1}{2}$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $1000$ et de raison $-0,1$ : \answersline
+\end{enumquestions}
+\end{example}
+\begin{proposition}[Variation d'une suite géométrique]
+Soit $(u_n)_{n \in \N}$ une suite géométrique de raison $q \in \R$. \textbf{On suppose que son premier terme $u_0$ est non nul}.
+\begin{itemize}
+\item Si $q > 1$ :
+\begin{itemize}
+\item Si $u_0 > 0$, alors $(u_n)_{n \in \N}$ est strictement croissante.
+\item Si $u_0 < 0$, alors $(u_n)_{n \in \N}$ est strictement décroissante.
+\end{itemize}
+\item Si $0 < q < 1$ : 
+\begin{itemize}
+\item Si $u_0 > 0$, alors $(u_n)_{n \in \N}$ est strictement décroissante.
+\item Si $u_0 < 0$, alors $(u_n)_{n \in \N}$ est strictement croissante. 
+\end{itemize}
+\item Si $q = 0$ ou $q = 1$, alors $(u_n)_{n \in \N}$ est constante à partir du terme $u_1$.
+\item Si $q < 0$, alors la suite n'est pas \textbf{monotone} (elle n'est ni croissante, ni décroissante).
+\end{itemize}
+\end{proposition}
+\begin{proposition}[Formule explicite d'une suite arithmétique]
+Soit $(u_n)_{n \in \N}$ une suite géométrique de raison $q \in \R$. Alors, pour tout $n \in \N$, on observe
+\begin{equation*}
+u_n = u_0 \times q^n
+\end{equation*}
+\end{proposition}
+\begin{remark}
+On peut résumer cette formule à l'aide du schéma suivant :
+\begin{center}
+\begin{tikzpicture}
+\node[draw,circle] (0) at (0,0) {$u_0$};
+\node[draw,circle] (1) at (2,0) {$u_1$};
+\node[draw,circle] (2) at (4,0) {$u_2$};
+\node[draw,circle] (3) at (6,0) {$u_3$};
+\node[draw,circle] (4) at (8,0) {$u_4$};
+\node (5) at (10,0) {$\dots$};
+\draw[->] 
+    (0) -- node[midway,above] {$\times q$} 
+    (1) -- node[midway,above] {$\times q$}
+    (2) -- node[midway,above] {$\times q$}
+    (3) -- node[midway,above] {$\times q$}
+    (4) -- node[midway,above] {$\times q$}
+    (5);
+\draw[->] (0) to[bend right] node[midway,below] {$\times q^4$} (4);
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{example}
+Pour chacune des définitions suivantes de $(u_n)_{n \in \N}$, calculer $u_{10}$ :
+\begin{enumquestions}
+\item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $1$ et de raison $-2$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $5^{10} = \num{9765625}$ et de raison $\dfrac{1}{5}$ : \answersline
+\end{enumquestions}
+\end{example}
+\begin{tcolorbox}
+\begin{definition}
+Les suites géométriques permettent de modéliser des évolutions dites \textbf{exponentielles}.         
+\end{definition}
+\end{tcolorbox}
+
 \end{document}

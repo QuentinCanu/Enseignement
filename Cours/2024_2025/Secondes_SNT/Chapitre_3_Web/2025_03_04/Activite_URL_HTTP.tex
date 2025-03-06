@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Activité : URL et HTTP}
+\author{Seconde 9}
+\date{5 Mars 2025}
+
+\begin{document}
+\maketitle
+
+\section{URL}
+\begin{tcolorbox}
+Le Web est constitué de serveurs hébergeant des pages web. Une page web est identifiée à l'aide d'une adresse URL. Une adresse URL utilise le format suivant :
+\url{https://ent.iledefrance.fr/welcome}
+
+Il est composé de plusieurs éléments :
+\begin{itemize}
+\item \url{https://} : Le protocole utilisé (voir partie \ref{http}). La différence avec \url{http://} est la fait que la connexion est sécurisée.
+\item \url{ent.iledefrance.fr} : L'adresse symbolique du serveur. Il correpond à l'adresse présent sur votre DNS : on peut donc remplacer cette adresse par l'adresse IP correspondante.
+\item \url{/welcome} : L'emplacement de la page web correspondante sur le serveur.  
+\end{itemize}
+\end{tcolorbox}
+\begin{enumquestions}
+\item Certaines adresses URL contiennent aussi des informations supplementaires pour aider votre navigateur. Dans chacune des situations, identifier cette information supplémentaire.
+\begin{itemize}
+\item Ancre (\#) \url{https://fr.wikipedia.org/wiki/World_Wide_Web} et \url{https://fr.wikipedia.org/wiki/World_Wide_Web#Histoire}
+
+\answersline
+
+\answersline
+\item Paramètre (?) \url{https://www.google.com/} et \url{https://www.google.com/search?q=triangle+de+sierpinski}
+
+\answersline
+
+\answersline
+\end{itemize}
+\item Identifier les composantes des addresses URL suivantes :
+\begin{itemize}
+\item \url{https://www.larrousse.fr/dictionnaires/anglais-francais/request}
+
+\answersline
+\item \url{https://www.youtube.com/watch?v=e6uLDvUUs8A}
+
+\answersline
+\end{itemize}
+\item 
+\begin{enumerate}
+\item Où vous envoie l'adresse URL \url{https://172.217.20.174/search?q=flocon+de+koch} sur votre navigateur ?
+\item Trouver l'adresse IP du serveur \url{random.org} et donner l'adresse URL équivalente de \url{https://www.random.org/playing-cards/}. 
+\end{enumerate}
+\end{enumquestions}
+\newpage
+\section{HTTP}
+\label{http}
+\begin{tcolorbox}
+Le client (votre navigateur) communique avec les serveurs web à l'aide du protocole HTTP (HyperText Transfert Protocol). Le protocole HTPP est basé sur un système de requête : à chaque action de votre part, votre navigateur envoie une demande à un serveur qui vous renvoie de l'information, comme le code HTML d'une page web.
+
+On retiendra les requêtes suivantes qui sont les plus courantes :
+\begin{itemize}
+\item \textbf{GET} : le client demande une information au serveur (exemple : obtenir le code html d'une page web afin de l'afficher).
+\item \textbf{POST} : Le client envoie lui-même des informations au serveur (exemple : vous envoyez votre mot de passe au serveur afin de vous connecter à votre compte).
+\item \textbf{HEAD} : le client demande uniquement les informations d'en-tête au serveur.
+\end{itemize}
+\end{tcolorbox}
+\begin{enumquestions}
+\item Quand vous tapez sur un navigateur \url{https://fr.wikipedia.org/wiki/Alan_Turing}, en réalité, il envoie une requête \textbf{GET} ayant le format suivant.
+\begin{lstlisting}
+GET /wiki/Alan_Turing HTTP/1.1
+Host: fr.wikipedia.org
+\end{lstlisting}
+Quelle requête \textbf{GET} envoie votre navigateur quand vous tapez \url{https://www.youtube.com/watch?v=7ell8KEbhJo} ?
+\vspace*{0.3cm}
+
+\emptybox{4cm}
+\item La réponse d'un serveur est aussi sous un certain format :
+\begin{lstlisting}
+HTTP/1.1 200 OK
+Date: Mon, 4 Mar 2019 22:38:34 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 983
+Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+
+<html>
+<head><title>Une page de test</title></head>
+<body><p>Un simple paragraphe de texte.</p></body>
+</html>
+\end{lstlisting}
+\begin{enumerate}
+\item De quand date la requête ? \answersline
+\item Quand la page a-t-elle été modifiée la dernière fois ? \answersline
+\item Quel est le titre de cette page ? \answersline 
+\end{enumerate}
+\item Pour tester la production de requêtes \textbf{GET}, on pourra utiliser l'invite de commandes windows. Sur la barre de recherche en bas de votre écran, taper \og cmd \fg puis entrée. Ensuite, tapez
+\begin{lstlisting}
+curl --verbose duckduckgo.com
+\end{lstlisting}
+Analysez la réponse obtenue : identifier la requête \textbf{GET} générée, puis la réponse du serveur à la requête.
+\end{enumquestions}
+\end{document}
