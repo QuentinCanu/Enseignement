@@ -178,4 +178,56 @@ Ici, on a résolu l'inéquation $f(x) \geq 3$ : l'ensemble des solutions $\mathc
 \end{itemize}
 \end{remark}
 \end{tcolorbox}
+
+\newpage
+\subsection{Résolution d'équation $f(x)=g(x)$}
+Cette information est donnée par les points d'intersection des courbes représentatives des fonctions $f$ et $g$
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw (0.5,1) node {$\bullet$};
+\draw (2.5,1) node {$\bullet$};
+\draw[thick] (2.5,0.1) -- (2.5,-0.1) node[below] {$5$};
+\draw (3.25,-1) node[right] {$\mathcal{C}_f$};
+\draw (3.25,3) node[right] {$\mathcal{C}_g$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100] plot (\x,{(\x-1.5)*(\x - 1.5)});
+\end{tikzpicture}
+\end{center}
+L'ensemble des solutions de $f(x)=g(x)$ est donné par $\mathcal{S} = \{1;5\}$.
+\end{example}
+\subsection{Résolution d'inéquation $f(x) < g(x)$}
+Cette information est donnée par la position relative entre les deux courbes représentatives.
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw (0.5,1) node {$\bullet$};
+\draw (2.5,1) node {$\bullet$};
+\draw[thick] (2.5,0.1) -- (2.5,-0.1) node[below] {$5$};
+\draw (3.25,-1) node[right] {$\mathcal{C}_f$};
+\draw (3.25,3) node[right] {$\mathcal{C}_g$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100] plot (\x,{(\x-1.5)*(\x - 1.5)});
+\draw[samples=100, domain=-3.25:0.5, ultra thick] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100, domain=2.5:3.25, ultra thick] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\end{tikzpicture}
+\end{center}
+L'ensemble $\mathcal{S}$ des solutions de l'inéquation $f(x)<g(x)$ est donné par la réunion d'intervalles $]-\infty;1[\cup]5;+\infty[$.
+\end{example}
 \end{document}

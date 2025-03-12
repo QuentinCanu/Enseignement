@@ -259,8 +259,8 @@ Le calcul des termes d'une suite géométrique de raison $q \in \R$ peut être s
 Calculer les termes $u_1$, $u_2$ et $u_3$ pour chaque définition suivante :
 \begin{enumquestions}
 \item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $1$ et de raison $2$ : \answersline
-\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $64$ et de raison $\dfrac{1}{2}$ : \answersline
-\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $1000$ et de raison $-0,1$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $64$ et de raison $\dfrac{1}{2}$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $1000$ et de raison $-0,1$ : \answersline
 \end{enumquestions}
 \end{example}
 \begin{proposition}[Variation d'une suite géométrique]
@@ -280,7 +280,7 @@ Soit $(u_n)_{n \in \N}$ une suite géométrique de raison $q \in \R$. \textbf{On
 \item Si $q < 0$, alors la suite n'est pas \textbf{monotone} (elle n'est ni croissante, ni décroissante).
 \end{itemize}
 \end{proposition}
-\begin{proposition}[Formule explicite d'une suite arithmétique]
+\begin{proposition}[Formule explicite d'une suite géométrique]
 Soit $(u_n)_{n \in \N}$ une suite géométrique de raison $q \in \R$. Alors, pour tout $n \in \N$, on observe
 \begin{equation*}
 u_n = u_0 \times q^n
@@ -311,7 +311,7 @@ On peut résumer cette formule à l'aide du schéma suivant :
 Pour chacune des définitions suivantes de $(u_n)_{n \in \N}$, calculer $u_{10}$ :
 \begin{enumquestions}
 \item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $1$ et de raison $-2$ : \answersline
-\item $(u_n)_{n \in \N}$ est la suite arithmétique de premier terme $5^{10} = \num{9765625}$ et de raison $\dfrac{1}{5}$ : \answersline
+\item $(u_n)_{n \in \N}$ est la suite géométrique de premier terme $5^{10} = \num{9765625}$ et de raison $\dfrac{1}{5}$ : \answersline
 \end{enumquestions}
 \end{example}
 \begin{tcolorbox}
@@ -319,5 +319,74 @@ Pour chacune des définitions suivantes de $(u_n)_{n \in \N}$, calculer $u_{10}$
 Les suites géométriques permettent de modéliser des évolutions dites \textbf{exponentielles}.         
 \end{definition}
 \end{tcolorbox}
+\newpage
+\section{Calcul de sommes}
+\subsection{Sommes arithmétiques}
+\begin{tcolorbox}
+\begin{proposition}
+Soit $n$ un nombre entier naturel. Alors,
+\begin{equation*}
+1 + 2 + 3 + \dots + n = \dfrac{n(n+1)}{2}
+\end{equation*}
+\end{proposition}
+\end{tcolorbox}
+\begin{proof}
+\hfill
 
+\vspace{0.2cm}
+\emptybox{5cm}
+\end{proof}
+\begin{proposition}
+Soit $(u_n)_{n \in \N}$ une suite arithmétique de raison $r$, et $N$ un entier naturel. Alors,
+\begin{equation*}
+u_0 + u_1 + u_2 + \dots + u_N = (N+1)u_0 + \dfrac{N(N+1)r}{2}
+\end{equation*}
+\end{proposition}
+\begin{proof}
+\hfill
+
+\vspace{0.2cm}
+\emptybox{5cm}
+\end{proof}
+\begin{example}
+Soit $(u_n)_{n \in N}$ une suite arithmétique de premier terme $u_0 = 2$ et de raison $r = 3$. Calculer $u_0 + u_1 + u_2 + \dots + u_{15}$ (somme des 16 premiers termes).
+
+\vspace*{0.2cm}
+\emptybox{3cm}
+\end{example}
+
+\newpage
+\subsection{Sommes géométriques}
+\begin{tcolorbox}
+\begin{proposition}
+Soit $n$ un nombre entier naturel, et $q \neq 1$ un réel. Alors,
+\begin{equation*}
+1 + q^1 + q^2 + \dots + q^n = \dfrac{1 - q^{n+1}}{1 - q} = \dfrac{q^{n+1} - 1}{q - 1}
+\end{equation*}
+\end{proposition}
+\end{tcolorbox}
+\begin{proof}
+\hfill
+
+\vspace{0.2cm}
+\emptybox{5cm}
+\end{proof}
+\begin{proposition}
+Soit $(u_n)_{n \in \N}$ une suite géométrique de raison $q \neq 1$, et $N$ un entier naturel. Alors,
+\begin{equation*}
+u_0 + u_1 + u_2 + \dots + u_N = u_0 \dfrac{q^{n+1} - 1}{q - 1}
+\end{equation*}
+\end{proposition}
+\begin{proof}
+\hfill
+
+\vspace{0.2cm}
+\emptybox{5cm}
+\end{proof}
+\begin{example}
+Soit $(u_n)_{n \in N}$ une suite géométrique de premier terme $u_0 = 3$ et de raison $q = 2$. Calculer $u_0 + u_1 + u_2 + \dots + u_{19}$ (somme des 20 premiers termes).
+
+\vspace*{0.2cm}
+\emptybox{3cm}
+\end{example}
 \end{document}
