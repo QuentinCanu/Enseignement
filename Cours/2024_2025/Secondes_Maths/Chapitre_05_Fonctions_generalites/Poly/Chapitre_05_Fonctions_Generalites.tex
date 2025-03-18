@@ -230,4 +230,47 @@ Cette information est donnée par la position relative entre les deux courbes re
 \end{center}
 L'ensemble $\mathcal{S}$ des solutions de l'inéquation $f(x)<g(x)$ est donné par la réunion d'intervalles $]-\infty;1[\cup]5;+\infty[$.
 \end{example}
+\newpage
+\section{Fonctions croissantes et décroissantes}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction à valeurs réelles, et $I$ un intervalle sur lequel $f$ est définie.
+\begin{itemize}
+\item On dit que $f$ est \textbf{croissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) \leq f(y)$.  
+\item On dit que $f$ est \textbf{strictement croissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) < f(y)$.  
+\item On dit que $f$ est \textbf{décroissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) \geq f(y)$.  
+\item On dit que $f$ est \textbf{strictement décroissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) > f(y)$.
+\item On dit que $f$ est \textbf{constante sur $I$}, si pour tout $x < y \in I$, on a $f(x) = f(y)$
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Si l'intervalle $I$ est clair suivant le contexte, alors on peut dire qu'une fonction est croissante ou décroissante sans préciser l'intervalle $I$.
+\item On dit qu'une fonction croissante (ou strictement croissante) \textbf{conserve l'ordre}, tandis qu'une fonction décroissante (ou strictement décroissante) \textbf{inverse l'ordre}.
+\end{itemize}
+\end{remark}
+\begin{definition}
+Soit $f$ une fonction à valeurs réelles, et $I$ un intervalle sur lequel $f$ est définie. 
+\begin{itemize}
+\item On dit que $f$ est \textbf{monotone sur $I$} si $f$ est croissante sur $I$ ou si $f$ est décroissante sur $I$.
+\item On dit que $f$ est \textbf{strictement monotone sur $I$} si $f$ est strictement croissante sur $I$ ou si $f$ est strictement décroissante sur $I$.
+\end{itemize}
+\end{definition}
+\begin{remark}
+Pour déterminer qu'une fonction n'est pas monotone sur un intervalle $I$, il suffit de trouver trois réels $x < y < z \in I$ tels que $f(x)$, $f(y)$ et $f(z)$ ne soient pas dans le même ordre (Ni $f(x) \leq f(y) \leq f(z)$, ni $f(x) \geq f(y) \geq f(z)$). 
+\end{remark}
+\begin{example}
+Soit une fonction $f$ définie sur l'intervalle $[-4;6]$ dont la courbe représentative $\mathcal{C}_f$ est donnée ci-dessous.
+\begin{center}
+\includegraphics[width=\textwidth]{Var_Fonctions.png}
+\end{center}
+\begin{enumquestions}
+\item Comparer $f(-2)$ et $f(0)$. L'ordre entre $-2$ et $0$ est-il conservé par $f$ ? \answersline
+\item La fonction $f$ est-elle décroissante sur $[-2;0]$ ? \answersline
+\item Donner un intervalle $I$ tel que $f$ est croissante sur $I$ : \answersline
+\item Donner un intervalle $J$ tel que la fonction n'est pas monotone sur $J$ : \answersline
+\end{enumquestions}
+\end{example}
 \end{document}

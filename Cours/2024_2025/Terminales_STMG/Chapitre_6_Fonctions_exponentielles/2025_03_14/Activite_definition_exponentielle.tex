@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{main}
+
+\author{Terminale STMG2}
+\title{Définition de la fonction exponentielle}
+\date{14 Mars 2025}
+
+\begin{document}
+\maketitle
+
+\section{Production au mois}
+On étudie la production de sirop contre la toux d'une entreprise pharmaceutique. Au 1\ier{} du mois de sa création, cette entreprise produit $100$ litres de sirop. On réalise que chaque mois, sa production augmente de $20\%$.
+\begin{enumquestions}
+\item Soit $(u_n)$ la suite donnant la production de sirop au 1\ier{} du mois $n$, le mois $0$ étant le mois de création de l'entreprise. Justifier que la suite $(u_n)$ est géométrique. Quelle est sa raison ?
+\item En déduire une expression de $u_n$ en fonction de $n$.
+\item Donner la production de sirop au bout d'un an.
+\end{enumquestions}
+
+\section{Étude plus précise de la production}
+
+L'entreprise souhaite trouver une méthode pour étudier plus précisément sa production de sirop, au jour près. Pour cela, on va chercher à trouver un moyen de calculer la puissance $1,2^x$, \textbf{où $x$ n'est pas forcément un nombre entier}.
+\begin{enumquestions}
+\item À combien de jours correspond un demi-mois ? 
+\item Même question pour un tiers de mois.
+\item On se pose donc la question d'une valeur imaginable pour $1,2^{1/2}$. Rappeler la règle de calcul de $a^p \times a^q$, ainsi que de $(a^p)^q$
+\item À l'aide de ces règles de calcul, en déduire la valeur de $(1,2^{1/2})^2$.
+\item En calculant $\sqrt{1,2}^2$, en déduire la valeur de $1,2^{1/2}$.
+\item De combien est multiplié la production de sirop chaque demi-mois ?    
+\end{enumquestions}
+
+En s'inspirant de cette méthode pour la puissance $1/2$, on peut en déduire que 
+\begin{equation*}
+(1,2)^{p/q} = \sqrt[q]{1,2^p}
+\end{equation*}
+où l'on considère la racine $q$\ieme{} de $1,2^p$
+
+\section{Étendre le champ des possibles}
+En réalité, on peut même déterminer une valeur de $1,2^x$ pour n'importe quel nombre réel $x$, et pas seulement les fractions.
+
+\begin{enumquestions}
+\item Rappeler ce qu'est un rationnel. Le nombre $\pi$ est-il rationnel ?
+\item On s'intéresse donc à la valeur hypothétique de $1,2^{\pi}$. Pour cela, on considère la suite suivante: $3$; $3,1 = \dfrac{3}{10}$; $3,14 = \dfrac{314}{100}$; $3,141 = \dfrac{3141}{1000}$ \dots. À quoi correspond cette suite ?
+\item Calculer $1,2^x$ pour chaque fraction de cette suite. Que remarquez-vous ?
+\end{enumquestions}
+\begin{tcolorbox}
+En suivant le même modèle, on est capable de calculer $1,2^x$ pour tout $x$ réel, avec la précision nécessaire. En effet, pour tout nombre $x$, il est toujours possible de mettre en place une suite de fraction se rapprochant de plus en plus de la valeur de $x$.
+\end{tcolorbox}
+
+\end{document}
