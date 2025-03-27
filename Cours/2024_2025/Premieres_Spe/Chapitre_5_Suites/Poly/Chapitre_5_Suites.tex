@@ -389,4 +389,97 @@ Soit $(u_n)_{n \in N}$ une suite géométrique de premier terme $u_0 = 3$ et de 
 \vspace*{0.2cm}
 \emptybox{3cm}
 \end{example}
+\newpage
+\section{Notion de limite}
+\subsection{Convergence de suites}
+\begin{tcolorbox}
+\begin{definition}[Limite finie d'une suite]
+Soit $(u_n)_{n \in \N}$ une suite numérique, et $l$ un nombre réel. On dit que \textbf{la suite $(u_n)_{n \in \N}$ admet $l$ comme limite} quand les nombres $u_n$ sont aussi proches de $l$ que l'on veut à mesure que les indices $n$ sont grands. On le note
+\begin{equation*}
+\lim_{n \to +\infty} u_n = l 
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Quand une suite admet une limite finie, on dit que la suite \textbf{converge}.
+\item Quand une suite ne converge pas, on dit qu'elle \textbf{diverge}.
+\end{itemize}
+\end{remark}
+\begin{example}
+On représente une suite $(u_n)_{n \in \N}$ par les points de coordonnées $(n,u_n)$. 
+
+\begin{center}
+\begin{tikzpicture}
+\repereclassique{-0.25}{-3.25}{10.25}{3.25}{0.5};
+\foreach \x in {0,0.5,...,10.0}
+{
+    \draw (\x,{2*(-1)^(2*\x)/(\x^2+1) + 1}) node {$\bullet$};
+}
+\draw[dashed] (-0.25,1) -- (10.25,1) node[right] {$y=2$};
+\end{tikzpicture}
+\end{center}
+\begin{tcolorbox}
+La suite $(u_n)$ semble converger vers le réel $2$ : plus $n$ est grand (pour des abscisses de plus en plus grandes), et plus $u_n$ est proche de $2$ (les ordonnées des points sont de plus en plus proche de $2$).
+\end{tcolorbox}
+\begin{center}
+\begin{tikzpicture}
+\repereclassique{-0.25}{-3.25}{10.25}{3.25}{0.5};
+\foreach \x in {0,0.5,...,10.0}
+{
+    \draw (\x,{2.5*sin(\x r)}) node {$\bullet$};
+}
+\end{tikzpicture}
+\end{center}
+\begin{tcolorbox}
+Ici, la suite représentée ne semble pas admettre de limite finie $l$. En effet, les ordonnées des points de coordonnées $(n,u_n)$ ne semblent pas se rapprocher d'une valeur en particulier, à la mesure que $n$ augmente.
+\end{tcolorbox}
+\end{example}
+\newpage
+\subsection{Divergence vers l'infini}
+\begin{tcolorbox}
+\begin{definition}
+Soit $(u_n)_{n \in \N}$ une suite numérique. On dit que \textbf{la suite $(u_n)$ admet $+\infty$ comme limite} quand les valeurs de $u_n$ sont de plus en plus grandes à la mesure où $n$ augmente. On le note
+\begin{equation*}
+\lim_{n \to +\infty} u_n = +\infty 
+\end{equation*}
+\end{definition}    
+\end{tcolorbox}
+\begin{tcolorbox}
+\begin{definition}
+Soit $(u_n)_{n \in \N}$ une suite numérique. On dit que \textbf{la suite $(u_n)$ admet $-\infty$ comme limite} quand les valeurs de $u_n$ sont de plus en plus petites à la mesure où $n$ augmente. On le note
+\begin{equation*}
+\lim_{n \to +\infty} u_n = -\infty 
+\end{equation*}
+\end{definition}    
+\end{tcolorbox}
+\begin{remark}
+Une suite admettant $+\infty$ ou $-\infty$ comme limite est dite \textbf{divergente}. Une suite diverge donc dans deux cas :
+\begin{itemize}
+\item si elle n'admet pas de limite finie;
+\item ou si elle admet $+\infty$ ou $-\infty$ comme limite.
+\end{itemize}
+\end{remark}
+\begin{example}
+Les deux suites $(u_n)$ et $(v_n)$ représentées ci-après admettent $-\infty$ et $+\infty$ comme limite.
+\begin{center}
+\begin{tikzpicture}
+\repereclassique{-0.25}{-3.25}{10.25}{3.25}{0.5};
+\foreach \x in {0,0.5,...,10.0}
+{
+    \draw (\x,{6*exp(\x - 10) - 3}) node {$\bullet$};
+}
+\end{tikzpicture}
+\end{center}
+\begin{center}
+\begin{tikzpicture}
+\repereclassique{-0.25}{-3.25}{10.25}{3.25}{0.5};
+\foreach \x in {0,0.5,...,10.0}
+{
+    \draw (\x,-0.5*\x+2) node {$\bullet$};
+}
+\end{tikzpicture}
+\end{center}
+\end{example}
 \end{document}

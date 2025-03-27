@@ -273,4 +273,112 @@ Soit une fonction $f$ définie sur l'intervalle $[-4;6]$ dont la courbe représe
 \item Donner un intervalle $J$ tel que la fonction n'est pas monotone sur $J$ : \answersline
 \end{enumquestions}
 \end{example}
+\newpage
+\section{Tableaux}
+Soient $f$ et $g$ deux fonctions définies sur $[-5;5]$ dont les courbes représentatives sont données ci-contre.
+\vspace*{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\repereclassique{-5.25}{-5.25}{5.25}{5.25}{1}
+\draw (-5,2) node {$\bullet$};
+\draw (5,3) node {$\bullet$} node[right] {$\mathcal{C}_f$};
+\draw (-5,2) parabola (-3,0);
+\draw (-3,0) parabola[bend at end] (-1,-2);
+\draw (-1,-2) parabola (2,0);
+\draw (2,0) parabola bend (4,4) (5,3);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\repereclassique{-5.25}{-5.25}{5.25}{5.25}{1}
+\draw (-5,-1) node {$\bullet$};
+\draw (5,3) node {$\bullet$} node[right] {$\mathcal{C}_g$};
+\draw (-5,-1) parabola (-1,0);
+\draw (-1,0) parabola[bend at end] (-0.5,2.5);
+\draw (-0.5,2.5) parabola bend (0,3) (2,0);
+\draw (2,0) parabola bend (3,-2) (4,0);
+\draw (4,0) -- (5,3);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\subsection{Tableau de valeurs}
+\begin{definition}
+Le tableau de valeurs associe plusieurs antécédents (ligne $x$) à leurs images (ligne $f(x)$).
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tabular}{|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|}
+\hline
+$x$&-5&-3&2&4&5\\
+\hline
+$f(x)$&2&0&0&4&3\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tabular}{|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|}
+\hline
+$x$&-5&-1&0&2&3\\
+\hline
+$g(x)$&&&&&\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{example}
+\subsection{Tableau de variation}
+\begin{definition}
+Le tableau de variation répertorie les plus grand intervalles sur lesquels les fonctions sont monotones. 
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variations de $f$ / 2}{$-5$,$-1$,$4$,$5$};
+\tkzTabVar{+/$2$,-/$-2$,+/$4$, -/$3$};
+\end{tikzpicture}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variations de $g$ / 2}{$-5$,,, $5$}; 
+\end{tikzpicture}
+\end{minipage}
+\end{example}
+\subsection{Tableau de signe}
+\begin{definition}
+Le tableau de signe d'une fonction $f$ répertorie les intervalles solutions de $f(x) \geq 0$ (où la fonction est \textbf{positive}) et $f(x) \leq 0$ (où la fonction est \textbf{négative}).
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Signe de $f$ / 2}{$-5$,$-3$,$2$,$5$};
+\tkzTabLine{,+,z,-,z,+,};
+\end{tikzpicture}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Signe de $g$ / 2}{$-5$,,,$5$};
+\tkzTabLine{,,,,,,};
+\end{tikzpicture}
+\end{minipage}
+\end{example}
 \end{document}
