@@ -381,4 +381,44 @@ Le tableau de signe d'une fonction $f$ répertorie les intervalles solutions de 
 \end{tikzpicture}
 \end{minipage}
 \end{example}
+\newpage
+\section{Extremum de fonction}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction définie sur un intervalle $I$, et $b$ un nombre réel.
+\begin{itemize}
+\item On dit que $b$ est un \textbf{maximum de $f$ sur $I$}, si pout tout $x \in I$, on a $f(x) \leq b$; et qu'il existe $a \in I$ tel que $f(a) = b$. On dit alors que le maximum $b$ de $f$ sur $I$ est atteint en $a$.
+\item On dit que $b$ est un \textbf{minimum de $f$ sur $I$}, si pout tout $x \in I$, on a $f(x) \geq b$; et qu'il existe $a \in I$ tel que $f(a) = b$. On dit alors que le minimum $b$ de $f$ sur $I$ est atteint en $a$.
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Le maximum d'une fonction sur $I$ est donc la plus grande image possible sur $I$, tandis que le minimum est la plus petite image possible sur $I$.
+\end{remark}
+\begin{example}
+Soit une fonction $f$ dont la courbe représentative est donnée ci-après :
+\begin{center}
+\begin{tikzpicture}
+\repereclassique{-5.25}{-5.25}{5.25}{5.25}{0.5};
+\draw (-5,4) node {$\bullet$};
+\draw (-5,4) parabola bend (-2.5,-3.5) (0,-1);
+\draw (0,-1) parabola bend (2,3) (5,-0.5);
+\draw (5,-0.5) node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\begin{enumquestions}
+\item Compléter le tableau de variation de $f$.
+\begin{center}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variation de $f$ / 2}{, , ,};
+\end{tikzpicture}
+\end{center}
+\item Déterminer le maximum de cette fonction ? En quelle valeur ce maximum est-il atteint ?
+
+\answersline
+\item Déterminer le minimum de cette fonction ? En quelle valeur ce minimum est-il atteint ? 
+
+\answersline
+\end{enumquestions}
+\end{example}
 \end{document}

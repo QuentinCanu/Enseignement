@@ -79,4 +79,68 @@ $k < 0$& Décroissante & Croissante\\
 \end{center}
 \end{proposition}
 \end{tcolorbox}
+\newpage
+\section{Propriétés algébrique de la fonction exponentielle}
+\begin{tcolorbox}
+\begin{proposition}
+Soit $a$ un réel positif, ainsi que $x,y$ deux réels quelconques. Alors,
+\begin{itemize}
+\item $a^{x+y}=a^x \times a^y$
+\item $a^{x \times y} = (a^x)^y$
+\item $a^{x - y} = \dfrac{a^x}{a^y}$
+\item $a^{-x} = \dfrac{1}{a^x}$
+\item $a^{1/n} = \sqrt[n]{a}$
+\item $a^0 = 1$
+\end{itemize}
+\end{proposition}
+\end{tcolorbox}
+\begin{example}
+Simplifier les expressions suivantes en une puissance de $2$ :
+\begin{enumquestions}
+\begin{minipage}{0.45\textwidth}
+\item $2^15 \times 2^12 = $ \answersline
+\item $2^-7 =$ \answersline 
+\item $(2^12)^{-5} =$ \answersline
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\item $\dfrac{2^18}{2^5} = $ \answersline
+\item $64^{4} =$ \answersline 
+\item $2^4 + 2^4 =$ \answersline
+\end{minipage}
+\end{enumquestions}
+\end{example}
+\section{Cas particulier : taux d'évolution moyen}
+\begin{definition}
+On suppose qu'une quantité évolue de $T\%$ en $n$ étapes. Alors, si le coefficient multiplicateur de $T$ est noté $CM$, on dit que le \textbf{taux d'évolution moyen} est donné par le taux d'évolution $t$ dont le coefficient multiplicateur $cm$ est donné par
+\begin{equation*}
+cm = CM^{1/n}
+\end{equation*}
+
+Cela correspond au taux d'évolution constant associé à une étape. 
+\end{definition}
+\begin{center}
+\begin{tikzpicture}
+\node[draw,circle] (V0) at (0,0) {$V_0$};
+\node[draw,circle] (V1) at (3,0) {$V_1$};
+\node[draw,circle] (V2) at (6,0) {$V_2$};
+\node[draw,circle] (V3) at (9,0) {$V_3$};
+\node[draw,circle] (V4) at (12,0) {$V_4$};
+\draw[->] (V0) -- (V1) node[midway,below] {$\times CM^{1/n}$};
+\draw[->] (V1) -- (V2) node[midway,below] {$\times CM^{1/n}$};
+\draw[->] (V2) -- (V3) node[midway,below] {$\times CM^{1/n}$};
+\draw[->] (V3) -- (V4) node[midway,below] {$\times CM^{1/n}$};
+\draw[->] (V0) to[bend left] (V4);
+\draw (6,2.2) node {$\times CM$};
+\end{tikzpicture}
+\end{center}
+\begin{example}
+Le prix du loyer augmente de $54\%$ en quatre ans. Donner le taux d'évolution moyen de cette augmentation.
+
+\begin{enumquestions}
+\item On calcule d'abord le coefficient multiplicateur de $+ 54\%$ : $CM = $ \answersline
+\item On calcule ensuite $cm = CM^{1/4} = $ \answersline
+\item On déduit le taux d'évolution moyen $t = cm - 1 =$ \answersline
+\end{enumquestions}
+\end{example}
 \end{document}
