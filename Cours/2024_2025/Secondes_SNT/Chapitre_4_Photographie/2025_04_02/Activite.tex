@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Fichiers d'images : Compression}
+\date{15 Mars 2024}
+\author{Seconde 9}
+
+\newcommand{\Rien}{Blanc $(255,255,255)$}
+\newcommand{\Noir}{Noir $(0,0,0)$}
+\newcommand{\Fonce}{Bleu $(35,39,83)$}
+\newcommand{\Orange}{Orange $(255,162,5)$}
+\newcommand{\Jaune}{Jaune $(254,255,36)$}
+\newcommand{\Rouge}{Rouge $(251,1,70)$}
+\newcommand{\Marron}{Marron $(170,82,48)$}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+Nous allons aujourd'hui étudier la manière dont sont stockées les images dans un ordinateur.
+
+\section{Image non compressée}
+L'une des manières de décomposer une image est de considérer ses \emph{pixels} : une image est alors vue comme un tableau de cellules, chacune affichant une couleur. Chaque pixel contient des données définissant la couleur à afficher.
+
+\begin{enumquestions}
+\item Notre image a pour résolution $8 \times 8$. Combien de pixels cette image comporte-t-elle ?
+\item Sachant qu'une couleur est stockée dans un octet, combien d'octets sont nécessaires pour stocker cette image ?
+\item Même question pour une image de taille $1920 \times 1080$.
+\item Trouver une image sur Internet dans le format $1920 \times 1080$, et donner sa taille en octets. Cela correspond-t-il à votre réponse précédente ?
+\end{enumquestions}
+
+\section{Image compressée}
+
+Compresser une image revient à décrire les pixels de l'image de façon plus efficace.
+\begin{enumquestions}
+\item Aller sur le site \url{piskelapp.com}, puis cliquer sur \url{Create Sprite}. Suivre les instructions au dos du sujet ligne par ligne pour colorier une image de $8 \times 8$ pixels. L'onglet palette sert à gérer les couleurs possibles.
+\item Proposer une autre série d'instructions permettant à un autre élève de la classe de produire la même image, mais plus efficacement. Faites tester un camarade.
+\end{enumquestions}
+
+\newpage 
+\section*{Instructions}
+\begin{multicols}{3}
+\begin{enumerate}
+\multido{}{1}{\item \Rien}
+\multido{}{2}{\item \Fonce}
+\multido{}{4}{\item \Rien}
+\multido{}{1}{\item \Fonce}
+\multido{}{2}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{3}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{3}{\item \Rien}
+\multido{}{4}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{2}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Noir}
+\multido{}{2}{\item \Jaune}
+\multido{}{1}{\item \Noir}
+\multido{}{2}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Rouge}
+\multido{}{3}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{3}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Rien}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Rien}
+\multido{}{2}{\item \Rien}
+\multido{}{1}{\item \Jaune}
+\multido{}{1}{\item \Orange}
+\multido{}{2}{\item \Marron}
+\multido{}{1}{\item \Orange}
+\multido{}{1}{\item \Rien}
+\item[\vspace{\fill}]
+\end{enumerate}
+\end{multicols}
+\end{document}

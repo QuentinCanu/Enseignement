@@ -1,0 +1,60 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : fonctions exponentielles}
+\date{11 Avril 2024}
+\author{Terminale STMG2}
+
+\begin{document}
+\maketitle
+\instructions{Autorisée}
+\begin{questions}
+\vspace*{0.2cm}
+\titledquestion{Algèbre et puissances}[5]
+Soit $a$ un nombre réel strictement positif. 
+
+Simplifier les expressions suivantes sous la forme $a^n$ avec $n$ un nombre réel.
+\begin{parts}
+\part[1] $\dfrac{a^2 \times a^8}{a^9}$
+\vspace*{0.2cm}
+\part[1] $(a^{-3})^{5} \times a^{-4}$
+\vspace*{0.2cm}
+\part[1] $\dfrac{a^5}{a^{-5}\times a^{2}}$
+\vspace*{0.2cm}
+\part[1] $((a^4)^3)^2$
+\vspace*{0.2cm}
+\part[1] $\dfrac{a^2}{a^5} \times (a^6)^{-2}$
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Variations}[2]
+Donner, en le justifiant, le sens de variation des fonctions définies par les relations suivantes :
+\begin{parts}
+\part[0,5] $f(x) = 12 \times 3^x$ pour tout $x \in \R$
+\part[0,5] $g(x) = -0,7 \times 1,2^x$ pour tout $x \in \R$
+\part[0,5] $h(x) = -3 \times 0,6^x$ pour tout $x \in \R$
+\part[0,5] $q(x) = 0,75 \times 3^x$ pour tout $x \in \R$
+\end{parts} 
+\vspace*{0.5cm}
+\titledquestion{Soldes}[8]
+Les managers d'un grand magasin souhaitent proposer une offre promotionnelle cohérente avec les concurrents. Pour cela, ils observent l'évolutions des prix des produits chez deux concurrent, nommés A et B.
+
+\begin{parts}
+\part On constate qu'en moyenne, les prix chez A diminuent chaque année de $6\%$. Par exemple, le 1\ier{} Janvier 2020, le lait coûte $1€50$, et subit une diminution d'environ $6\%$ annuellement. On note $u_n$ le prix du lait le 1er Janvier $2020+n$.
+\begin{subparts}
+\subpart[1] Donner le prix du lait le 1er Janvier 2021, puis le prix du lait le 1er Janvier 2022.
+\subpart[1] Montrer que $(u_n)_{n \in \N}$ est une suite géométrique dont on précisera la raison $q$ et le premier terme $k$. En déduire que, pour tout $n$,
+\begin{equation*}
+u_n = kq^n
+\end{equation*}
+\subpart[2] On prolonge cette suite en une fonction exponentielle $f(x) = kq^x$. En déduire le prix du lait le 15 Juin 2020, puis le 1er Juin 2024 (soit au milieu d'une année).
+\end{subparts}
+\part Chez le concurrent B, le prix du lait a augmenté de $4\%$ entre 2020 et 2021, de $9\%$ entre 2021 et 2022, puis a diminué de $5\%$ entre 2021 et 2022.
+\begin{subparts}
+\subpart[1] Montrer qu'entre 2020 et 2022, le prix du lait a augmenté d'environ $7,7\%$
+\subpart[1] En déduire le taux d'évolution moyen annuel du prix du lait entre 2020 et 2022. On pourra s'aider d'un schéma.
+\subpart[1] On utilise le coefficient multiplicateur trouvé précédemment, nommé $q'$, pour modéliser le prix du lait à l'aide d'une fonction exponentielle $g(x) = 1,50 \times q'^x$. Cette fonction est-elle croissante ou décroissante ?
+\subpart[1] Déduire à partir de quelle année le lait coûtera le double de son prix initial d'après ce modèle.
+\end{subparts}
+\end{parts}
+\end{questions}
+\end{document}

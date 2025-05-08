@@ -1,0 +1,76 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : Suites numériques}
+\date{2 Avril 2025}
+\author{Premières Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+\instructions{Autorisée}
+\begin{questions}
+\titledquestion{Limites de suites}[3]
+Pour chaque suite $(u_n)_{n \in \N}$ définie ci-dessous, calculer ses $5$ premiers termes puis conjecturer sa limite :
+\begin{parts}
+\part[0,5] $u_n = 2^n$;
+\part[0,5] $\begin{cases}u_0 = 5 \\ u_{n+1} = 0,8u_n + 2\end{cases}$
+\part[0,5] $u_n = (-3)^n$
+\part[0,5] $\begin{cases}u_0 = -2\\u_{n+1} = \dfrac{1}{u_n}\end{cases}$
+\part[0,5] $u_n = 5\pi + 3$
+\part[0,5] $u_n = (-0,7)^n$
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Suite arithmético-géométrique}[6]
+On pose la suite $(u_n)_{n \in \N}$ définie par la relation de récurrence suivante :
+\begin{equation*}
+\begin{cases}
+u_0 = 1\\
+u_{n+1} = 4u_n - 9 \text{ pour tout } n \in \N
+\end{cases}
+\end{equation*}
+\begin{parts}
+\part[1] Calculer $u_1$, $u_2$ et $u_3$.
+\part[1] Justifier que la suite $(u_n)_{n \in \N}$ n'est ni arithmétique, ni géométrique.
+
+On pose $(v_n)_{n \in \N}$ la suite définie par $v_n = u_n - 3$ pour tout $n \in \N$.
+\part[1] Montrer que $(v_n)_{n \in \N}$ est une suite géométrique de raison $4$.
+\part[1] En déduire une expression de $v_n$ en fonction de $n$.
+\part[1] En déduire une expression de $u_n$ en fonction de $n$.
+\part[1] Calculer $u_{20}$.
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Mot de passe}[5]
+\begin{parts}
+\part Calculer les sommes suivantes :
+\begin{subparts}
+\subpart[1] $S_1 = 1 + 2 + 3 + 4 + \dots + 102$
+\subpart[1] $S_2 = 1 + 1,5 + 1,5^2 + \dots + 1,5^{13}$
+\end{subparts}
+
+Un site web décide de tester la résistence des mots de passe de ses utilisateurs. On considère uniquement les mots de passe composés de chiffres, c'est-à-dire de tous les symboles numériques de $0$ à $9$. On pose $m_n$ le nombre de mots de passe posssibles de $n$ symboles.
+\part[0,5] Quelle est la valeur de $u_1$ ?  et de $u_2$ ?
+\part[0,5] Justifier que $(u_n)_{n \in \N}$ est géométrique.
+\part[2] Pour tester la fiabilité des mots de passe, on décide de créer un programme énumérant tous les mots de passe possibles de moins de $20$ symboles. Combien de mots de passe vont être testés en tout.
+\end{parts}
+\newpage
+\titledquestion{Cercle}[5]
+On considère $n$ points distincts $A_1$, $A_2$, \dots, $A_n$ sur un cercle. On représente ici le cas $n = 3$.
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (3) node {$+$};
+\draw (30:3) node {$\bullet$} node[right] {$A_1$};
+\draw (100:3) node {$\bullet$} node[above] {$A_2$};
+\draw (130:3) node {$\bullet$} node[above left] {$A_3$};
+\end{tikzpicture}
+\end{center}
+On s'intéresse à la suite $(u_n)_{n \in \N}$ définie comme le nombre de segments possibles entre deux points parmi les $A_1$, $A_2$, \dots, $A_n$.
+\begin{parts}
+\part[0,5] Représenter le cas $n=2$ et le cas $n = 4$.
+\part[0,5] Montrer que $u_1 = 0$, $u_1 = 0$, $u_2 = 1$ et $u_3 = 3$.
+\part[1,5] Justifier que $u_{n+1} = u_n + n$.
+\part[0,5] En déduire la valeur de $u_7$.
+\part[1,5] Donner une expression de $u_n$ en fonction de $n$.
+\part[0,5] À partir de combien de points sur le cercle peut-on tracer plus de $80$ segments entre ces points ? 
+\end{parts}
+\end{questions}
+\end{document}

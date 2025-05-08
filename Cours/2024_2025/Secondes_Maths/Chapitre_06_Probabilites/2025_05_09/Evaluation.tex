@@ -1,0 +1,128 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Évaluation de cours : Probabilités}
+\date{9 Mai 2025}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+\begin{questions}
+\question[6]
+Un magasin de cosmétiques fait l'inventaire de ses produits. On obtient le tableau de répartition suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+&Rouge à lèvres&Maquillage\\
+\hline
+Européen&\num{68}&\num{56}\\
+\hline
+Asiatique&\num{49}&\num{12}\\
+\hline
+Américain&\num{90}&\num{53}\\
+\hline
+\end{tabular}
+\end{center}
+On tire au hasard un produit de ce magasin. On note les événements:
+\begin{itemize}
+\item $A$ : \og le produit sélectionné est américain \fg
+\item $B$ : \og le produit sélectionné est du maquillage \fg
+\end{itemize}
+\vspace*{0.5cm}
+\begin{parts}
+\part[1] Calculer $P(A)$. $P(A) =$ \answersline 
+\part[1] Calculer $P(B)$. $P(B) =$ \answersline 
+\part[2] Donner la signification en français de l'événement $A \cap B$, puis calculer $P(A \cap B)$.
+\begin{itemize}
+\item $A \cap B$ : \og \answersline \fg 
+\item $P(A \cap B) =$ \answersline 
+\end{itemize}
+\part[2] Donner la signification en français de l'événement $\overbar{B}$, puis calculer $P(\overbar{B})$.
+\begin{itemize}
+\item $\overbar{B}$ : \og \answersline \fg 
+\item $P(\overbar{B}) =$ \answersline 
+\end{itemize} 
+\end{parts}
+\vspace*{0.5cm}
+\question[4]
+On numérote deux urnes $1$ et $2$. Dans l'urne $1$, on dispose deux boules rouges et une boule bleue. Dans l'urne $2$, on dispose une boule rouge et deux boules bleues. On sélectionne au hasard une des deux urnes, puis on tire dans l'urne sélectionnée une boule au hasard.
+\begin{parts}
+\part Compléter l'arbre de dénombrement suivant, qui représente l'expérience aléatoire.
+\begin{center}
+\begin{tikzpicture}[level 1/.style={sibling distance=30mm},level 2/.style={sibling distance=10mm}]
+\coordinate
+    child {node {\dots}
+        child {node {R}}
+        child {node {R}}
+        child {node {\dots}}}
+    child {node {\dots}
+        child {node {R}}
+        child {node {B}}
+        child {node {\dots}}};
+\end{tikzpicture}
+\end{center}
+\part Quelle est la probabilité d'obtenir une boule rouge après cette expérience ?
+
+\answersline
+\end{parts}
+\end{questions}
+\newpage
+\maketitle
+\begin{questions}
+\question[6]
+Un magasin de bricolage fait l'inventaire de ses produits. On obtient le tableau de répartition suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&Marteau&Clou&Scie\\
+\hline
+En promotion&\num{17}&\num{80}&\num{9}\\
+\hline
+Sans Promotion&\num{88}&\num{20}&\num{113}\\
+\hline
+\end{tabular}
+\end{center}
+On tire au hasard un produit de ce magasin. On note les événements:
+\begin{itemize}
+\item $A$ : \og le produit sélectionné est en promotion \fg
+\item $B$ : \og le produit sélectionné est une scie \fg
+\end{itemize}
+\vspace*{0.5cm}
+\begin{parts}
+\part[1] Calculer $P(A)$. $P(A) =$ \answersline 
+\part[1] Calculer $P(B)$. $P(B) =$ \answersline 
+\part[2] Donner la signification en français de l'événement $A \cap B$, puis calculer $P(A \cap B)$.
+\begin{itemize}
+\item $A \cap B$ : \og \answersline \fg 
+\item $P(A \cap B) =$ \answersline 
+\end{itemize}
+\part[2] Donner la signification en français de l'événement $\overbar{B}$, puis calculer $P(\overbar{B})$.
+\begin{itemize}
+\item $\overbar{B}$ : \og \answersline \fg 
+\item $P(\overbar{B}) =$ \answersline 
+\end{itemize} 
+\end{parts}
+\vspace*{0.5cm}
+\question[4]
+On numérote deux urnes $1$ et $2$. Dans l'urne $1$, on dispose deux boules rouges et une boule bleue. Dans l'urne $2$, on dispose une boule rouge et deux boules bleues. On sélectionne au hasard une des deux urnes, puis on tire dans l'urne sélectionnée une boule au hasard.
+\begin{parts}
+\part Compléter l'arbre de dénombrement suivant, qui représente l'expérience aléatoire.
+\begin{center}
+\begin{tikzpicture}[level 1/.style={sibling distance=30mm},level 2/.style={sibling distance=10mm}]
+\coordinate
+    child {node {\dots}
+        child {node {R}}
+        child {node {R}}
+        child {node {\dots}}}
+    child {node {\dots}
+        child {node {R}}
+        child {node {B}}
+        child {node {\dots}}};
+\end{tikzpicture}
+\end{center}
+\part Quelle est la probabilité d'obtenir une boule rouge après cette expérience ?
+
+\answersline
+\end{parts}
+\end{questions}
+\end{document}
