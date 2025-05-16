@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Définition de la fonction exponentielle}
+\date{14 Mai 2025}
+\author{Première Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+\section{Équation différentielle}
+On s'intéresse aux fonctions $f : \R \to \R$ qui vérifient \textbf{l'équation différentielle} suivante :
+\begin{equation*}
+f' = f
+\end{equation*}
+Autrement dit, pour tout $x \in \R$, si $f$ est solution de cette équation, alors,
+\begin{equation*}
+f'(x) = f(x)
+\end{equation*}
+On suppose que la fonction $f$ est une telle solution.
+\begin{enumquestions}
+\item Soit $C$ une constante réelle. Montrer que la fonction $g : x \mapsto Cf(x)$ est définie et dérivable sur $\R$. Montrer que sa dérivée vérifie $g'(x) = g(x)$.
+\item En déduire qu'il y a une infinité de fonctions $f'$ vérifiant l'équation différentielle $f' = f$.
+
+On suppose alors que $f$ est un telle solution, et qu'en plus, $f$ vérifie :
+\begin{equation*}
+f(0) = 1
+\end{equation*}
+\item Soit $h : x \mapsto f(x) \times f(-x)$. Montrer que $h$ est défini et dérivable sur $\R$.
+\item Calculer la dérivée de $h$. En déduire que $h$ est une fonction constante.
+
+Cette constante vaut $h(0) = f(0) \times f(- 0) = 1 \times 1 = 1$
+
+\item En déduire que pour tout $x$, $f(x) > 0$.
+
+Ainsi, si $f$ est solution de $f' = f$, et si $f(0) = 1$, $f$ est toujours strictement positive.
+
+On suppose maintenant que $f$ et $g$ vérifient tous les deux les même critères :
+\begin{itemize}
+\item $f' = f$ et $f(0) = 1$
+\item $g' = g$ et $g(0) = 1$
+\end{itemize}
+\item On pose $h(x) = \dfrac{g(x)}{f(x)}$. Montrer que $h$ est définie et dérivable sur $\R$.
+\item Calculer la dérivée de $h$, et en déduire que $h$ est constante.
+\item Conclure que $g = f$.
+\end{enumquestions}
+En conclusion, si une fonction $f$ vérifie $f' = f$ et $f(0) = 1$. Alors cette fonction est unique.
+
+Nous admettons l'existence d'une telle fonction.
+\begin{tcolorbox}
+\begin{definition}
+La \textbf{fonction exponentielle}, noté $\exp$ est l'unique solution de l'équation différentielle
+\begin{equation*}
+\begin{cases}
+f'(x) = f(x)& \text{ pour tout } x \in \R\\
+f(0) = 1
+\end{cases}
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+\newpage
+\maketitle
+\section{Méthode d'Euler et Constante de Neper}
+On cherche à déterminer une fonction $f$ qui vérifie
+\begin{equation*}
+\begin{cases}
+f'(x) = f(x)& \text{ pour tout } x \in \R\\
+f(0) = 1
+\end{cases}
+\end{equation*}
+Pour déterminer les valeurs que peuvent prendre une telle fonction $f$, nous allons employer la \textbf{méthode d'Euler}. Elle consiste à se souvenir que
+\begin{equation*}
+f'(x) = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
+\end{equation*}
+Alors, en prenant $h$ suffisamment petit, on obtient 
+\begin{equation}
+\label{Euler}
+f'(x) \simeq \dfrac{f(x + h) - f(x)}{h} 
+\end{equation}
+
+\begin{enumquestions}
+\item Soit $h$ fixé. À l'aide de la relation \eqref{Euler}, en déduire une approximation de $f(x + h)$ en fonction de $f(x)$ et de $h$.
+\item On pose $h = 1$. En déduire une première approximation de $f(1)$. (Indication : partir de $x = 0$)
+\item On pose $h = 0,5$. En déduire une deuxième approximation de $f(1)$ (Indication : il faudra pour cela approcher $f(0,5)$).
+\item On pose $h = 0,25$. En déduire une troisième approximation de $f(1)$.
+\item Même question pour $h = 0,1$ et $h = 0,01$. Quelle formule utiliser pour accélerer vos calculs ?
+
+En passant à la limite, on obtient la \textbf{constante de Neper}, notée $e$. Elle vaut environ $2,718\dots$
+
+On va montrer que $f : x \mapsto e^x$ est vérifie les critères recherchés : $f' = f$ et $f(0) = 1$. On va admettre l'existence de $a^x$ où $a$ est une constante réelle positive, et $x$ est réel. Notamment, on admet que pour tout $x, y \in \R$, $a^{x + y} = a^x a^y$.
+
+\item On pose $a = 2$, et $f(x) = 2^x$. Montrer que $f(0) = 1$.
+\item Soit $x \in \R$ et $h \neq 0$. Simplifier l'expression
+\begin{equation*}
+\dfrac{2^{x + h} - 2^h}{h}
+\end{equation*}
+\item En prenant $h = 1$, puis $h = 0,5$, puis $h = 0,25$ puis $h = 0,1$, conjecturer l'expression de la dérivée de $x \mapsto 2^x$.
+\item Recommencer en remplaçant $2$ par $2,7$.
+\item Recommencer en remplaçant $2,7$ par $2,71$.
+\item Conjecturer la dérivée de $x \mapsto e^x$.
+\end{enumquestions}
+Cette conjecture est un théorème : la fonction $f : x \mapsto e^x$ vérifie $f' = f$ et $f(0) = 1$. 
+\begin{tcolorbox}
+\begin{definition}
+La fonction $x \mapsto e^x$ est appelée la \textbf{fonction exponentielle}. Elle est notée $\exp$ et vérifie
+\begin{equation*}
+\begin{cases}
+exp'(x) = exp(x)& \text{ pour tout } x \in \R\\
+exp(0) = 1
+\end{cases}
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+
+\end{document}
