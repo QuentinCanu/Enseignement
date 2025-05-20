@@ -1,0 +1,130 @@
+\documentclass{exam}
+\usepackage{mainExam}
+
+\title{Contrôle : Probabilités}
+\date{20 Mai 2025}
+\author{Seconde 9}
+
+\begin{document}
+\maketitle
+\instructions{Autorisée}
+\begin{questions}
+\titledquestion{Tourisme}[7]
+Une agence de voyage propose différents types de trajets et différentes destinations. Les gestionnaires ont établis la répartition de tous les dossiers clients. En voici une répresentation partielle :
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+&Train&Avion&Total\\
+\hline
+Japon&&\num{456}&\\
+\hline
+Norvège&\num{312}&&\\
+\hline
+Inde&\num{52}&&\num{89}\\
+\hline
+Total&&\num{532}&\num{1000}\\
+\hline
+\end{tabular}
+\end{center}
+\begin{parts}
+\part[1] Compléter ce tableau.
+
+On tire au hasard un dossier client. On pose les événements suivants :
+\begin{itemize}
+\item $A$ \og Le client prend l'avion pour son voyage\fg 
+\item $T$ \og Le client prend le train pour son voyage\fg
+\item $J$ \og Le client se rend au Japon son voyage\fg
+\item $N$ \og Le client se rend en Norvège son voyage\fg 
+\item $I$ \og Le client se rend en Inde son voyage\fg 
+\end{itemize}
+\part[1] Donner la valeur de $P(A)$, $P(T)$, $P(J)$, $P(N)$ et $P(I)$.
+\part[1] Proposer une traduction en français de $A \cap I$, puis donner la valeur de $P(A \cap I)$.
+\part[1] Proposer une traduction en français de $A \cup I$, puis donner la valeur de $P(A \cup I)$.
+\part[1] Proposer une traduction en français de $\overbar{N}$, puis donner la valeur de $P(\overbar{N})$.
+\part[1] Proposer une traduction en français de $\overbar{T \cup I}$, puis calculer la valeur de $P(\overbar{T \cup I})$.
+\part[1] La directrice de l'agence prend tous les dossiers clients à destination du Japon, puis tire au hasard un de ces dossiers. Quelle est la probabilité que le client voyage en train ?
+\end{parts}
+
+\vspace*{1cm}
+\titledquestion{Jeu de hasard truqué}[5]
+On place dans une urne des boules de deux couleurs différentes : rouge et bleu. La répartition des boules suit les critères suivants :
+\begin{itemize}
+\item Il y a dix boules en tout.
+\item Il y a autant de boules rouges que de boules bleues.
+\item Toutes les boules rouges sont numérotées $6$.
+\item Les boules bleues sont numérotées de $1$ à $5$.
+\end{itemize}
+On tire une boule au hasard et on regarde leur numéro.
+\begin{parts}
+\part[1] Donner l'univers $\Omega$ de cette expérience aléatoire.
+\part[0,5] Établir la loi de probabilité de cette expérience aléatoire, sous la forme d'un tableau.
+\part[1,5] On pose les événements suivants :
+\begin{itemize}
+\item $A$ \og On tire un numéro inférieur ou égal à $5$ \fg
+\item $B$ \og On tire un nombre pair \fg
+\item $C$ \og On tire un multiple de $3$ \fg
+\end{itemize}
+Calculer les valeurs de $P(A)$, $P(B)$ et $P(C)$.
+\part[1] Calculer $P(B \cup C)$.
+\part[1] Calculer $P(\overbar{A \cap C})$.
+\end{parts}
+
+\vspace*{1cm}
+\titledquestion{Groupe Sanguin}[4]
+Le groupe sanguin d'un personne est déterminé par les antigènes transmis par le père, et ceux transmis par la mère. Il y a deux antigènes possibles: $A$ et $B$. Il se peut aussi qu'un des deux parents n'en transmettent aucun. Le groupe sanguin est déterminé ainsi :
+\begin{itemize}
+\item Si l'enfant reçoit uniquement des antigènes $A$, son groupe sanguin est $A$.
+\item Si l'enfant reçoit uniquement des antigènes $B$, son groupe sanguin est $B$.
+\item Si l'enfant reçoit uniquement des antigènes $A$ et $B$, son groupe sanguin est $AB$.
+\item Sinon, le groupe sanguin de l'enfant est $O$.
+\end{itemize}
+On tire au hasard un couple dans une population si grande que l'on peut suppose que chaque parent a autant de chances de transmettre des antigènes $A$, des antigènes $B$ ou pas d'antigènes du tout à leur enfant. On observe les antigènes transmis par les deux parents à leur enfant. On pose les événements suivants :
+\begin{itemize}
+\item $A_M$ \og La mère transmet des antigènes $A$ à l'enfant \fg 
+\item $B_M$ \og La mère transmet des antigènes $B$ à l'enfant \fg 
+\item $O_M$ \og La mère ne transmet pas d'antigènes à l'enfant \fg 
+\item $A_P$ \og Le père transmet des antigènes $A$ à l'enfant \fg 
+\item $B_P$ \og Le père transmet des antigènes $B$ à l'enfant \fg 
+\item $O_P$ \og Le père ne transmet pas d'antigènes à l'enfant \fg 
+\end{itemize}
+\begin{parts}
+\part[1] Compléter l'arbre de dénombrement suivant rendant compte de toutes les possibilités.
+\begin{center}
+\begin{tikzpicture}[
+    grow'=right,level distance=4cm,
+    level 1/.style={sibling distance=30mm},
+    level 2/.style={sibling distance=10mm},
+    ]
+\coordinate
+    child {node {$A_M$}
+        child {node {$A_P$}}
+        child {node {$\dots$}}
+        child {node {$\dots$}}
+    }
+    child {node {$B_M$}
+        child {node {$\dots$}}
+        child {node {$\dots$}}
+        child {node {$\dots$}}
+    }
+    child {node {$\dots$}
+        child {node {$\dots$}}
+        child {node {$\dots$}}
+        child {node {$\dots$}}
+    }
+;
+\end{tikzpicture}
+\end{center}
+\part[1] Quelle est la probabilité que l'enfant soit de groupe sanguin $A$ ?
+\part[1] Quelle est la probabilité que l'enfant soit de groupe sanguin $AB$ ?
+\part[1] Quelle est la probabilité que l'enfant soit de groupe sanguin $O$ ?
+\end{parts}
+
+\vspace*{1cm}
+\titledquestion{Prénom}[2]
+Un jeune garçon du nom de Théo connait les lettres de son prénom, mais ne connait pas leur ordre. Il ecrit au hasard les quatre lettres de son prénom.
+\begin{parts}
+\part[1] Quel est le nombre de possibilités ?
+\part[1] En déduire la probabilité que Théo écrive son prénom correctement.
+\end{parts}
+\end{questions}
+\end{document}
