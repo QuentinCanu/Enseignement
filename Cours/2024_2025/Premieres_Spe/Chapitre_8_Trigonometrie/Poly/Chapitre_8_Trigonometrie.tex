@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{mainPoly}
+
+\title{Fonctions Trigonométriques}
+\date{}
+\author{Premières Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+
+\section{Cercle trigonométrique : mesure en radians}
+On se munit d'un repère orthonormé $(O;I;J)$. Le cercle \textbf{trigonométrique} est le cercle de centre $O$, et de rayon $1$.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (-3,0) -- (3,0);
+\draw[->] (0,-3) -- (0,3);
+\draw (0,0) node[above left] {$O$};
+\draw (1.5,0) node[below right] {$I$};
+\draw (0,1.5) node[above left] {$J$};
+\draw (0,0) circle (1.5);
+\end{tikzpicture}
+\end{center}
+On va considérer un point $M$ qui circule le long de ce cercle. Son point de départ est $I$, et le sens de parcours sera le sens anti-horaire.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (-3,0) -- (3,0);
+\draw[->] (0,-3) -- (0,3);
+\draw (0,0) node[above left] {$O$};
+\draw (1.5,0) node[below right] {$I$};
+\draw (0,1.5) node[above left] {$J$};
+\draw (0,0) circle (1.5);
+\draw (45:1.5) node {$\bullet$} node[above right] {$M$};
+\path[->] (15:3) edge[bend right] node[right] {Sens de parcours} (75:3);
+\end{tikzpicture}
+\end{center}
+
+\begin{tcolorbox}
+\begin{definition}
+Le sens anti-horaire est appelé \textbf{sens direct} ou \textbf{sens trigonométrique}.
+\end{definition}
+\end{tcolorbox}
+\end{document}
