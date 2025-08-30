@@ -2,3 +2,4 @@
 \ProvidesClass{poly}
 
 \LoadClass{article}
+\pagestyle{headings}
