@@ -1,0 +1,22 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{main}
+
+\RequirePackage[french]{babel}
+\RequirePackage{tcolorbox}
+\RequirePackage{enumitem}
+\newenvironment{alphaquestions}{\begin{enumerate}[label=\alph*), parsep=0.5cm, topsep=0.5cm]}{\end{enumerate}}
+
+\RequirePackage{tikz}
+\usetikzlibrary{tikzmark}
+
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\newtheorem{definition_}{Définition}
+\newenvironment{definition}{\begin{tcolorbox}\begin{definition_}}{\end{definition_}\end{tcolorbox}}
+\newtheorem{proposition_}{Proposition}
+\newenvironment{proposition}{\begin{tcolorbox}[arc=0mm]\begin{proposition_}}{\end{proposition_}\end{tcolorbox}}
+\newtheorem*{example}{Exemple}
+\newtheorem*{remark}{Remarque}
+
+
+\newcommand{\answerline}{\dotfill}

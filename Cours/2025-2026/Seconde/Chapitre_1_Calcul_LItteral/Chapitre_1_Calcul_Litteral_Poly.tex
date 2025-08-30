@@ -1,0 +1,263 @@
+\documentclass{poly}
+\usepackage{main}
+
+\author{Seconde 9}
+\date{}
+\title{Calcul Littéral}
+
+\begin{document}
+\maketitle
+\section{Introduction : Lire un cours de maths}
+En mathématiques, un cours est composé de \textbf{définitions}, de résultats (comme des \textbf{propositions}, des \textbf{propriétés} ou des \textbf{théorèmes}), de \textbf{remarques} ainsi que d'\textbf{exemples} ou \textbf{exercices}. 
+
+Les définitions décrivent ce que sont les objets.
+\begin{tcolorbox}
+Une \textbf{définition} permet l'introduction d'un concept nouveau en mathématiques. Il utilise des définitions déjà connues pour construire quelque chose de nouveau.
+\tcblower
+\textbf{Il faut connaitre ses définitions pour comprendre les énoncés des exercices.}
+\end{tcolorbox}
+Les propositions, les propriétés et les théorèmes décrivent ce que font les objets.
+\begin{tcolorbox}[arc=0mm, colback=black!10]
+Une \textbf{proposition}, une \textbf{propriété} ou un \textbf{théorème} est un \textbf{résultat} à propos des objets définis plus tôt. Ce résultat est vrai parce qu'il a été démontré.
+\tcblower
+\textbf{Il faut connaître les résultat du cours pour pouvoir résoudre les exercices.}
+\end{tcolorbox}
+\begin{example}
+\hfill
+\begin{itemize}
+\item Un triangle rectangle est un triangle dont l'un des angles est droit. C'est une \textbf{définition}.
+\item Le \textbf{Théorème de Pythagore} est un résultat à propos des triangles rectangles. Il nous en apprend un peu plus sur l'objet \og triangle rectangle \fg.
+\end{itemize}
+\end{example}
+\begin{tcolorbox}[colback=white]
+Dans un cours, il y a aussi des remarques pour bien aider à comprendre, il ne faut pas les négliger.
+\end{tcolorbox}
+
+% \begin{remark}
+% Pour bien apprendre un cours de maths, il faut identifier les différentes parties du cours: 
+% \begin{itemize}
+% \item Les \textbf{définitions} sont à connaître par \textbf{cœur}.
+% \item Les \textbf{propositions} sont à comprendre. Pour cela, il faut savoir \textbf{refaire} les \textbf{exemples} données par le cours.
+% \item Les \textbf{théorèmes} sont des proposition importantes, elle nécessitent d'être connues.
+% \item Les \textbf{remarques} permettent de mieux comprendre les concepts du cours, il ne faut pas les négliger lors de la lecture du cours.
+% \item Les \textbf{Exemples} illustrent directement les notions introduites. Il faut savoir les \textbf{refaire}.
+% \end{itemize}
+% \end{remark}
+\newpage
+\section{Développement et factorisation}
+\begin{definition}
+\begin{itemize}
+\item Une expression littérale est sous forme \emph{développée} si elle correspond à une \textbf{somme} de termes.
+\item Une expression littérale est sous forme \emph{factorisée} si elle correspond à un \textbf{produit} de facteurs.
+\end{itemize}
+\end{definition}
+\begin{example}
+L'aire du rectangle suivant
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (5,2);
+\coordinate (D) at (0,2);
+\coordinate (E) at (2,0);
+\coordinate (F) at (2,2);
+
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (E) -- (F);
+\draw[<->] (A) ++ (-0.25,0) -- ++(0,2) node[midway,left] {$a$};
+\draw[<->] (A) ++ (0,-0.25) -- ++(2,0) node[midway, below] {$b$};
+\draw[<->] (E) ++ (0,-0.25) -- ++(3,0) node[midway,below] {$c$};
+\end{tikzpicture}
+\end{center}
+peut être calculée de deux façons.
+\begin{itemize}
+\item En \textbf{multipliant} sa largeur ($a$) et sa longueur ($b + c$):
+\begin{equation*}
+a(b + c)    
+\end{equation*}
+\item En \textbf{ajoutant} les aires des deux rectangles:
+\begin{equation*}
+ab + bc
+\end{equation*}  
+\end{itemize}
+\end{example}
+\subsection{Développement}
+Pour développer un produit, on utilise la distributivité de la multiplication sur l'addition.
+
+
+\begin{equation*}
+\tikzmarknode{a}{a}(\tikzmarknode{b}{b}+\tikzmarknode{c}{c}) = ab + ac
+\end{equation*}
+\begin{tikzpicture}[overlay, remember picture]
+\draw (a.north) to[bend left=75] (b.north);
+\draw (a.north) to[bend left=75] (c.north);
+\end{tikzpicture}
+
+\begin{equation*}
+(\tikzmarknode{a1}{a} + \tikzmarknode{b1}{b})(\tikzmarknode{c1}{c} + \tikzmarknode{d1}{d}) =
+ac + ad + bc + bd
+\end{equation*}
+\begin{tikzpicture}[overlay, remember picture]
+\draw (a1.north) to[bend left=75] (c1.north);
+\draw (a1.north) to[bend left=75] (d1.north);
+\draw (b1.south) to[bend right=75] (c1.south);
+\draw (b1.south) to[bend right=75] (d1.south);
+\end{tikzpicture}
+\begin{tcolorbox}
+Pour développer un produit de sommes, on \og distribue \fg chaque terme de la somme de gauche vers chaque terme de la somme de droite.
+\end{tcolorbox}
+\begin{example}
+Développer chacune des expressions suivantes. On fera apparaître les traits de construction de la distributivité.
+\begin{alphaquestions}
+\item $4x(2y + 5z) = $ \answerline
+\item $3x(-10x + 2) = $ \answerline
+\item $-(-4a + 2b) = $ \answerline
+\item $(17x - 5)(12x + 7) = $ \answerline
+\item $(l + L)(l - L) = $ \answerline
+\end{alphaquestions}
+\end{example}
+
+\newpage
+\subsection{Factorisation}
+\begin{tcolorbox}
+Pour factoriser une somme, on peut chercher dans chaque terme de la somme un \textbf{facteur commun}.
+\end{tcolorbox}
+\begin{equation*}
+\underline{a}b + \underline{a}c = \underline{a}(b + c)
+\end{equation*}
+\begin{example}
+Factoriser les expressions suivantes :
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $5a + 10b =$ \answerline
+\item $-8y^2 + y =$ \answerline
+\item $21x - 28x^2 =$ \answerline
+\item $35p - 42q =$ \answerline
+\item $x(3x - 2) + 10(3x - 2) =$ \answerline
+\end{enumerate}
+\end{example}
+\section{Identités remarquables}
+\begin{proposition}
+Soient $a$ et $b$ deux nombre réels quelconques. Alors,
+\begin{equation*}
+\begin{aligned}
+&(a + b)^2 = a^2 + 2ab + b^2\\ 
+&(a - b)^2 = a^2 - 2ab + b^2\\ 
+&(a + b)(a - b) = a^2 - b^2\\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+\begin{example}
+Développer les expression suivantes:
+\begin{alphaquestions}
+\item $(c-1)(c+1)=$ \answerline
+\item $(x+4)^2=$ \answerline
+\item $(x-4)^2=$ \answerline
+\end{alphaquestions}    
+\end{example}
+\vspace*{0.5cm}
+\begin{example}
+Factoriser l'expression suivante. 
+
+$y^2 - 64 =$ \answerline
+\end{example}
+\newpage
+\section{Expressions Fractionnaires}
+\begin{definition}[Expression fractionnaire]
+\begin{equation*}
+\text{Expression Fractionnaire} = \dfrac{\text{Numérateur}}{\text{Dénominateur} \neq 0}
+\end{equation*}
+\end{definition}
+\begin{example}
+
+Les expressions $\dfrac{3}{4}$; $\dfrac{x}{3-x}$ et $\dfrac{a + b}{c - d}$ sont des expressions fractionnaires.
+
+L'expression $\dfrac{x^2 - 1}{0}$ ne l'est pas à cause du $0$.
+\end{example}
+
+\subsection{Simplification de fractions}
+\begin{example}
+Simplifier les fractions suivantes :
+\begin{enumerate}[label=\emph{\alph*})]
+\item $\dfrac{35}{42} =$  \answerline
+\item $\dfrac{10a^2(1 + b)}{5a(2 + b)} = $ \answerline
+\item $\dfrac{a^2 + 2a + 1}{a^2 - 1} =$ \answerline
+\item $\dfrac{49 - x^2}{x^2-14x+49} =$ \answerline
+\end{enumerate}
+\end{example}
+\subsection{Dénominateurs communs}
+\begin{proposition}[Formule universelle]
+Soient $\dfrac{a}{b}$ et $\dfrac{c}{d}$ deux expressions fractionnaires. Alors les expressions fractionnaires
+\begin{equation*}
+\dfrac{ad}{bd} \text{ et } \dfrac{bc}{bd}    
+\end{equation*}
+ont le même dénominateur.
+\end{proposition}
+\begin{remark}
+Cette formule est à utiliser \textbf{en dernier recours}, si vous ne voyez pas comment mettre deux expressions fractionnaires au même dénominateur.
+\end{remark}
+\begin{example}
+Simplifier les expressions suivantes : 
+\begin{enumerate}[label=\emph{\alph*)}]
+\item $\dfrac{2}{3} + \dfrac{13}{6} =$ \answerline
+\item $\dfrac{9}{15} - \dfrac{35}{25} = $
+\answerline
+\item $\dfrac{3}{p(q-1)} + \dfrac{5}{(q-1)} = $ \answerline 
+\item $\dfrac{y + 1}{y - 2} - \dfrac{y - 3}{y^2 - 4y + 4} =$ \answerline
+\end{enumerate}
+\end{example}
+
+\subsection{Égalité d'expressions fractionnaires}
+\begin{remark}
+Pour comparer deux expressions fractionnaires $\dfrac{a}{b}$ et $\dfrac{c}{d}$ :
+\begin{enumerate}
+\item On les mets au même dénominateur, et on compare les numérateurs;
+\item On vérifie que $ad = bc$. 
+\end{enumerate}
+\end{remark}
+% \begin{proposition}
+% \hfill
+% \begin{itemize} 
+% \item Pour ajouter deux expressions fractionnaires, leurs dénominateurs doivent être \textbf{identiques}. La formule générale d'addition de fractions est donnée par :
+% \begin{equation*}
+% \dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad + cb}{bd}   
+% \end{equation*}
+% \item Pour multiplier deux fractions, on multiplie leur numérateurs et leur dénominateurs :
+% \begin{equation*}
+% \dfrac{a}{b} \times \dfrac{c}{d} = \dfrac{ac}{bd}    
+% \end{equation*}
+% \item Deux fractions sont égales si et seulement si leur produit en croix donne deux quantités égales.
+% \begin{equation*}
+% \dfrac{a}{b} = \dfrac{c}{d} \Leftrightarrow ad = bc
+% \end{equation*}
+% \end{itemize}
+% \end{proposition}
+% \begin{remark}
+% Ces trois résultats sont à utiliser si vous ne voyez pas d'autres solutions.
+% \end{remark}
+% \begin{example}
+% Différents cas que vous allez croiser\newline
+% \begin{tcolorbox}
+% \begin{minipage}{0.45\textwidth}
+% Somme de deux fractions avec \textbf{une} fraction à changer :
+% \begin{equation*}
+% \dfrac{1+y}{1+x} + \dfrac{x}{y(1+x)} = \dfrac{y(1+y) + x}{y(1+x)}     
+% \end{equation*}
+% Multiplication d'une fraction par une expression non fractionnaire :
+% \begin{equation*}
+% (1+x)\dfrac{2}{y} = \dfrac{2(1+x)}{y}   
+% \end{equation*}    
+% \end{minipage}
+% \hfill\vline\hfill
+% \begin{minipage}{0.45\textwidth}
+% Somme de deux fractions avec \textbf{deux} fractions à changer:
+% \begin{equation*}
+% \dfrac{1+a}{a} - \dfrac{a}{1+a} = \dfrac{(1+a)^2 - a^2}{a(1+a)}
+% \end{equation*}
+% Produit en croix pour isoler une variable :
+% \begin{equation*}
+% V = \dfrac{d}{t} \Leftrightarrow d = \dfrac{t}{V}
+% \end{equation*}
+% \end{minipage}
+% \end{tcolorbox}
+% \end{example}
+\end{document}
