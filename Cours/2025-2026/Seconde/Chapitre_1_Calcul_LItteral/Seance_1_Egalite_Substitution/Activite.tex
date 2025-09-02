@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Art abstrait}
+\author{Seconde 3}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Tableau}
+Une fresque d'art abstrait fait figurer quatre zones différentes, toutes rectangulaires:
+\begin{itemize}
+\item La zone délimitée par le rectangle $HIFG$ sera coloriée en rouge.
+\item La zone délimitée par le rectangle $BCDI$ sera coloriée en bleu.
+\item La zone délimitée par le rectangle $ABIH$ contiendra un mélange de bleu et de rouge.
+\item La dernière zone, délimité par $IDEF$ restera en blanc.
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (5,0);
+\coordinate (D) at (5,2);
+\coordinate (E) at (5,4);
+\coordinate (F) at (2,4);
+\coordinate (G) at (0,4);
+\coordinate (H) at (0,2);
+\coordinate (I) at (2,2);
+\draw (A) -- (C) -- (E) -- (G) -- cycle;
+\draw (B) -- (F);
+\draw (D) -- (H);
+\draw (A) node[below left] {$A$};
+\draw (B) node[below] {$B$};
+\draw (C) node[below right] {$C$};
+\draw (D) node[right] {$D$};
+\draw (E) node[above right] {$E$};
+\draw (F) node[above] {$F$};
+\draw (G) node[above left] {$G$};
+\draw (H) node[left] {$H$};
+\draw (I) node[above right] {$I$};
+\draw[<->] (A) ++ (0,-0.5) -- ++ (2,0) node[below, midway] {$q$};
+\draw[<->] (A) ++ (0,-1) -- ++ (5,0) node[below, midway] {\qty{50}{\meter}};
+\draw[<->] (A) ++ (-0.5, 0) -- ++ (0,2) node[left, midway] {$p$};
+\draw[<->] (A) ++ (-1, 0) -- ++ (0,4) node[left, midway] {\qty{40}{\meter}};
+\end{tikzpicture}
+\end{center}
+\begin{alphaquestions}
+\item Ajouter de la couleur à la figure ci-dessus pour correspondre aux zones du tableau.
+\item\label{perim} Proposer une formule pour calculer les périmètres des zones suivantes, en fonction des indéterminées $p$ et $q$:
+\begin{itemize}
+\item La zone coloriée avec le mélange de bleu et de rouge 
+\item La zone totale coloriée avec du bleu
+\item La zone totale coloriée avec du rouge
+\item La zone restant blanche
+\end{itemize}
+\item\label{val} En déduire la valeur du périmètre de ces rectangles en fonction des valeurs données à $p$ et $q$:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+&Mélange&Rouge&Bleu&Blanc\\
+\hline
+$p = 20$ et $q = 20$&&&&\\
+\hline
+$p = 5$ et $q = 7$&&&&\\
+\hline
+$p = 15$ et $q = 2$&&&&\\
+\hline
+\end{tabular}
+\end{center}
+\item Même question que \ref{perim} et \ref{val}, mais en remplaçant le périmètre par \textbf{l'aire} des rectangles considérés.
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+&Mélange&Rouge&Bleu&Blanc\\
+\hline
+$p = 20$ et $q = 20$&&&&\\
+\hline
+$p = 5$ et $q = 7$&&&&\\
+\hline
+$p = 15$ et $q = 2$&&&&\\
+\hline
+\end{tabular}
+\end{center}
+\end{alphaquestions}
+\hfill\vline\hfill
+\section{Collection}
+Un dyptique est constitué de deux tableaux liés par leur taille autour d'un nombre $x$ indéterminé : le premier est un rectangle de longueur $x + 1$ et de largeur $x - 1$, le deuxième est un carré de côté $x$ dont on a retiré un petit carré de côté $1$.
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (3,1);
+\coordinate (D) at (0,1);
+\coordinate (E) at (4,0);
+\coordinate (F) at (6,0);
+\coordinate (G) at (6,2);
+\coordinate (H) at (5,2);
+\coordinate (I) at (5,1);
+\coordinate (J) at (4,1);
+\coordinate (K) at (4,2);
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (E) -- (F) -- (G) -- (H) -- (I) -- (J) -- cycle;
+\draw[dashed] (J) -- (K) -- (H);
+\draw[<->] (A) ++ (0,-0.25) -- ++(3,0) node[midway,below] {$x+1$};
+\draw[<->] (A) ++ (-0.25,0) -- ++(0,1) node[midway,left] {$x-1$};
+\draw[<->] (E) ++ (0,-0.25) -- ++(2,0) node[midway,below] {$x$};
+\draw[<->] (K) ++ (-0.25,0) -- ++(0,-1) node[midway,left] {$1$};
+\end{tikzpicture}
+\end{center}
+\begin{alphaquestions}
+\item Donner la formule permettant de calculer l'aire de ces deux tableaux.
+\item Le nombre $x$ peut-il prendre n'importe quelle valeur ?
+\item Calculer l'aire de chacun des deux tableaux, en choisissant plusieurs valeurs de $x$.  
+\item Que remarquez-vous ?
+\end{alphaquestions}
+\end{document}
