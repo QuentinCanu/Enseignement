@@ -34,6 +34,7 @@ Soit $(O;I;J)$ un repère orthonormée, et $f$ une fonction définie sur $\R$ do
 \end{proposition}
 \newpage
 \begin{exercize}
+\label{ex:affine}
 Sur le repère $(0;I;J)$ ci-contre, on a tracé la courbe représentative de deux fonctions affines $f$ et $g$.
 \begin{center}
 \begin{tikzpicture}
@@ -67,6 +68,23 @@ b = f(x_1) - ax_1
 \end{equation*}
 \end{minipage}
 \end{proposition}
+\begin{proposition}
+Soit $f : x \mapsto ax + b$ une fonction affine.
+\begin{itemize}
+\item Si $a < 0$, alors $f$ est décroissante sur $\R$. 
+\item Si $a > 0$, alors $f$ est croissante sur $\R$. 
+\end{itemize}
+\end{proposition}
+\begin{method}
+Pour dresser le tableau de signes d'une fonction affine $f : x \mapsto ax + b$, il faut:
+\begin{enumerate}
+\item Déterminer l'antécédant de $0$ de $f$, autrement dit, trouver $x$ tel que $ax + b = 0$;
+\item Le tableau de signes s'obtient en suivant la variation de la fonction, autrement dit, cela dépend du signe de $a$ 
+\end{enumerate} 
+\end{method}
+\begin{exercize}
+Dresser le tableau de signes des fonctions trouvées dans l'exercice \ref{ex:affine}.
+\end{exercize}
 
 \newpage
 \section{Fonction polynomiale du second degré}
