@@ -10,6 +10,8 @@
 \RequirePackage{tikz}
 \usetikzlibrary{tikzmark}
 
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
 \newtheorem{definition_}{Définition}
@@ -20,6 +22,14 @@
 \newtheorem*{remark}{Remarque}
 \newtheorem{exercize}{Exercice}
 \newtheorem{method}{Méthode}
+\newtheorem{theorem_}{theorem}
+\newenvironment{theorem}{\begin{tcolorbox}[arc=0mm]\begin{theorem_}}{\end{theorem_}\end{tcolorbox}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
 
 \RequirePackage{siunitx}
 
