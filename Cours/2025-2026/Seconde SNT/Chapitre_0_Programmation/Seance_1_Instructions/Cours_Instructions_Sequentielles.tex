@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Cours : Accueil, Programmation}
+\date{4 Septembre 2024}
+\author{Seconde 3}
+
+\begin{document}
+\maketitle
+
+\section{Accueil des élèves en SNT}
+\subsection{Matériel}
+\begin{itemize}
+\item Cahier pour la SNT
+\item Ordinateur région
+\end{itemize}
+\subsection{Notes}
+\begin{itemize}
+\item Une note à la fin de chaque chapitre sous forme de projets ou d'exposés.
+\item Quelques évaluations de cours de temps en temps.
+\end{itemize}
+
+\section{Cours : programmation}
+
+\textbf{Chapitre $0$ sur la programmation.}
+
+\subsection{Notion d'instructions séquentielles.}
+
+\begin{definition}
+Un programme est une suite d'instructions. Lorsque l'on exécute un programme, les instructions sont exécutées les unes après les autres.
+\end{definition}
+\begin{example}
+Le programme contrôlant un feu tricolore peut être comparé à un programme exécutant infiniment les instructions suivantes: 
+\begin{enumerate}
+\item allumer l'ampoule rouge pendant un temps donné
+\item allumer l'ampoule verte pendant un temps donné
+\item allumer l'ampoule orange pendant un temps donné
+\end{enumerate}
+\end{example}
+
+\begin{exercize}
+Proposer un programme similaire pour les objets suivants:
+\begin{itemize}
+\item Distributeur automatique de billets (au moment d'insérer la carte).
+\item Distributeur de boissons.
+\item 
+\end{itemize}
+\end{exercize}
+
+Un ordinateur est très naïf, il exécute dans l'ordre toutes les instructions d'un programme sans discuter.
+
+\begin{example}
+On peut simuler à la main l'exécution d'un programme par une flèche qui lit une à une les instructions.
+\begin{enumerate}
+\item Penser à un nombre.
+\item Le multiplier par $2$.
+\item Ajouter $10$ au résultat.
+\item Diviser par $2$ le résultat.
+\item Enlever le nombre de départ.
+\end{enumerate}
+\end{example}
+
+\subsection{Variables}
+
+\begin{definition}
+Une \emph{variable} est un emplacement mémoire dédié à stocker une valeur. Cette valeur peut ensuite être réutilisée plus tard par une autre instruction.
+\end{definition}
+
+\begin{example}
+On peut imaginer chaque variable comme des boîtes contenant une seule valeur. Quand une variable n'a pas encore été définie, la boite n'existe pas encore.
+
+Le programme suivant définit deux variables nommées $a$ et $b$ qui contiennent respectivement $2$ et $3$.
+\begin{enumerate}
+\item $a \leftarrow 2$ 
+\item $b \leftarrow 3$ 
+\end{enumerate}
+Que font les programmes suivants ?
+\begin{enumerate}
+\item 
+\begin{enumerate}
+    \item $a \leftarrow 2$ 
+    \item $b \leftarrow 3$ 
+    \item $a \leftarrow 5$ 
+\end{enumerate}
+\item
+\begin{enumerate}
+    \item $a \leftarrow 2$ 
+    \item $b \leftarrow 3$ 
+    \item $a \leftarrow a+b$ 
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item $a \leftarrow 2$
+\item $b \leftarrow 3$
+\item $c \leftarrow b$
+\item $b \leftarrow a$
+\item $a \leftarrow c$ 
+\end{enumerate}
+\end{enumerate}
+\end{example}
+
+\begin{exercize}
+Trouver un programme qui initialise deux variables nommées $a$ et $b$, et qui échange la valeur de ces deux variables, mais sans utiliser de variables temporaires $c$.
+\end{exercize}
+
+\section{Devoirs}
+J'interrogerais quelqu'un sur un programme très simple.
+
+\end{document}
