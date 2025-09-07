@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Conversion d'unités}
+\author{Seconde 3}
+\date{8 Septembre 2025}
+
+\begin{document}
+\maketitle
+\begin{alphaquestions}
+\item Rappeler la relation entre les mètres (\unit{\meter}) et les kilomètres (\unit{\kilo\meter}) en complétant l'égalité suivante :
+\begin{equation*}
+\qty{1}{\kilo\meter} = \dots
+\end{equation*}
+\item À l'aide d'une substitution, en déduire le nombre de mètres carrés (\unit{\meter^2}) qu'il y a dans \num{20} kilomètre carré (\unit{\kilo\meter^2}) :
+\begin{equation*}
+\qty{20}{\kilo\meter^2} = 20 \times \qty{1}{\kilo\meter\squared} = 20 \times (\qty{1}{\kilo\meter})^2 = \dots
+\end{equation*}
+\item Même question, mais sur le nombre de mètres cube dans \num{60} kilomètre cube.
+\item Combien y a-t-il de secondes dans une heure ?
+\item Une voiture roule à \qty[per-mode = symbol]{72}{\kilo\meter\per\hour}, quelle est sa vitesse en \unit[per-mode = symbol]{\meter\per\second} ? On pourra compléter l'égalité suivante :
+\begin{equation*}
+\qty[per-mode = fraction]{72}{\kilo\meter\per\hour} = 72 \times \dfrac{\qty{1}{\kilo\meter}}{\qty{1}{\hour}} = \dots 
+\end{equation*}
+\item Une moto double la voiture en roulant à \qty[per-mode = symbol]{25}{\meter\per\second}. Quelle est sa vitesse en \unit[per-mode = symbol]{\kilo\meter\per\hour} ? \emph{(Indication : Si $\qty{1}{\kilo\meter} = \qty{1000}{\meter}$, alors $\qty{1}{\meter} = \qty[parse-numbers = false]{1/1000}{\kilo\meter}$)}
+\item La vitesse de la lumière est de \qty[per-mode = symbol]{299 792 458}{\meter\per\second}, quelle est-elle en \unit[per-mode = symbol]{\kilo\meter\per\hour}? 
+\end{alphaquestions}
+\end{document}
