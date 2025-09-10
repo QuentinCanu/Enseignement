@@ -1,0 +1,76 @@
+\documentclass{exos}
+\usepackage{main}
+
+\begin{document}
+\begin{exercize*}
+Dresser le tableau de signes des fonctions affines suivantes :
+\begin{alphaquestions}
+\item $f(x) = 4x + 2$
+\item $f(x) = -x - 5$
+\end{alphaquestions}
+\end{exercize*}
+\begin{exercize*}
+Soit $f \colon x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. En fonction de l'aspect de la courbe représentative de $f$ dans les différents cas présentés après, en déduire le signe de $a$ :
+\begin{alphaquestions}
+\begin{minipage}{0.45\textwidth}
+\item \hfill
+
+\begin{tikzpicture}[scale=0.7]
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw plot[samples=100] (\x, {0.5*(\x)^2 - 0.2*(\x) - 2});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\item \hfill
+
+\begin{tikzpicture}[scale=0.7]
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw plot[samples=100] (\x, {-3*(\x)^2 - 2.3*(\x) + 2});
+\end{tikzpicture}
+\end{minipage}
+\end{alphaquestions}
+\end{exercize*}
+\vspace*{2cm}
+\begin{exercize*}
+Dresser le tableau de signes des fonctions affines suivantes :
+\begin{alphaquestions}
+\item $f(x) = 4x + 2$
+\item $f(x) = -x - 5$
+\end{alphaquestions}
+\end{exercize*}
+\begin{exercize*}
+Soit $f \colon x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. En fonction de l'aspect de la courbe représentative de $f$ dans les différents cas présentés après, en déduire le signe de $a$ :
+\begin{alphaquestions}
+\begin{minipage}{0.45\textwidth}
+\item \hfill
+
+\begin{tikzpicture}[scale=0.7]
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw plot[samples=100] (\x, {0.5*(\x)^2 - 0.2*(\x) - 2});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\item \hfill
+
+\begin{tikzpicture}[scale=0.7]
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw plot[samples=100] (\x, {-3*(\x)^2 - 2.3*(\x) + 2});
+\end{tikzpicture}
+\end{minipage}
+\end{alphaquestions}
+\end{exercize*}
+\end{document}

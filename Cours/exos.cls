@@ -2,5 +2,11 @@
 \ProvidesClass{exos}
 
 \LoadClass{article}
-\pagestyle{headings}
+\pagestyle{empty}
 \pagenumbering{gobble}
+
+\RequirePackage{geometry}
+\geometry{
+  a4paper,
+  top = 20mm
+}
