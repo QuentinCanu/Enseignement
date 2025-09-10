@@ -1,0 +1,101 @@
+\documentclass{poly}
+\usepackage{main}
+
+\title{Optimisation et transport d'électricité}
+\author{Quentin Canu}
+\date{11 Septembre 2025}
+
+\begin{document}
+\maketitle
+
+\section{Fonctions polynomiales du second degré}
+\begin{definition}
+Une fonction polynomiale du second degré est une fonction $f$ définie sur $\R$ et telle que pour tout $x \in \R$, $f(x)$ est de la forme
+\begin{equation*}
+f(x) = ax^2 + bx + c
+\end{equation*}
+où $a \neq 0, b$ et $c$ sont trois constantes réelles.
+\end{definition}
+\begin{example}
+\dotfill
+\end{example}
+\begin{definition}
+La courbe représentative d'une fonction polynomiale du second degré $f \colon x \mapsto ax^2 + bx + c$ est appelé \textbf{parabole}.
+\end{definition}
+\begin{proposition}
+Soit $f \colon x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors elle admet un unique extremum (minimum si $a > 0$, maximum si $a < 0$) atteint pour $x = \dfrac{-b}{2a}$.
+\end{proposition}
+Trouver l'extremum d'une fonction polynomiale de degré $2$ est donc assez facile.
+
+\section{Effet Joule}
+La puissance électrique transportée depuis une centrale est mesurée en \unit{W}, à l'aide de la formule $P = UI$ où $U$ est la tension du circuit et $I$ l'intensité du courant. La puissance étant constante, on en déduit que $U$ et $I$ sont inversement proportionnels. On va voir que l'on souhaite réduire $I$, et donc augmenter $U$ en conséquence : c'est pourquoi le transport d'électricité utilise des câbles à haute tension.
+
+L'énergie dissipée par effet Joule se mesure à l'aide de la formule $RI^2$. Une des problématiques du transport d'électricité est la réduction de l'effet Joule. À choisir, il est préférable de chercher à reduire l'intensité, le gain étant quadratique.
+
+Actuellement, on estime les pertes par effet Joule à \num{2,5}\% de la production, environ \qty{11,5}{\tera\watt\hour}.
+
+\section{Distribution d'électricité}
+Une autre problématique de la distribution d'électricité est l'allocation des ressources, c'est-à-dire du choix concernant l'intensité à fournir pour les différents acteurs d'un réseau électrique.
+
+Pour représenter un réseau de distribution d'électricité, on se sert d'un graphe orienté pondéré.
+
+\begin{definition}
+Un graphe orienté est donné par un ensemble $S$ appelé ensemble des \textbf{noeuds}, et par un ensemble $A \subseteq S^2$ appelé ensemble des arcs. On rajoute que $A$ ne contient aucun arc ayant la même origine et destination.
+
+Le graphe est dit pondéré s'il est muni d'une fonction $p : A -> \R$.
+\end{definition}
+\begin{example}
+\dotfill
+\end{example}
+Ici, les noeuds représentent d'un côté les centrales, les cibles (infrastructures nécessitant de l'électricité), ainsi que des intermédiaires. Les arc représentent les cables. Ils sont orientés depuis les sources vers les cibles, et pondérés par l'intensité du courant.
+
+Le but est de sélectionner l'intensité de chaque arc en respectant certaines contraintes :
+\begin{itemize}
+\item Les intensités sortantes des sources sont limitées par leur capacité de procuction
+\item Les intensités entrantes des cibles doivent correspondre à leur demande.
+\item Les intensités entrantes des noeuds intermédiaires doivent correspondre aux intensités sortantes.
+\end{itemize}
+
+Parmi toutes les solutions respectant cette contrainte, on souhaite trouver la solution (si elle existe) qui minimise une fonction objectif :
+\begin{itemize}
+\item Par exemple, on peut évaluer le prix en euros que coûte le transport d'électricité de chaque câble en fonction de l'intensité, et chercher à minimiser le coût total.
+\item Où alors, on peut chercher à minimiser les pertes par effet Joule dans le réseau électrique.  
+\end{itemize}
+Dans le premier cas, on parle de programmation linéaire, et ce genre de problème se résout avec des algorithmes comme l'algorithme du simplexe.
+
+Dans l'autre, il s'agit d'optimisation non linéaire ce qui compliqué en général.
+\subsection*{Exemple}
+\begin{center}
+\begin{tikzpicture}
+\coordinate (S1) at (0,0);
+\coordinate (S2) at (0,-2);
+\coordinate (S3) at (0,-4);
+\coordinate (V1) at (4,1);
+\coordinate (V2) at (4,-1);
+\coordinate (V3) at (4,-3);
+\coordinate (V4) at (4,-5);
+\draw (S1) node {$\bullet$} node[left] {$s_1 = 35$};
+\draw (S2) node {$\bullet$} node[left] {$s_2 = 50$};
+\draw (S3) node {$\bullet$} node[left] {$s_3 = 40$};
+\draw (V1) node {$\bullet$} node[right] {$c_1 = 45$};
+\draw (V2) node {$\bullet$} node[right] {$c_2 = 20$};
+\draw (V3) node {$\bullet$} node[right] {$c_3 = 30$};
+\draw (V4) node {$\bullet$} node[right] {$c_4 = 30$};
+\draw[-{Stealth[length=3mm,width=1mm]}] (S1) -- (V1); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S1) -- (V2); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S1) -- (V3); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S1) -- (V4); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S2) -- (V1); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S2) -- (V2); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S2) -- (V3); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S2) -- (V4); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S3) -- (V1); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S3) -- (V2); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S3) -- (V3); 
+\draw[-{Stealth[length=3mm,width=1mm]}] (S3) -- (V4); 
+\end{tikzpicture}
+\end{center}
+\begin{tcolorbox}
+Pour chaque arc reliant une source $i$ et une ville $j$, on note $x_{ij}$ l'intensité allouée au cable correspondant, et $t_{ij}$ le coût du transport d'\qty{1}{\ampere} spécifique à ce cable. Alors le coût total d'un cable est donné par $t_{ij}x_{ij}$
+\end{tcolorbox}
+\end{document}
