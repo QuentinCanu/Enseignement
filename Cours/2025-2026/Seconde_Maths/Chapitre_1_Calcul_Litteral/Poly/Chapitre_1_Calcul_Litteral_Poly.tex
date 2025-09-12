@@ -106,46 +106,14 @@ En utilisant les égalités données, transformer l'expression correspondante:
 
 \newpage
 \section{Développement et factorisation}
-\begin{definition}
-\begin{itemize}
-\item Une expression littérale est sous forme \emph{développée} si elle correspond à une \textbf{somme} de termes.
-\item Une expression littérale est sous forme \emph{factorisée} si elle correspond à un \textbf{produit} de facteurs.
-\end{itemize}
-\end{definition}
-\begin{example}
-L'aire du rectangle suivant
-\begin{center}
-\begin{tikzpicture}
-\coordinate (A) at (0,0);
-\coordinate (B) at (5,0);
-\coordinate (C) at (5,2);
-\coordinate (D) at (0,2);
-\coordinate (E) at (2,0);
-\coordinate (F) at (2,2);
-
-\draw (A) -- (B) -- (C) -- (D) -- cycle;
-\draw (E) -- (F);
-\draw[<->] (A) ++ (-0.25,0) -- ++(0,2) node[midway,left] {$a$};
-\draw[<->] (A) ++ (0,-0.25) -- ++(2,0) node[midway, below] {$b$};
-\draw[<->] (E) ++ (0,-0.25) -- ++(3,0) node[midway,below] {$c$};
-\end{tikzpicture}
-\end{center}
-peut être calculée de deux façons.
-\begin{itemize}
-\item En \textbf{multipliant} sa largeur ($a$) et sa longueur ($b + c$):
-\begin{equation*}
-a(b + c)    
-\end{equation*}
-\item En \textbf{ajoutant} les aires des deux rectangles:
-\begin{equation*}
-ab + bc
-\end{equation*}  
-\end{itemize}
-\end{example}
 \subsection{Développement}
-Pour développer un produit, on utilise la distributivité de la multiplication sur l'addition.
-
-
+\begin{definition}
+Une expression littérale est sous forme \textbf{développée réduite} si elle correspond à une \textbf{somme de termes} avec le moins de termes possible.
+\end{definition}
+\begin{method}
+Pour développer et réduire une expression, on procède comme suit :
+\begin{enumerate}
+\item On utilise la distributivité de la multiplication sur l'addition pour transformer les produits contenant des \og parenthèses de sommes \fg 
 \begin{equation*}
 \tikzmarknode{a}{a}(\tikzmarknode{b}{b}+\tikzmarknode{c}{c}) = ab + ac
 \end{equation*}
@@ -164,17 +132,19 @@ ac + ad + bc + bd
 \draw (b1.south) to[bend right=75] (c1.south);
 \draw (b1.south) to[bend right=75] (d1.south);
 \end{tikzpicture}
-\begin{tcolorbox}
-Pour développer un produit de sommes, on \og distribue \fg chaque terme de la somme de gauche vers chaque terme de la somme de droite.
-\end{tcolorbox}
+\item Une fois toutes les distributions finies, on ajoute entre eux tous les termes ayant les mêmes produits d'indéterminées.
+\begin{equation*}
+5x + 12 + 7rx -3x + rx + r^2 = 2x + 12 + 8rx + r^2
+\end{equation*}
+\end{enumerate}
+\end{method}
 \begin{example}
-Développer chacune des expressions suivantes. On fera apparaître les traits de construction de la distributivité.
+Développer et réduire les expressions suivantes :
 \begin{alphaquestions}
-\item $4x(2y + 5z) = $ \answerline
-\item $3x(-10x + 2) = $ \answerline
-\item $-(-4a + 2b) = $ \answerline
-\item $(17x - 5)(12x + 7) = $ \answerline
-\item $(l + L)(l - L) = $ \answerline
+\item $4(5a + 2b)$
+\item $(7x + 2)(3x - 4)$
+\item $-4(2x - 1) + (-5 + 4x)(8 + 5x)$
+\item $(a - b)(a + b)$
 \end{alphaquestions}
 \end{example}
 
