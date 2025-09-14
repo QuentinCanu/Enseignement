@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{main}
+
+\title{Démonstration de la forme canonique}
+\author{Quentin Canu}
+\date{11 Septembre 2025}
+
+\begin{document}
+\maketitle
+
+\begin{proposition}
+Soit $f$ une fonction polynomiale du second degré telle que $f(x) = ax^2 + bx + c$ pour tout $x$ réel. Alors, il existe $\alpha$ et $\beta$ deux nombres réels tel que
+\begin{equation*}
+f(x) = a(x - \alpha)^2 + \beta
+\end{equation*}
+\end{proposition}
+\begin{proof}
+On rappelle d'abord le résultat suivant : soient $p$ et $q$ deux nombres réels, alors $(p - q)^2 - q^2 = p^2 - 2pq$.
+
+Soit $x \in \R$. On remarque dans la formule recherchée que le coefficient $a$ est le même. On factorise donc par $a$ :
+\begin{equation*}
+f(x) = a \left(x^2 + \dfrac{b}{a}x\right) + c
+\end{equation*}
+On multiplie \og en haut et en bas \fg la fraction par $-2$ :
+\begin{equation*}
+\begin{aligned}
+f(x) &= a \left(x^2 + \dfrac{-2b}{-2a}x\right) + c\\
+&= a \left(x^2 -2 \left(\dfrac{-b}{2a}\right)x\right) + c
+\end{aligned}
+\end{equation*}
+On pose $p = x$ et $q = \dfrac{-b}{2a}$. Alors, en utilisant le résultat du début de la démonstration :
+\begin{equation*}
+\begin{aligned}
+f(x) &= a\left(\left(x - \dfrac{-b}{2a}\right)^2 - \left(\dfrac{-b}{2a}\right)^2\right) + c\\
+&= a\left(x-\dfrac{-b}{2a}\right)^2 - a\left(\dfrac{-b}{2a}\right)^2 + c
+\end{aligned}
+\end{equation*}
+On conclut en posant $\alpha = \dfrac{-b}{2a}$ et $\beta = -a \left(\dfrac{-b}{2a}\right)^2 + c$
+\end{proof}
+\end{document}
