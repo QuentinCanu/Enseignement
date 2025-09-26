@@ -1,0 +1,39 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{\vspace{-2cm}Jeu de la variation}
+\date{}
+\author{Première Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+\begin{exercize*}
+\hfill
+
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-7.25,-4.25) grid[step=0.5] (7.25,4.25);
+\draw[axis] (-7.25,0) -- (7.25,0) node[right] {$x$};
+\draw[axis] (0,-4.25) -- (0,4.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw (1,0.1) -- (1,-0.1) node[below] {$1$};
+\draw (0.1,1) -- (-0.1,1) node[left] {$1$};
+\end{tikzpicture}
+\end{center}
+
+\paragraph*{Règles du jeu}
+
+\begin{alphaquestions}
+\item Choisissez lequel/laquelle d'entre vous est le/la joueur/se $1$ et le/la joueur $2$. Le rôle de n°1 est de tracer des courbes représentatives de fonctions, tandis que le rôle de n°2 est de tracer des droites sécantes à cette courbe.
+\item N°1 choisit un nombre $a$ dans l'intervalle $[-7;0]$ qu'il note dans l'encadré suivant :
+\begin{equation*}
+\tcboxmath{a = \quad} 
+\end{equation*}
+\item \textbf{Au crayon de papier}, n°1 trace la courbe représentative d'une fonction \og un peu complexe \fg.
+\item\label{Alice} \textbf{au crayon de papier}, n°2 trace une droite sécante à la courbe à l'abscisse $a$ puis par un autre point $b > a$. \textbf{Sur l'intervalle $[a;b]$, la fonction associée à la courbe doit être monotone}.
+\item\label{Bob} N°1 efface alors la courbe, et en redessine une autre de sorte que la droite de n°2 soit toujours sécante à la courbe aux points d'abscisse $a$ et $b$. \textbf{Sur l'intervalle $[a;b]$, la fonction représentée par la courbe ne doit pas être monotone}.
+\item Continuer le jeu en répétant les étapes \ref{Alice} et \ref{Bob}. Le jeu peut-il continuer indéfiniment ? Que remarquez-vous concernant le nombre $b$ ?
+\end{alphaquestions}
+
+\end{exercize*}
+\end{document}

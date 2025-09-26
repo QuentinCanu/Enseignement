@@ -68,14 +68,12 @@ Soit $f \colon x \mapsto (x-1)^2 - 2$ définie sur $[-2;3]$.
 \section{Dérivée locale}
 \subsection{Limite finie en $0$}
 Soit $Q(h)$ une quantité dépendant d'une variable $h$.
-\begin{tcolorbox}
 \begin{definition}
 On dit que \textbf{$Q(h)$ admet une limite finie en $0$} quand il existe un nombre $q$ tel que $Q(h)$ s'approche de plus en plus de $q$ à mesure que $h$ s'approche de plus en plus de $0$. Dans ce cas, ce nombre $q$ est appelé \textbf{limite de $Q(h)$ en $0$}, et est noté
 \begin{equation*}
 \lim_{h \to 0} Q(h)
 \end{equation*}
 \end{definition}
-\end{tcolorbox}
 \begin{example}
 Pour chaque quantité $Q(h)$ suivante, remplir le tableau de valeur suivant, et en déduire si $Q(h)$ admet une limite finie en $0$, et le cas échéant, donner $\lim_{h \to 0} Q(h)$.
 \begin{alphaquestions}
@@ -116,23 +114,12 @@ T_a(h) = \dfrac{f(a + h) - f(a)}{(a + h) - a} = \dfrac{f(a + h) - f(a)}{h}
 \begin{remark}
 Par définition, on ne peut pas remplacer $h$ par $0$, donc $T_a(0)$ n'est pas défini. Par contre, on peut s'interesser à son éventuelle limite finie en $0$
 \end{remark}
-\begin{tcolorbox}
 \begin{definition}
 On dit que \textbf{$f$ est dérivable en $a$} quand $T_a(h)$ admet une limite finie en $0$. Dans ce cas, on appelle \textbf{nombre dérivé de $f$ en $a$} la limite en $0$ de $T_a(h)$, et on le note $f'(a)$. En résumé, quand $f$ est dérivable en $a$, alors son nombre dérivé est donné par
 \begin{equation*}
 f'(a) = \lim_{h \to 0} \dfrac{f(a + h) - f(a)}{h}
 \end{equation*}
 \end{definition}
-\end{tcolorbox}
-\begin{example}
-Soit $f : x \mapsto 2x + 1$ définie sur $\R$.
-\begin{alphaquestions}
-\item Soit $a = 2$. Écrire le taux de variation $T_a(h)$ de $f$ entre $a$ et $a + h$, et simplifier l'expression.
-\item La fonction $f$ est-elle dérivable en $2$ ?
-\item En déduire le nombre dérivé de $f$ en $2$.
-\end{alphaquestions}
-
-\end{example}
 
 \newpage
 \section{Interprétation géométrique}
@@ -148,13 +135,11 @@ Au fur et à mesure que $H$ se rapproche de $A$, cette sécante se rapproche d'u
 \includegraphics[width=\textwidth]{Limite_tangente.png}
 \end{center}
 \end{remark}
-\begin{tcolorbox}
 \begin{definition}
 On dit que $f$ admet une \textbf{tangente en $a$} quand elle dérivable en $a$. Dans ce cas, la \textbf{tangente en $a$ de $f$} est la droite passant par le point $A(a;f(a))$ et de pente $f'(a)$.
 \end{definition}
-\end{tcolorbox}
 \begin{remark}
-La tangente de $f$ en $a$, quand elle existe, peut être comprise comme une droite qui \og frôle \fg la courbe en $a$.
+La tangente de $f$ en $a$, quand elle existe, peut être comprise comme une droite qui \og frôle \fg la courbe en $a$. Sa pente peut-être interprétée comme la \textbf{Vitesse instantanée} de la fonction en $a$.
 \end{remark}
 \begin{proposition}
 L'équation de la tangente de $f$ en $a$, quand elle existe, est
