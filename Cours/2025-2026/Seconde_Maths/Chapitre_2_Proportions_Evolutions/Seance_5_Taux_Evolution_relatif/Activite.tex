@@ -1,0 +1,47 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Évolutions : Coefficient multiplicateur}
+\author{Seconde 3}
+\date{1\ier{} Octobre}
+\begin{document}
+\maketitle
+
+\section*{Introduction : Taux d'évolution}
+\begin{exercize}
+Une entreprise de produits cosmétiques observe un chiffre d'affaire de \num{800}€ en Septembre. En Octobre, ce chiffre d'affaire devient \num{1500}€.
+\begin{alphaquestions}
+\item De combien ce chiffre d'affaire à augmenté ?
+\item À quel pourcentage de la somme de départ correspond cette augmentation ?
+\end{alphaquestions} 
+\end{exercize}
+\section*{Etude de cas géométrique : augmentation en pourcentages}
+\begin{exercize}
+On pose un rectangle $ABCD$ tel que $AB = 1$ et $AD = a$.
+
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (5,4);
+\coordinate (D) at (0,4);
+
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (A) node[below left] {$A$};
+\draw (B) node[below right] {$B$};
+\draw (C) node[above right] {$C$};
+\draw (D) node[above left] {$D$};
+\draw (A) -- (B) node[midway, below] {$1$};
+\draw (A) -- (D) node[midway, left] {$a$};
+\end{tikzpicture}
+\end{center}
+
+\begin{alphaquestions}
+\item Exprimer l'aire $\mathcal{A}$ de ce rectangle.
+\item À quel pourcentage correspond un cinquième ?
+\item Tracer un rectangle $BCEF$. On suppose que son aire vaut un cinquième de $\mathcal{A}$. Qu'en déduire des longueurs $EF$ et $CE$ ?
+\item Exprimer l'aire du rectangle $ADEF$. Cette aire correspond à l'augmentation de l'aire $A$.
+\item Bilan : Si je souhaite augmenter l'aire $\mathcal{A}$ de $35\%$, par quelle valeur dois-je multiplier $\mathcal{A}$ ? Et pour une augmentation de $t\%$ ?
+\end{alphaquestions}
+\end{exercize}
+\end{document}
