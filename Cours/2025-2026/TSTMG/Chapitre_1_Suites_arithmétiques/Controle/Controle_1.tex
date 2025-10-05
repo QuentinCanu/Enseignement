@@ -1,0 +1,65 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Contrôle n°1 : Suites arithmétiques}
+\author{TSTMG1}
+\date{3 Octobre 2025}
+
+\begin{document}
+\maketitle
+
+\instructions[Autorisée]
+
+\vspace*{1cm}
+
+\begin{questions}
+\titledquestion{Sommes arithmétiques}[5]
+\begin{parts}
+\part[1] Rappeler la démonstration de la formule suivante, pour $n \in \N$ :
+\begin{equation*}
+1 + 2 + 3 + \dots + n = \dfrac{n(n+1)}{2}
+\end{equation*}
+\part[4] Calculer les sommes suivantes :
+\begin{subparts}
+\subpart $2 + 4 + 6 + \dots + 144$
+\subpart $110 + 105 + 100 + \dots + 40$
+\subpart $30 + 42 + 54 + \dots + 402$
+\end{subparts}
+\end{parts}
+\vspace*{2cm}
+\titledquestion{Identification de suites arithmétiques}[3]
+Dans chacun des cas suivants, utiliser les informations données pour déterminer la raison et le terme $u_{20}$ de la suite arithmétique $(u_n)_{n \in \N}$. \textbf{Les questions sont indépendantes.}
+\begin{parts}
+\part[1] $u_0 = 7$; $u_1 = 13$; $u_2 = 19$
+\part[1] $u_{19} = 90$; $u_{21} = 58$
+\part[1] $u_{14} = 0$; $u_{17} = - 5,67$
+\end{parts}
+\vspace*{2cm}
+\titledquestion{Chiffre d'affaire}[6]
+Un service de VTC souhaite lancer une nouvelle offre d'abonnements. Deux versions sont expérimentées :
+\begin{itemize}
+\item La version \emph{standard} qui coûte \num{80}€ plus \num{15}€ la course. 
+\item La version \emph{deluxe} qui coûte \num{160}€, mais où chaque course coûte seulement \num{5}€.
+\end{itemize}
+On pose $s_n$ le prix de $n$ courses pour une personne ayant souscrit à l'abonnement standard, et $d_n$ le prix de $n$ courses pour une personne ayant souscrit à l'abonnement deluxe.
+\begin{parts}
+\part[1] Calculer le prix de $0$, $1$ ou $2$ courses pour chacun des abonnements.
+\part[2] Exprimer $s_n$ et $d_n$ en fonction de $n$.
+\part[1] En déduire le prix de $5$; $10$ et $20$ courses pour chacun des abonnements.
+\part[2] À partir de combien de courses l'abonnement deluxe est-il plus avantageux que l'abonnement standard ?    
+\end{parts}
+\vspace*{2cm}
+\titledquestion{Biodiversité}[6]
+On étudie l'évolution des naissance d'un groupe de manchots empereurs. Chaque année, un nouveau comptage des naissances est effectué. Le résultats sont représentés sur le graphique ci-contre.
+\begin{center}
+\includegraphics[width=\textwidth]{Graphique.png}
+\end{center}
+\begin{parts}
+\part[0,5] On appelle $m_n$ le nombre de naissances lors de l'année $n$. Donner les valeurs de $m_0$ et de $m_4$.
+\part[0,5] On suppose que la suite $(m_n)_{n \in \N}$ est arithmétique. En déduire sa raison.
+\part[1] Exprimer $m_n$ en fonction de $n$. En déduire la valeur de $m_{30}$.
+\part[2] Si la tendance continue, en quelle année le groupe n'observera aucune naissance ?
+\part[2] Comptabiliser le nombre total de naissances dans ce groupe observé depuis le début de l'expérience (année $0$) jusque $30$ ans après le début de l'expérience.
+\end{parts}
+\end{questions}
+\end{document}
