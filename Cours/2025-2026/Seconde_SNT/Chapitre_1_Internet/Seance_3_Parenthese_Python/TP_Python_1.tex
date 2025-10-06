@@ -1,0 +1,69 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{TP Python : Prise en main}
+\author{Seconde 3}
+\date{6 Octobre 2025}
+
+
+\begin{document}
+\maketitle
+
+\section{Présentation de l'interface d'EduPython}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{Interface_Edupython.png}
+\end{center}
+\section{Python, comme une calculatrice}
+\begin{exercize}
+Entrez dans \textbf{la console} les instructions suivantes :
+\begin{lstlisting}[language=Python]
+>> 3+4
+>> 3-9
+>> 5*2
+>> 5**2
+>> 31/5
+>> 31//5
+>> 31%5
+\end{lstlisting}
+À quoi servent les opérateurs \lstinline[language=python]!**!; \lstinline[language=python]!//! et \lstinline[language=python]!%! ? Tester sur d'autres exemples.
+\end{exercize}
+\section{Début en programmation}
+\begin{exercize}
+Nous avons déjà travaillé sur des programmes écrits en pseudo-code. On a notamment utilisé les instructions suivantes:
+\begin{lstlisting}[mathescape=true]
+Affectation : variable $\leftarrow$ valeur
+Conditionnelle : Si Condition Alors Instruction1 Sinon Instruction2
+Boucle : TantQue Condition Faire Instruction
+\end{lstlisting}
+Recopier le programme suivant en python, et dire à quel type d'instruction correspond chaque ligne. On prendra garde aux nombre d'espaces à ajouter au début de chaque ligne.
+\begin{lstlisting}[language=Python]
+a = 2 + 5
+while a > 6:
+  if a == 5:
+    a = a - 2
+  else:
+    a = a - 4
+print(a)
+\end{lstlisting}
+Executer le programme. À quoi sert la ligne \lstinline[language=Python]!print(a)! ?
+\end{exercize}
+\begin{tcolorbox}
+\begin{remark}
+Pour faire une affectation de variables, on utilise le symbole $=$ en python. Il ne faut pas le confondre avec l'égalité en mathématiques.
+
+Pour tester que deux valeurs sont égales en Python, on utilise l'opérateur \lstinline[language=Python]!==!.
+\end{remark}
+\end{tcolorbox}
+\begin{exercize}
+\begin{alphaquestions}
+\item Écrire un programme qui initialise deux variables \lstinline[language=Python]!p! et \lstinline[language=Python]!q! aux valeurs de votre choix, et qui appelle l'instruction \lstinline[language=Python]!print("p est plus grand que q")! si \lstinline[language=Python]!p > q!.
+\item Écrire un programme qui initialise une variable \lstinline[language=Python]!a! à la valeur de votre choix, puis qui double la valeur de \lstinline[language=Python]!a! jusqu'à que celle-ci dépasse le nombre $100$.
+\item Écrire un programme qui initialise une variable \lstinline[language=Python]!S! à la valeur de votre choix, puis qui augmente cette valeur de $24\%$, et répète cette opération jusqu'à que la valeur de \lstinline[language=Python]!S! dépasse le triple de la valeur initiale.
+\end{alphaquestions}
+\end{exercize}
+\begin{exercize}
+Recopier le programme de Syracuse vu plus tôt en classe. Pour rappel, il consiste à initialiser une variable au nombre de choix, puis de répéter une boucle tant que cette valeur ne contient pas la valeur $1$. À chaque tour de boucle, si la variable est paire, alors la diviser par $2$, sinon la multiplier par $3$ et ajouter $1$ au résultat.
+
+Exécuter votre programmer sur de grands nombres. Le programme termine-t-il ?
+\end{exercize}
+\end{document}
