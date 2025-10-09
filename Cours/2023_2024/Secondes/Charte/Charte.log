@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  2 OCT 2025 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  7 OCT 2025 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -65,8 +65,6 @@ Package babel Info: Importing font and identification data for french
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2023/02/12 version 6.0.1 text color boxes
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
@@ -400,6 +398,8 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowlength=\dimen274
 \pgfarrowwidth=\dimen275
 \pgfarrowlinewidth=\dimen276
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tkz-tab/tkz-tab.sty
 Package: tkz-tab 2020/04/29 v2.12c variations (ctan version)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -547,7 +547,29 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip63
 \thanksmargin=\skip64
 \droptitle=\skip65
-)) (./Charte.aux)
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count343
+\lst@gtempboxa=\box85
+\lst@token=\toks48
+\lst@length=\count344
+\lst@currlwidth=\dimen297
+\lst@column=\count345
+\lst@pos=\count346
+\lst@lostspace=\dimen298
+\lst@width=\dimen299
+\lst@newlines=\count347
+\lst@lineno=\count348
+\lst@maxwidth=\dimen300
+ (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count349
+\lst@skipnumbers=\count350
+\lst@framebox=\box86
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+) (./Charte.aux)
 \openout1 = `Charte.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -580,17 +602,17 @@ Package french.ldf Warning: OT1 encoding should not be used for French.
 
 (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
-\scratchdimen=\dimen297
-\scratchbox=\box85
-\nofMPsegments=\count344
-\nofMParguments=\count345
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count346
-\MPscratchDim=\dimen298
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count351
+\scratchdimen=\dimen301
+\scratchbox=\box87
+\nofMPsegments=\count352
+\nofMParguments=\count353
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count354
+\MPscratchDim=\dimen302
+\MPnumerator=\count355
+\makeMPintoPDFobject=\count356
+\everyMPtoPDFconversion=\toks50
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -600,6 +622,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: translations-basic-dictionary-french.trsl (french translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 8.
+\c@lstlisting=\count357
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -616,10 +639,10 @@ Overfull \hbox (15.86836pt too wide) in paragraph at lines 12--13
 
 {/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Charte.aux) ) 
 Here is how much of TeX's memory you used:
- 24261 strings out of 476025
- 545965 string characters out of 5780533
+ 25656 strings out of 476025
+ 566442 string characters out of 5780533
  1856388 words of memory out of 5000000
- 44356 multiletter control sequences out of 15000+600000
+ 45738 multiletter control sequences out of 15000+600000
  517836 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,118p,576b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s

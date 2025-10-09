@@ -71,13 +71,25 @@ P_A(B) = \dfrac{P(A \cap B)}{P(A)}
 P(A \cap B) = P(A)P_A(B)
 \end{equation*}    
 \end{proposition}
+\begin{remark}
+Cette formule correspond à la multiplication des poids d'\textbf{une branche} dans un arbre pondéré de probabilités. 
+\end{remark}
+\begin{proposition}[Formule des probabilités totales]
+Soit une expérience aléatoire d'univers $\Omega$, et $A$ et $B$ deux événements de $\Omega$. Alors,
+\begin{equation*}
+P(B) = P(A) \times P_A(B) + P(\overbar{A}) P_{\overbar{A}}(B) 
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Cette formule correspond à la somme des probabilités de \textbf{chaque branche} réalisant l'événement $B$ dans un arbre pondéré de probabilités.
+\end{remark}
 \begin{example}
 Il y a dans une urne trois boules rouges et deux boules noires. On tire deux boules successivement, sans remise. On pose $A$ l'événement \og la première boule est rouge\fg et $B$ l'événement \og la deuxième boule est rouge \fg.
 \begin{alphaquestions}
 \item Donner $P_A(B)$ à l'aide du contexte.
 \item Calculer $P(A \cap B)$.
+\item Calculer $P(B)$.
 \end{alphaquestions}
-
 \end{example}
 
 \newpage
