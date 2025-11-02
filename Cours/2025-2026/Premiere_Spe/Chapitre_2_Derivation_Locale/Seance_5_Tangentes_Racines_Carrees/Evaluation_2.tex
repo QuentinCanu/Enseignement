@@ -1,0 +1,66 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation n°2 : Nombre dérivé}
+\date{13 Octobre}
+\author{Première Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+\version
+\begin{questions}
+\titledquestion{À vos marques\dots}[10]
+Calculer le nombre dérivé de la fonction $f \colon x \mapsto 3x^2 + 5x + 1$ en $a = -2$.
+\begin{solution}
+Soit $h \neq 0$. On exprime le taux de variation de $f$ entre $a + h$ et $a$.
+\begin{equation*}
+\begin{aligned}
+\dfrac{f(a + h) - f(a)}{h} &= \dfrac{3(-2 + h) ^2 + 5(-2 + h) + 1 - (3 \times (-2)^2 + 5 \times (-2) + 1)}{h}\\
+&= \dfrac{3((-2)^2 + 2 \times (-2) \times h + h^2) + 5(-2 + h) + 1 - (3 \times (-2)^2 + 5 \times (-2) + 1)}{h}\\
+&= \dfrac{3(4 -4h + h^2) -10 + 5h + 1 - 12 + 10 - 1}{h}\\
+&= \dfrac{12 - 12h + 3h^2 - 10 + 5h + 1 - 12 + 10 - 1}{h}\\
+&= \dfrac{-7h + 3h^2}{h}\\
+&= \dfrac{-7h}{h} + \dfrac{3h^2}{h}\\
+&= -7 + 3h
+\end{aligned}
+\end{equation*}
+Ce taux de variation admet une limite finie quand $h$ tend vers $0$. En effet,
+\begin{equation*}
+\lim_{h \to 0} -7 + 3h = -7 + 3 \times 0 = -7
+\end{equation*}
+On en déduit que $f$ est dérivable en $a = -2$, et que
+\begin{equation*}
+f'(-2) = 7
+\end{equation*}
+\end{solution}
+\end{questions}
+\newpage
+\maketitle
+\version
+\begin{questions}
+\titledquestion{À vos marques\dots}[10]
+Calculer le nombre dérivé de la fonction $f \colon x \mapsto 2x^2 + 7x + 4$ en $a = -3$.
+\begin{solution}
+Soit $h \neq 0$. On exprime le taux de variation de $f$ entre $a + h$ et $a$.
+\begin{equation*}
+\begin{aligned}
+\dfrac{f(a + h) - f(a)}{h} &= \dfrac{2(-3 + h)^2 + 7(-3 + h) + 4 - (2 \times (-3)^2 + 7 \times (-3) + 4)}{h}\\
+&= \dfrac{2((-3)^2 + 2 \times (-3) \times h + h^2) + 7(-3 + h) + 4 - (2 \times (-3)^2 + 7 \times (-3) + 4)}{h}\\
+&= \dfrac{2(9 -6h + h^2) - 21 + 7h + 4 - 18 + 21 - 4}{h}\\
+&= \dfrac{18 - 12h + 2h^2 - 21 + 7h + 4 - 18 + 21 - 4}{h}\\
+&= \dfrac{-5h + 2h^2}{h}\\
+&= \dfrac{-5h}{h} + \dfrac{2h^2}{h}\\
+&= -5 + 2h
+\end{aligned}
+\end{equation*}
+Ce taux de variation admet une limite finie quand $h$ tend vers $0$. En effet,
+\begin{equation*}
+\lim_{h \to 0} -5 + 2h = -5 + 2 \times 0 = -5
+\end{equation*}
+On en déduit que $f$ est dérivable en $a = -3$, et que
+\begin{equation*}
+f'(-3) = -5
+\end{equation*}
+\end{solution}
+\end{questions}
+\end{document}

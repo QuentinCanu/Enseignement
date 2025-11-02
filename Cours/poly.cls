@@ -4,6 +4,11 @@
 \LoadClass{article}
 \RequirePackage{geometry}
 \geometry{
-  textwidth=16cm
+  textwidth=16cm,
+  top=3cm
 }
+
+\RequirePackage{titling}
+\setlength{\droptitle}{-3cm}
+
 \pagestyle{headings}

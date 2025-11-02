@@ -4,7 +4,13 @@
 \LoadClass{exam}
 \pagestyle{headings}
 \RequirePackage{geometry}
-\geometry{top=2cm}
+\geometry{top=2cm, left=2cm, right=2cm}
+
+\RequirePackage{fontspec}
+\setmainfont{Verdana}
+\setmathrm{Optima}
+
+\footer{}{}{}
 
 \qformat{\bfseries Exercice \thequestion~:~\thequestiontitle\if@placepoints~(\thepoints)\else\fi\hfill}
 \renewcommand{\solutiontitle}{\noindent\textbf{Correction:}\enspace}
@@ -19,3 +25,9 @@
 \end{itemize}
 \end{tcolorbox}
 }
+
+\newcounter{versionCounter}
+\setcounter{versionCounter}{0}
+\newcommand{\version}{\addtocounter{versionCounter}{1}\paragraph*{Version \arabic{versionCounter}}}
+
+\pagestyle{empty}

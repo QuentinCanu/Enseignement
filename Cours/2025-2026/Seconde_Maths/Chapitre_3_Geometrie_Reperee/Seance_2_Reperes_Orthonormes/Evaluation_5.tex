@@ -1,0 +1,209 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation 5 : Évolutions successives et réciproques, équations produit-nul}
+\author{Seconde 3}
+\date{17 Octobre 2025}
+
+
+\begin{document}
+\maketitle
+\version
+\begin{questions}
+\titledquestion{Évolutions successives}[4]
+\begin{parts}
+\part[2] Karim constate avoir augmenté sa consommation d'eau de $+12\%$ durant le mois d'Octobre. Durant le mois de Novembre, cette consommation baisse de $-3\%$. Quelle est son évolution en pourcentage de consommation d'eau entre Octobre et Novembre ?
+\begin{solution}[3cm]
+On calcule les coefficients multiplicateurs associés aux taux d'évolutions donnés :
+\begin{equation*}
+\begin{cases}
+CM_1 &= 1 + \dfrac{12}{100} = 1,12\\
+CM_2 &= 1 - \dfrac{3}{100} = 0,97\\
+\end{cases}
+\end{equation*}
+On en déduit le coefficient multiplicateur global, puis le taux d'évolution global associé.
+\begin{equation*}
+\begin{aligned}
+CM &= CM_1 \times CM_2 &= 1,12 \times 0,97 &= 1,0864\\
+t &= (CM - 1) \times 100 &= (1,0864 - 1) \times 100 &= 8,64\%
+\end{aligned}
+\end{equation*}
+\end{solution}
+\part[2] Le taux de chômage d'un pays diminue de $-2\%$ en $2021$, puis de $-7\%$ en $2022$. Quelle est l'évolution en pourcentage du taux de chômage entre $2021$ et $2022$ ?
+\begin{solution}[3cm]
+On calcule les coefficients multiplicateurs associés aux taux d'évolutions donnés :
+\begin{equation*}
+\begin{cases}
+CM_1 &= 1 - \dfrac{2}{100} = 0,98\\
+CM_2 &= 1 - \dfrac{7}{100} = 0,93\\
+\end{cases}
+\end{equation*}
+On en déduit le coefficient multiplicateur global, puis le taux d'évolution global associé.
+\begin{equation*}
+\begin{aligned}
+CM &= CM_1 \times CM_2 &= 0,98 \times 0,93 &= 0,9114\\
+t &= (CM - 1) \times 100 &= (0,9114 - 1) \times 100 &= -8,86\%
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{parts}
+\titledquestion{Évolution réciproque}[4]
+\begin{parts}
+\part[2] Une veste est soldée à $-35\%$. Quelle évolution en pourcentage sur son nouveau prix permet de retrouver le prix initial ? La réponse sera arrondie à $0,01\%$ près (2 chiffres après la virgule).
+\begin{solution}[3cm]
+On calcule le coefficient multiplicateur associé au taux d'évolution donné :
+\begin{equation*}
+CM = 1 - \dfrac{35}{100} = 0,65
+\end{equation*}
+On calcule alors le coefficient multiplicateur réciproque, puis le taux d'évolution réciproque associé :
+\begin{equation*}
+\begin{aligned}
+CM_r &= \dfrac{1}{CM} &= \dfrac{1}{0,65} &\simeq 1,5385\\
+t_r = (CM_r - 1) \times 100 &= (1,5385 - 1) \times 100 &= 53,85\% 
+\end{aligned}
+\end{equation*}
+\end{solution}
+\newpage
+\part[2] Le taux de pollution dans le monde a augmenté de $+11\%$. Quel évolution en pourcentage est nécessaire pour retrouver le taux de pollution initial ? La réponse sera arrondie à $0,001\%$ près (3 chiffres après la virgule).
+\begin{solution}[3cm]
+On calcule le coefficient multiplicateur associé au taux d'évolution donné :
+\begin{equation*}
+CM = 1 + \dfrac{11}{100} = 1,11
+\end{equation*}
+On calcule alors le coefficient multiplicateur réciproque, puis le taux d'évolution réciproque associé :
+\begin{equation*}
+\begin{aligned}
+CM_r &= \dfrac{1}{CM} &= \dfrac{1}{1,11} &\simeq 0,9009\\
+t_r = (CM_r - 1) \times 100 &= (0,9009 - 1) \times 100 &= -9,909\% 
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{parts}
+\titledquestion{Équation produit-nul}[2]
+Résoudre les équations suivantes :
+\begin{parts}
+\part[1] $(3x+2)(8x - 4)=0$
+\begin{solution}[3cm]
+\begin{equation*}
+\begin{aligned}
+(3x + 2)(8x - 4) = 0 &\Leftrightarrow 3x + 2 = 0 \text{ ou } 8x - 4 = 0\\
+&\Leftrightarrow 3x = -2 \text{ ou } 8x = 4\\
+&\Leftrightarrow x = - \dfrac{2}{3} \text{ ou } x = \dfrac{4}{8} = \dfrac{1}{2}\\
+\end{aligned}
+\end{equation*}
+L'ensemble des solutions de l'équation est $S = \{\dfrac{1}{2}; \dfrac{2}{3}\}$
+\end{solution}
+\part[1] $(-x + 4)(12 - x)=0$
+\begin{solution}[3cm]
+\begin{equation*}
+\begin{aligned}
+(-x + 4)(12 - x) = 0 &\Leftrightarrow -x + 4 = 0 \text{ ou } 12 - x = 0\\
+&\Leftrightarrow -x = -4 \text{ ou } -x = -12\\
+&\Leftrightarrow x = 4 \text{ ou } x = 12\\
+\end{aligned}
+\end{equation*}
+L'ensemble des solutions de l'équation est $S = \{4; 12\}$
+\end{solution}
+\end{parts}
+\end{questions}
+\newpage
+\maketitle
+\version
+\begin{questions}
+\titledquestion{Évolutions successives}[4]
+\begin{parts}
+\part[2] Karim constate avoir augmenté sa consommation d'eau de $+31\%$ durant le mois d'Octobre. Durant le mois de Novembre, cette consommation baisse de $-11\%$. Quelle est son évolution en pourcentage de consommation d'eau entre Octobre et Novembre ?
+\begin{solution}[3cm]
+On calcule les coefficients multiplicateurs associés aux taux d'évolutions donnés :
+\begin{equation*}
+\begin{cases}
+CM_1 &= 1 + \dfrac{31}{100} = 1,31\\
+CM_2 &= 1 - \dfrac{11}{100} = 0,89\\
+\end{cases}
+\end{equation*}
+On en déduit le coefficient multiplicateur global, puis le taux d'évolution global associé.
+\begin{equation*}
+\begin{aligned}
+CM &= CM_1 \times CM_2 &= 1,31 \times 0,89 &= 1,1659\\
+t &= (CM - 1) \times 100 &= (1,1659 - 1) \times 100 &= 16,59\%
+\end{aligned}
+\end{equation*}
+\end{solution}
+\part[2] Le taux de chômage d'un pays diminue de $-4\%$ en $2021$, puis de $-6\%$ en $2022$. Quelle est l'évolution en pourcentage du taux de chômage entre $2021$ et $2022$ ?
+\begin{solution}[3cm]
+On calcule les coefficients multiplicateurs associés aux taux d'évolutions donnés :
+\begin{equation*}
+\begin{cases}
+CM_1 &= 1 - \dfrac{4}{100} = 0,96\\
+CM_2 &= 1 - \dfrac{6}{100} = 0,94\\
+\end{cases}
+\end{equation*}
+On en déduit le coefficient multiplicateur global, puis le taux d'évolution global associé.
+\begin{equation*}
+\begin{aligned}
+CM &= CM_1 \times CM_2 &= 0,96 \times 0,94 &= 0,9024\\
+t &= (CM - 1) \times 100 &= (0,9024 - 1) \times 100 &= -9,76\%
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{parts}
+\titledquestion{Évolution réciproque}[4]
+\begin{parts}
+\part[2] Une veste est soldée à $-35\%$. Quelle évolution en pourcentage sur son nouveau prix permet de retrouver le prix initial ? La réponse sera arrondie à $0,01\%$ près (2 chiffres après la virgule).
+\begin{solution}[3cm]
+On calcule le coefficient multiplicateur associé au taux d'évolution donné :
+\begin{equation*}
+CM = 1 - \dfrac{35}{100} = 0,65
+\end{equation*}
+On calcule alors le coefficient multiplicateur réciproque, puis le taux d'évolution réciproque associé :
+\begin{equation*}
+\begin{aligned}
+CM_r &= \dfrac{1}{CM} &= \dfrac{1}{0,65} &\simeq 1,5385\\
+t_r = (CM_r - 1) \times 100 &= (1,5385 - 1) \times 100 &= 53,85\% 
+\end{aligned}
+\end{equation*}
+\end{solution}
+\newpage
+\part[2] Le taux de pollution dans le monde a augmenté de $+17\%$. Quel évolution en pourcentage est nécessaire pour retrouver le taux de pollution initial ? La réponse sera arrondie à $0,001\%$ près (3 chiffres après la virgule).
+\begin{solution}[3cm]
+On calcule le coefficient multiplicateur associé au taux d'évolution donné :
+\begin{equation*}
+CM = 1 + \dfrac{17}{100} = 1,17
+\end{equation*}
+On calcule alors le coefficient multiplicateur réciproque, puis le taux d'évolution réciproque associé :
+\begin{equation*}
+\begin{aligned}
+CM_r &= \dfrac{1}{CM} &= \dfrac{1}{1,17} &\simeq 0,8547\\
+t_r = (CM_r - 1) \times 100 &= (0,8547 - 1) \times 100 &= -14,53\% 
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{parts}
+\titledquestion{Équation produit-nul}[2]
+Résoudre les équations suivantes :
+\begin{parts}
+\part[1] $(5x-8)(13x - 2)=0$
+\begin{solution}[3cm]
+\begin{equation*}
+\begin{aligned}
+(5x - 8)(13x - 2) = 0 &\Leftrightarrow 5x - 8 = 0 \text{ ou } 13x - 2 = 0\\
+&\Leftrightarrow 5x = 8 \text{ ou } 13x = 2\\
+&\Leftrightarrow x = \dfrac{8}{5} \text{ ou } x = \dfrac{2}{13}\\
+\end{aligned}
+\end{equation*}
+L'ensemble des solutions de l'équation est $S = \{\dfrac{2}{13}; \dfrac{8}{5}\}$
+\end{solution}
+\part[1] $(-x + 4)(12 - x)=0$
+\begin{solution}[3cm]
+\begin{equation*}
+\begin{aligned}
+(-x + 4)(12 - x) = 0 &\Leftrightarrow -x + 4 = 0 \text{ ou } 12 - x = 0\\
+&\Leftrightarrow -x = -4 \text{ ou } -x = -12\\
+&\Leftrightarrow x = 4 \text{ ou } x = 12\\
+\end{aligned}
+\end{equation*}
+L'ensemble des solutions de l'équation est $S = \{4; 12\}$
+\end{solution}
+\end{parts}
+\end{questions}
+\end{document}

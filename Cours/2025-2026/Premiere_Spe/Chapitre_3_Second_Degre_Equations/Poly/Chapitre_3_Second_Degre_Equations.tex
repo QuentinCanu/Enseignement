@@ -1,0 +1,123 @@
+\documentclass{poly}
+\usepackage{main}
+
+\title{Chapitre 3 : Équations et inéquations du second degré}
+\author{Première Spécialité Mathématiques}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+\section{Racines}
+
+\subsection{Définition}
+
+\begin{definition}
+Soit $f$ une fonction. On appelle \textbf{racine} de la fonction $f$ un nombre $r$ tel que $f(r) = 0$.
+\end{definition}
+\begin{exercize*}
+Vérifier que $r_1 = 1$ et $r_2 = - 3$ sont deux racines de la fonction $f : x \mapsto 2x^2 + 4x - 6$.
+\end{exercize*}
+\vspace*{2cm}
+
+\begin{proposition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors, seuls trois cas sont à considérer :
+\begin{alphaquestions}
+\item $f$ n'admet aucune racine réelle, c'est-à-dire que pour tout réel $x$, on a $f(x) \neq 0$.
+\item $f$ admet une unique racine notée $r$. Dans ce cas, $f$ peut être factorisée en $f(x) = a (x - r)^2$ pour tout $x$.
+\item $f$ admet deux racines, notées $r_1$ et $r_2$. Dans ce cas, $f$ peut être factorisée en $f(x) = a(x - r_1)(x - r_2)$ pour tout $x$. 
+\end{alphaquestions} 
+\end{proposition}
+\begin{exercize*}
+Sur le repère suivant, tracer la courbe représentative de trois fonctions polynomiale du second degré correspondant à chacun des cas exposés dans la proposition précédente.
+\begin{center}
+\begin{tikzpicture}
+\newcommand{\Le}{-3.25};
+\newcommand{\Ri}{3.25};
+\newcommand{\To}{3.25};
+\newcommand{\Bo}{-3.25};
+\coordinate (LB) at (\Le,\Bo);
+\coordinate (RT) at (\Ri,\To);
+\draw[help lines] (LB) grid[step = 0.5] (RT);
+\draw[->,axis] (\Le,0) -- (\Ri,0) node[right] {$x$};
+\draw[->,axis] (0,\Bo) -- (0,\To) node[above] {$y$};
+\end{tikzpicture}
+\end{center}
+\end{exercize*}
+\subsection{Calcul des racines}
+\subsubsection{En identifiant une racine évidente}
+\begin{exercize*}
+Soit $f(x) = -x^2 + 6x$ pour $x \in \R$. Cette fonction possède-t-elle des racines évidentes ? Essayer avec des entiers comme $0; 1; -1; \dots$. 
+\end{exercize*}
+\vspace*{2cm}
+\subsubsection{En utilisant une identité remarquable}
+\begin{exercize*}
+Soit $f(x)= 2x^2 - 128$ pour $x \in \R$.
+\begin{alphaquestions}
+\item Factoriser $f(x)$ par $2$.
+\item À l'aide d'une identité remarquable bien choisie, factoriser $f(x)$.
+\item En déduire les racines de $f(x)$.
+\end{alphaquestions}
+\end{exercize*}
+\vspace*{2cm}
+
+\subsubsection{Avec le produit et la somme des racines}
+\begin{proposition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Si $r_1$ et $r_2$ sont les deux racines (possiblement confondues) de $f$, alors
+\begin{equation*}
+r_1 + r_2 = \dfrac{-b}{a} \qquad r_1 \times r_2 = \dfrac{c}{a}
+\end{equation*}
+\end{proposition}
+\begin{example}
+Soit $f(x) = x^2 + x - 20$. On remarque que $4$ est une racine de $f$. En déduire une autre racine de $f$, puis une factorisation de $f$.
+\vspace*{0.5cm}
+
+\end{example}
+\newpage
+\subsection{Discriminant}
+\begin{definition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors on appelle \textbf{discriminant de f}, noté $\Delta$, la quantité
+\begin{equation*}
+\Delta = b^2 - 4ac
+\end{equation*} 
+\end{definition}
+\begin{theorem}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale de second degré, et $\Delta$ son discriminant. Alors:
+\begin{alphaquestions}
+\item Si $\Delta < 0$, alors $f$ n'admet pas de racine réelle.
+\item Si $\Delta = 0$, alors $f$ admet une unique racine réelle $r$, telle que
+\begin{equation*}
+r = - \dfrac{b}{2a}
+\end{equation*}
+\item Si $\Delta > 0$, alors $f$ admet deux racines réelles distinctes $r_1 < r_2$, telles que
+\begin{equation*}
+r_1 = \dfrac{- b - \sqrt{\Delta}}{2a} \qquad r_2 = \dfrac{- b + \sqrt{\Delta}}{2a}
+\end{equation*}
+\end{alphaquestions}
+\end{theorem}
+\paragraph{Démonstration}
+\hfill
+\newpage
+\section{Signe}
+\begin{proposition}
+Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors:
+\begin{alphaquestions}
+\item Si $f$ n'admet pas de racine, alors $f$ est du même signe que $a$ sur $\R$.
+\item Si $f$ admet une unique racine $r$, alors $f$ est du même signe que $a$ sur $\left]-\infty;r\right[$ et sur $\left]r;+\infty\right[$.
+\item Si $f$ admet deux racines distinctes $r_1 < r_2$, alors $f$ est du même signe que $a$ sur $\left]-\infty;r_1\right[$ et sur $\left]r_2;+\infty\right[$, et est du signe opposé à $a$ sur $\left]r_1;r_2\right[$
+\end{alphaquestions}
+\end{proposition}
+\begin{remark}
+Une phrase pour retenir cette proposition :
+\begin{tcolorbox}
+\begin{quote}
+Une fonction polynomiale du second degré est du même signe que $a$ à \textbf{l'extérieur} de ses racines, et est de signe opposé à $a$ à \textbf{l'intérieur} de ses racines.
+\end{quote}
+\end{tcolorbox}
+\end{remark}
+\begin{example}
+En reprenant l'exemple précédent, donner le tableau de signes des fonctions $f$, $g$ et $h$.
+\end{example}
+
+\end{document}

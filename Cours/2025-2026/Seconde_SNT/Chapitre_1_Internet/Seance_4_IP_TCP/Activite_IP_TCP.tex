@@ -1,0 +1,34 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Protocoles IP et TCP}
+\date{13 Octobre 2025}
+\author{Seconde 3}
+
+\begin{document}
+\maketitle
+
+\section{Protocole IP}
+À l'aide de votre ordinateur personnel, répondre aux questions suivantes :
+\begin{alphaquestions}
+\item À qui attribue-t-on l'invention du protocole IP ?
+\item Quel est le service fourni par le protocole IP ?
+\item Quel est la différence entre adresse IP locale et adresse IP publique ?
+\item Quelle est la différence entre IPv4 et IPv6 ? Pour quelles raisons la norme IPv6 a-t-elle fait son apparition ?
+\end{alphaquestions}
+
+\section{Protocole TCP}
+\begin{alphaquestions}
+\item Quel est le service fourni par le protocole TCP ?
+\item Quels sont les différences entre le protocole TCP et le protocole UDP ? Dans quels cas privilégier l'un plutôt que l'autre ?
+\end{alphaquestions}
+\section{En pratique}
+Pour ouvrir une invite de commande, tapez \og cmd \fg dans le menu windows sur le bureau. Assurez-vous d'être bien connectés à Internet pour faire les exercices suivants.
+\begin{alphaquestions}
+\item Tapez la commande \lstinline!ipconfig! dans votre invite de commande. Trouvez votre adresse IPv4, et comparez-la à celle de votre voisin. Que remarquez-vous ? S'agit-il d'après vous de votre adresse IP locale ou publique ?
+\item Tapez la commande \lstinline!ping www.lemonde.fr! dans votre invite de commande. Pouvez-vous en déduire l'adresse du serveur du journal \emph{Le Monde} ? Même question pour le journal \emph{The Guardian}.
+\item Tapez la commande \lstinline!tracert www.lemonde.fr! dans votre invite de commande. Par combien de routeurs sont passés les paquets responsables de la communication avec le serveur du journal ?
+\end{alphaquestions}
+
+
+\end{document}
