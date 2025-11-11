@@ -1,0 +1,113 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Fichiers CSV, JSON}
+\date{10 Novembre 2025}
+\author{Seconde 3}
+
+\begin{document}
+\maketitle
+
+Deux fichiers contiennent une liste de films stockés dans des formats différents.
+
+\section{CSV}
+
+Le premier fichier est stocké au format \verb|.csv| :
+
+\begin{verbatim}
+Film;Acteur/actrice Principal(e);Année
+Fast and Furious X;Vin Diesel;2023
+Jurrassic Park;Jeff Goldblum;1993
+Retour vers le Futur;Michael J. Fox;1985
+Indiana Jones;Harrisson Ford;1981
+Alien;Sigourney Weaver;1979
+Asterix et Obelix Mission Cléopatre;Christian Clavier;2002
+Barbie;Margot Robbie;2023
+\end{verbatim}
+
+\begin{exercize}
+Quels sont les descripteurs de la table de données associé à ce fichier ?
+\end{exercize}
+\begin{exercize}
+Quel est le séparateur de données ?
+\end{exercize}
+
+\section{JSON}
+
+Le deuxième fichier est sous le format \verb|.json|
+
+\begin{verbatim}
+{
+    {
+        'film' : 'La grande vadrouille',
+        'Réalisation' : 'Gérard Oury',
+        'Année' : '1966'
+    },
+    {
+        'film' : 'Mourir peut attendre',
+        'Réalisation' : 'Cary Joji Fukunaga',
+        'Année' : '2021'
+    },
+    {
+        'film' : 'Foodfight!',
+        'Réalisation' : 'Lawrence Kasanoff',
+        'Année' : '2012'
+    },
+    {
+        'film' : 'Once Upon a Time… in Hollywood',
+        'Réalisation' : 'Quentin Tarantino',
+        'Année' : '2019'
+    }
+}
+\end{verbatim}
+\begin{exercize}
+Quels sont les descripteurs ?
+\end{exercize}
+\newpage
+\begin{exercize}
+Remplir le tableau suivant avec les films de votre choix.
+\end{exercize}
+\begin{center}
+\begin{tabular}{|*{4}{c|}}
+\hline
+Film & Année & Réalisation & Acteur\\
+\hline
+\rule[-0.5cm]{2cm}{0pt} &&&\\
+\hline
+\rule[-0.5cm]{2cm}{0pt} &&&\\
+\hline
+\rule[-0.5cm]{2cm}{0pt} &&&\\
+\hline
+\rule[-0.5cm]{2cm}{0pt} &&&\\
+\hline
+\end{tabular}
+\end{center}
+\begin{exercize}
+Reproduire votre table de données au format \verb|.csv| puis au format \verb|.json|.
+\end{exercize}
+
+\vspace*{0.5cm}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\verb|.csv|
+\end{center}
+\vspace*{8cm}    
+\end{minipage}
+\vline
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\verb|.json|
+\end{center}
+\vspace*{8cm}
+\end{minipage}
+\begin{exercize}
+Une personne souhaite composer une table de données de ses $100$ films préférés. Lui conseillez-vous d'écrire un fichier en \verb|csv| ou en \verb|json| ? Justifier votre réponse.
+\end{exercize}
+\begin{exercize}
+Chercher d'autres avantages et inconvénients aux deux format \verb|csv| et \verb|json|.
+\end{exercize}
+\begin{exercize}
+Chercher une alternative aux format de donnée structurée \verb|csv| et \verb|json| et expliquer son fonctionnement.
+\end{exercize}
+
+\end{document}

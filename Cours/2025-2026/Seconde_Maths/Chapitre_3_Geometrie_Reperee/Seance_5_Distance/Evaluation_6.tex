@@ -1,0 +1,148 @@
+\documentclass{controle}
+\usepackage{main}
+
+
+
+\title{Évaluation n°6 : Repère, Coordonnées, Milieu d'un segment, Distance entre deux points}
+\author{Seconde 3}
+\date{7 Novembre 2025}
+
+\begin{document}
+\maketitle
+\version
+\begin{questions}
+\titledquestion{Distance entre deux points}[2] 
+Soit $(O;I;J)$ un repère orthonormé. Donner la formule de la distance entre deux points $A(x_A;y_A)$ et $B(x_B;y_B)$ :
+\begin{equation*}
+AB = 
+\end{equation*}
+\begin{solution}[1cm]
+\begin{equation*}
+AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}
+\end{equation*}
+\end{solution}
+\titledquestion{Coordonnées}[4]
+\begin{parts}
+\part[1] Comment s'appelle un repère $(O;I;J)$ vérifiant $(OI) \perp (OJ)$ ?
+\begin{solution}
+C'est un repère orthogonal.
+\end{solution}
+\part[3] Soit $(O;I;J)$ un repère orthonormé. Placer les points $A(1;2)$, $B(0;4)$, $C(-2;0)$, $D(3;3)$, $E(0,-3)$ et $F(-2;-4)$ sur ce repère.
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x = 2.25;}
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[thick,->] (-\x,0) -- (\x,0);
+\draw[thick,->] (0,-\x) -- (0,\x);
+\draw (0,0) node[below left] {$O$};
+\draw (0.5,0.1) -- (0.5,-0.1) node[below] {$I$};
+\draw (0.1,0.5) -- (-0.1,0.5) node[left] {$J$};
+\end{tikzpicture}
+\end{center}
+\begin{solution}
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x = 2.25;}
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[thick,->] (-\x,0) -- (\x,0);
+\draw[thick,->] (0,-\x) -- (0,\x);
+\draw (0,0) node[below left] {$O$};
+\draw (0.5,0.1) -- (0.5,-0.1) node[below] {$I$};
+\draw (0.1,0.5) -- (-0.1,0.5) node[left] {$J$};
+\draw (0.5,1) node[above right] {$A$} node {$\bullet$};
+\draw (0,2) node[above right] {$B$} node {$\bullet$};
+\draw (-1,0) node[below left] {$C$} node {$\bullet$};
+\draw (1.5,1.5) node[above right] {$D$} node {$\bullet$};
+\draw (0,-1.5) node[above right] {$E$} node {$\bullet$};
+\draw (-1,-2) node[above right] {$F$} node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\end{solution}
+\end{parts}
+\titledquestion{Coordonnées du milieu d'un segment}[4]
+Pour chaque couple de points $A$ et $B$ donnés ci-après, calculer les coordonnées du milieu $I$ du segment $[AB]$ :
+\begin{parts}
+\part[1] $A(12;7)$ et $B(18;-13)$;
+\part[1] $A(-8;-3)$ et $B(0;-15)$;
+\part[2] $A\left(\dfrac{3}{2};\dfrac{11}{4}\right)$ et $B\left(\dfrac{13}{4};\dfrac{5}{2}\right)$;
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part $I\left(\dfrac{12+18}{2};\dfrac{7+(-13)}{2}\right)$, soit $I(15;-3)$.
+\part $I\left(\dfrac{-8+0}{2};\dfrac{-3 + (-15)}{2}\right)$; soit $I(-4;-9)$.
+\part $I\left(\dfrac{\dfrac{3}{2} + \dfrac{13}{4}}{2};\dfrac{\dfrac{11}{4} + \dfrac{5}{2}}{2}\right)$; soit $I\left(\dfrac{\dfrac{6 + 13}{4}}{2};\dfrac{\dfrac{11+10}{4}}{2}\right)$; soit $I\left(\dfrac{19}{8};\dfrac{21}{8}\right)$
+\end{parts}
+\end{solution}
+\end{questions}
+\newpage
+\maketitle
+\version
+\begin{questions}
+\titledquestion{Coordonnées}[4]
+\begin{parts}
+\part[1] Comment s'appelle un repère $(O;I;J)$ vérifiant $OI = OJ$ ?
+\begin{solution}
+C'est un repère normé.
+\end{solution}
+\part[3] Soit $(O;I;J)$ un repère orthonormé. Placer les points $A(-2;-4)$, $B(1;2)$, $C(3;3)$, $D(0;4)$, $E(0,-3)$ et $F(-2;0)$ sur ce repère.
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x = 2.25;}
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[thick,->] (-\x,0) -- (\x,0);
+\draw[thick,->] (0,-\x) -- (0,\x);
+\draw (0,0) node[below left] {$O$};
+\draw (0.5,0.1) -- (0.5,-0.1) node[below] {$I$};
+\draw (0.1,0.5) -- (-0.1,0.5) node[left] {$J$};
+\end{tikzpicture}
+\end{center}
+\begin{solution}
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x = 2.25;}
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[thick,->] (-\x,0) -- (\x,0);
+\draw[thick,->] (0,-\x) -- (0,\x);
+\draw (0,0) node[below left] {$O$};
+\draw (0.5,0.1) -- (0.5,-0.1) node[below] {$I$};
+\draw (0.1,0.5) -- (-0.1,0.5) node[left] {$J$};
+\draw (-1,-2) node[above right] {$A$} node {$\bullet$};
+\draw (0.5,1) node[above right] {$B$} node {$\bullet$};
+\draw (1.5,1.5) node[above right] {$C$} node {$\bullet$};
+\draw (0,2) node[above right] {$D$} node {$\bullet$};
+\draw (0,-1.5) node[above right] {$E$} node {$\bullet$};
+\draw (-1,0) node[above right] {$F$} node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\end{solution}
+\end{parts}
+\titledquestion{Coordonnées du milieu d'un segment}[4]
+Pour chaque couple de points $A$ et $B$ donnés ci-après, calculer les coordonnées du milieu $I$ du segment $[AB]$ :
+\begin{parts}
+\part[1] $A(-3;15)$ et $B(7;9)$;
+\part[1] $A(0;-3)$ et $B(-6;-11)$;
+\part[2] $A\left(\dfrac{3}{2};\dfrac{11}{4}\right)$ et $B\left(\dfrac{13}{4};\dfrac{5}{2}\right)$;
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part $I\left(\dfrac{(-3)+7}{2};\dfrac{15+9}{2}\right)$, soit $I(2;12)$.
+\part $I\left(\dfrac{0+(-6)}{2};\dfrac{-3 + (-11)}{2}\right)$; soit $I(-3;-7)$.
+\part $I\left(\dfrac{\dfrac{3}{2} + \dfrac{13}{4}}{2};\dfrac{\dfrac{11}{4} + \dfrac{5}{2}}{2}\right)$; soit $I\left(\dfrac{\dfrac{6 + 13}{4}}{2};\dfrac{\dfrac{11+10}{4}}{2}\right)$; soit $I\left(\dfrac{19}{8};\dfrac{21}{8}\right)$
+\end{parts}
+\end{solution}
+\titledquestion{Distance entre deux points}[2] 
+Soit $(O;I;J)$ un repère orthonormé. Donner la formule de la distance entre deux points $A(x_A;y_A)$ et $B(x_B;y_B)$ :
+\begin{equation*}
+AB = 
+\end{equation*}
+\begin{solution}[1cm]
+\begin{equation*}
+AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}
+\end{equation*}
+\end{solution}
+\end{questions}
+\end{document}

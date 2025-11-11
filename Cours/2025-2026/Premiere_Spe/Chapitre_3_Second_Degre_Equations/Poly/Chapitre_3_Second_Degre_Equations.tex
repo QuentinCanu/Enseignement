@@ -104,7 +104,7 @@ r_1 = \dfrac{- b - \sqrt{\Delta}}{2a} \qquad r_2 = \dfrac{- b + \sqrt{\Delta}}{2
 Soit $f : x \mapsto ax^2 + bx + c$ une fonction polynomiale du second degré. Alors:
 \begin{alphaquestions}
 \item Si $f$ n'admet pas de racine, alors $f$ est du même signe que $a$ sur $\R$.
-\item Si $f$ admet une unique racine $r$, alors $f$ est du même signe que $a$ sur $\left]-\infty;r\right[$ et sur $\left]r;+\infty\right[$.
+\item Si $f$ admet une unique racine $r$, alors $f$ est du même signe que $a$ sur $\R$, et vaut $0$ en $r$.
 \item Si $f$ admet deux racines distinctes $r_1 < r_2$, alors $f$ est du même signe que $a$ sur $\left]-\infty;r_1\right[$ et sur $\left]r_2;+\infty\right[$, et est du signe opposé à $a$ sur $\left]r_1;r_2\right[$
 \end{alphaquestions}
 \end{proposition}
@@ -116,8 +116,13 @@ Une fonction polynomiale du second degré est du même signe que $a$ à \textbf{
 \end{quote}
 \end{tcolorbox}
 \end{remark}
-\begin{example}
-En reprenant l'exemple précédent, donner le tableau de signes des fonctions $f$, $g$ et $h$.
-\end{example}
+\begin{exercize*}
+Soit $f \colon x \mapsto x^2 - 5x + 3$. Compléter le tableau de signes de $f$.
+\begin{center}
+\begin{tikzpicture}
+\tkzTabInit{$x$/1, Signe de $f$/2}{$-\infty$, , $+\infty$};
+\end{tikzpicture}
+\end{center}
+\end{exercize*}
 
 \end{document}

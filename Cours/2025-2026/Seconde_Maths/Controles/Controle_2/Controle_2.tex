@@ -1,0 +1,81 @@
+\documentclass{controle}
+\usepackage{main}
+
+
+\title{Contrôle n°2 : Évolutions}
+\author{Seconde 3}
+\date{12 Novembre 2025}
+
+\begin{document}
+\maketitle
+\instructions[Autorisée]
+
+\begin{questions}
+\titledquestion{Géométrie repérée}[4]
+Soit $(O;I;J)$ un repère orthonormé que l'on représente ci-dessous.
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x=4.25;};
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[axis] (-\x,0) -- (\x,0); 
+\draw[axis] (0,-\x) -- (0,\x);
+\draw (0,0) node[below left] {$O$};
+\draw (1,0.1) -- (1,-0.1) node[below] {$I$};  
+\draw (0.1,1) -- (-0.1,1) node[left] {$J$};
+
+\draw (2,3) node[below left] {$A$} node {$\bullet$};
+\draw (-2,-1) node[below left] {$B$} node {$\bullet$};
+\draw (-3,1.5) node[below left] {$C$} node {$\bullet$}; 
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part[2] Quelles sont les coordonnées des points $A$, $B$ et $C$ ?
+\part[2] Placer les points suivants sur le repère:
+\begin{subparts}
+\subpart $D(-1;2)$
+\subpart $E(1,5;0,5)$
+\subpart $F$ a la même abscisse que $A$ et la même ordonnée que $B$.
+\end{subparts}
+\end{parts}
+
+\titledquestion{Taux d'évolution}[6]
+\begin{parts}
+\part[1] Soit une quantité évoluant d'une valeur de départ $V_d$ vers une valeur finale $V_f$. Donner la formule du taux d'évolution $t$ de cette quantité.
+\vspace*{0.5cm}
+
+On joue à un jeu de rôle. La puissance de notre personnage est actuellement de $1246$. Heureusement, il est possible d'acheter un bonus parmi trois pour s'améliorer. 
+\begin{enumerate}
+\item Le premier bonus augmente la puissance de $300$. 
+\item Le deuxième bonus permet d'augmenter la puissance de $15\%$.
+\item Le troisième bonus est aussi une augmentation en pourcentage. Par exemple, durant la dernière partie, ce bonus a augmenté une puissance de $650$ en $767$.
+\end{enumerate}
+\part[2] Quel est le meilleur bonus disponible pour notre personnage ?
+\part[2] Même question pour un personnage dont le niveau de puissance de départ est $1945$.
+\part[1] Quel est le niveau de puissance de départ nécessaire pour que le premier et le deuxième bonus aient le même effet ?
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Évolutions successives}[5]
+\begin{parts}
+\part[1] Donner le taux d'évolution correspondant à une augmentation de $+15\%$ puis une augmentation de $10\%$. 
+\part[1] Donner le taux d'évolution correspondant à une augmentation de $+36\%$ puis une diminution de $5\%$.
+\part[3] Une boutique en ligne de chaussure souhaitant devenir rentable décide d'augmenter progressivement ses prix. Chaque mois, les prix augmentent de $12\%$.
+\begin{subparts}
+\subpart[1] De quel pourcentage les prix ont augmenté au bout de $1$ mois ? $2$ mois ?
+\subpart[1] Montrer que le taux d'évolution des prix au bout de $4$ mois est d'environ $57\%$.
+\subpart[1] L'entreprise décide de solder sa marchandise de $42\%$ après avoir le $4$\ieme{} mois. Quel est le taux d'évolution des prix après ces soldes ?
+\end{subparts}
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Évolutions réciproques}[4]
+\begin{parts}
+\part[1] Quel est le taux d'évolution réciproque d'une diminution de $45\%$ ? On arrondira la réponse au centième près.
+\part[3] Lors d'un congrès sur l'écologie, différents états discutent de mesures pour diminuer les augmentations d'émission de gaz à effet de serre.
+\begin{subparts}
+\subpart[1] L'état $A$ a observé dans la décennie une augmentation de $40\%$ d'émission de $CO_2$. Elle propose des actions pour diminuer ces emissions de $35\%$. Est-ce suffisant pour contrebalancer l'augmentation d'émission ? Si non, donner le taux d'évolution en pourcentage nécessaire.
+\subpart[2] L'état $B$ prétend avoir réussi à compenser ses émissions de $CO_2$ aux moyens de mesures ayant diminué les émissions de $39\%$. De quel pourcentage avait augmenté les émissions de $CO_2$ avant la mise en place de ces mesures ?
+\end{subparts}
+\end{parts}
+\end{questions}
+
+
+\end{document}

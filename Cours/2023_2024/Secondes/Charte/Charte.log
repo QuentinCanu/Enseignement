@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  7 OCT 2025 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  5 NOV 2025 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -400,6 +400,10 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowlinewidth=\dimen276
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count308
+\tikz@math@dimen=\dimen277
+\tikz@math@toks=\toks39
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tkz-tab/tkz-tab.sty
 Package: tkz-tab 2020/04/29 v2.12c variations (ctan version)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -407,35 +411,35 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks39
-\XKV@tempa@toks=\toks40
+\XKV@toks=\toks40
+\XKV@tempa@toks=\toks41
 )
-\XKV@depth=\count308
+\XKV@depth=\count309
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen277
+\arrowsize=\dimen278
 )) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-\tkz@XF=\dimen278
-\tkz@YF=\dimen279
-\c@tkz@cnt@line=\count309
-\c@tkz@cnt@lg=\count310
-\c@tkz@cnt@cl=\count311
-\c@tkz@cnt@pred=\count312
-\c@tkz@cnt@temp=\count313
-\c@tkz@cnt@arrow=\count314
-\c@tkz@cnt@zone=\count315
-\c@tkz@cnt@lgnext=\count316
-\c@tkz@cnt@clnext=\count317
-\c@tkz@cnt@pair=\count318
-\c@tkz@cnt@impair=\count319
-\c@tkz@cnt@aw=\count320
+\tkz@XF=\dimen279
+\tkz@YF=\dimen280
+\c@tkz@cnt@line=\count310
+\c@tkz@cnt@lg=\count311
+\c@tkz@cnt@cl=\count312
+\c@tkz@cnt@pred=\count313
+\c@tkz@cnt@temp=\count314
+\c@tkz@cnt@arrow=\count315
+\c@tkz@cnt@zone=\count316
+\c@tkz@cnt@lgnext=\count317
+\c@tkz@cnt@clnext=\count318
+\c@tkz@cnt@pair=\count319
+\c@tkz@cnt@impair=\count320
+\c@tkz@cnt@aw=\count321
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -447,55 +451,55 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks41
-\thm@bodyfont=\toks42
-\thm@headfont=\toks43
-\thm@notefont=\toks44
-\thm@headpunct=\toks45
+\thm@style=\toks42
+\thm@bodyfont=\toks43
+\thm@headfont=\toks44
+\thm@notefont=\toks45
+\thm@headpunct=\toks46
 \thm@preskip=\skip54
 \thm@postskip=\skip55
 \thm@headsep=\skip56
-\dth@everypar=\toks46
+\dth@everypar=\toks47
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count321
-\calc@Bcount=\count322
-\calc@Adimen=\dimen280
-\calc@Bdimen=\dimen281
+\calc@Acount=\count322
+\calc@Bcount=\count323
+\calc@Adimen=\dimen281
+\calc@Bdimen=\dimen282
 \calc@Askip=\skip57
 \calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count323
+\calc@Ccount=\count324
 \calc@Cskip=\skip59
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count324
-\l_MT_multwidth_dim=\dimen282
+\g_MT_multlinerow_int=\count325
+\l_MT_multwidth_dim=\dimen283
 \origjot=\skip60
-\l_MT_shortvdotswithinadjustabove_dim=\dimen283
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen284
-\l_MT_above_intertext_sep=\dimen285
-\l_MT_below_intertext_sep=\dimen286
-\l_MT_above_shortintertext_sep=\dimen287
-\l_MT_below_shortintertext_sep=\dimen288
+\l_MT_shortvdotswithinadjustabove_dim=\dimen284
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen285
+\l_MT_above_intertext_sep=\dimen286
+\l_MT_below_intertext_sep=\dimen287
+\l_MT_above_shortintertext_sep=\dimen288
+\l_MT_below_shortintertext_sep=\dimen289
 \xmathstrut@box=\box74
-\xmathstrut@dim=\dimen289
+\xmathstrut@dim=\dimen290
 )
-\c@definition_=\count325
-\c@proposition_=\count326
-\c@exercize=\count327
-\c@method=\count328
-\c@theorem_=\count329
+\c@definition_=\count326
+\c@proposition_=\count327
+\c@exercize=\count328
+\c@method=\count329
+\c@theorem_=\count330
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2023-03-04 v3.2.2 A comprehensive (SI) units package
-\l__siunitx_angle_tmp_dim=\dimen290
+\l__siunitx_angle_tmp_dim=\dimen291
 \l__siunitx_angle_marker_box=\box75
 \l__siunitx_angle_unit_box=\box76
-\l__siunitx_compound_count_int=\count330
+\l__siunitx_compound_count_int=\count331
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -511,34 +515,34 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-\l__siunitx_number_exponent_fixed_int=\count331
-\l__siunitx_number_min_decimal_int=\count332
-\l__siunitx_number_min_integer_int=\count333
-\l__siunitx_number_round_precision_int=\count334
-\l__siunitx_number_lower_threshold_int=\count335
-\l__siunitx_number_upper_threshold_int=\count336
-\l__siunitx_number_group_first_int=\count337
-\l__siunitx_number_group_size_int=\count338
-\l__siunitx_number_group_minimum_int=\count339
+\l__siunitx_number_exponent_fixed_int=\count332
+\l__siunitx_number_min_decimal_int=\count333
+\l__siunitx_number_min_integer_int=\count334
+\l__siunitx_number_round_precision_int=\count335
+\l__siunitx_number_lower_threshold_int=\count336
+\l__siunitx_number_upper_threshold_int=\count337
+\l__siunitx_number_group_first_int=\count338
+\l__siunitx_number_group_size_int=\count339
+\l__siunitx_number_group_minimum_int=\count340
 \l__siunitx_table_tmp_box=\box77
-\l__siunitx_table_tmp_dim=\dimen291
-\l__siunitx_table_column_width_dim=\dimen292
+\l__siunitx_table_tmp_dim=\dimen292
+\l__siunitx_table_column_width_dim=\dimen293
 \l__siunitx_table_integer_box=\box78
 \l__siunitx_table_decimal_box=\box79
 \l__siunitx_table_uncert_box=\box80
 \l__siunitx_table_before_box=\box81
 \l__siunitx_table_after_box=\box82
-\l__siunitx_table_before_dim=\dimen293
-\l__siunitx_table_carry_dim=\dimen294
-\l__siunitx_unit_tmp_int=\count340
-\l__siunitx_unit_position_int=\count341
-\l__siunitx_unit_total_int=\count342
+\l__siunitx_table_before_dim=\dimen294
+\l__siunitx_table_carry_dim=\dimen295
+\l__siunitx_unit_tmp_int=\count341
+\l__siunitx_unit_position_int=\count342
+\l__siunitx_unit_total_int=\count343
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen295
+\col@sep=\dimen296
 \ar@mcellbox=\box83
-\extrarowheight=\dimen296
-\NC@list=\toks47
+\extrarowheight=\dimen297
+\NC@list=\toks48
 \extratabsurround=\skip61
 \backup@length=\skip62
 \ar@cellbox=\box84
@@ -548,22 +552,22 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmargin=\skip64
 \droptitle=\skip65
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count343
+\lst@mode=\count344
 \lst@gtempboxa=\box85
-\lst@token=\toks48
-\lst@length=\count344
-\lst@currlwidth=\dimen297
-\lst@column=\count345
-\lst@pos=\count346
-\lst@lostspace=\dimen298
-\lst@width=\dimen299
-\lst@newlines=\count347
-\lst@lineno=\count348
-\lst@maxwidth=\dimen300
+\lst@token=\toks49
+\lst@length=\count345
+\lst@currlwidth=\dimen298
+\lst@column=\count346
+\lst@pos=\count347
+\lst@lostspace=\dimen299
+\lst@width=\dimen300
+\lst@newlines=\count348
+\lst@lineno=\count349
+\lst@maxwidth=\dimen301
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count349
-\lst@skipnumbers=\count350
+\c@lstnumber=\count350
+\lst@skipnumbers=\count351
 \lst@framebox=\box86
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -602,17 +606,17 @@ Package french.ldf Warning: OT1 encoding should not be used for French.
 
 (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
-\scratchdimen=\dimen301
+\scratchcounter=\count352
+\scratchdimen=\dimen302
 \scratchbox=\box87
-\nofMPsegments=\count352
-\nofMParguments=\count353
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count354
-\MPscratchDim=\dimen302
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
-\everyMPtoPDFconversion=\toks50
+\nofMPsegments=\count353
+\nofMParguments=\count354
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count355
+\MPscratchDim=\dimen303
+\MPnumerator=\count356
+\makeMPintoPDFobject=\count357
+\everyMPtoPDFconversion=\toks51
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -622,7 +626,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: translations-basic-dictionary-french.trsl (french translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 8.
-\c@lstlisting=\count357
+\c@lstlisting=\count358
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -639,10 +643,10 @@ Overfull \hbox (15.86836pt too wide) in paragraph at lines 12--13
 
 {/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Charte.aux) ) 
 Here is how much of TeX's memory you used:
- 25656 strings out of 476025
- 566442 string characters out of 5780533
+ 26224 strings out of 476025
+ 579714 string characters out of 5780533
  1856388 words of memory out of 5000000
- 45738 multiletter control sequences out of 15000+600000
+ 46297 multiletter control sequences out of 15000+600000
  517836 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,118p,576b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s

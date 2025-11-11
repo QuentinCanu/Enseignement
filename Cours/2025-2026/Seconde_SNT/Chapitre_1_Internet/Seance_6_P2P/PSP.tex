@@ -1,0 +1,41 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Peer-to-peer}
+\date{3 Novembre 2025}
+
+\begin{document}
+\maketitle
+\section{Messages}
+Lors d'un conflit, 4 soldats sont envoyés dans des postes avancés différents : Caroline, David, Evangeline et Fabien. Tous les postes avancés sont reliés deux à deux par une ligne télégraphique permettant de communiquer en morse.
+
+\begin{alphaquestions}
+\item Faire un schéma représentant la situation. On représentera les postes avancés par des points $C, D, E$ et $F$, et les lignes télégraphiques par des segments entre les différents points.
+\item Se renseigner sur le morse, puis écrire le mot \og MESSAGE \fg en morse.
+\item Avant d'envoyer les soldats en mission, l'état-major indique à Fabien qu'il trouvera dans son poste avancé $3$ messages à envoyer aux autres postes, et précise aux autres que Fabien est le seul autorisé à envoyer des messages. Combien de messages Fabien devra-t-il envoyer ? Sachant que chaque message fait \num{1200} mots à envoyer, et que chaque mot prend \qty{1}{\second} à écrire en morse, combien de temps mettra Fabien à envoyer tous les messages ?
+\item Tous les soldats sont maintenant autorisés à envoyer des messages à n'importe qui. C'est toujours Fabien qui possède l'intégralité des $3$ messages au début de la mission. Comment peuvent s'organiser les soldats avant de partir en mission pour que tout le monde reçoive les $3$ messages le plus rapidement possible ? On organisera la réponse sous la forme d'un tableau similaire au tableau suivant \textbf{(Prévoir de la place)}:
+\begin{center}
+\begin{tabular}{|c|c|c|c}
+\hline
+&Instant 1&Instant 2&\dots\\  
+\hline
+Caroline&&&\\  
+\hline
+David&&&\\  
+\hline
+Evangeline&Message 1 à David&&\\  
+\hline
+Fabien&Message 1 à Evangeline&Message 2 à Evangeline&\\  
+\hline
+\end{tabular}
+\end{center} 
+\end{alphaquestions}
+\section{Le Peer-to-peer}
+\begin{alphaquestions}
+\item Donner la définition d'une architecture client-serveur, et la définition d'une architecture peer-to-peer.
+\item Quels sont les avantages d'une architecture peer-to-peer ?
+\item Quels sont les usages du peer-to-peer en pratique ?
+\item Que risque-t-on en utilisant le peer-to-peer pour des pratiques illégales ?
+\end{alphaquestions}
+
+\end{document}

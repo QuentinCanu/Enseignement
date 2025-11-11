@@ -99,4 +99,45 @@ Pour obtenir respectivement l'abscisse et l'ordonnée du milieu d'un segment $[A
 \item Que remarquez-vous ? En déduire la nature du quadrilatère $ABCD$.
 \end{alphaquestions}
 \end{exercize*}
+\newpage
+\section{Distance entre deux points}
+\begin{proposition}
+Soit $(O;I;J)$ un repère \textbf{orthonormé} du plan, ainsi que $A(x_A;y_A)$ et $B(x_B;y_B)$ deux points du plan. Alors, la longueur du segment $[AB]$ est donnée par la formule suivante :
+\begin{equation*}
+AB = \sqrt{(x_A - x_B)^2 + (y_A - y_B)^2}
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Cette formule est simplement une conséquence du théorème de Pythagore. On peut le voir à l'aide de la figure suivante :
+\begin{center}
+\begin{tikzpicture}
+\tikzmath{\x = 4.25; \k = 0.1;}
+\draw[help lines] (-\x,-\x) grid[step=0.5] (\x,\x);
+\draw[->,thick] (-\x,0) -- (\x,0) node[right] {$x$};
+\draw[->,thick] (0,-\x) -- (0,\x) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw (1,\k) -- (1,-\k) node[below] {$I$};
+\draw (\k,1) -- (-\k,1) node[left] {$J$};
+
+\coordinate (A) at (1.5,1.5);
+\coordinate (B) at (3,3.5);
+\draw (A) node {$\bullet$} node[below left] {$A$};
+\draw (B) node {$\bullet$} node[above right] {$B$};
+\draw (A) -- (B);
+\draw[dashed] (A) -| (B);
+\draw let \p1 = (A), \p2 = (B) in ($(\x2, \y1) + (-2*\k,0)$) |- ($(\x2,\y1) + (0,2*\k)$);
+\draw let \p1 = (A), \p2 = (B) in (\x1,\k) -- (\x1,-\k) node[below] {$x_A$} (\x2,\k) -- (\x2,-\k) node[below] {$x_B$};
+\draw let \p1 = (A), \p2 = (B) in (\k,\y1) -- (-\k,\y1) node[left] {$y_A$} (\k,\y2) -- (-\k,\y2) node[left] {$y_B$};
+\draw[<->] let \p1 = (A), \p2 = (B) in ($(A) + (0,-\k)$) -- ($(\x2,\y1) + (0,-\k)$) node[midway,below] {$x_B - x_A$};
+\draw[<->] let \p1 = (A), \p2 = (B) in ($(\x2,\y1) + (\k,0)$) -- ($(B) + (\k,0)$) node[midway,below,sloped] {$y_B - y_A$};
+\end{tikzpicture}
+\end{center}
+\end{remark}
+\begin{exercize*}
+Soit $(O;I;J)$ un repère orthonormé. On considère les points $A(4;10)$ et $B(5;-3)$. Calculer la longueur du segment $[AB]$.
+
+\begin{equation*}
+AB = 
+\end{equation*}
+\end{exercize*}
 \end{document}
