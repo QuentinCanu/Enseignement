@@ -1,0 +1,418 @@
+\documentclass{poly}
+\usepackage{main}
+
+\title{Chapitre 4 : Généralités sur les fonctions}
+\author{Seconde 3}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Définitions}
+\begin{definition}
+Une \textbf{fonction} est un objet mathématique capable d'associer un \textbf{unique} résultat à tout objet d'un ensemble appelé \textbf{ensemble de définition}. 
+\end{definition}
+\begin{example}
+On définit plusieurs fonctions dont l'ensemble de définition est \emph{l'ensemble des élèves de la seconde 3} :
+\begin{itemize}
+\item $f$ est la fonction qui à un élève de la seconde 3 associe sa date d'anniversaire.
+\item $g$ est la fonction qui à un élève de la seconde 3 associe sa couleur préférée.
+\item $h$ est la fonction qui à un élève de la seconde 3 associe l'initiale d'un des membres de sa famille. \textbf{(Attention ! A-t-on vraiment défini une fonction ici ?)}
+\item $p$ est la fonction qui à un élève de la seconde 3 associe 
+\item $q$ est la fonction qui à un élève de la seconde 3 associe 
+\end{itemize}
+\end{example}
+\begin{remark}
+On s'intéresse majoritairement en mathématiques aux fonctions numériques. Les ensembles de définitions sont des ensembles de nombres, et le résultat renvoyé par les fonctions est toujours un nombre réel.
+\end{remark}
+\begin{definition}
+Une \textbf{fonction numérique à valeurs réelles} est une fonction $f$ définie de la manière suivante :
+\begin{equation*}
+\function{f}{I}{\R}{x}{f(x)}
+\end{equation*}
+avec $I$ son \textbf{ensemble de définition}.
+\end{definition}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item La plupart du temps, on aura $I = \R$, $I$ est un intervalle ou $I$ est une réunion d'intervalles.
+\item On aura toujours $\R$ à droite de la flèche du haut : on dit que \textbf{l'ensemble d'arrivée} est $\R$.
+\item La flèche du bas se lit de la manière suivante : au nombre $x$, on renvoie le nombre $f(x)$
+\end{itemize}
+\end{remark}
+\begin{definition}
+Soit $\function{f}{I}{\R}{x}{f(x)}$ et $a \in I$. On pose $b$ vérifiant l'égalité
+\begin{equation*}
+b = f(a)\,.
+\end{equation*}
+Alors, 
+\begin{itemize}
+\item $a$ est \textbf{un antécédent} de $b$ par la fonction $f$.
+\item $b$ est \textbf{l'image} de $a$ par la fonction $f$.
+\end{itemize}
+\end{definition}
+\begin{example}
+Soit $\function{f}{\R}{\R}{x}{2x+1}$.
+\begin{alphaquestions}
+\item Donner l'image de $3$ par $f$ : 
+\item Donner un antécédent de $7$ par $f$ : 
+\end{alphaquestions}
+\end{example}
+\newpage
+\section{Courbe représentative}
+\begin{tcolorbox}
+\begin{definition}
+Un \textbf{repère orthonormé} est un repère formé par deux axes tels que :
+\begin{itemize}
+\item Les deux axes sont perpendiculaires (on dit que le repère est \textbf{orthogonal})
+\item Les deux axes sont gradués et ont des graduations de longueurs égales (on dit que le repère est \textbf{normé})
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{example} On représente traditionnellement un repère orthonormé de la manière suivante :
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item L'axe horizontal est appelé \textbf{axe des abscisses}.
+\item L'axe vertical est appelé \textbf{axe des ordonnées}.
+\item Le point d'abscisse $0$ et d'ordonnée $0$ (de coordonnées $(0;0)$) est appelé \textbf{origine du repère}.
+\end{itemize}
+\end{example}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction définie sur un ensemble de définition $I$. On se place sur un reprère orthonormé. Alors, la \textbf{courbe représentative de $f$}, notée $\mathcal{C}_f$, est l'ensemble des points du repère de coordonnées $(x;y)$ vérifiant
+\begin{equation*}
+y = f(x)
+\end{equation*}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+La courbe représentative d'une fonction permet donc de représenter la fonction, c'est-à-dire de représenter la transformation d'un antécédent en une image par la fonction $f$. Chaque point de la courbe de coordonnées $(x;y)$ représente une telle transformation : l'abscisse $x$ du point joue le rôle de l'antécédent, et l'ordonnée $y$ du point joue le rôle de l'image.
+\end{remark}
+\begin{example}
+Soit $f$ une fonction dont la courbe représentative est donnée sur le repère orthonormé suivant. Donner l'image de $3$ par $f$ : 
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\end{tikzpicture}
+\end{center}
+\end{example}
+
+\newpage
+
+\begin{tcolorbox}
+La courbe représentative d'une fonction $f$ procure de nombreuses informations concernant $f$. 
+\end{tcolorbox}
+\subsection{Calcul des antécédents de $f$}
+Pour chercher un antécédent (ou tous les antécédents) d'un nombre $a$ par $f$, on trace une droite horizontale d'équation $y = a$ :
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw[thick,dashed] (-3.25,1.5) -- (3.25,1.5) node[right] {$y = 3$};
+\draw[thick,dashed] (0.8,1.5) -- (0.8,0) node[below] {$1,6$};
+\draw[thick,dashed] (2.2,1.5) -- (2.2,0) node[below] {$4,4$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\end{tikzpicture}
+\end{center}
+On a résolu ici l'équation $f(x) = 3$ : l'ensemble $\mathcal{S}$ des solutions est donné par $\mathcal{S} = \{1,6; 4,4\}$.
+\end{example}
+    
+\subsection{Résolution d'inéquation $f(x) \geq a$}
+Dans ce cas, on cherche les zones où la courbe est \textbf{au-dessus} de la droite horizontale d'équation $y = a$.
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw[thick,dashed] (-3.25,1.5) -- (3.25,1.5) node[right] {$y = 3$};
+\fill[color=gray,opacity=0.2] (-3.25,1.5) rectangle (3.25,3.25);
+\draw[ultra thick] (0.8,0) node {$[$} node[below] {$1,6$} -- (2.2,0) node {$]$} node[below] {$4,4$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100,domain=0.8:2.2,ultra thick] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\end{tikzpicture}
+\end{center}
+Ici, on a résolu l'inéquation $f(x) \geq 3$ : l'ensemble des solutions $\mathcal{S}$ de cette inéquation est donné par l'intervalle $[1,6;4,4]$.
+\end{example}
+\begin{tcolorbox}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Le sens des crochets est toujours dépendant des cas d'égalités.
+\item La même méthode marche pour $f(x) > a$; $f(x) \leq a$ et $f(x) < a$.
+\item Si la courbe est au-dessus de la droite à plusieurs endroit, alors on \og joint \fg les différents intervalles-solutions à l'aide du symbole $\cup$ (qui se lit \textbf{\og union \fg}). Par exemple, $[0;1] \cup ]4,5;9]$ est une union d'intervalles.
+\end{itemize}
+\end{remark}
+\end{tcolorbox}
+
+\newpage
+\subsection{Résolution d'équation $f(x)=g(x)$}
+Cette information est donnée par les points d'intersection des courbes représentatives des fonctions $f$ et $g$
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw (0.5,1) node {$\bullet$};
+\draw (2.5,1) node {$\bullet$};
+\draw[thick] (2.5,0.1) -- (2.5,-0.1) node[below] {$5$};
+\draw (3.25,-1) node[right] {$\mathcal{C}_f$};
+\draw (3.25,3) node[right] {$\mathcal{C}_g$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100] plot (\x,{(\x-1.5)*(\x - 1.5)});
+\end{tikzpicture}
+\end{center}
+L'ensemble des solutions de $f(x)=g(x)$ est donné par $\mathcal{S} = \{1;5\}$.
+\end{example}
+\subsection{Résolution d'inéquation $f(x) < g(x)$}
+Cette information est donnée par la position relative entre les deux courbes représentatives.
+\begin{example}
+\hfill
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
+\draw (0,0) node[below left] {$O$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
+\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw (0.5,1) node {$\bullet$};
+\draw (2.5,1) node {$\bullet$};
+\draw[thick] (2.5,0.1) -- (2.5,-0.1) node[below] {$5$};
+\draw (3.25,-1) node[right] {$\mathcal{C}_f$};
+\draw (3.25,3) node[right] {$\mathcal{C}_g$};
+\clip (-3.25,-3.25) rectangle (3.25,3.25);
+\draw[samples=100] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100] plot (\x,{(\x-1.5)*(\x - 1.5)});
+\draw[samples=100, domain=-3.25:0.5, ultra thick] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\draw[samples=100, domain=2.5:3.25, ultra thick] plot (\x,{-(\x-1.5)*(\x - 1.5) + 2});
+\end{tikzpicture}
+\end{center}
+L'ensemble $\mathcal{S}$ des solutions de l'inéquation $f(x)<g(x)$ est donné par la réunion d'intervalles $]-\infty;1[\cup]5;+\infty[$.
+\end{example}
+\newpage
+\section{Fonctions croissantes et décroissantes}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction à valeurs réelles, et $I$ un intervalle sur lequel $f$ est définie.
+\begin{itemize}
+\item On dit que $f$ est \textbf{croissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) \leq f(y)$.  
+\item On dit que $f$ est \textbf{strictement croissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) < f(y)$.  
+\item On dit que $f$ est \textbf{décroissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) \geq f(y)$.  
+\item On dit que $f$ est \textbf{strictement décroissante sur $I$}, si pour tout $x < y \in I$, on a $f(x) > f(y)$.
+\item On dit que $f$ est \textbf{constante sur $I$}, si pour tout $x < y \in I$, on a $f(x) = f(y)$
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Si l'intervalle $I$ est clair suivant le contexte, alors on peut dire qu'une fonction est croissante ou décroissante sans préciser l'intervalle $I$.
+\item On dit qu'une fonction croissante (ou strictement croissante) \textbf{conserve l'ordre}, tandis qu'une fonction décroissante (ou strictement décroissante) \textbf{inverse l'ordre}.
+\end{itemize}
+\end{remark}
+\begin{definition}
+Soit $f$ une fonction à valeurs réelles, et $I$ un intervalle sur lequel $f$ est définie. 
+\begin{itemize}
+\item On dit que $f$ est \textbf{monotone sur $I$} si $f$ est croissante sur $I$ ou si $f$ est décroissante sur $I$.
+\item On dit que $f$ est \textbf{strictement monotone sur $I$} si $f$ est strictement croissante sur $I$ ou si $f$ est strictement décroissante sur $I$.
+\end{itemize}
+\end{definition}
+\begin{remark}
+Pour déterminer qu'une fonction n'est pas monotone sur un intervalle $I$, il suffit de trouver trois réels $x < y < z \in I$ tels que $f(x)$, $f(y)$ et $f(z)$ ne soient pas dans le même ordre (Ni $f(x) \leq f(y) \leq f(z)$, ni $f(x) \geq f(y) \geq f(z)$). 
+\end{remark}
+\begin{example}
+Soit une fonction $f$ définie sur l'intervalle $[-4;6]$ dont la courbe représentative $\mathcal{C}_f$ est donnée ci-dessous.
+\begin{center}
+% \includegraphics[width=\textwidth]{Var_Fonctions.png}
+\end{center}
+\begin{alphaquestions}
+\item Comparer $f(-2)$ et $f(0)$. L'ordre entre $-2$ et $0$ est-il conservé par $f$ ? 
+\item La fonction $f$ est-elle décroissante sur $[-2;0]$ ? 
+\item Donner un intervalle $I$ tel que $f$ est croissante sur $I$ : 
+\item Donner un intervalle $J$ tel que la fonction n'est pas monotone sur $J$ : 
+\end{alphaquestions}
+\end{example}
+\newpage
+\section{Tableaux}
+Soient $f$ et $g$ deux fonctions définies sur $[-5;5]$ dont les courbes représentatives sont données ci-contre.
+\vspace*{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+% \repereclassique{-5.25}{-5.25}{5.25}{5.25}{1}
+\draw (-5,2) node {$\bullet$};
+\draw (5,3) node {$\bullet$} node[right] {$\mathcal{C}_f$};
+\draw (-5,2) parabola (-3,0);
+\draw (-3,0) parabola[bend at end] (-1,-2);
+\draw (-1,-2) parabola (2,0);
+\draw (2,0) parabola bend (4,4) (5,3);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+% \repereclassique{-5.25}{-5.25}{5.25}{5.25}{1}
+\draw (-5,-1) node {$\bullet$};
+\draw (5,3) node {$\bullet$} node[right] {$\mathcal{C}_g$};
+\draw (-5,-1) parabola (-1,0);
+\draw (-1,0) parabola[bend at end] (-0.5,2.5);
+\draw (-0.5,2.5) parabola bend (0,3) (2,0);
+\draw (2,0) parabola bend (3,-2) (4,0);
+\draw (4,0) -- (5,3);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\subsection{Tableau de valeurs}
+\begin{definition}
+Le tableau de valeurs associe plusieurs antécédents (ligne $x$) à leurs images (ligne $f(x)$).
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tabular}{|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|}
+\hline
+$x$&-5&-3&2&4&5\\
+\hline
+$f(x)$&2&0&0&4&3\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\begin{tabular}{|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|p{0.8cm}|}
+\hline
+$x$&-5&-1&0&2&3\\
+\hline
+$g(x)$&&&&&\\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\end{example}
+\subsection{Tableau de variation}
+\begin{definition}
+Le tableau de variation répertorie les plus grand intervalles sur lesquels les fonctions sont monotones. 
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variations de $f$ / 2}{$-5$,$-1$,$4$,$5$};
+\tkzTabVar{+/$2$,-/$-2$,+/$4$, -/$3$};
+\end{tikzpicture}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variations de $g$ / 2}{$-5$,,, $5$}; 
+\end{tikzpicture}
+\end{minipage}
+\end{example}
+\subsection{Tableau de signe}
+\begin{definition}
+Le tableau de signe d'une fonction $f$ répertorie les intervalles solutions de $f(x) \geq 0$ (où la fonction est \textbf{positive}) et $f(x) \leq 0$ (où la fonction est \textbf{négative}).
+\end{definition}
+\begin{example}
+\hfill
+
+\vspace*{0.2cm}
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Signe de $f$ / 2}{$-5$,$-3$,$2$,$5$};
+\tkzTabLine{,+,z,-,z,+,};
+\end{tikzpicture}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Signe de $g$ / 2}{$-5$,,,$5$};
+\tkzTabLine{,,,,,,};
+\end{tikzpicture}
+\end{minipage}
+\end{example}
+\newpage
+\section{Extremum de fonction}
+\begin{tcolorbox}
+\begin{definition}
+Soit $f$ une fonction définie sur un intervalle $I$, et $b$ un nombre réel.
+\begin{itemize}
+\item On dit que $b$ est un \textbf{maximum de $f$ sur $I$}, si pout tout $x \in I$, on a $f(x) \leq b$; et qu'il existe $a \in I$ tel que $f(a) = b$. On dit alors que le maximum $b$ de $f$ sur $I$ est atteint en $a$.
+\item On dit que $b$ est un \textbf{minimum de $f$ sur $I$}, si pout tout $x \in I$, on a $f(x) \geq b$; et qu'il existe $a \in I$ tel que $f(a) = b$. On dit alors que le minimum $b$ de $f$ sur $I$ est atteint en $a$.
+\end{itemize}
+\end{definition}
+\end{tcolorbox}
+\begin{remark}
+Le maximum d'une fonction sur $I$ est donc la plus grande image possible sur $I$, tandis que le minimum est la plus petite image possible sur $I$.
+\end{remark}
+\begin{example}
+Soit une fonction $f$ dont la courbe représentative est donnée ci-après :
+\begin{center}
+\begin{tikzpicture}
+% \repereclassique{-5.25}{-5.25}{5.25}{5.25}{0.5};
+\draw (-5,4) node {$\bullet$};
+\draw (-5,4) parabola bend (-2.5,-3.5) (0,-1);
+\draw (0,-1) parabola bend (2,3) (5,-0.5);
+\draw (5,-0.5) node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\begin{alphaquestions}
+\item Compléter le tableau de variation de $f$.
+\begin{center}
+\begin{tikzpicture}
+\tkzTabInit[espcl=1.5]{$x$ / 1, Variation de $f$ / 2}{, , ,};
+\end{tikzpicture}
+\end{center}
+\item Déterminer le maximum de cette fonction ? En quelle valeur ce maximum est-il atteint ?
+
+
+\item Déterminer le minimum de cette fonction ? En quelle valeur ce minimum est-il atteint ? 
+
+
+\end{alphaquestions}
+\end{example}
+\end{document}
