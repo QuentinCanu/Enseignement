@@ -1,0 +1,59 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Contrôle n°2 : Dérivation Locale, Discriminant}
+\author{Première Spécialité Mathématiques}
+\date{17 Novembre 2025}
+
+\begin{document}
+\maketitle
+\instructions[Interdite]
+
+\begin{questions}
+\titledquestion{Dérivée}[5]
+En rédigeant convenablement votre réponse, donner : 
+\begin{parts}
+\part[2,5] le nombre dérivé de la fonction $f \colon x \mapsto x^2 + 5x - 13$ en $a = 3$;
+\part[2,5] le nombre dérivé de la fonction $g \colon x \mapsto 5x^2 - 1$ en $a = - 1$.
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Discriminant}[5]
+\begin{parts}
+\part[1] Rappeler la formule du discriminant d'une fonction polynomiale du second degré $f \colon x \mapsto ax^2 + bx + c$.
+\part[4]  Déterminer les racines de chaque fonction polynomiale du second degré ci-après:
+\begin{subparts}
+\subpart[1] $f \colon x \mapsto 2x^2 - 6x - 8$;
+\subpart[1] $g \colon x \mapsto 4x^2 - 4x + 2$;
+\subpart[1] $h \colon x \mapsto x^2 - 12x + 36$;
+\subpart[1] $j \colon x \mapsto 6x^2 - 12x$;
+\end{subparts} 
+\end{parts}
+\vspace*{1cm}
+\titledquestion{Méthode de Héron}[8]
+La méthode de Héron est une méthode permettant de calculer la valeur numérique de n'importe quelle racine carrée. Ici, nous allons étudier la valeur numérique de $\sqrt{2}$.
+
+\begin{parts}
+\part[1] On pose la fonction $f : x \mapsto x^2 - 2$. Montrer que les racines de cette fonction sont $\sqrt{2}$ et $-\sqrt{2}$.
+\vspace*{0.5cm}
+\part\label{methode} La méthode de Héron consiste en réalité à calculer numériquement une approximation d'une racine de $f$. Pour cela, on pose $a = 1$.
+\begin{subparts}
+\subpart[1] En justifiant de son existence, montrer que le nombre dérivé de $f$ en $a$ est $2$.
+\subpart[2] Rappeler l'expression de l'équation de la tangente à la courbe représentative de $f$ en un point d'abscisse $a$. En déduire que l'équation de la tangente pour $a = 1$ vaut:
+\begin{equation*}
+y = 2x - 3
+\end{equation*}
+\subpart[1] Montrer que le point d'intersection de cette tangente avec l'axe des abscisses a pour abscisse $x = \dfrac{3}{2}$. 
+\end{subparts}
+\vspace*{0.5cm}
+\part[2] Le principe de la méthode de Héron consiste à refaire les questions de la partie \emph{\ref{methode}} avec cette fois-ci $a = \dfrac{3}{2}$. C'est-à-dire trouver l'équation de la tangente à la courbe $\mathcal{C}_f$ en le point d'abscisse $a = \dfrac{3}{2}$, puis déterminer l'abscisse $x$ en laquelle cette nouvelle tangente intersecte l'axe des abscisses.
+
+On donne $f\left(\dfrac{3}{2}\right) = \dfrac{1}{4}$ et $f'\left(\dfrac{3}{2}\right) = 3$. En déduire l'équation de la tangente correspondante, puis montrer que l'abscisse $x$ recherchée vaut $\dfrac{17}{12}$.
+
+\part[1] En continuant cette méthode, $a$ va successivement prendre les valeurs $1$; $\dfrac{3}{2}$; $\dfrac{17}{12}$; $\dfrac{577}{408}$ \dots En effectuant chacune de ces divisions, on obtient un nombre approchant de plus en plus la valeur numérique de $\sqrt{2}$.
+
+Sur quelle fonction appliquer la méthode de Héron afin de calculer des valeurs numériques approchées de $\sqrt{3}$ ?
+\end{parts}
+
+\end{questions}
+
+\end{document}
