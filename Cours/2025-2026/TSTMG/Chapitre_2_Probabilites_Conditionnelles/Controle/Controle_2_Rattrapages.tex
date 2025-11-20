@@ -1,0 +1,114 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Contrôle n°2 : Probabilités Conditionnelles}
+\author{Terminale STMG1}
+\date{14 Novembre 2025}
+
+\begin{document}
+\maketitle
+\instructions[Autorisée]
+\vspace*{0.5cm}
+
+\begin{questions}
+\titledquestion{Tableau}[5]
+On interroge le public d'un festival de musique sur ce qu'il sont venus voir, ainsi que sur leur âge. Aucun n'est allé voir à la fois du black metal et du death metal. Le résultat de cette étude est consignée sur le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+& Black Metal & Death Metal & Total\\
+\hline
+Moins de 18 ans & 78 & 72 & 150\\
+\hline
+Entre 18 et 30 ans & 237 & 63 & 300\\
+\hline
+Plus de 30 ans & 135 & 415 & 550\\
+\hline
+Total & 450 & 550 & 1000\\
+\hline
+\end{tabular}
+\end{center}
+On tire une personne au hasard dans cette foule. On considère les événements suivants :
+\begin{itemize}
+\item $B$ \og La personne intérrogée est venu voir du Black Metal \fg
+\item $D$ \og La personne intérrogée est venu voir du Death Metal \fg
+\item $M$ \og La personne interrogée a moins de 18 ans \fg
+\item $V$ \og La personne interrogée a entre 18 ans et 30 ans \fg
+\item $T$ \og La personne interrogée a plus de 30 ans \fg
+\end{itemize}
+\begin{parts}
+\part[1] Calculer $P(B)$ et $P(T)$.
+\part[2] Calculer $P(D \cap V)$ et $P(M \cap B)$.
+\part[2] Calculer $P_B(T)$ et $P_V(B)$.
+\end{parts}
+\vspace*{0.5cm}
+\titledquestion{Arbre de probabilités}[5]
+On procède à l'expérience aléatoire suivante : il y a dans une urne trois boules rouges et deux boules bleues. On tire successivement deux boules de cette urne, sans remettre la première à l'intérieur. On pose les événements suivants :
+\begin{itemize}
+\item $B_1$ \og La première boule tirée est bleue \fg
+\item $B_2$ \og La deuxième boule tirée est bleue \fg
+\end{itemize}
+\begin{parts}
+\part[1] Décrire en français l'événement $\overbar{B_1}$.
+\part[1] Compléter l'arbre pondéré suivant.
+\begin{center}
+\begin{tikzpicture}
+\node (B1) at (2,1.5) {$B_1$};
+\node (R1) at (2,-1.5) {$\overbar{B_1}$};
+\node (B1B2) at (5,2.5) {$B_2$};
+\node (B1R2) at (5,0.5) {$\overbar{B_2}$};
+\node (R1B2) at (5,-0.5) {$B_2$};
+\node (R1R2) at (5,-2.5) {$\overbar{B_2}$};
+
+\draw (0,0) -- (B1) node[midway,above left] {$\dots$};
+\draw (0,0) -- (R1) node[midway,below left] {$\dots$};
+\draw (B1) -- (B1B2) node[midway,above] {$\dots$};
+\draw (B1) -- (B1R2) node[midway,below] {$\dots$};
+\draw (R1) -- (R1B2) node[midway,above] {$\dots$};
+\draw (R1) -- (R1R2) node[midway,below] {$\dots$};
+\end{tikzpicture}
+\end{center}
+\part[1] Expliquer en une phrase à quelle probabilité correspond $P_{B_1}(B_2)$, et donner sa valeur par lecture sur l'arbre pondéré.
+\part[1] Expliquer en une phrase à quoi correspond l'événement $B_1 \cap B_2$, puis calculer $P(B_1 \cap B_2)$.
+\part[1] Calculer $P(B_2)$.
+\end{parts}
+\vspace*{0.5cm}
+
+\titledquestion{Cuisine}[7]
+Dans une cuisine, il y a plusieurs beignets :
+\begin{itemize}
+\item $30\%$ des beignets sont à l'ananas, les autres sont à la pomme;
+\item Parmi les beignets à l'ananas, $35\%$ sont à la farine complète; tandis que parmi les beignets à la pomme, $45\%$ sont à la farine complète. Les autres sont à la farine classique. 
+\end{itemize}
+On choisit au hasard un beignet. Chaque beignet a la même chance d'être choisi.
+On note les événements suivants :
+\begin{itemize}
+\item $A$ : \og le beignet choisi est à l'ananas \fg;
+\item $C$ : \og le beignet choisi est à la farine complète \fg 
+\end{itemize}
+\begin{parts}
+\part[1] Donner $P_A(C)$ d'après le contexte donné dans l'énoncé.
+\part[1] Compléter l'arbre de probabilités suivant:
+\begin{center}
+\begin{tikzpicture}
+\node (B1) at (2,1.5) {$A$};
+\node (R1) at (2,-1.5) {$\overbar{A}$};
+\node (B1B2) at (5,2.5) {$C$};
+\node (B1R2) at (5,0.5) {$\overbar{C}$};
+\node (R1B2) at (5,-0.5) {$C$};
+\node (R1R2) at (5,-2.5) {$\overbar{C}$};
+
+\draw (0,0) -- (B1) node[midway,above left] {$\dots$};
+\draw (0,0) -- (R1) node[midway,below left] {$\dots$};
+\draw (B1) -- (B1B2) node[midway,above] {$\dots$};
+\draw (B1) -- (B1R2) node[midway,below] {$\dots$};
+\draw (R1) -- (R1B2) node[midway,above] {$\dots$};
+\draw (R1) -- (R1R2) node[midway,below] {$\dots$};
+\end{tikzpicture}
+\end{center}
+\part[1] Calculer la probabilité $P(A \cap C)$
+\part[2] Montrer que $P(C) = 0,42$
+\part[2] Calculer la probabilité que le beignet soit à l'ananas, sachant qu'il est à la farine complète.
+\end{parts}
+\end{questions}
+\end{document}

@@ -5,6 +5,10 @@
 \pagestyle{empty}
 \pagenumbering{gobble}
 
+\RequirePackage{fontspec}
+\setmainfont{Verdana}
+\setmathrm{Optima}
+
 \RequirePackage{geometry}
 \geometry{
   a4paper,

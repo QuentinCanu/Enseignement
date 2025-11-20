@@ -60,47 +60,24 @@ Soit $\function{f}{\R}{\R}{x}{2x+1}$.
 \end{example}
 \newpage
 \section{Courbe représentative}
-\begin{tcolorbox}
-\begin{definition}
-Un \textbf{repère orthonormé} est un repère formé par deux axes tels que :
-\begin{itemize}
-\item Les deux axes sont perpendiculaires (on dit que le repère est \textbf{orthogonal})
-\item Les deux axes sont gradués et ont des graduations de longueurs égales (on dit que le repère est \textbf{normé})
-\end{itemize}
-\end{definition}
-\end{tcolorbox}
-\begin{example} On représente traditionnellement un repère orthonormé de la manière suivante :
-\begin{center}
-\begin{tikzpicture}
-\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
-\draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
-\draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
-\draw (0,0) node[below left] {$O$};
-\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
-\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
-\end{tikzpicture}
-\end{center}
-\begin{itemize}
-\item L'axe horizontal est appelé \textbf{axe des abscisses}.
-\item L'axe vertical est appelé \textbf{axe des ordonnées}.
-\item Le point d'abscisse $0$ et d'ordonnée $0$ (de coordonnées $(0;0)$) est appelé \textbf{origine du repère}.
-\end{itemize}
-\end{example}
-\begin{tcolorbox}
+
 \begin{definition}
 Soit $f$ une fonction définie sur un ensemble de définition $I$. On se place sur un reprère orthonormé. Alors, la \textbf{courbe représentative de $f$}, notée $\mathcal{C}_f$, est l'ensemble des points du repère de coordonnées $(x;y)$ vérifiant
 \begin{equation*}
 y = f(x)
 \end{equation*}
 \end{definition}
-\end{tcolorbox}
 \begin{remark}
-La courbe représentative d'une fonction permet donc de représenter la fonction, c'est-à-dire de représenter la transformation d'un antécédent en une image par la fonction $f$. Chaque point de la courbe de coordonnées $(x;y)$ représente une telle transformation : l'abscisse $x$ du point joue le rôle de l'antécédent, et l'ordonnée $y$ du point joue le rôle de l'image.
+Chaque point de la courbe de coordonnées $(x;y)$ représente une association entre antécédent et image : 
+\begin{itemize}
+\item l'abscisse $x$ du point joue le rôle de l'antécédent; 
+\item l'ordonnée $y$ du point joue le rôle de l'image.
+\end{itemize}
 \end{remark}
 \begin{example}
-Soit $f$ une fonction dont la courbe représentative est donnée sur le repère orthonormé suivant. Donner l'image de $3$ par $f$ : 
+Soit $f$ une fonction dont la courbe représentative est donnée sur le repère orthonormé suivant. Donner l'image de $3$ par $f$: 
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
 \draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
 \draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
 \draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
@@ -113,23 +90,18 @@ Soit $f$ une fonction dont la courbe représentative est donnée sur le repère 
 \end{center}
 \end{example}
 
-\newpage
-
-\begin{tcolorbox}
-La courbe représentative d'une fonction $f$ procure de nombreuses informations concernant $f$. 
-\end{tcolorbox}
 \subsection{Calcul des antécédents de $f$}
 Pour chercher un antécédent (ou tous les antécédents) d'un nombre $a$ par $f$, on trace une droite horizontale d'équation $y = a$ :
 \begin{example}
 \hfill
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
 \draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
 \draw[thick, ->] (-3.25,0) -- (3.25,0) node[right] {$x$};
 \draw[thick, ->] (0,-3.25) -- (0,3.25) node[above] {$y$};
 \draw (0,0) node[below left] {$O$};
-\draw[thick] (0.5,0.1) -- (0.5,-0.1) node[below] {$1$};
-\draw[thick] (0.1,0.5) -- (-0.1,0.5) node[left] {$1$};
+\draw[thick] (0.5,0.1) -- (0.5,-0.1);
+\draw[thick] (0.1,0.5) -- (-0.1,0.5);
 \draw[thick,dashed] (-3.25,1.5) -- (3.25,1.5) node[right] {$y = 3$};
 \draw[thick,dashed] (0.8,1.5) -- (0.8,0) node[below] {$1,6$};
 \draw[thick,dashed] (2.2,1.5) -- (2.2,0) node[below] {$4,4$};
@@ -139,7 +111,9 @@ Pour chercher un antécédent (ou tous les antécédents) d'un nombre $a$ par $f
 \end{center}
 On a résolu ici l'équation $f(x) = 3$ : l'ensemble $\mathcal{S}$ des solutions est donné par $\mathcal{S} = \{1,6; 4,4\}$.
 \end{example}
-    
+
+\newpage
+
 \subsection{Résolution d'inéquation $f(x) \geq a$}
 Dans ce cas, on cherche les zones où la courbe est \textbf{au-dessus} de la droite horizontale d'équation $y = a$.
 \begin{example}
@@ -174,6 +148,7 @@ Ici, on a résolu l'inéquation $f(x) \geq 3$ : l'ensemble des solutions $\mathc
 \end{tcolorbox}
 
 \newpage
+
 \subsection{Résolution d'équation $f(x)=g(x)$}
 Cette information est donnée par les points d'intersection des courbes représentatives des fonctions $f$ et $g$
 \begin{example}
