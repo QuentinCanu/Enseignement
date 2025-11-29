@@ -1,0 +1,37 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Dérivée d'un quotient}
+\date{27 Novembre 2025}
+\author{Premières Spécialité Mathématiques}
+
+\begin{document}
+\maketitle
+\begin{tcolorbox}
+Durant cette activité, on ne demande pas les ensembles de dérivabilité des fonctions étudiées.
+\end{tcolorbox}
+\section{Introduction}
+On donne la formule de la dérivée de l'inverse d'une fonction $v$:
+\begin{equation*}
+\left(\dfrac{1}{v}\right)' = - \dfrac{v'}{v^2}  
+\end{equation*}
+\begin{alphaquestions}
+\item Tester sur la fonction $f \colon x \mapsto \dfrac{1}{x}$.
+\item Calculer la fonction dérivée de $g \colon x \mapsto \dfrac{1}{x^2}$ et $h \colon x \mapsto \dfrac{1}{\sqrt{x}}$.
+\item Calculer la fonction dérivée de $p \colon x \mapsto \dfrac{1}{3x^2 - 2x + 1}$ 
+\end{alphaquestions}
+\section{Dérivée de la division}
+On souhaite démontrer la règle de dérivation d'un quotient de fonctions. Pour cela, on pose $u$ et $v$ deux fonctions.
+
+En remarquant que $\left(\dfrac{u}{v}\right) = \left(u \times \dfrac{1}{v}\right)$, en déduire que
+\begin{equation*}
+\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}
+\end{equation*}
+\section{Application}
+En déduire la fonction dérivée de chacune des fonctions suivantes:
+\begin{alphaquestions}
+\item $f \colon x \mapsto \dfrac{x^2 - 2x + 1}{5x + 1}$
+\item $g \colon x \mapsto \dfrac{2x + 11}{-x^3 + 4x^2 - 5x + 7}$
+\item $h \colon x \mapsto \dfrac{\sqrt{x}}{x^3}$
+\end{alphaquestions}
+\end{document}

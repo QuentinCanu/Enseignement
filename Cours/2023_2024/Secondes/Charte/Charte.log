@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  5 NOV 2025 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  27 NOV 2025 11:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -573,6 +573,46 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/cellspace/cellspace.sty
+Package: cellspace 2022/01/04 v1.9.0 Spacing table cells (JN)
+\cellspacetoplimit=\dimen302
+\cellspacebottomlimit=\dimen303
+\cellspace@firstht=\dimen304
+\cellspace@lastdp=\dimen305
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+Package: csvsimple 2022/09/20 v2.3.2 LaTeX CSV file processing
+) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/csvsimple/csvsimple-legacy.sty
+Package: csvsimple-legacy 2022/09/20 version 2.3.2 LaTeX2e CSV file processing
+ (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read5
+\c@csvinputline=\count352
+\c@csvrow=\count353
+\c@csvcol=\count354
+\csv@out=\write4
+)) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
+\LTchunksize=\count355
+\LTcapwidth=\dimen306
+\LT@head=\box87
+\LT@firsthead=\box88
+\LT@foot=\box89
+\LT@lastfoot=\box90
+\LT@gbox=\box91
+\LT@cols=\count356
+\LT@rows=\count357
+\c@LT@tables=\count358
+\c@LT@chunks=\count359
+\LT@p@ftn=\toks50
 ) (./Charte.aux)
 \openout1 = `Charte.aux'.
 
@@ -606,17 +646,17 @@ Package french.ldf Warning: OT1 encoding should not be used for French.
 
 (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen302
-\scratchbox=\box87
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen303
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks51
+\scratchcounter=\count360
+\scratchdimen=\dimen307
+\scratchbox=\box92
+\nofMPsegments=\count361
+\nofMParguments=\count362
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count363
+\MPscratchDim=\dimen308
+\MPnumerator=\count364
+\makeMPintoPDFobject=\count365
+\everyMPtoPDFconversion=\toks52
 ) (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -626,7 +666,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 File: translations-basic-dictionary-french.trsl (french translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `french'. on input line 8.
-\c@lstlisting=\count358
+\c@lstlisting=\count366
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -643,10 +683,10 @@ Overfull \hbox (15.86836pt too wide) in paragraph at lines 12--13
 
 {/usr/local/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Charte.aux) ) 
 Here is how much of TeX's memory you used:
- 26224 strings out of 476025
- 579714 string characters out of 5780533
+ 27002 strings out of 476025
+ 598574 string characters out of 5780533
  1856388 words of memory out of 5000000
- 46297 multiletter control sequences out of 15000+600000
+ 47054 multiletter control sequences out of 15000+600000
  517836 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,118p,576b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
