@@ -173,12 +173,16 @@ Soit $f$ une fonction définie sur un intervalle $I$, et $a \in I$. On dit que $
 \begin{remark}
 Autrement dit, $f(a)$ est un extremum local de $f$ sur $I$ si l'image de $a$ est supérieure ou inférieure à l'image de ses voisins \og proches \fg.
 \end{remark}
-\begin{example}
-Soit $f$ une fonction définie sur $[-6;6]$ dont la courbe représentative $\mathcal{C}_f$ est représentée sur le repère suivant (en bas à gauche) :
+\begin{exercize*}
+Soit $f$ une fonction définie sur $[-6;6]$ dont la courbe représentative $\mathcal{C}_f$ est représentée sur le repère suivant (à gauche) :
 \begin{center}
 \hfill
 \begin{tikzpicture}
 % \repereclassique{-3.25}{-3.25}{3.25}{3.25}{0.5};
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
+
 \draw (-3,0) parabola bend (-1.5,2) (-0.5,0);
 \draw (-0.5,0) parabola bend (1,-1) (1.5,0);
 \draw (1.5,0) parabola bend (2,2.5) (3,1.5) node[below right] {$\mathcal{C}_f$};
@@ -188,6 +192,9 @@ Soit $f$ une fonction définie sur $[-6;6]$ dont la courbe représentative $\mat
 \hfill
 \begin{tikzpicture}
 % \repereclassique{-3.25}{-3.25}{3.25}{3.25}{0.5};
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\draw[axis] (-3.25,0) -- (3.25,0) node[right] {$x$};
+\draw[axis] (0,-3.25) -- (0,3.25) node[above] {$y$};
 \draw (-3,0) parabola bend (-1.5,2) (-0.5,0);
 \draw (-3,0) node {$\bullet$};
 \draw (-0.5,0) node {$\bullet$};
@@ -196,10 +203,9 @@ Soit $f$ une fonction définie sur $[-6;6]$ dont la courbe représentative $\mat
 \end{center}
 \begin{alphaquestions}
 \item Quel est le maximum et le minimum de $f$ ? En quelles valeurs sont-elles atteintes ?
-\item On a représenté sur le repère à droite la restriction de $f$ sur l'intervalle $[-6;-1]$. En déduire que en quel abscisse $f$ admet un extremum local.  
+\item On a représenté sur le repère à droite la restriction de $f$ sur l'intervalle $[-6;-1]$. En déduire en quel abscisse $f$ admet un extremum local.  
 \end{alphaquestions}
-\vspace{2cm}
-\end{example}
+\end{exercize*}
 \begin{proposition}
 Soit $f$ une fonction définie et dérivable sur un intervalle \textbf{ouvert} $I$, et soit $a \in I$. Si $f$ atteint un extremum local en $a$, alors
 \begin{equation*}
