@@ -1,0 +1,56 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Activité : Moteur de recherche/Page Rank}
+\author{Seconde}
+\date{5 Janvier 2026}
+
+
+\begin{document}
+\maketitle
+
+Le succès du moteur de recherche Google vient de sa capacité à classifier les pages web par popularité:
+
+\begin{enumerate}
+\item Une page web est populaire si beaucoup d'autres pages web renvoient vers celle-ci (via les liens hypertexte);
+\item Une page web est d'autant plus populaire qu'elle est cité par d'autres pages populaires. 
+\end{enumerate}
+
+Pour établir un score de popularité, le moteur de recherche va d'abord prendre la liste de tous les sites web (qui font figurer les mots-clés de la recherche), puis en prendre un au hasard. Ensuite, elle va regarder tous les liens de cette page web (vers les autres pages de la liste) et en vister un au hasard. Ce processus continue alors, en notant à chaque fois le site visité. Le site le plus visité sera le plus populaire, et inversement.
+
+\begin{exercize}
+Pour modéliser le fonctionnement de Google (ou plutôt de son algorithme PageRank), on utilise un graphe :
+\begin{center}
+\includegraphics[width=0.3\textwidth]{graphe_1.png}
+\end{center}
+Les sommets représentent les pages web, et les flèches représentent les liens hypertextes. Par exemple, il y a un lien hypertexte dans la page 1 pointant vers la page 2.
+
+Munissez-vous d'un dé (ou rendez-vous sur \url{random.org}). Vous commencez sur la page 1. Ensuite, choisissez au hasard une des flèches issue de la page courante, et visitez-la. Continuez cette procédure trente fois, en comptabilisant chacune des pages visitées. 
+\begin{alphaquestions}
+
+\item Quelle page est la plus populaire ?
+\item Comparez votre réponse avec vos camarades.
+\end{alphaquestions}
+\end{exercize}
+\newpage
+\begin{exercize}
+Recommencer l'exercice sur le graphe suivant :
+\begin{center}
+\includegraphics[width=0.3\textwidth]{graphe_2.png}
+\end{center}
+\end{exercize}
+\begin{exercize}
+Justifier ce qui pose problème avec les trois graphes suivant. Comment y remédier ?
+\begin{center}
+\includegraphics[width=0.4\textwidth]{graphe_3.png}
+\includegraphics[width=0.4\textwidth]{graphe_4.png}
+\includegraphics[width=0.3\textwidth]{graphe_5.png}
+\end{center}
+\end{exercize}
+\begin{tcolorbox}
+L'idée des créateurs de Google va être d'ajouter de la \og téléportation \fg : à chaque étape, on décide au hasard si on fait une visite normalement, ou si on se \og téléporte \fg~sur une des pages au hasard (n'importe laquelle, même s'il n'y pas de lien hypertexte). La téléportation arrive dans $15\%$ des cas.
+\end{tcolorbox}
+\begin{exercize}
+Essayez vous-même.
+\end{exercize}
+\end{document}
