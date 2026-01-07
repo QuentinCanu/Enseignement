@@ -63,7 +63,7 @@ Des étudiants lancent un prototype de fusée. Ils ne souhaitent pas voir leur c
 \part[0,5] La fusée se casse-t-elle à l'atterissage ?
 \part[3] Le groupe décide de changer la puissance de son moteur pour l'empêcher de se casser. L'expression de la fonction $h$ est donnée par
 \begin{equation*}
-h(t) = a(t^2 - 10t)
+h(t) = a(10t - t^2)
 \end{equation*}
 avec $a$ un nombre correspondant à la puissance du moteur.
 \begin{subparts}
@@ -71,6 +71,41 @@ avec $a$ un nombre correspondant à la puissance du moteur.
 \subpart[2] Pour quelle valeur de $a$ la fusée a pour altitude maximale \qty{4}{\meter} ?
 \end{subparts}
 \end{parts}
-\titledquestion{Équations et Inéquations}[7,5]
+\titledquestion{Température d'ébullition}[7,5]
+On teste la capacité de chauffe d'un four de cuisine. Pour cela, on met dans ce four deux plats différents (des lasagnes végétariennes et un gâteau), dans lesquels on a installé un thermomètre. Les deux plats cuisent pendant une heure.
+
+\begin{itemize}
+\item On note $l(t)$ la température (en \unit{\celsius}) des lasagnes en fonction du temps de cuisson $t$ (en minutes).
+\item On note $g(t)$ la température (en \unit{\celsius}) du gateau en fonction du temps de cuisson $t$ (en minutes).
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  xmin=-3,
+  xmax=65,
+  ymin=-10,
+  ymax=210,
+  xlabel=$t$ (en \unit{\minute}),
+  ylabel=Température (en \unit{\celsius})
+]
+
+\addplot[domain=0:7.83]{(0.76628352)*x^2 + (0.0)*x + (0.0)} node[pos=0] {$\bullet$};
+\addplot[domain=7.83:20]{(-0.49301561)*x^2 + (19.720624)*x + (-77.206245)};
+\addplot[domain=20:39.32]{(-0.10351967)*x^2 + (4.1407867)*x + (78.592133)};
+\addplot[domain=39.32:40]{(2.9411765)*x^2 + (-235.29412)*x + (4785.8824)};
+\addplot[domain=40:44.37]{(1.1441648)*x^2 + (-91.533181)*x + (1910.6636)};
+\addplot[domain=44.37:60]{(-0.31989763)*x^2 + (38.387716)*x + (-971.63148)} node[pos=1] {$\bullet$} node[pos=1,right] {$\mathcal{C}_l$};
+\addplot[domain=0:60]{0.025*x^(2) - 0.5*x + 70} node[pos=0] {$\bullet$} node[pos=1] {$\bullet$} node[pos=1,right] {$\mathcal{C}_g$};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part[1] Quel plat est le plus chaud au bout d'une heure de question ? Justifier la réponse à l'aide du graphique.
+\part[1.5] Résoudre graphiquement l'équation $l(t)=g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions.
+\part[2] Résoudre graphiquement l'équation $l(t) \geq g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions. (On pourra utiliser les réponses obtenues à la question précédente).
+\part[0.5] On souhaite servir un gâteau plus chaud que les lasagnes. Quand sortir les deux plats du four ?
+\part[2.5] On décide de faire cuire le gâteau de nouveau. On souhaite cuisiner en même temps un autre plat.
+\end{parts}
 \end{questions}
 \end{document}
