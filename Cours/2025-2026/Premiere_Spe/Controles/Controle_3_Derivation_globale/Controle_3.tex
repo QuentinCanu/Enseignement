@@ -1,0 +1,66 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Contrôle n°3 : Dérivation globale}
+\author{Première Spécialité Mathématiques}
+\date{8 Janvier 2026}
+
+\begin{document}
+\instructions[Interdite]
+\begin{questions}
+\titledquestion{Automatismes}[6]
+\begin{parts}
+\part[3] Résoudre sur $\R$ les équations polynomiale du second degré suivantes:
+\begin{subparts}
+\subpart $x^2 - 7x + 12 = 0$
+\subpart $-2x^2 +16x - 42 = 0$
+\end{subparts}
+\part[3] Dériver les fonctions suivantes sur les ensembles donnés, en justifiant correctement l'ensemble de dérivabilité des fonctions.
+\begin{subparts}
+\subpart $f : x \mapsto \sqrt{x}$
+\subpart $g : x \mapsto 6x^4 - 3x^2 + 19x - 5$
+\subpart $h : x \mapsto (x^3 - 5x)(x-2)$
+\end{subparts}
+\end{parts}
+\titledquestion{Bottes}[7]
+Un fabricant de chaussures fait un peu de comptabilité. Il vend chaque paire de chaussures \num{201}€. On appelle $C(x)$ le coût de production de $x$ paires de chaussures.
+
+On définit, pour $x \in [0;30]$,
+\begin{equation*}
+C(x) = x^3 - 30x^2 + 309x + 500
+\end{equation*}
+\begin{parts}
+\part[0.5] Justifier que le bénéfice $B(x)$ associé à la production et à la vente de $x$ paires de chaussures est défini par
+\begin{equation*}
+B(x)=-x^3+30x^2-108x-500
+\end{equation*}
+\part[0.5] Justifier que $B$ est dérivable sur $[0;30]$ et donner l'expression de sa dérivée $B'$.
+\part[2] En déduire le tableau de variations de $B$.
+\part[2] Combien de chaussures doit vendre ce fabricant afin de réaliser un bénéfice maximal ?
+\part[2] On appelle coût marginal de production la fonction $C_m$ définie par, pour tout $x \in [0;30]$,
+\begin{equation*}
+C_m(x)=C'(x)
+\end{equation*}
+\begin{subparts}
+\subpart Démontrer que pour tout $x \in [0;30]$, $C_m(x) = 3(x-10)^2+9$.
+\subpart En déduire combien de paires doit produire le fabricant pour observer un coût marginal minimal.
+\end{subparts}  
+\end{parts}
+\titledquestion{Courbes de Lorenz}[7]
+On appelle \textbf{courbe de Lorenz} la courbe représentative d'une fonction $L$ vérifiant les propriétés suivantes:
+\begin{enumerate}
+\item \label{Lorenz_incr} $L$ est définie et croissante sur $[0;1]$;
+\item \label{Lorenz_eq} $L(0) = 0$ et $L(1) = 1$;
+\item \label{Lorenz_high} Pour tout $x \in [0;1]$, on a $L(x) \leq x$. 
+\end{enumerate}
+Soit $f : x \mapsto \dfrac{3}{2}x+\dfrac{1}{x+1}-1$, définie sur $[0;1]$. On souhaite montrer que $f$ est une courbe de Lorenz.
+\begin{parts}
+\part[1] Montrer que $f(0)=0$ et $f(1)=1$. En déduire que le critère \ref{Lorenz_eq} est respecté.
+\part[1] On admet que la fonction est dérivable sur $[0;1]$. Montrer que pour tout $x \in [0;1]$, $f'(x)=\dfrac{3}{2}-\dfrac{1}{(x+1)^2}$.
+\part[1] En déduire pour tout $x \in [0;1]$, on a $f'(x)=\dfrac{3(x+1)^2-2}{(x+1)^2}$.
+\part[2] Dresser le tableau de signes de $f'$, et en déduire le tableau de variations de $f$. La fonction $f$ vérifie-t-elle le critère \ref{Lorenz_incr} ?
+\part[1] Justifier que pour montrer que $f$ vérifie le critère \ref{Lorenz_high}, il suffit de vérifier que $f(x) - x \leq 0$ pour tout $x \in [0;1]$.
+\part[2] On admet que pour montrer que $f(x) - x \leq 0$, il suffit de montrer que $x^2 - x \leq 0$ pour tout $x \in [0;1]$. Montrer alors que $f(x) - x \leq 0$. Conclure que $f$ vérifie le critère \ref{Lorenz_high}
+\end{parts}
+\end{questions}
+\end{document}
