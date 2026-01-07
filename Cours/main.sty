@@ -16,6 +16,13 @@
 \RequirePackage{tkz-tab}
 \tikzstyle{axis}=[thick,->]
 \RequirePackage{pgfplots}
+\pgfplotsset{
+  every axis/.style={
+    axis lines=center,
+    grid=both,
+    samples=100
+  }
+}
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
