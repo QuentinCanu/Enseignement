@@ -1,0 +1,79 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{URL (Uniform Resource Locator) et HTTP (HyperText Transfert Protocol)}
+\author{Seconde 3}
+\date{8 Janvier 2026}
+
+\begin{document}
+\maketitle
+
+\section{Definitions}
+Le \textbf{web} est un des nombreux services sur Internet. Il permet d'accéder à des ressources situés sur les différents ordinateurs du réseau.
+
+Pour cela se met en place une architecture client-serveur :
+\begin{itemize}
+\item Le \textbf{navigateur} fait office de client web. Il assure la communication avec le serveur web, et il sert aussi d'interpréteur HTML (HyperText Markup Language)
+\item Le \textbf{serveur web} est un ordinateur distant du réseau, qui héberge différentes ressources comme des pages en HTML, en CSS, des images, des vidéos\dots  
+\end{itemize}
+
+Le client et le serveur communiquent grâce au protocole \textbf{HTTP} (HyperText Transfert Protocol). Celui-ci peut-être remplacé par le protocole HTTPS, où le S signifie \og Secured \fg : l'échange d'informations est chiffrée afin de ne pas pouvoir être intercepté et lu.
+
+Le client web requiert de la part du serveur une ressource qui est identifiée à l'aide de son \textbf{URL} (Uniform Resource Locator). Cette chaîne de caractère identifie le protocole utilisé, l'adresse symbolique du serveur dans le réseau, et l'emplacement du fichier sur le serveur.
+
+\section{URL}
+On donne un exemple d'URL : \url{https://fr.wikipedia.org/wiki/Informatique}
+\begin{itemize}
+\item \url{https} : le protocole utilisé pour obtenir la resource;
+\item \url{://} : le serveur est distant, c'est-à-dire qu'il est sur le réseau internet;
+\item \url{fr.wikipedia.org} : l'adresse symbolique du serveur; il est associé à son adresse IP sur le réseau;
+\item \url{wiki/Informatique} : l'emplacement de la ressource dans les dossiers et fichier du serveur.
+\end{itemize}
+\begin{alphaquestions}
+\item Identifier les différentes parties de l'URL suivante : \url{https://fr.wikipedia.org/wiki/Sanglier}
+\item Identifier les différentes parties de l'URL suivante : \url{https://www.1jour1actu.com/sport/les-elephants-vont-gagner}
+\item Identifier les différentes parties de l'URL suivante : \url{file:///Users/utilisateur0/Desktop/Revisions.pdf}
+\item Identifier les différentes parties de l'URL suivante : \url{http://192.168.1.1}
+\end{alphaquestions}
+\section{HTTP}
+
+Le protocole HTTP (HyperText Transfert Protocol) est un ensemble de façons de formuler une demande à un serveur, et un ensemble de réponses possible.
+
+Une fois la communication avec le serveur établie grâce à son adresse IP (ou symbolique), le client peut envoyer une demande dans le format requis par le protocole. Il y a différents types de demandes. En voici un exemple.
+
+\begin{lstlisting}[language=html]
+GET /mondossier/monFichier.html HTTP/1.1
+User-Agent : Mozilla/5.0
+Accept : text/html
+\end{lstlisting}
+
+\begin{alphaquestions}
+\item Comment s'appelle le fichier requis par le navigateur dans cet exemple ? Où se trouve-t-il sur le serveur ?
+
+La réponse du serveur est donnée sous le format suivant.
+
+\begin{lstlisting}[language=html]
+HTTP/1.1 200 OK
+Date: Thu, 15 feb 2019 12:02:32 GMT
+Server: Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Voici mon site</title>
+</head>
+<body>
+<h1>Hello World! Ceci est un titre</h1>
+<p>Ceci est un <strong>paragraphe</strong>. Avez-vous bien compris ?</p>
+</body>
+</html>
+\end{lstlisting}
+
+\item À quelle date la demande a été formulée ?
+\item Quel est le titre de la page web obtenue ?
+\item Que va-t-il s'afficher sur le navigateur ?
+\end{alphaquestions}
+\end{document}
