@@ -9,6 +9,7 @@
 \maketitle
 \instructions[autorisée]
 \begin{questions}
+\vspace*{0.5cm}
 \titledquestion{Univers et événements}[5]
 Dans une urne opaque, on installe des boules colorées et numérotées :
 \begin{itemize}
@@ -34,9 +35,11 @@ Donner $R$ et $T$ sous forme d'ensemble.
 \subpart $\overbar{R}$
 \end{subparts}
 \end{parts}
+\vspace*{0.5cm}
 \titledquestion{Décollage imminent}[7,5]
-Des étudiants lancent un prototype de fusée. Ils ne souhaitent pas voir leur création se briser à l'atterissage, ce qui se produit si le prototype dépasse les \qty{4}{\meter} durant son envol. On note $h(t)$ la hauteur (en mètres) atteinte par la fusée en fonction du temps $t$ (en secondes). L'allure de la courbe $\mathcal{C}_h$ représentative de $h$ est donnée ci-contre
-:
+Des étudiants lancent un prototype de fusée. Ils ne souhaitent pas voir leur création se briser à l'atterissage, ce qui se produit si le prototype dépasse les \qty{4}{\meter} durant son envol. On note $h(t)$ la hauteur (en mètres) atteinte par la fusée en fonction du temps $t$ (en secondes). L'allure de la courbe $\mathcal{C}_h$ représentative de $h$ est donnée ci-contre :
+
+\begin{minipage}{0.45\textwidth}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -45,7 +48,9 @@ Des étudiants lancent un prototype de fusée. Ils ne souhaitent pas voir leur c
   ymin=-0.5,
   ymax=7.5,
   axis lines=center,
-  grid=major
+  grid=major,
+  xlabel=temps (en \unit{\second}),
+  ylabel=hauteur (en \unit{\meter}),
 ]
 \addplot[
   domain=0:10,
@@ -55,29 +60,36 @@ Des étudiants lancent un prototype de fusée. Ils ne souhaitent pas voir leur c
 \end{axis}
 \end{tikzpicture}
 \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
 \begin{parts}
 \part[0,5] Donner l'image de $4$ par la fonction $h$.
 \part[1] À quel instant la fusée atterit-elle ?
-\part[1] Résoudre l'équation $h(t) = 6$. On donnera notamment l'ensemble $S$ des solutions.
-\part[1,5] Résoudre graphiquement l'inéquation $h(t) \geq 4$. On donnera notamment l'ensemble $S$ des solutions de cette inéquation.
-\part[0,5] La fusée se casse-t-elle à l'atterissage ?
-\part[3] Le groupe décide de changer la puissance de son moteur pour l'empêcher de se casser. L'expression de la fonction $h$ est donnée par
+\part[1,5] Résoudre l'équation $h(t) = 6$. On donnera notamment l'ensemble $S$ des solutions.
+\part[2] Résoudre graphiquement l'inéquation $h(t) \geq 4$. On donnera notamment l'ensemble $S$ des solutions de cette inéquation.
+\part[1] La fusée se casse-t-elle à l'atterissage ?
+\part[1,5] Le groupe décide de changer la puissance de son moteur pour l'empêcher de se casser. L'expression de la fonction $h$ est donnée par
 \begin{equation*}
 h(t) = a(10t - t^2)
 \end{equation*}
 avec $a$ un nombre correspondant à la puissance du moteur.
 \begin{subparts}
-\subpart[1] On admet que $h(5)$ correspond à l'altitude maximale atteinte par la fusée. Si on suppose que $a = 0.1$, quelle est l'altitude maximale de la fusée ?
-\subpart[2] Pour quelle valeur de $a$ la fusée a pour altitude maximale \qty{4}{\meter} ?
+\subpart[0,5] On admet que $h(5)$ correspond à l'altitude maximale atteinte par la fusée. Si on suppose que $a = 0.1$, quelle est l'altitude maximale de la fusée ?
+\subpart[1] Pour quelle valeur de $a$ la fusée a pour altitude maximale \qty{4}{\meter} ?
 \end{subparts}
-\end{parts}
+\end{parts}  
+\end{minipage}
+\vspace*{0.5cm}
 \titledquestion{Température d'ébullition}[7,5]
 On teste la capacité de chauffe d'un four de cuisine. Pour cela, on met dans ce four deux plats différents (des lasagnes végétariennes et un gâteau), dans lesquels on a installé un thermomètre. Les deux plats cuisent pendant une heure.
 
 \begin{itemize}
-\item On note $l(t)$ la température (en \unit{\celsius}) des lasagnes en fonction du temps de cuisson $t$ (en minutes).
-\item On note $g(t)$ la température (en \unit{\celsius}) du gateau en fonction du temps de cuisson $t$ (en minutes).
+\item On note $l(t)$ la température (en \unit{\celsius}) des lasagnes en fonction du temps de cuisson $t$ (en minutes). On note $\mathcal{C}_l$ sa courbe représentative.
+\item On note $g(t)$ la température (en \unit{\celsius}) du gateau en fonction du temps de cuisson $t$ (en minutes). On note $\mathcal{C}_g$ sa courbe représentative.
 \end{itemize}
+
+\begin{minipage}{0.45\textwidth}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -100,12 +112,38 @@ On teste la capacité de chauffe d'un four de cuisine. Pour cela, on met dans ce
 \end{axis}
 \end{tikzpicture}
 \end{center}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{0.45\textwidth}
 \begin{parts}
-\part[1] Quel plat est le plus chaud au bout d'une heure de question ? Justifier la réponse à l'aide du graphique.
-\part[1.5] Résoudre graphiquement l'équation $l(t)=g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions.
-\part[2] Résoudre graphiquement l'équation $l(t) \geq g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions. (On pourra utiliser les réponses obtenues à la question précédente).
-\part[0.5] On souhaite servir un gâteau plus chaud que les lasagnes. Quand sortir les deux plats du four ?
-\part[2.5] On décide de faire cuire le gâteau de nouveau. On souhaite cuisiner en même temps un autre plat.
+\part[0,5] Quel plat est le plus chaud au bout d'une heure de question ? Justifier la réponse à l'aide du graphique.
+\part[2,5] Résoudre graphiquement l'équation $l(t)=g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions.
+\part[2,5] Résoudre graphiquement l'équation $l(t) \geq g(t)$. On utilisera la précision permise par le graphique, et on détaillera l'ensemble $S$ des solutions. (On pourra utiliser les réponses obtenues à la question précédente).
+\part[0,5] On souhaite servir un gâteau plus chaud que les lasagnes. Quand sortir les deux plats du four, après \qty{30}{\minute} ?
+\end{parts}
+\end{minipage}
+\begin{parts}\setcounter{partno}{4}
+\part[1,5] On décide de faire cuire le gâteau de nouveau. On souhaite cuisiner en même temps un autre plat. Dessiner sur le repère ci-dessous une courbe représentative possible pour chacune des fonctions décrites ci-après, correspondant à différent plats :
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  xmin=-3,
+  xmax=65,
+  ymin=-10,
+  ymax=210,
+  xlabel=$t$ (en \unit{\minute}),
+  ylabel=Température (en \unit{\celsius}),
+  width=0.6\textwidth
+]
+\addplot[domain=0:60]{0.025*x^(2) - 0.5*x + 70} node[pos=0] {$\bullet$} node[pos=1] {$\bullet$} node[pos=1,right] {$\mathcal{C}_g$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\begin{subparts}
+\subpart[0.5] Le gratin dauphinois est toujours moins chaud que le gâteau durant toute la durée de la cuisson. Sa température en fonction de la durée est notée $d(t)$.
+\subpart[0.5] La quiche lorraine fait \qty{100}{\celsius} jusqu'à ce quelle fasse la même température que le gâteau, puis descend jusque \qty{50}{\celsius}. Sa température en fonction de la durée est notée $q(t)$.
+\subpart[0.5] La pizza est plus chaude que le gâteau entre \qty{10}{\minute} et \qty{40}{\minute}, et plus froide sinon. Sa température en fonction de la durée est notée $p(t)$.
+\end{subparts}
 \end{parts}
 \end{questions}
 \end{document}
