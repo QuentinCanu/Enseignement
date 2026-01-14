@@ -1,16 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{poly}
+\ProvidesClass{controle}
 
-\LoadClass{exam}
-\pagestyle{headings}
+\LoadClassWithOptions{exam}[a4paper]
 \RequirePackage{geometry}
 \geometry{top=2cm, left=2cm, right=2cm}
 
 \RequirePackage{fontspec}
 \setmainfont{Verdana}
 \setmathrm{Optima}
-
-\footer{}{}{}
 
 \qformat{\bfseries Exercice \thequestion~:~\thequestiontitle\if@placepoints~(\thepoints)\else\fi\hfill}
 \renewcommand{\solutiontitle}{\noindent\textbf{Correction:}\enspace}
@@ -30,4 +27,6 @@
 \setcounter{versionCounter}{0}
 \newcommand{\version}{\addtocounter{versionCounter}{1}\paragraph*{Version \arabic{versionCounter}}}
 
-\pagestyle{empty}
+\renewcommand{\thepartno}{\arabic{partno}}
+\renewcommand{\thesubpart}{\alph{subpart}}
+\renewcommand{\partlabel}{\thepartno)}
