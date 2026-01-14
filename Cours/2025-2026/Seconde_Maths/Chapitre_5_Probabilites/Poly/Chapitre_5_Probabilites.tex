@@ -250,19 +250,21 @@ Dans une situation d'équiprobabilité, il faut donc énumérer les cas favorabl
 
 \begin{minipage}{0.45\textwidth}
 \begin{example}
-On tire au sort une personne dans un lycée de $1000$ personnes. Sachant qu'il y a $242$ secondes, $534$ premières, $632$ filles dont $320$ en terminale et $76$ en première, compléter le tableau suivant et donner la probabilité de tomber sur un garçon en seconde.
+On tire au sort une personne dans un lycée de $1000$ personnes. Sachant qu'il y a $195$ secondes, $235$ premières, $632$ filles dont $345$ en terminale et $155$ en première, compléter le tableau suivant et donner la probabilité de tomber sur un garçon en seconde.
 \begin{center}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|c|}
 \hline
             &Secondes   &Premières  &Terminale  &Total\\
 \hline
-Filles      &           &$76$       &$320$      &$632$\\
+Filles      &.          &$155$      &$345$      &$632$\\
 \hline
-Garçons     &           &           &           &\\
+Garçons     &           &           &.          &\\
 \hline
-Total       &$242$      &$534$      &           &$1000$\\
+Total       &$195$      &$235$      &.          &$1000$\\
 \hline
 \end{tabular}
+}
 \end{center}
 \end{example}
 \end{minipage}
@@ -308,14 +310,12 @@ Dans un sac opaque contenant trois pièces d'or ($O_1$, $O_2$ et $O_3$) et une p
 \end{minipage}
 \newpage
 \subsection{Calcul de probabilités de combinaisons d'événements}
-\begin{tcolorbox}
 \begin{proposition}
 Soit une expérience aléatoire d'univers fini $\Omega$, et deux événements $A$ et $B$. Alors,
 \begin{equation*}
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
 \end{equation*}
 \end{proposition}
-\end{tcolorbox}
 \begin{remark}
 La figure suivante permet d'illustrer une idée de la démonstration de cette formule.
 \begin{center}
@@ -419,14 +419,12 @@ Dans une classe de seconde de $30$ élèves, $20$ ont un prénom qui commence pa
 
 \vspace*{0.5cm}
 \end{example}
-\begin{tcolorbox}
 \begin{proposition}
 Soit une expérience aléatoire d'univers fini $\Omega$, et $A$ un événement. Alors,
 \begin{equation*}
 P(\overbar{A})=1 - P(A)\,.    
 \end{equation*}    
 \end{proposition}
-\end{tcolorbox}
 \begin{example}
 En reprenant l'expérience aléatoire précédente, combien d'élèves de cette classe ne font pas de basket ? En déduire la probabilité $P(\overbar{B})$.
 
