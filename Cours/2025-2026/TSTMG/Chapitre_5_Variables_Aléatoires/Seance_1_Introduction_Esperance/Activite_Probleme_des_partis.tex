@@ -1,0 +1,92 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Le problèmes des partis, la génèse de la théorie des probabilités}
+\date{16 Janvier 2026}
+\author{TSTMG1}
+
+\begin{document}
+\maketitle
+
+\section{Enoncé du problème des partis}
+\begin{tcolorbox}
+Deux joueurs, Patricia et Farid, jouent à pile ou face avec une pièce équilibrée en trois manches gagnantes. Pour ajouter de l'enjeu, chacun mise $32 €$. Celui qui gagne trois manches remporte les $64 €$. Pour simplifier les choses, Particia joue Pile à chaque partie, tandis que Farid joue Face.  
+
+Malheureusement, la partie de Patricia et Farid est interrompue sans qu'aucun des deux n'ait gagné. Les deux joueurs s'accordent alors pour se partager les gains. Comment opérer ce partage afin d'être le plus équitable possible ?
+\end{tcolorbox}
+
+Ce problème est une retranscription moderne du \emph{Problème des partis}, un problème du \textsc{XVII}\ieme siècle posé à \emph{Blaise Pascal} par \emph{Antoine Gombaud}, dit \og le Chevalier de Méré \fg. Pascal va alors correspondre par courrier avec son collègue \emph{Pierre de Fermat} pour résoudre ce problème. Cet échange épistolaire est considéré comme le point d'origine de la théorie mathématique des \emph{Probabilités}.
+
+En nous inspirant de la méthode proposée par Pascal ou par Fermat, nous allons réfléchir à ce problème.
+
+\section{Introduction}
+Nous nous concentrerons sur les trois cas suivants : au moment de l'interruption du jeu\dots
+\begin{enumerate}
+\item \dots Patricia et Farid ont tous les deux gagné deux manches.\label{22}
+\item \dots Patricia a gagné deux manches, et Farid une seule.\label{21}
+\item \dots Patricia a gagné une manche, et Farid aucune.\label{20}
+\end{enumerate}
+\begin{tcolorbox}
+Pour chacun des trois cas, proposer le partage des mises qui vous semble équitable, et justifier pourquoi.
+\end{tcolorbox}
+
+\section{Solution de Fermat}
+
+La solution écrite de Fermat n'a pas été retrouvée, et nous est connue uniquement grâce à sa retranscription dans une lettre de Pascal, datée du 29 Juillet 1654.
+
+\begin{quote}
+\og Si deux joueurs jouent en plusieurs parties, se trouvent en cet état qu'il manque deux parties au premier et trois au second, pour trouver le parti, il faut (dites-vous) voir en combien de parties le jeu sera décidé absolument. Il est aisé de supputer que ce sera en quatre parties, d'où vous concluez qu'il faut voir combien quatre parties se combinent entre deux joueurs, et voir combien il y a de combinaisons pour faire gagner le premier, et combien pour le second, et partager l'argent suivant cette proportion. \fg 
+\end{quote}
+
+\begin{enumerate}[label=\textbf{Question \arabic*}\hfill]
+\item Auquel des trois cas correspond cet extrait ?
+\item La proposition de Fermat consiste à énumérer toutes les parties possibles. Supposons que nous sommes dans le cas \ref{21}. Combien de parties sont possibles \emph{à partir de} cette situation ?
+\item Pour chacun des cas, donner le partage des gains tel que proposé par Fermat.
+\end{enumerate}
+
+\newpage
+\setcounter{section}{0}
+
+\maketitle
+\section{Enoncé du problèmes des partis}
+\begin{tcolorbox}
+Deux joueurs, Patricia et Farid, jouent à pile ou face avec une pièce équilibrée en trois manches gagnantes. Pour ajouter de l'enjeu, chacun mise $32 €$. Celui qui gagne trois manches remporte les $64 €$. Pour simplifier les choses, Particia joue Pile à chaque partie, tandis que Farid joue Face.  
+
+Malheureusement, la partie de Patricia et Farid est interrompue sans qu'aucun des deux n'ait gagné. Les deux joueurs s'accordent alors pour se partager les gains. Comment opérer ce partage afin d'être le plus équitable possible ?
+\end{tcolorbox}
+Ce problème est une retranscription moderne du \emph{Problèmes des partis}, un problème du \textsc{XVII}\ieme siècle posé à \emph{Blaise Pascal} par \emph{Antoine Gombaud}, dit \og le Chevalier de Méré \fg. Pascal va alors correspondre par courrier avec son collègue \emph{Pierre de Fermat} pour résoudre ce problème. Cet échange épistolaire est considéré comme le point d'origine de la théorie mathématique des \emph{Probabilités}.
+
+En nous inspirant de la méthode proposée par Pascal ou par Fermat, nous allons réfléchir à ce problème.
+
+\section{Introduction}
+Nous nous concentrerons sur les trois cas suivants : au moment de l'interruption du jeu\dots
+\begin{enumerate}
+\item \dots Patricia et Farid ont tous les deux gagné deux manches.\label{22}
+\item \dots Patricia a gagné deux manches, et Farid une seule.\label{21}
+\item \dots Patricia a gagné deux manches, et Farid aucune.\label{20}
+\end{enumerate}
+\begin{tcolorbox}
+Pour chacun des trois cas, proposer le partage des mises qui vous semble équitable, et justifier pourquoi.
+\end{tcolorbox}
+
+\section{Solution de Pascal}
+
+Dans sa lettre pour Fermat, datée du 29 Juillet 1654, Pascal écrit ceci :
+
+\begin{quote}
+\og Voici à peu près comme je fais pour savoir la valeur de chacune des parties, quand deux joueurs jouent, par exemple, en trois parties, et chacun a mis 32 pistoles au jeu.
+
+Posons que le premier en ait deux et l'autre une ; ils jouent maintenant une partie, dont le sort est tel que, si le premier la gagne, il gagne tout l'argent qui est au jeu, savoir 64 pistoles ; si l'autre la gagne, ils sont deux parties à deux parties, et par conséquent, s'ils veulent se séparer, il faut qu'ils retirent chacun
+leur mise, savoir chacun 32 pistoles.
+
+Considérez donc, Monsieur, que si le premier gagne, il lui appartient 64 : s'il perd, il lui appartient 32. Donc s'ils veulent ne point hasarder cette partie et se séparer sans la jouer, le premier doit dire : "Je suis sûr d'avoir 32 pistoles, car la perte même me les donne ; mais pour les 32 autres, peut-être je les aurai, peut-être vous les aurez, le hasard est égal ; partageons donc ces 32 pistoles par la moitié et me donnez, outre cela, mes 32 qui me sont sûres". Il aura donc 48 pistoles et l'autre 16.\fg
+\end{quote}
+
+\begin{enumerate}[label=\textbf{Question \arabic*}\hfill]
+\item D'après ce texte, comment partager les mises dans le cas \ref{22} ?
+\item Supposons que nous sommes dans le cas \ref{21}. D'après Pascal, quelle somme est \og sûre \fg de posséder Patricia ?
+\item Quel est le partage proposé par Pascal dans le cas \ref{21} ?
+\item Adapter la méthode de Pascal pour proposer un partage pour le cas \ref{20}.
+\end{enumerate}
+
+\end{document}

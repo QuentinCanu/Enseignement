@@ -1,0 +1,138 @@
+\documentclass{poly}
+\usepackage{main}
+
+\title{Variables Aléatoires}
+\date{}
+\author{Terminale STMG1}
+
+\begin{document}
+\maketitle
+\section{Espérance d'une variable aléatoire}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$. Une \textbf{variable aléatoire} est une fonction définie sur $\Omega$ et à valeur dans $\R$. 
+\end{definition}
+\begin{example}
+On donne des exemples de variables aléatoires :
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Expérience&Variable aléatoire $X$\\
+\hline
+On lance un dé à six faces & Le gain $X$ correspondant au double du résultat\\
+\hline
+On sélectionne un élève du lycée au hasard & L'âge de l'élève sélectionné\\
+\hline
+On choisit un mot au hasard dans le dictionnaire & Le nombre de lettres du mot choisi\\
+\hline
+&\\
+\hline
+&\\
+\hline
+\end{tabular}
+\end{center}
+\end{example}-
+\begin{definition}
+Soit $X$ une variable aléatoire d'une expérience aléatoire d'univers $\Omega$ \textbf{fini}. Déterminer \textbf{la loi de $X$} correspond à établir la probabilité de chaque valeur possible de $X$.
+\end{definition}
+\begin{example}
+Dans une urne on dispose une boule rouge, deux boules vertes, et trois boules bleues. On mise 1€, et on tire au hasard une boule dans cette urne.
+\begin{itemize}
+\item Si la boule est rouge, on remporte le double de la mise.
+\item Si la boule est verte, on récupère sa mise.
+\item Si la boule est bleue, la mise est perdue.
+\end{itemize}
+On note $X$ la mise obtenue. Déterminer la loi de $X$ :
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Valeur de $X$&$X=-1$&$X=0$&$X=1$\\
+\hline
+Probabilité&&&\\
+\hline
+\end{tabular}
+\end{center}
+\end{example}
+\newpage
+\begin{definition}
+Soit $X$ une variable aléatoire d'une expérience aléatoire d'univers $\Omega$ \textbf{fini}. On suppose que $X$ peut prendre les valeurs $x_1; x_2; \dots; x_n$. On appelle alors \textbf{espérance de $X$}, notée $E(X)$, la quantité
+\begin{equation*}
+E(X) = x_1 \times P(X=x_1) + x_2 \times P(X = x_2) + \dots + x_n \times P(X = x_n)
+\end{equation*} 
+\end{definition}
+\begin{remark}
+L'espérance de $X$ correspond à la valeur moyenne que l'on peut espérer si l'on répète l'expérience un grand nombre de fois.
+\end{remark}
+\begin{example}
+Sur un jeu à gratter coûtant \num{1}€, il est indiqué que sur \num{1000000} tickets :
+\begin{itemize}
+\item \num{1} permet de gagner \num{10000}€; 
+\item \num{5} permettent de gagner \num{1000}€; 
+\item \num{100} permetten de gagner \num{500}€; 
+\item \num{1000} permettent de gagner \num{200}€; 
+\item \num{1500} permettent de gagner \num{100}€; 
+\item \num{3000} permettent de gagner \num{10}€;
+\item \num{4000} permettent de gagner \num{1}€;
+\item Le reste ne fait rien gagner du tout.
+\end{itemize}
+On appelle $X$ le gain en € gagné après achat et grattage d'un ticket à gratter.
+\begin{alphaquestions}
+\item Déterminer la loi de $X$.
+\item Calculer son espérance.
+\end{alphaquestions}
+
+\end{example}
+\newpage
+\section{Schéma de Bernoulli et loi binomiale}
+\subsection{Épreuve de Bernoulli}
+\begin{example}
+On lance une pièce équilibrée. On gagne 1€ si l'on fait face et rien si on fait pile. Quelle est la probabilité de gagner un euro ? Si on note $X$ le gain possible suite à cette expérience, calculer $E(X)$.
+
+\end{example}
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$, et $X$ une variable aléatoire d'$\Omega$. On dit que $X$ \textbf{suit une loi de Bernoulli de paramètre $p \in [0;1]$}, ce que l'on note $X \hookrightarrow \mathcal{B}(p)$, quand la loi de $X$ est donnée par le tableau suivant :
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$x_i$&$1$&$0$\\
+\hline
+$P(X = x_i)$&$p$&$1 - p$\\
+\hline
+\end{tabular}
+\end{center}
+\end{definition}
+\begin{proposition}
+Soit une expérience aléatoire d'univers $\Omega$, et $X$ une variable aléatoire d'$\Omega$ suivant une loi de Bernoulli de paramètre $p$. Alors,
+\begin{equation*}
+E(X) = p
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Une expérience de Bernoulli est donc une expérience durant laquelle on est confronté à un succès (le $1$) ou à un échec (le $0$).
+\end{remark}
+
+\subsection{Schéma de Bernoulli}
+\begin{example}
+On lance dix pièces équilibrées. On note $X$ le nombre de pile obtenus après tirage.
+\end{example}
+\begin{remark}
+Dans l'expérience précédente, $X$ compte le nombre de succès de $n = 10$ expériences de Bernoulli indépendantes, ayant toute la même probabilité de succès $p = \dfrac{1}{2}$. On dit que c'est un \textbf{schéma de Bernoulli de paramètres $n$ et $p$}.
+\end{remark}    
+\begin{definition}
+Soit une expérience aléatoire d'univers $\Omega$, ainsi que $n \in \N$ et $p \in [0;1]$. On dit que $X$ \textbf{suit une loi binomiale de paramètres $n$ et $p$}, ce qui l'on note $X \hookrightarrow \mathcal{B}(n;p)$, quand $X$ comptabilise le nombre de succès de $n$ dans un schéma de Bernoulli de paramètres $n$ et $p$. 
+\end{definition}
+\begin{proposition}
+Soit une expérience aléatoire d'univers $\Omega$, et $X \hookrightarrow \mathcal{B}(n;p)$. Alors, on a
+\begin{equation*}
+E(X) = n \times p
+\end{equation*}
+\end{proposition}
+\begin{example}
+Pour chacun des exemples suivants, donner l'espérance de $X$ :
+\begin{alphaquestions}
+\item On tire trois fois une boule dans une urne contenant deux boules vertes et quatres boules rouges, avec remise après chaque tirage. $X$ est le nombre de boules vertes tirées. 
+\item $X$ est le nombre de match gagnés par une équipe de foot sur une saison de $10$ matchs. Les matchs sont tous très équitables, et il n'y a pas de match nul.
+\item On lance quatre fois un dé à 10 faces. $X$ est le nombre de fois où l'on obtient un multiple de $3$.
+\end{alphaquestions}
+
+\end{example}
+\end{document}
