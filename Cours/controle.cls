@@ -9,7 +9,12 @@
 \setmainfont{Verdana}
 \setmathrm{Optima}
 
-\qformat{\bfseries Exercice \thequestion~:~\thequestiontitle\if@placepoints~(\thepoints)\else\fi\hfill}
+\qformat{\bfseries Exercice \thequestion~:
+\ifthenelse{\equal{\thequestion}{\thequestiontitle}}{}{~\thequestiontitle}
+\if@placepoints~(\thepoints)
+\fi
+\hfill}
+
 \renewcommand{\solutiontitle}{\noindent\textbf{Correction:}\enspace}
 
 \newcommand{\instructions}[1][Interdite]{
@@ -30,3 +35,18 @@
 \renewcommand{\thepartno}{\arabic{partno}}
 \renewcommand{\thesubpart}{\alph{subpart}}
 \renewcommand{\partlabel}{\thepartno)}
+
+\newcommand{\titleandname}{
+\firstpageheader{}{}{Nom :\enspace\makebox[7cm]{\dotfill}}
+\maketitle
+\thispagestyle{headandfoot}
+}
+\newcommand{\titleonly}{
+\maketitle
+\thispagestyle{headandfoot}
+}
+
+\RequirePackage{titling}
+\runningheader{\thetitle}{}{\theauthor}
+\runningheadrule
+\runningfooter{}{}{Page \thepage~sur \numpages}
