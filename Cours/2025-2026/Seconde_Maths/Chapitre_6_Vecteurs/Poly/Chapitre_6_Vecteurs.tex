@@ -174,10 +174,12 @@ Soit $\vect{u}$ un vecteur, et $k$ un nombre réel. Alors la multiplication de $
 Placer sur ce repére les vecteurs $2\vect{u}$ et $-3\vect{u}$.
 
 \begin{center}
+\scalebox{0.75}{
 \begin{tikzpicture}
 \draw[help lines] (-0.25,-0.25) grid[step=0.5] (4.25,4.25);
 \draw[thick,->] (0.5,2.5) -- (1.5,4) node[above right] {$\vect{u}$};
 \end{tikzpicture}
+}
 \end{center}
 \end{example}
 
@@ -190,6 +192,32 @@ Soient $\vect{u}$ et $\vect{v}$ deux vecteurs, et $k$ et $k'$ deux nombres réel
 \item $0 \vect{u} = \vect{0}$
 \end{itemize}
 \end{proposition}
+
+\section{Vecteurs colinéaires}
+\begin{definition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Ces deux vecteurs sont dits \textbf{colinéaires} si et seulement s'ils ont la même direction.
+\end{definition}
+
+\begin{proposition}
+Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors, $\vect{u}$ et $\vect{v}$ sont colinéaires si et seulement si il existe $k$ tel que $\vect{u} = k \vect{v}$. 
+\end{proposition}
+
+\begin{remark}
+\hfill
+\begin{itemize}
+\item Pour prouver que deux vecteurs sont colinéaires, il faut donc prouver que l'un est le \textbf{multiple} de l'autre.
+\item Le vecteur nul $\vect{0}$ est donc colinéaire à tous les vecteurs.
+\end{itemize}
+\end{remark}
+
+\begin{proposition}
+Soient $A$, $B$, $C$ et $D$ quatre points plan. Alors les droites $(AB)$ et $(CD)$ sont parallèles si et seulement si les vecteurs $\vect{AB}$ et $\vect{CD}$ sont colinéaires. 
+\end{proposition}
+
+\begin{proposition}
+Soient $A$, $B$ et $C$ trois points du plan. Alors les point $A$, $B$ et $C$ sont alignés si et seulement si les vecteurs $\vect{AB}$ et $\vect{AC}$ sont colinéaires.
+\end{proposition}
+
 
 \newpage
 
@@ -211,11 +239,9 @@ Un quadrilatère $ABCD$ est un parallélogramme si et seulement si :
 Soit un quadrilatère $ABCD$. Alors $ABCD$ est un parallélogramme (éventuellement applati) si et seulement si $\vect{AB} = \vect{DC}$.
 \end{proposition}
 
-\begin{tcolorbox}
 \begin{remark}
 Attention, il ne faut \textbf{pas} vérifier $\vect{AB} = \vect{CD}$.        
 \end{remark}
-\end{tcolorbox}
 
 \begin{proposition}
 Soit un parallélogramme $ABCD$. Alors,
@@ -236,6 +262,10 @@ Soit $ABCD$ un parallélogramme.
 \end{example}
 
 \newpage
+\subsection{Trapèze}
+\begin{proposition}
+Soit $ABCD$ un quadrilatère. Alors, si $\vect{AB}$ et $\vect{DC}$ sont colinéaires, alors $ABCD$ est un trapèze.
+\end{proposition}
 \subsection{Milieu d'un segment}
 
 \begin{proposition}
@@ -268,31 +298,13 @@ Soient $A$, $B$ et $I$ trois points tels que $\vect{AI} = \dfrac{1}{2}\vect{AB}$
 
 \end{example}
 
+\subsection{Points alignés}
+
+\begin{proposition}
+Soient trois points $A$, $B$ et $C$ du plan. Alors, $A$, $B$ et $C$ sont alignés si et seulement si $\vect{AB} = \vect{AC}$.
+\end{proposition}
+
 \newpage
 
-\section{Vecteurs colinéaires}
-\begin{definition}
-Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Ces deux vecteurs sont dits \textbf{colinéaires} si et seulement s'ils ont la même direction.
-\end{definition}
-
-\begin{proposition}
-Soient $\vect{u}$ et $\vect{v}$ deux vecteurs. Alors, $\vect{u}$ et $\vect{v}$ sont colinéaires si et seulement si il existe $k$ tel que $\vect{u} = k \vect{v}$. 
-\end{proposition}
-
-\begin{remark}
-\hfill
-\begin{itemize}
-\item Pour prouver que deux vecteurs sont colinéaires, il faut donc prouver que l'un est le \textbf{multiple} de l'autre.
-\item Le vecteur nul $\vect{0}$ est donc colinéaire à tous les vecteurs.
-\end{itemize}
-\end{remark}
-
-\begin{proposition}
-Soient $A$, $B$, $C$ et $D$ quatre points plan. Alors les droites $(AB)$ et $(CD)$ sont parallèles si et seulement si les vecteurs $\vect{AB}$ et $\vect{CD}$ sont colinéaires. 
-\end{proposition}
-
-\begin{proposition}
-Soient $A$, $B$ et $C$ trois points du plan. Alors les point $A$, $B$ et $C$ sont alignés si et seulement si les vecteurs $\vect{AB}$ et $\vect{AC}$ sont colinéaires.
-\end{proposition}
     
 \end{document}

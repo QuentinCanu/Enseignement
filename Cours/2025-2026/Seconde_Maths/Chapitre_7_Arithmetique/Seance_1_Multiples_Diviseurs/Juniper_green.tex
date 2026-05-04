@@ -1,0 +1,39 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Activité : Jeu du Juniper Green}
+\author{Seconde}
+\date{Chapitre 7 Partie 1}
+
+\begin{document}
+\maketitle
+
+Le jeu du Juniper Green est un jeu entre deux joueurs nécessitant un tableau de tous les nombres de $1$ à $50$.
+
+\begin{center}
+\begin{tblr}{hlines,vlines,columns={wd=0.8cm,c},rows={ht=1cm,m}}
+1&2&3&4&5&6&7&8&9&10\\
+11&12&13&14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27&28&29&30\\
+31&32&33&34&35&36&37&38&39&40\\
+41&42&43&44&45&46&47&48&49&50\\
+\end{tblr}
+\end{center}
+Les règles sont les suivantes :
+\begin{enumerate}
+\item Le premier joueur choisit un nombre pair et le coche;
+\item À tour de rôle, le joueur dont c'est le tour choisit un multiple ou un diviseur du nombre venant d'être coché. \textbf{Il ne peut pas choisir un nombre déjà coché durant la partie.}
+\item Le joueur dont c'est le tour mais qui ne peut plus jouer a perdu.
+\end{enumerate}
+
+\begin{questions}
+\question 
+Jouer quelques parties du jeu avec votre voisin; puis répondre aux questions suivantes :
+\begin{parts}
+\part Sans tenir compte de la règle 1.; si on suppose que le joueur $1$ coche la case $1$, quelle case le joueur suivant peut-il cocher ?
+\part Sans tenir compte de l règle 1.; quelle case le joueur $1$ doit-il cocher en premier pour que le joueur suivant aie le moins de choix possibles ? 
+\part Décrire une stratégie gagnante pour le premier joueur si on ne tient pas compte de la règle 1.
+\part Quelle est l'utilité de la règle 1. ? Y a-t-il toujours une stratégie gagnante pour le premier joueur ?
+\end{parts}
+\end{questions}
+\end{document}

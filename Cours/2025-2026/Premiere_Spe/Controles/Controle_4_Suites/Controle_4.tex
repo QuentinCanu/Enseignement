@@ -1,0 +1,288 @@
+\documentclass{controle}
+\usepackage{main}
+
+% \printanswers{}
+
+\title{Contrôle n°4 : Suites numériques}
+\author{Première Spécialité Mathématiques}
+\date{19 Février 2026}
+
+\begin{document}
+\titleandname{}
+\instructions[Interdite]
+\begin{questions}
+\vspace*{0.5cm}
+\titledquestion{Cours : Limites et sommes}[6]
+Répondre aux questions suivantes :
+\begin{parts}
+\part[2] Soit $n \in \N$. Donner la formule du cours permettant de calculer
+\begin{equation*}
+1+2+3+\dots+n =
+\end{equation*}
+\part[2] Soit $n \in \N$ et $q \neq 1$. Donner la formule du cours permettant de calculer
+\begin{equation*}
+1 + q + q^2 + \dots + q^n =
+\end{equation*}
+\part[1] Conjecturer la limite des suites dont certains termes sont donnés dans les listes suivantes. On n'attend pas de justification :
+\begin{subparts}
+\subpart $u_0 = 10; u_{10} = 100; u_{100} = 1000; u_{1000} = 10000$;
+\subpart $w_0 = 6; w_{4} = 4.25; w_{8}=5.25; w_{12}=4.9; w_{16} = 5.1$.
+\end{subparts}
+\part[1] Donner un exemple de suite n'admettant pas de limite (ni finie, ni infinie).
+\begin{solution}[0.5cm]
+\begin{parts}
+\part 
+\begin{equation*}
+1 + 2 + 3 + \dots + n = \dfrac{n(n+1)}{2}
+\end{equation*}
+\part
+\begin{equation*}
+1 + q + q^2 + \dots q^n = \dfrac{q^{n+1} - 1}{q - 1} \text{ ou } \dfrac{1 - q^{n+1}}{1 - q}
+\end{equation*}
+\part
+\begin{subparts}
+\subpart On conjecture que la suite $(u_n)$ admet $+ \infty$ comme limite. Cela s'écrit
+\begin{equation*}
+\lim_{n \to +\infty} u_n = +\infty
+\end{equation*}
+\subpart On conjecture que la suite $(v_n)$ admet $5$ comme limite. Cela s'écrit
+\begin{equation*}
+\lim_{n \to +\infty} u_n = 5
+\end{equation*}
+\end{subparts}
+\end{parts}
+\end{solution}
+\end{parts}
+\titledquestion{Suites arithmético-géométrique}[6]
+%%%%%%%%
+\COPY{4}{\init}
+\COPY{3}{\a}
+\COPY{8}{\b}
+\SUBTRACT{\a}{1}{\temp}
+\DIVIDE{\b}{\temp}{\fix}
+\newlpoly{\f}{\b}{\a}
+\f{\init}{\uone}{\Duone}
+\f{\uone}{\utwo}{\Dutwo}
+\SUBTRACT{\uone}{\init}{\uoneMinZero}
+\SUBTRACT{\utwo}{\uone}{\utwoMinOne}
+\FRACTIONSIMPLIFY{\uone}{\init}{\numonezero}{\denonezero}
+\FRACTIONSIMPLIFY{\utwo}{\uone}{\numtwoone}{\dentwoone}
+\ADD{\b}{\fix}{\sumbfix}
+\ADD{\init}{\fix}{\wzero}
+%%%%%%%%%
+Soit $(a_n)_{n \in \N}$ une suite définie par $u_0 = \init$ et, pour tout $n \in \N$, 
+\begin{equation*}
+u_{n+1} = \a u_n + \b
+\end{equation*}
+\begin{parts}
+\part[0,5] Calculer $u_0; u_1$ et $u_2$.
+\part[0,5] En déduire que $(u_n)$ n'est ni arithmétique ni géométrique.
+\part[2] On pose $(w_n) = u_n + \fix$. Montrer que pour tout $n \in \N$,
+\begin{equation*}
+w_{n+1} = \a w_n
+\end{equation*}
+\part[1] En déduire la nature de la suite $(w_n)$, puis une expression de $w_n$ en fonction de $n$.
+\part[1] Déduire de l'expression trouvée à la question précédente une expression de $u_n$ en fonction de $n$.
+\part[1] En calculant $u_{n+1} - u_n$ pour tout $n \in \N$, déterminer les variations de la suite $(u_n)$.
+\end{parts}
+\begin{solution}[0.5cm]
+\begin{parts}
+\part $u_0 = \init; u_1 = \uone; u_2 = \utwo$
+\part $(u_n)$ n'est pas arithmétique. En effet,
+\begin{equation*}
+\begin{aligned}
+u_1 - u_0 &= \uoneMinZero\\
+u_2 - u_1 &= \utwoMinOne
+\end{aligned}
+\end{equation*}
+$u_2 - u_1 \neq u_1 - u_0$, la suite ne peut pas être arithmétique.
+
+$(u_n)$ n'est pas géométrique. En effet,
+\begin{equation*}
+\begin{aligned}
+\dfrac{u_1}{u_0} &= \dfrac{\numonezero}{\denonezero}\\
+\dfrac{u_2}{u_1} &= \dfrac{\numtwoone}{\dentwoone}
+\end{aligned}
+\end{equation*}
+$\dfrac{u_2}{u_1} \neq \dfrac{u_1}{u_0}$, la suite ne peut pas être géométrique.
+\part Soit $n \in \N$. On a
+\begin{equation*}
+\begin{aligned}
+w_{n+1} &= u_{n+1} + \fix\\
+&= \a u_n + \b + \fix\\
+&= \a u_n + \sumbfix\\
+&= \a (u_n + \fix)\\
+&= \a w_n
+\end{aligned}
+\end{equation*}
+Donc $w_{n+1} = \a w_n$ pour tout $n \in \N$.
+\part La suite $(w_n)$ est géométrique de premier terme $w_0 = u_0 + \fix = \wzero$ et de raison $q = \a$. On en déduit la formule explicite du cours
+\begin{equation*}
+w_n = w_0 q^n = \wzero \times \a^n
+\end{equation*}
+\part On a, pour tout $n \in \N$,
+\begin{equation*}
+u_n = w_n - \fix = \wzero \times \a^n - \fix
+\end{equation*}
+\part Soit $n \in \N$, alors
+\begin{equation*}
+\begin{aligned}
+u_{n+1} - u_n &= 8 \times 3^{n+1} - 4 - (8 \times 3^n - 4)\\
+&= 8 \times 3^n \times 3 \cancel{- 4} - 8 \times 3^n \cancel{+ 4}\\
+&= 8 \times 3^n \times (3 - 1)
+&= 16 \times 3^n 
+\end{aligned}
+\end{equation*}
+Donc $u_{n+1} - u_n = 16 \times 3^n$ est positif pour tout $n \in \N$. On en déduit que la suite $(u_n)$ est croissante.
+\end{parts}
+\end{solution}  
+
+
+\titledquestion{Finances}[8]
+\COPY{75}{\tauxfixe}
+\MULTIPLY{\tauxfixe}{12}{\tauxfixeannee}
+\COPY{1200}{\initialone}
+\ADD{\initialone}{\tauxfixeannee}{\montantfixeannee}
+\COPY{1000}{\initialtwo}
+\COPY{5}{\tauxcompose}
+\COPY{1.08}{\geo}
+\COPY{1700}{\seuil}
+
+Hélène souhaite réaliser un placement à la banque. Le banquier lui propose deux types d'offres : le placement à taux fixe et le placement à taux composés.
+
+\begin{parts}
+\part[3] L'offre de placement à taux fixe stipule que chaque mois, le montant de son placement augmentera de $t = $ \num{\tauxfixe}€. On note $p_n$ le montant de son placement $n$ mois après la placement initial.
+\begin{subparts}
+\subpart[1] On suppose qu'Hélène compte placer \num{\initialone}€ pour cette offre. Justifier que la suite $(p_n)$ est arithmétique. En déduire le montant de son placement un an après le placement initial.
+\subpart[1] Pour quelle valeur du taux fixe $t$ le placement initial d'Hélène de \num{\initialone}€ double-t-il au bout d'un an ?
+\subpart[1] Chaque mois, la banque consulte le montant du placement d'Hélène, et investit la même somme dans l'immobilier. Quel est la valeur de l'investissement total réalisé par la banque au bout d'un an ? (Le taux fixe est de \num{\tauxfixe} €. On donnera la réponse sous la forme d'une formule simple)
+\end{subparts}  
+\part[3,5] L'offre de placement à taux composés stipule que chaque mois, le montant du placement d'Hélène augmentera de $t = $\num{\tauxcompose}\%. On note $c_n$ le montant de son placement $n$ mois après le placement initial. On suppose que le placement initial d'Hélène est de 
+\begin{subparts}
+\subpart[1] Justifier que la suite $(c_n)$ est géométrique, et en préciser la raison $q$.
+\subpart[0.5] On suppose que le taux $t$ a changé de sorte à ce que la raison de cette suite géométrique soit $q = \geo$. En déduire une expression de $c_n$ en fonction de $n$.
+\subpart[1] À partir de combien de mois le montant du placement d'Hélène est supérieur à \num{\seuil}€ ? On utilisera le tableau des puissances de \num{\geo} suivant.
+\begin{center}
+\begin{tblr}{hlines,vlines}
+$n$&$0$&$1$&$2$&$3$&$4$&$5$&$6$&$7$&$8$&$9$&$10$&$11$&$12$\\
+$\geo^n$&$\fpeval{round(\geo^0,3)}$&$\fpeval{round(\geo^1,3)}$&$\fpeval{round(\geo^2,3)}$&$\fpeval{round(\geo^3,3)}$&$\fpeval{round(\geo^4,3)}$&$\fpeval{round(\geo^5,3)}$&$\fpeval{round(\geo^6,3)}$&$\fpeval{round(\geo^7,3)}$&$\fpeval{round(\geo^8,3)}$&$\fpeval{round(\geo^9,3)}$&$\fpeval{round(\geo^10,3)}$&$\fpeval{round(\geo^11,3)}$&$\fpeval{round(\geo^12,3)}$\\
+\end{tblr}
+\end{center}
+\subpart[1] Chaque mois, la banque consulte le montant du placement d'Hélène, et investit la même somme dans l'immobilier. Quelle formule permet de calculer la somme totale investie au bout de $10$ mois ?
+\end{subparts}
+\part[1,5] 
+\COPY{400}{\inita}
+\COPY{700}{\initb}
+\COPY{50}{\tauxa}
+\COPY{20}{\tauxb}
+Hélène hésite entre les deux offres d'une autre banque. Celle-ci propose deux placements à taux fixe :
+\begin{itemize}
+\item L'offre $A$ permet de placer initialement \num{\inita}€, pour voir ce montant augmenter de \num{\tauxa}€ tous les mois; 
+\item L'offre $B$ permet de placer initialement \num{\initb}€, pour voir ce montant augmenter de \num{\tauxb}€ tous les mois. 
+\end{itemize}
+On note $a_n$ le montant d'un placement bénéficiant de l'offre $A$ après $n$ mois suivant le placement initial.
+On note $b_n$ le montant d'un placement bénéficiant de l'offre $B$ après $n$ mois suivant le placement initial.
+Quelle offre est la plus avantageuse et à partir de combien de mois ?
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part
+\begin{subparts}
+\subpart Soit $n \in \N$. L'énoncé nous donne que $p_{n+1} = p_n + \tauxfixe$. On en déduit que la suite $(p_n)$ est arithmétique.
+
+Alors, on sait que pour tout $n \in \N$,
+\begin{equation*}
+p_n = p_0 + n \times t = \initialone + n \times \tauxfixe
+\end{equation*}
+
+On en déduit que $p_{12} = \initialone + 12 \times \tauxfixe = \initialone + \tauxfixeannee = \montantfixeannee$
+\subpart 
+\DIVIDE{\initialone}{12}{\sol}
+On cherche la valeur de $t$ telle que 
+\begin{equation*}
+\begin{aligned}
+&p_{12} &= 2 \times \initialone\\
+\Leftrightarrow& \initialone + 12 \times t &= 2 \times \initialone\\
+\Leftrightarrow& 12 \times t &= \initialone\\
+\Leftrightarrow& t &= \dfrac{\initialone}{12}\\
+\Leftrightarrow& t &= \sol
+\end{aligned}
+\end{equation*}
+Donc, le taux $t$ doit valoir \num{\sol}€.
+\subpart On cherche donc la valeur de la somme
+\begin{equation*}
+\begin{aligned}
+S &= p_0 + p_1 + \dots + p_{12}\\
+&= p_0 + (p_0 + t) + \dots + (p_0 + 12 \times t)\\
+&= 13 \times p_0 + (1 + 2 + \dots + 12)t\\
+&= 13 \times \initialone + \dfrac{12 \times 13}{2} \tauxfixe\\
+\end{aligned}
+\end{equation*}
+\end{subparts}  
+\part 
+\begin{subparts}
+\DIVIDE{\tauxcompose}{100}{\temp}
+\ADD{1}{\temp}{\sol}
+\subpart On sait que pour tout $n$, $c_{n+1}$ correspond à une augmentation de \num{\tauxcompose}\% de $c_n$. Cela revient à multiplier $c_n$ par $1 + \dfrac{\tauxcompose}{100} = \sol$. On en déduit que $(c_n)$ est géométrique de raison $\sol$.
+\subpart On nous demande donc la formule explicite de la suite géométrique $c_n$, pour $n \in \N$ :
+\begin{equation*}
+c_n = c_0 \times q^n = \initialtwo \times \geo^n
+\end{equation*}
+\subpart
+\DIVIDE{\seuil}{\initialtwo}{\sol}
+\LOG[\geo]{\sol}{\testa}
+\ADD{1}{\testa}{\testb}
+\FLOOR{\testb}{\test}
+On cherche la valeur de $n$ telle que
+\begin{equation*}
+\begin{aligned}
+&c_n &\geq \seuil \\
+\Leftrightarrow& \initialtwo \times \geo^n &\geq \seuil\\
+\Leftrightarrow& \geo^n &\geq \dfrac{\seuil}{\initialtwo}\\
+\Leftrightarrow& \geo^n &\geq \sol
+\end{aligned}
+\end{equation*}
+On constate que $\geo^n \geq \sol$ à partir de $n = \test$. Ainsi, c'est à partir du mois $\test$ que le placement est supérieur à \num{\seuil}€.
+\subpart On cherche à calculer
+\begin{equation*}
+\begin{aligned}
+S &= c_0 + c_1 + c_2 + \dots + c_{10}\\
+&= c_0 + c_0 \times q + c_0 \times q^2 + \dots + c_0 \times q^{10}\\
+&= c_0(1 + q + q^2 + \dots + q^{10})\\
+&= c_0 \dfrac{q^{11} - 1}{q - 1}\\
+&= \initialtwo \times \dfrac{\geo^{11}-1}{\geo-1}
+\end{aligned}
+\end{equation*}
+\end{subparts}
+\part 
+\COPY{400}{\inita}
+\COPY{700}{\initb}
+\COPY{50}{\tauxa}
+\COPY{20}{\tauxb}
+On remarque que $(a_n)$ et $(b_n)$ sont des suites arithmétiques dont les formules explicites sont données par :
+\begin{equation*}
+\begin{cases}
+a_n &= \inita + n \times \tauxa\\
+b_n &= \initb + n \times \tauxb\\
+\end{cases}
+\end{equation*}
+Savoir quelle offre est la plus avantageuse revient à chercher $n$ tel que $a_n \geq b_n$ et à conclure suivant la réponse. Or,
+\SUBTRACT{\inita}{\initb}{\soli}
+\SUBTRACT{\tauxb}{\tauxa}{\solt}
+\begin{equation*}
+\begin{aligned}
+&a_n \geq b_n\\
+\Leftrightarrow & \inita + n \times \tauxa \geq \initb + n \times \tauxb\\
+\Leftrightarrow & \inita - \initb \geq \tauxb n - \tauxa n \\ 
+\Leftrightarrow & \soli \geq \solt n \\ 
+\Leftrightarrow & \dfrac{\soli}{\solt} \leq n \\ 
+\Leftrightarrow & 10 \leq n \\ 
+\end{aligned}
+\end{equation*}
+Ainsi, quand $n \geq 10$, l'offre $A$ est plus avantageuse que l'offre $B$, c'est-à-dire à partir de $10$ mois.  
+\end{parts}
+
+\end{solution}
+(Un demi-point bonus sera accordé si vous encadrez votre nom sur votre copie)  
+\end{questions}
+\end{document}

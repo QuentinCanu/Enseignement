@@ -7,12 +7,14 @@
 
 \RequirePackage{enumitem}
 \newenvironment{alphaquestions}{\begin{enumerate}[label=\alph*), parsep=0.5cm, topsep=0.5cm]}{\end{enumerate}}
+\setlist[itemize,1]{label=$\bullet$}
 
 \RequirePackage{tikz}
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{calc}
 \usetikzlibrary{math}
+\usetikzlibrary{intersections}
 \RequirePackage{tkz-tab}
 \tikzstyle{axis}=[thick,->]
 \RequirePackage{pgfplots}
@@ -22,23 +24,27 @@
     axis lines=center,
     grid=both,
     samples=100,
+    no markers,
   }
 }
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
+\RequirePackage{cancel}
 \RequirePackage{mathtools}
 \newtheorem{definition_}{Définition}
 \newenvironment{definition}{\begin{tcolorbox}\begin{definition_}}{\end{definition_}\end{tcolorbox}}
 \newtheorem{proposition_}{Proposition}
 \newenvironment{proposition}{\begin{tcolorbox}[arc=0mm]\begin{proposition_}}{\end{proposition_}\end{tcolorbox}}
+\newtheorem{corollary_}{Corollaire}
+\newenvironment{corollary}{\begin{tcolorbox}[arc=0mm]\begin{corollary_}}{\end{corollary_}\end{tcolorbox}}
 \newtheorem*{example}{Exemple}
 \newtheorem*{remark}{Remarque}
 \newtheorem{exercize}{Exercice}
 \newtheorem*{exercize*}{Exercice}
 \newtheorem{method}{Méthode}
-\newtheorem{theorem_}{theorem}
+\newtheorem{theorem_}{Théorème}
 \newenvironment{theorem}{\begin{tcolorbox}[arc=0mm]\begin{theorem_}}{\end{theorem_}\end{tcolorbox}}
 
 \newcommand{\R}{\mathbb{R}}
@@ -55,6 +61,7 @@
 
 \RequirePackage{siunitx}
 \sisetup{locale = FR}
+\DeclareSIUnit\px{px}
 
 \RequirePackage{titling}
 
@@ -67,7 +74,13 @@
 
 \RequirePackage{url}
 \RequirePackage{csvsimple}
-\RequirePackage{longtable}
-\RequirePackage{lscape}
+\RequirePackage{tabularray}
+\UseTblrLibrary{amsmath,booktabs,counter,diagbox,nameref,siunitx,varwidth,zref}
+
 \RequirePackage{xunicode}
 \RequirePackage{caption}
+\RequirePackage{calculus}
+\RequirePackage{xfp}
+\RequirePackage{seqsplit}
+\RequirePackage{pythontex}
+\RequirePackage{graphicx}

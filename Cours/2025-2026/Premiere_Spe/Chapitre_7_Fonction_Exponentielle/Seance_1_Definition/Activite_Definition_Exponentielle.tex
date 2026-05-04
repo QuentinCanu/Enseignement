@@ -1,0 +1,128 @@
+\documentclass{exos}
+\usepackage{main}
+
+\date{}
+\author{Première Spécialité Mathématiques}
+
+\begin{document}
+\title{Définition de la fonction exponentielle : Existence}
+\maketitle
+\section{Méthode d'Euler et Constante de Neper}
+On cherche à déterminer une fonction $f$ qui vérifie
+\begin{equation}
+\label{Exponentielle}
+\begin{cases}
+f'(x) = f(x)& \text{ pour tout } x \in \R\\
+f(0) = 1
+\end{cases}
+\end{equation}
+Pour déterminer les valeurs que peuvent prendre une telle fonction $f$, nous allons employer la \textbf{méthode d'Euler}. Elle consiste à se souvenir que
+\begin{equation*}
+f'(x) = \lim_{h \to 0} \dfrac{f(x + h) - f(x)}{h}
+\end{equation*}
+Alors, en prenant $h$ suffisamment petit, on obtient 
+\begin{equation}
+\label{Euler}
+f'(x) \simeq \dfrac{f(x + h) - f(x)}{h} 
+\end{equation}
+
+\subsection{Détermination de $f(1)$}
+
+On se donne une fonction $f$ vérifiant \eqref{Exponentielle}.
+
+\begin{alphaquestions}
+\item En utilisant \eqref{Exponentielle} et \eqref{Euler} avec $x = 0$ et $h = 1$, en déduire que
+
+\begin{equation*}
+f(0) \simeq \dfrac{f(1) - f(0)}{1}
+\end{equation*} 
+\item En déduire une première approximation de $f(1)$.
+\item On remplace $h = 1$ par $h = 0,5 = \dfrac{1}{2}$. En choisissant $x = 0$ puis $x = 0,5$, utliser \eqref{Exponentielle} et \eqref{Euler} pour montrer les deux approximation suivantes :
+\begin{equation*}
+\begin{cases}
+f(0) &\simeq \dfrac{f(0,5) - f(0)}{0,5}\\
+f(0,5) &\simeq \dfrac{f(1) - f(0,5)}{0,5}\\
+\end{cases}  
+\end{equation*}
+\item En déduire une approximation de $f(0,5)$ à l'aide de la première ligne. Puis une approximation de $f(1)$ à l'aide de la deuxième ligne.
+\item Montrer que cette approximation de $f(1)$ s'obtient grâce à la formule
+\begin{equation*}
+f(1) \simeq \left(1 + \dfrac{1}{2}\right)^2
+\end{equation*} 
+\item Recommencer le même travail avec $h = 0,25 = \dfrac{1}{4}$. Il faudra utiliser la méthode d'Euler quatre fois, avec $x = 0$, $x = 0,25$, $x = 0,5$ et $x = 0,75$. Montrer que la formule permettant d'approcher $f(1)$ dans ce cas est
+\begin{equation*}
+f(1) \simeq \left(1 + \dfrac{1}{4}\right)^4
+\end{equation*}
+\item Conjecturer la formule permettant de calculer cette approximation pour $h = 0,1 = \dfrac{1}{10}$.
+
+En passant à la limite $h \to 0$, on obtient que $f(1)$ vaut un nombre appelé \textbf{constante de Neper}, notée $e$. Cette constante vaut environ $2,718\dots$.
+
+\subsection{Détermination de $f(n)$}
+
+La donnée de $f(1)$ va être précieuse pour déterminer le reste des valeurs prises par cette fameuse fonction. Pour cela, on va étudier la fonction $g : x \mapsto \dfrac{f(x + 1)}{f(x)}$. On admet ici que $f$ prend des valeurs strictement positives.
+
+\item Rappeler la formule de dérivation d'un quotient $\dfrac{u}{v}$.
+\item En justifiant que $g$ est dérivable sur $\R$, montrer que pour tout $x \in \R$,
+\begin{equation*}
+g'(x) = \dfrac{f'(x + 1)f(x) - f(x+1)f'(x)}{f(x)^2}
+\end{equation*}
+\item En déduire que $g$ est constante telle que pour tout $x \in \R$, $g(x) = f(1)$.
+\item En déduire que pour tout $x$,
+\begin{equation*}
+f(x+1) = f(1)f(x)
+\end{equation*}
+On pose la suite $(u_n)_{n \in \N}$ définie par $u_n = f(n)$ pour $n \in \N$.
+\item Justifier que $(u_n)$ est géométrique de raison $e$ et de premier terme $1$.
+\item En déduire une expression de $f(n)$ en fonction de $n$.
+
+Ainsi, la fonction $f$ est liée aux puissances de $e$. On peut généraliser cela en notant $f(x)=e^x$, pour n'importe quel réel $x$. La fonction $f$ solution est nommée \textbf{fonction exponentielle}.
+
+\end{alphaquestions}
+\newpage
+\title{Définition de la fonction exponentielle : Unicité}
+\maketitle
+\section{Équation différentielle}
+On s'intéresse aux fonctions $f : \R \to \R$ qui vérifient \textbf{l'équation différentielle} suivante :
+\begin{equation*}
+f' = f
+\end{equation*}
+Autrement dit, pour tout $x \in \R$, si $f$ est solution de cette équation, alors,
+\begin{equation*}
+f'(x) = f(x)
+\end{equation*}
+\subsection{Sans condition initiale}
+On suppose que la fonction $f$ est une telle solution.
+\begin{alphaquestions}
+\item Montrer que la fonction $g : x \mapsto 2f(x)$ est définie et dérivable sur $\R$. Montrer que sa dérivée vérifie $g'(x) = g(x)$.
+\item Même question avec la fonction $h : x \mapsto 17f(x)$.
+\item En déduire qu'il y a une infinité de fonctions $f'$ vérifiant l'équation différentielle $f' = f$.
+
+\subsection{Ajout de la condition initiale}
+On suppose alors que $f$ est un telle solution, et qu'en plus, $f$ vérifie :
+\begin{equation*}
+f(0) = 1
+\end{equation*}
+\item Soit $h : x \mapsto f(x) \times f(-x)$. Montrer que $h$ est défini et dérivable sur $\R$.
+\item Calculer la dérivée de $h$. En déduire que $h$ est une fonction constante.
+
+Cette constante vaut $h(0) = f(0) \times f(- 0) = 1 \times 1 = 1$
+
+\item En déduire que pour tout $x$, $f(x) > 0$.
+
+Ainsi, si $f$ est solution de $f' = f$, et si $f(0) = 1$, $f$ est toujours strictement positive.
+
+\subsection{Unicité}
+On suppose maintenant que $f$ et $g$ vérifient tous les deux les même critères :
+\begin{itemize}
+\item $f' = f$ et $f(0) = 1$
+\item $g' = g$ et $g(0) = 1$
+\end{itemize}
+\item On pose $h(x) = \dfrac{g(x)}{f(x)}$. Montrer que $h$ est définie et dérivable sur $\R$.
+\item Calculer la dérivée de $h$, et en déduire que $h$ est constante.
+\item Conclure que $g = f$.
+\end{alphaquestions}
+En conclusion, si une fonction $f$ vérifie $f' = f$ et $f(0) = 1$. Alors cette fonction est unique.
+
+Or, cette fonction existe bel et bien : c'est la \textbf{fonction exponentielle}.
+
+\end{document}

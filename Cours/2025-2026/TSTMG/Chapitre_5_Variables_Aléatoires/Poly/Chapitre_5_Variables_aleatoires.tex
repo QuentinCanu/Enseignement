@@ -136,6 +136,44 @@ Pour chacun des exemples suivants, donner l'espérance de $X$ :
 \item $X$ est le nombre de match gagnés par une équipe de foot sur une saison de $10$ matchs. Les matchs sont tous très équitables, et il n'y a pas de match nul.
 \item On lance quatre fois un dé à 10 faces. $X$ est le nombre de fois où l'on obtient un multiple de $3$.
 \end{alphaquestions}
-
 \end{example}
+\newpage
+\section{Coefficients binomiaux}
+Soit $X$ une variable aléatoire suivant une loi binomiale de paramètres $n$ et $p$. Cette variable revient à compter le nombre de manches gagnées lors d'une partie à $n$ manches indépendantes, où chaque partie est gagnée avec une probabilité de $p$. 
+\begin{definition}
+Soit $k$ un nombre entier entre $0$ et $n$. On note $\binom{n}{k}$ le nombre possible de parties à $n$ manches avec $k$ manches gagnantes.
+\end{definition}
+\begin{proposition}
+Soit $k$ un nombre entier entre $0$ et $n$. Alors,
+\begin{equation*}
+P(X = k) = \binom{n}{k}p^k(1-p)^{n-k}
+\end{equation*}
+\end{proposition}
+\begin{remark}
+Cela revient à compter, dans l'arbre de probabilité correspondant à la partie, le nombre de branches (c'est-à-dire de parties possibles) correspondant à $k$ victoires. Chacune de ces branches a pour probabilité $p^k(1-p)^{n-k}$
+\end{remark}
+Pour calculer $\binom{n}{k}$, on se fait les remarques suivantes :
+\begin{proposition}
+\hfill
+\begin{itemize}
+\item $\binom{n}{0} = 1$ (Il n'y qu'une seule partie possible où l'on ne gagne jamais)
+\item $\binom{n}{1} = n$ (Compter les parties à une manche gagnante revient à désigner LA manche gagnante)
+\item $\binom{n}{k} = \binom{n}{n-k}$ (Compter les parties à $k$ manches gagnées revient à compter les parties à $n - k$ manches perdues) 
+\end{itemize}
+\end{proposition}
+\begin{proposition}
+\begin{equation*}
+\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}
+\end{equation*}
+\end{proposition}
+\begin{proof}
+Pour compter les parties à $k$ manches gagnées, on distingue les parties possibles en fonction du résultat de sa première manche.
+
+Si la manche est perdue, alors il suffit de compter les parties à $n - 1$ manches et $k$ manches gagnées. 
+
+Si la manche est gagnée, alors il suffit de compter les parties à $n - 1$ manches et $k - 1$ manches gagnées.
+
+La somme de possibilités correspondant à chacun des cas donne le résultat.
+\end{proof}
+
 \end{document}

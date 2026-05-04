@@ -37,6 +37,7 @@
 \renewcommand{\partlabel}{\thepartno)}
 
 \newcommand{\titleandname}{
+\setcounter{page}{1}
 \firstpageheader{}{}{Nom :\enspace\makebox[7cm]{\dotfill}}
 \maketitle
 \thispagestyle{headandfoot}
@@ -50,3 +51,6 @@
 \runningheader{\thetitle}{}{\theauthor}
 \runningheadrule
 \runningfooter{}{}{Page \thepage~sur \numpages}
+
+\RequirePackage{setspace}
+% \onehalfspacing

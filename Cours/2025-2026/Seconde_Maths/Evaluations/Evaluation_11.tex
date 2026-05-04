@@ -1,0 +1,133 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation n°11 : Introductions aux vecteurs du plan}
+\date{30 Janvier 2026}
+\author{Seconde 3}
+
+% \printanswers
+
+\begin{document}
+\titleandname{}
+\version
+
+\begin{questions}
+\question[1,5] Citer les trois caractéristiques d'un vecteur.
+
+\begin{solution}[0.3cm]
+Les trois caractéristiques d'un vecteur sont :
+\begin{itemize}
+\item sa direction;
+\item son sens;
+\item sa norme
+\end{itemize}
+\end{solution}
+
+\question[1] Rappeler la relation de Chasles entre les vecteurs $\vect{PQ}$ et $\vect{QR}$.
+
+\begin{solution}[0.3cm]
+\begin{equation*}
+\vect{PQ} + \vect{QR} = \vect{AC} 
+\end{equation*}
+\end{solution}
+
+\question[7,5] Répondre aux questions suivantes. Tous les triangles représentés sur la figure sont équilatérals.
+
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (0:2);
+\coordinate (C) at (60:2);
+\coordinate (D) at ($(B) + (60:2)$);
+\coordinate (E) at (0:4);
+\coordinate (F) at (60:4);
+
+\draw (A) node[below left] {$A$} -- (B) node[below] {$B$} 
+  -- (C) node[left] {$C$} -- cycle;
+\draw (B) -- (D) node[right] {$D$} -- (E) node[below right] {$E$} -- cycle;
+\draw (C) -- (D) -- (F) node[above] {$F$} -- cycle;
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part Donner un vecteur égal à $\vect{AB}$.
+\part Donner le représentant de $\vect{DB}$ ayant pour origine $F$.
+\part Donner le représentant de $\vect{CF}$ ayant pour extrémité $C$.
+\part Donner un vecteur de même direction que $\vect{EB}$, mais de sens opposé.
+\part Donner un vecteur de même direction et de même sens que $\vect{DB}$ mais de norme différente.
+\end{parts}
+
+\begin{solution}
+\begin{parts}
+\part $\vect{CD}$
+\part $\vect{FC}$
+\part $\vect{AC}$
+\part $\vect{BE}$
+\part $\vect{FA}$
+\end{parts}
+\end{solution}
+
+\end{questions}
+
+\newpage
+\setcounter{page}{1}
+\titleandname{}
+\version
+
+\begin{questions}
+\question[1,5] Citer les trois caractéristiques d'un vecteur.
+
+\begin{solution}[0.3cm]
+Les trois caractéristiques d'un vecteur sont :
+\begin{itemize}
+\item sa direction;
+\item son sens;
+\item sa norme
+\end{itemize}
+\end{solution}
+
+\question[1] Rappeler la relation de Chasles entre les vecteurs $\vect{MN}$ et $\vect{NO}$.
+
+\begin{solution}[0.3cm]
+\begin{equation*}
+\vect{MN} + \vect{NO} = \vect{MO} 
+\end{equation*}
+\end{solution}
+
+\question[7,5] Répondre aux questions suivantes. Tous les triangles représentés sur la figure sont équilatérals.
+
+\begin{center}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+\coordinate (B) at (0:2);
+\coordinate (C) at (-60:2);
+\coordinate (D) at ($(B) + (-60:2)$);
+\coordinate (E) at (0:4);
+\coordinate (F) at (-60:4);
+
+\draw (A) node[above left] {$A$} -- (B) node[above] {$B$} 
+  -- (C) node[left] {$C$} -- cycle;
+\draw (B) -- (D) node[right] {$D$} -- (E) node[above right] {$E$} -- cycle;
+\draw (C) -- (D) -- (F) node[below] {$F$} -- cycle;
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part Donner un vecteur égal à $\vect{BC}$.
+\part Donner le représentant de $\vect{DB}$ ayant pour extrémité $C$.
+\part Donner le représentant de $\vect{AB}$ ayant pour origine $B$.
+\part Donner un vecteur de même direction que $\vect{FD}$, mais de sens opposé.
+\part Donner un vecteur de même direction et de même sens que $\vect{DC}$ mais de norme différente.
+\end{parts}
+
+\begin{solution}
+\begin{parts}
+\part $\vect{ED}$
+\part $\vect{FC}$
+\part $\vect{BE}$
+\part $\vect{BC}$
+\part $\vect{EA}$
+\end{parts}
+\end{solution}
+
+
+\end{questions}
+\end{document}

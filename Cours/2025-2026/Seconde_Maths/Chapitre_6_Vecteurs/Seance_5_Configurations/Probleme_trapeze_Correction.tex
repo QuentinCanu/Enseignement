@@ -1,0 +1,99 @@
+\documentclass{poly}
+\usepackage{main}
+
+\title{Correction}
+\author{Seconde 3}
+\date{16 Février 2026}
+
+\begin{document}
+\maketitle
+
+On commence par faire une figure de la situation exposée dans l'énoncé.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\coordinate (A) at (-2, 2);
+\coordinate (B) at (3, 2);
+\coordinate (C) at (0,-2);
+\coordinate (D) at (-1,-2);
+\coordinate (I) at (0.5,2);
+\coordinate (K) at (-0.5,-2);
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\draw (A) node[above left] {$A$};
+\draw (B) node[above right] {$B$};
+\draw (C) node[below right] {$C$};
+\draw (D) node[below left] {$D$};
+\draw[name path = AC] (A) -- (C);
+\draw[name path = DB] (D) -- (B);
+\draw (I) node {$\bullet$} node[above] {$I$};
+\draw (K) node {$\bullet$} node[below] {$K$};
+\draw[dashed] (I) -- (K);
+\path [name intersections={of=AC and DB, by=M}];
+\draw (M) node {$\bullet$} node[right] {$M$};
+\end{tikzpicture}
+\end{center}
+
+On conjecture que les points $K$, $M$ et $I$ sont alignés.
+
+On prouve cette conjecture à l'aide des vecteurs. On cherche donc à montrer que les vecteurs $\vect{KM}$ et $\vect{IM}$ sont colinéaires.
+
+On traduit ce que l'on sait grâce à l'énoncé :
+\begin{itemize}
+\item On sait déjà que $\vect{AB} = 5\vect{DC}$;
+\item $I$ est le milieu de $[AB]$ : on sait donc d'après le cours que $\vect{AI} = \vect{IB}$, ou que $\vect{AI}=\dfrac{1}{2}\vect{AB}$.
+\item $K$ est le milieu de $[DC]$ : on sait donc d'après le cours que $\vect{DK} = \vect{KC}$, ou que $\vect{DK}=\dfrac{1}{2}\vect{DC}$.
+\item $M$ est le point d'intersection de $[AC]$ et $[DB]$ : plus difficile, on peut simplement dire d'un côté que $A$, $M$ et $C$, et de l'autre côté que $D$, $M$ et $B$ sont alignés. Du point des vecteurs, on en déduit que $\vect{AM}$ et $\vect{MC}$ sont colinéaires, et que $\vect{BM}$ et $\vect{MD}$ sont colinéaires.
+\end{itemize}
+
+% On choisit de partir de $\vect{IM}$, et de trouver que ce vecteur est égal à $k\vect{KM}$ où $k$ sera un certain nombre. Le but est de faire apparaître les vecteurs sur lesquel on a des informations. Le vecteur $\vect{IM}$ peut-être obtenu par relation de Chasles de deux manières différentes. 
+
+% \begin{equation*}
+% \begin{cases}
+% \vect{IM} &= \vect{IA} + \vect{AM}\\
+% \vect{IM}&= \vect{IB} + \vect{BM}\\
+% \end{cases}
+% \end{equation*}
+% On en déduit, en ajoutant ces deux lignes, que
+% \begin{equation*}
+% \begin{aligned}
+% 2\vect{IM} &= \vect{IA} + \vect{AM} + \vect{IB} + \vect{BM}\\
+% &= \vect{IA} + \vect{AI} + \vect{AM} + \vect{BM}\\
+% &= \vect{0} + \vect{AM} + \vect{BM}\\
+% &= \vect{AM} + \vect{BM}\\
+% \end{aligned}
+% \end{equation*}
+
+\begin{equation*}
+\begin{aligned}
+\vect{MI} &= \vect{MA} + \vect{AI}\\
+&= \vect{MA} + \dfrac{1}{2}\vect{AB}\\
+&= k\vect{CM} + \dfrac{1}{2}(5\vect{DC})\\
+&= k\vect{CM} + 5(\dfrac{1}{2}\vect{DC})\\
+&= k\vect{CM} + 5\vect{KC}
+\end{aligned}
+\end{equation*}
+
+Si $k = 5$, alors on peut factoriser par $5$ :
+\begin{equation*}
+\vect{MI} = 5\vect{CM} + 5\vect{KC} = 5(\vect{KC} + \vect{CM}) = 5\vect{KM}  
+\end{equation*}
+
+Cela nous permet de montrer que $\vect{MI}$ et $\vect{KM}$ sont colinéaires, ce qui correspond à ce que nous cherchons.
+
+Mais cela ne fonctionne que si $k = 5$, il faut donc le prouver. 
+
+Le $5$ nous pousse à prendre comme point de départ l'égalité $\vect{AB} = 5\vect{DC}$.
+
+\begin{equation*}
+\begin{aligned}
+&\vect{AB} &= 5\vect{DC}\\
+\Leftrightarrow&\vect{AM} + \vect{MB} &= 5\vect{DM} + 5\vect{MC}\\
+\Leftrightarrow&k\vect{MC} + k'\vect{DM} &= 5\vect{DM} + 5\vect{MC}\\
+\Leftrightarrow&(k-5)\vect{MC} &= (5 - k')\vect{DM}\\
+\end{aligned}
+\end{equation*}
+On sait que $\vect{MC}$ et $\vect{DM}$ ne sont pas colinéaires. Donc cette égalité qui prétend le contraire ne peut être vraie que si $(k - 5) = (5 - k') = 0$. Donc $k = k' = 5$. Ainsi, on en déduit exactement ce que l'on voulait prouver.
+
+
+\end{document}

@@ -1,6 +1,8 @@
 \documentclass{controle}
 \usepackage{main}
 
+% \printanswers{}
+
 \title{Exercice : Suite Arithmético-Géométrique}
 \author{Première Spécialité Mathématiques}
 \date{Chapitre 5}
@@ -17,16 +19,73 @@ u_{n+1} &= 2u_n - 8
 \end{equation*}
 \begin{parts}
 \part Donner les valeurs de $u_0$, $u_1$ et $u_2$.
+\begin{solution}
+$u_0 = 14$; $u_1 = 2 \times 14 - 8 = 20$ et $u_2 = 2 \times 20 - 8 = 32$
+\end{solution}
 \part La suite $(u_n)$ est-elle arithmétique ? Est-elle géométrique ?
+\begin{solution}
+La suite $(u_n)$ n'est pas arithmétique car $u_1 - u_0 = 6$ et $u_2 - u_1 = 12$. Les différences ne sont pas égales.
+
+La suite $(u_n)$ n'est pas géométrique car $\dfrac{u_1}{u_0} = \dfrac{10}{7}$ et $\dfrac{u_2}{u_1} = \dfrac{8}{5}$. Les quotients ne sont pas égaux.
+\end{solution}
 \part On pose $(w_n)$ la suite définie pour $n \in \N$ par
 \begin{equation*}
 w_n = u_n - 8
 \end{equation*}
 Calculer $w_0$, $w_1$ et $w_2$.
+\begin{solution}
+On obtient $w_0 = u_0 - 8 = 6$; $w_1 = u_1 - 8 = 12$ et $w_2 = u_2 - 8 = 24$.
+\end{solution}
 \part Démontrer que $(w_n)$ est une suite géométrique dont on précisera la raison.
+\begin{solution}
+On souhaite montrer que $(w_n)$ est géométrique, autrement dit que pour tout $n$, $w_{n+1} = q \times w_n$, où $q$ est une constante indépendante de $n$.
+
+On constate que $\dfrac{w_1}{w_0} = \dfrac{w_2}{w_1} = 2$. Si $(w_n)$ est effectivement géométrique, sa raison est nécessairement $2$.
+
+On cherche donc à montrer que $(w_n)$ est géométrique de raison $2$. Pour cela, soit $n$ un entier naturel. Alors,
+
+\begin{equation*}
+\begin{aligned}
+2 \times w_n &= 2 \times (u_n - 8)&\\
+&= 2u_n - 16&\\
+&= u_{n+1} + 8 - 16&\text{(car $u_{n+1} = 2u_n - 8$)}\\
+&= u_{n+1} - 8&\\
+&= w_{n+1}&\text{(car pour \textbf{TOUT} $n$, $w_n = u_n - 8$)}\\
+\end{aligned}
+\end{equation*}
+On a montré l'égalité souhaitée pour tout $n$. On en déduit que $(w_n)$ est géométrique de raison $2$.
+\end{solution}
 \part En déduire une expression de $w_n$ en fonction de $n$.
+\begin{solution}
+On demande donc une formule explicite des termes d'une suite géométrique. Le cours donne directement que, pour tout $n \in \N$,
+\begin{equation*}
+w_n = w_0 \times q^n = 6 \times 2^n
+\end{equation*}
+\end{solution}
 \part Donner la valeur de $w_{15}$.
+\begin{solution}
+On remplace simplement $n$ par $15$.
+\begin{equation*}
+w_{15} = 6 \times 2^{15} 
+\end{equation*}
+\end{solution}
 \part Donner une expresison de $u_n$ en fonction de $n$.
+\begin{solution}
+On demande une formule explicite des termes de $(u_n)$. Or, on sait que pour tout $n \in \N$,
+\begin{equation*}
+w_n = u_n - 8
+\end{equation*}
+On en déduit que, pour tout $n \in \N$,
+\begin{equation*}
+u_n = w_n + 8 = 6 \times 2^n + 8 \text{ (de par la question précédente)}
+\end{equation*}
+\end{solution}
 \part En déduire une valeur de $u_{17}$.
+\begin{solution}
+On remplace $n$ par $17$ :
+\begin{equation*}
+u_{17} = 6 \times 2^{17} + 8
+\end{equation*}
+\end{solution}
 \end{parts}
 \end{document}

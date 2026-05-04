@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{main}
+
+\begin{document}
+\begin{proposition}
+Le nombre $\dfrac{1}{3}$ n'est pas décimal.
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item On annonce que l'on procède à un raisonnement par l'absurde. On suppose donc que $\dfrac{1}{3}$ \textbf{est} décimal.
+
+\item \begin{enumerate}
+\item Le cours nous dit qu'un nombre décimal est un nombre de la forme $\dfrac{a}{10^k}$. Donc il existe $a \in \Z$ et $k \in \N$ tel que
+\begin{equation*}
+\dfrac{1}{3} = \dfrac{a}{10^k}
+\end{equation*}
+\item On transforme l'égalité suivante, pour en déduire que
+\begin{equation*}
+10^k = 3a
+\end{equation*}
+\item Ainsi, \textbf{$10^k$ est un multiple de $3$}.
+\end{enumerate}
+\item \begin{enumerate}
+\item Or, on sait que la somme des chiffres d'un multiple de $3$ est aussi un multiple de $3$.
+\item Or, les chiffres de $10^k$ sont constitués d'un $1$ suivi de $k$ zéros. La somme des chiffres de $10^k$ fait donc $1$. \textbf{$10^k$ n'est pas un multiple de $3$}.
+\end{enumerate} 
+\item On aboutit à une \textbf{contradiction}. Par l'absurde, la supposition de départ est \textbf{fausse} : \textbf{$\dfrac{1}{3}$ n'est pas décimal}.
+\end{enumerate}
+\end{proof}
+\end{document}

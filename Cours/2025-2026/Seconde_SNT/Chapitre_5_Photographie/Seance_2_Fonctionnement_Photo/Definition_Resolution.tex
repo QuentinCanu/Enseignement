@@ -1,0 +1,34 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Fonctionnement d'un appareil photo}
+\author{Seconde}
+\date{Chapitre 5}
+
+\begin{document}
+\maketitle
+
+\begin{exercize}
+Extrait d'un article sur la définition et la résolution d'une image numérique :
+
+\textbf{Définition}
+\begin{quote}
+La définition d'une image est la quantité d'information contenue dans celle-ci. En photographie numérique, une image est composée de points : les pixels. La définition est une valeur absolue qui permet de quantifier une image et, souvent, le capteur qui a servi a sa création. Vous pouvez ainsi avoir des images en 2, 8, 16 ou 100 millions de pixels, ou Mpx.
+
+Notez que cette "écriture" de définition ne permet pas de connaître les dimensions de l'image : nous savons juste combien de pixels elle est composée. En effet, un pixel n'a pas de taille "physique" en soi : c'est une unité d'affichage ou d'impression. La taille physique d'un pixel peut ainsi très bien aller de plusieurs millimètres de côté, sur un écran géant par exemple, à quelques µm (ex. sur une dalle de smartphone).
+\end{quote}
+
+\textbf{Résolution}
+\begin{quote}
+Toutefois, dès que cette image est affichée ou imprimée, il faut prendre en compte un autre paramètre : la surface d'affichage, donc la résolution. En effet, une fois que vous avez le support d'affichage (un écran, du papier...), il faut faire rentrer toutes les informations de l'image sur cette surface. Plus cette surface est petite, plus la résolution augmente.
+
+Pour résumer, la résolution est le nombre de pixels par unité de mesure. Les Anglo-Saxons ont une nouvelle fois gagné la bataille, puisque le système métrique n'est pas utilisé. La résolution s'exprime en nombre de pixels par pouce — les fameux ppp (pixel per inch) — ou de points par pouce — les non moins fameux dpp (dot per inch). On pourrait parfaitement parler de pixels par cm, mais c'est rarement le cas.
+\end{quote}
+
+\begin{alphaquestions}
+\item Décrire de façon simple la différence entre définition et résolution d'une image.
+\item Si une image a une définition $\qty{1920}{\px} \times \qty{1080}{\px}$, et une résolution de $20$ pixel par centimètre. En déduire les dimension de l'image en centimètres.
+\item Chaque pixel nécessite trois octet pour être stocké. Combien d'octets sont nécessaires pour stocker l'image de la question précédente ? 
+\end{alphaquestions}
+\end{exercize}
+\end{document}

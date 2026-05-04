@@ -1,0 +1,148 @@
+\documentclass{controle}
+\usepackage{main}
+
+% \printanswers{}
+
+\title{Évaluation n°12 : Vecteurs et algèbre}
+\author{Seconde 3}
+\date{Vendredi 6 Février}
+
+\begin{document}
+\titleandname{}
+\version
+
+\begin{questions}
+\question[3]
+Soit $\vect{u}$ un vecteur, et $k$ un nombre réel. Décrire la direction, le sens et la norme du vecteur $k\vect{u}$ par rapport à ceux du vecteur $\vect{u}$.
+
+\ifprintanswers
+\begin{itemize}
+\item Direction : \textbf{Même direction que $\vect{u}$} 
+\item Sens : \textbf{Si $k$ est positif, même sens que $\vect{u}$. Si $k$ est négatif, sens opposé à $\vect{u}$}
+\item Norme : \textbf{On multiplie $\left|k\right|$ par la norme de $\vect{u}$.} 
+\end{itemize}
+\else
+\begin{itemize}
+\item Direction :
+\item Sens : 
+\item Norme :
+\end{itemize}
+\fi
+
+\question[7]
+On a placé trois points $A, B$ et $C$ sur le repère suivant :
+
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-4.25,-4.25) grid[step=0.5] (4.25,4.25);
+\coordinate (A) at (0,0);
+\coordinate (B) at (0.5,1);
+\coordinate (C) at (-1,1);
+\draw (A) node[below] {$A$} node {$\times$};
+\draw (B) node[above right] {$B$} node {$\times$};
+\draw (C) node[above left] {$C$} node {$\times$};
+\draw (A) -- (B) -- (C) -- cycle;
+
+\ifprintanswers
+\draw (A) ++ ($3*(A) - 3*(B)$) node {$\bullet$} node[below right] {$D$};
+\draw (A) ++ ($(B) - (A)$) ++ ($3*(C) - 3*(A)$) node {$\bullet$} node[below right] {$E$};
+\draw (C) ++ ($2*(C) - 2*(B)$) node {$\bullet$} node[below right] {$F$};
+\else
+\fi
+\end{tikzpicture}  
+\end{center}
+Placer les points $D$, $E$ et $F$ pour que vérifier les égalités vectorielles suivantes.
+\begin{parts}
+\part[2] $\vect{AD} = 3\vect{BA}$
+\part[2] $\vect{AE} = \vect{AB} - 3\vect{CA}$
+\part[3] $3\vect{FC} - 2\vect{FB} = \vect{0}$ (Justifier la réponse) 
+\end{parts}
+\begin{solution}
+On remarque l'égalité suivante :
+\begin{equation*}
+\begin{aligned}
+3\vect{FC} - 2\vect{FB} &= 3\vect{FC} - 2(\vect{FC} + \vect{CB})&\text{~(Relation de Chasles)}\\
+&= 3\vect{FC} -2\vect{FC} -2\vect{CB} &\text{~(Distributivité)}\\
+&= \vect{FC} -2\vect{CB} &\text{~(Réduction)}
+\end{aligned}
+\end{equation*}
+Ainsi, on cherche
+\begin{equation*}
+\begin{aligned}
+&~\vect{FC} - 2\vect{CB} = \vect{0}\\
+\Leftrightarrow& ~\vect{FC} = 2\vect{CB}\\
+\Leftrightarrow& ~\vect{CF} = 2\vect{BC}\text{~(En multipliant chaque membre de l'égalité par $-1$)}
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{questions}
+\newpage
+\setcounter{page}{1}
+\titleandname{}
+\version
+\begin{questions}
+\question[3]
+Soit $\vect{u}$ un vecteur, et $k$ un nombre réel. Décrire la direction, le sens et la norme du vecteur $k\vect{u}$ par rapport à ceux du vecteur $\vect{u}$.
+
+\ifprintanswers
+\begin{itemize}
+\item Direction : \textbf{Même direction que $\vect{u}$} 
+\item Sens : \textbf{Si $k$ est positif, même sens que $\vect{u}$. Si $k$ est négatif, sens opposé à $\vect{u}$}
+\item Norme : \textbf{On multiplie $\left|k\right|$ par la norme de $\vect{u}$.} 
+\end{itemize}
+\else
+\begin{itemize}
+\item Direction :
+\item Sens : 
+\item Norme :
+\end{itemize}
+\fi
+
+\question[7]
+On a placé trois points $A, B$ et $C$ sur le repère suivant :
+
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-4.25,-4.25) grid[step=0.5] (4.25,4.25);
+\coordinate (A) at (0,0);
+\coordinate (B) at (-1,0.5);
+\coordinate (C) at (-0.5,-0.5);
+\draw (A) node[above right] {$A$} node {$\times$};
+\draw (B) node[above left] {$B$} node {$\times$};
+\draw (C) node[below] {$C$} node {$\times$};
+\draw (A) -- (B) -- (C) -- cycle;
+
+\ifprintanswers
+\draw (A) ++ ($3*(A) - 3*(B)$) node {$\bullet$} node[below right] {$D$};
+\draw (A) ++ ($(B) - (A)$) ++ ($3*(C) - 3*(A)$) node {$\bullet$} node[below right] {$E$};
+\draw (C) ++ ($2*(C) - 2*(B)$) node {$\bullet$} node[below right] {$F$};
+\else
+\fi
+\end{tikzpicture}  
+\end{center}
+Placer les points $D$, $E$ et $F$ pour que vérifier les égalités vectorielles suivantes.
+\begin{parts}
+\part[2] $\vect{AD} = 3\vect{BA}$
+\part[2] $\vect{AE} = \vect{AB} - 3\vect{CA}$
+\part[3] $3\vect{FC} - 2\vect{FB} = \vect{0}$ (Justifier la réponse) 
+\end{parts}
+\begin{solution}
+On remarque l'égalité suivante :
+\begin{equation*}
+\begin{aligned}
+3\vect{FC} - 2\vect{FB} &= 3\vect{FC} - 2(\vect{FC} + \vect{CB})&\text{~(Relation de Chasles)}\\
+&= 3\vect{FC} -2\vect{FC} -2\vect{CB} &\text{~(Distributivité)}\\
+&= \vect{FC} -2\vect{CB} &\text{~(Réduction)}
+\end{aligned}
+\end{equation*}
+Ainsi, on cherche
+\begin{equation*}
+\begin{aligned}
+&~\vect{FC} - 2\vect{CB} = \vect{0}\\
+\Leftrightarrow& ~\vect{FC} = 2\vect{CB}\\
+\Leftrightarrow& ~\vect{CF} = 2\vect{BC}\text{~(En multipliant chaque membre de l'égalité par $-1$)}
+\end{aligned}
+\end{equation*}
+\end{solution}
+\end{questions}
+\end{document}

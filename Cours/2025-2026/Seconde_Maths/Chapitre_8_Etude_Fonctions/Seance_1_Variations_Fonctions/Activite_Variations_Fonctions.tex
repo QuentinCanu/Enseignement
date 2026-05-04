@@ -1,0 +1,68 @@
+\documentclass{exos}
+\usepackage{main}
+
+\title{Activité : Variations de fonctions}
+\date{Chapitre 8 Partie 1}
+\author{Seconde}
+
+\begin{document}
+\maketitle
+
+Au cours d'une expérience, la température d'une pièce change pour stimuler une réaction chimique. L'expérience dure \qty{24}{\hour}, et on note $T(t)$ la température (en \unit{\celsius}) de la pièce en fonction du temps $t$ (en \unit{\hour}). La courbe représentative de la fonction $T$ est représentée sur le repère ci-après :
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=0,xmax=24,ymin=-30,ymax=55,
+  enlargelimits, 
+  xtick={0,1,...,24}, 
+  width=12.5cm,
+  xlabel=$t$ (en \unit{\hour}),
+  ylabel=$T$ (en \unit{\celsius})]
+\addplot[smooth] coordinates {
+(0,25)(4,-20)(16,50)(24,25)
+};
+\draw (0,25) node {$\bullet$};
+\draw (24,25) node {$\bullet$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\begin{alphaquestions}
+\item Quelle est la température de la salle au bout de \qty{4}{\hour} ?
+\item L'expérience se déroule en trois étapes :
+\begin{enumerate}
+  \item Ajout de l'azote liquide froid pendant un temps long.
+  \item Réaction exothermique.
+  \item Phase de repos.
+\end{enumerate}
+À l'aide de la représentation de $T$, donner l'heure de départ et de fin de chacune de ces étapes.
+\item Ordonner les heures suivantes : $10; 7; 15; 5$. Ordonner les températures correspondantes $T(10); T(7); T(15)$ et $T(5)$. Que remarquez-vous ?
+\item Même question que la question précédente, mais pour les heures $23; 18; 21$.
+\item On dit que $T$ est croissante sur $[4;17]$ et décroissante sur $[17;24]$. Que peut-on dire de $T$ sur l'intervalle $[0;4]$ ?
+\end{alphaquestions}
+\newpage
+Le lendemain, on tente la même expérience dans une pièce différente. On obtient le résultat représenté par la courbe suivante :
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=0,xmax=24,ymin=-30,ymax=55,
+  enlargelimits, 
+  xtick={0,1,...,24}, 
+  width=12.5cm,
+  xlabel=$t$ (en \unit{\hour}),
+  ylabel=$T$ (en \unit{\celsius})]
+\addplot[smooth] coordinates {
+(0,18)(8,-12)(17,25)(19,-5)(24,18)
+};
+\draw (0,18) node {$\bullet$};
+\draw (24,18) node {$\bullet$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+S'inspirer de la phrase \og La fonction $T$ est \textbf{croissante} sur $[19;24]$ \fg pour compléter les suivantes :
+\begin{alphaquestions}
+\item La fonction $T$ est \dots sur $[0;8]$.
+\item La fonction $T$ est décroissante sur $\dots$.
+\item La fonction $T$ est croissante sur $\dots$.
+\end{alphaquestions}
+
+\end{document}

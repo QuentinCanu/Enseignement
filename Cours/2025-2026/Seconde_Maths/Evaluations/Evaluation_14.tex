@@ -1,0 +1,202 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation n°14 : Arithmétique}
+\author{Seconde 3}
+\date{23 Mars 2026}
+
+% \printanswers
+
+\begin{document}
+\begin{pycode}
+from random import *
+from functools import reduce
+from operator import mul
+import math
+
+def gen_decompose(s):
+  seed(s)
+  p2 = randrange(0,6)
+  p3 = randrange(0,3)
+  p5 = randrange(0,3)
+  p7 = randrange(0,2)
+  p11 = randrange(0,2)
+  p13 = 1 if p7 == 0 and p11 == 0 else 0
+
+  n = 2**p2 * 3**p3 * 5**p5 * 7**p7 * 11**p11 * 13**p13
+  sol = [2]*p2 + [3]*p3 + [5]*p5 + [7]*p7 + [11]*p11 + [13]*p13
+  return (n,sol)
+
+def simplify_fracts(sol1,sol2):
+  l1, l2 = len(sol1), len(sol2)
+  c1, c2 = 0, 0
+  cancel1, cancel2 = [], []
+  without1, without2 = [], []
+  while c1 < l1 or c2 < l2:
+    elt1 = sol1[c1] if c1 < l1 else math.inf
+    elt2 = sol2[c2] if c2 < l2 else math.inf
+    if elt1 == elt2:
+      cancel1.append(f"\\cancel{{{elt1}}}")
+      cancel2.append(f"\\cancel{{{elt2}}}")
+      c1 += 1
+      c2 += 1
+    elif c2 == l2 or elt1 < elt2:
+      cancel1.append(f"{elt1}")
+      without1.append(elt1)
+      c1 += 1
+    else:
+      cancel2.append(f"{elt2}")
+      without2.append(elt2)
+      c2 += 1
+  without1 = without1 if len(without1) > 0 else [1]
+  without2 = without2 if len(without2) > 0 else [1]
+
+  str_cancel1 = " \\times ".join(cancel1) 
+  str_cancel2 = " \\times ".join(cancel2)
+  str_without1 = " \\times ".join(map(str,without1)) 
+  str_without2 = " \\times ".join(map(str,without2))
+  res1 = reduce(mul, without1, 1)
+  res2 = reduce(mul, without2, 1)
+
+
+  return str_cancel1, str_cancel2, str_without1, str_without2, res1, res2, all(map(lambda x: x==2 or x==5,without2))
+\end{pycode}
+
+\titleandname{}
+\version{}
+\begin{questions}
+\question
+\begin{pycode}
+n1,sol1 = gen_decompose(1)
+n2,sol2 = gen_decompose(20)
+n3,sol3 = gen_decompose(3)
+n4,sol4 = gen_decompose(4)
+n5,sol5 = gen_decompose(5)
+
+#Fractions
+numc12, denc12, num12, den12, numr12, denr12, deci12 = simplify_fracts(sol1,sol2)
+numc34, denc34, num34, den34, numr34, denr34, deci34 = simplify_fracts(sol3,sol4)
+numc52, denc52, num52, den52, numr52, denr52, deci52 = simplify_fracts(sol5,sol2)
+
+\end{pycode}
+\begin{parts}
+\part Donner la décomposition en facteurs premiers des nombres suivants.
+\begin{subparts}
+\subpart $\py{n1}$
+\subpart $\py{n2}$
+\subpart $\py{n3}$
+\subpart $\py{n4}$
+\subpart $\py{n5}$
+\end{subparts}
+
+\vspace*{0.5cm}
+
+\part En déduire l'écriture sous forme irréductible des fractions suivantes.
+\begin{subparts}
+\subpart $\dfrac{\py{n1}}{\py{n2}} = $
+\subpart $\dfrac{\py{n3}}{\py{n4}} = $
+\subpart $\dfrac{\py{n5}}{\py{n2}} = $
+\end{subparts}
+
+\vspace*{0.5cm}
+
+\part En déduire pour chacune des fractions ci-dessus si elle correspond à un nombre décimal ou non.
+
+\end{parts}
+
+\begin{solution}
+\begin{parts}
+\part
+\begin{subparts}
+\subpart $\py{n1} = \py{" \\times ".join([str(elt) for elt in sol1])}$
+\subpart $\py{n2} = \py{" \\times ".join([str(elt) for elt in sol2])}$
+\subpart $\py{n3} = \py{" \\times ".join([str(elt) for elt in sol3])}$
+\subpart $\py{n4} = \py{" \\times ".join([str(elt) for elt in sol4])}$
+\subpart $\py{n5} = \py{" \\times ".join([str(elt) for elt in sol5])}$
+\end{subparts}
+\part
+\begin{subparts}
+\subpart $\dfrac{\py{n1}}{\py{n2}} = \dfrac{\py{numc12}}{\py{denc12}} = \dfrac{\py{num12}}{\py{den12}} = \dfrac{\py{numr12}}{\py{denr12}}$
+\subpart $\dfrac{\py{n3}}{\py{n4}} = \dfrac{\py{numc34}}{\py{denc34}} = \dfrac{\py{num34}}{\py{den34}} = \dfrac{\py{numr34}}{\py{denr34}}$
+\subpart $\dfrac{\py{n5}}{\py{n2}} = \dfrac{\py{numc52}}{\py{denc52}} = \dfrac{\py{num52}}{\py{den52}} = \dfrac{\py{numr52}}{\py{denr52}}$
+\end{subparts}
+\part
+\begin{subparts}
+\subpart \py{"Décimal" if deci12 else "Non Décimal"}
+\subpart \py{"Décimal" if deci34 else "Non Décimal"}
+\subpart \py{"Décimal" if deci52 else "Non Décimal"}
+\end{subparts}
+\end{parts}
+\end{solution}
+\end{questions}
+
+\newpage
+\titleandname{}
+\version{}
+\begin{questions}
+\question
+\begin{pycode}
+n1,sol1 = gen_decompose(10)
+n2,sol2 = gen_decompose(200)
+n3,sol3 = gen_decompose(30)
+n4,sol4 = gen_decompose(40)
+n5,sol5 = gen_decompose(50)
+
+#Fractions
+numc12, denc12, num12, den12, numr12, denr12, deci12 = simplify_fracts(sol1,sol2)
+numc34, denc34, num34, den34, numr34, denr34, deci34 = simplify_fracts(sol3,sol4)
+numc52, denc52, num52, den52, numr52, denr52, deci52 = simplify_fracts(sol5,sol2)
+
+\end{pycode}
+\begin{parts}
+\part Donner la décomposition en facteurs premiers des nombres suivants.
+\begin{subparts}
+\subpart $\py{n1}$
+\subpart $\py{n2}$
+\subpart $\py{n3}$
+\subpart $\py{n4}$
+\subpart $\py{n5}$
+\end{subparts}
+
+\vspace*{0.5cm}
+
+\part En déduire l'écriture sous forme irréductible des fractions suivantes.
+\begin{subparts}
+\subpart $\dfrac{\py{n1}}{\py{n2}} = $
+\subpart $\dfrac{\py{n3}}{\py{n4}} = $
+\subpart $\dfrac{\py{n5}}{\py{n2}} = $
+\end{subparts}
+
+\vspace*{0.5cm}
+
+\part En déduire pour chacune des fractions ci-dessus si elle correspond à un nombre décimal ou non.
+
+\end{parts}
+
+\begin{solution}
+\begin{parts}
+\part
+\begin{subparts}
+\subpart $\py{n1} = \py{" \\times ".join([str(elt) for elt in sol1])}$
+\subpart $\py{n2} = \py{" \\times ".join([str(elt) for elt in sol2])}$
+\subpart $\py{n3} = \py{" \\times ".join([str(elt) for elt in sol3])}$
+\subpart $\py{n4} = \py{" \\times ".join([str(elt) for elt in sol4])}$
+\subpart $\py{n5} = \py{" \\times ".join([str(elt) for elt in sol5])}$
+\end{subparts}
+\part
+\begin{subparts}
+\subpart $\dfrac{\py{n1}}{\py{n2}} = \dfrac{\py{numc12}}{\py{denc12}} = \dfrac{\py{num12}}{\py{den12}} = \dfrac{\py{numr12}}{\py{denr12}}$
+\subpart $\dfrac{\py{n3}}{\py{n4}} = \dfrac{\py{numc34}}{\py{denc34}} = \dfrac{\py{num34}}{\py{den34}} = \dfrac{\py{numr34}}{\py{denr34}}$
+\subpart $\dfrac{\py{n5}}{\py{n2}} = \dfrac{\py{numc52}}{\py{denc52}} = \dfrac{\py{num52}}{\py{den52}} = \dfrac{\py{numr52}}{\py{denr52}}$
+\end{subparts}
+\part
+\begin{subparts}
+\subpart \py{"Décimal" if deci12 else "Non Décimal"}
+\subpart \py{"Décimal" if deci34 else "Non Décimal"}
+\subpart \py{"Décimal" if deci52 else "Non Décimal"}
+\end{subparts}
+\end{parts}
+\end{solution}
+\end{questions}
+
+\end{document}

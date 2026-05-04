@@ -1,0 +1,141 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation n°9}
+\author{Premiere Spécialité Mathématique}
+\date{19 Mars 2026}
+
+% \printanswers
+
+\begin{document}
+\titleandname{}
+\version{}
+\begin{questions}
+\question Soit $A$ et $B$ deux événements d'une expérience aléatoire d'univers $\Omega$. Rappeler la formule de probabilités composées permettant de calculer $P(A \cap B)$.
+
+\begin{equation*}
+P(A \cap B) =
+\end{equation*}
+
+\begin{solution}
+\begin{equation*}
+P(A \cap B) = P(A) P_A(B)
+\end{equation*}
+\end{solution}
+
+\question Dans une classe de première spécialité (fictive), les élèves arrivent au hasard en cours. On s'interresse à l'identité de la première personne arrivée sur place. On suppose que les élèves arrivent au hasard de façon équiprobable.
+
+\begin{pycode}
+from random import *
+fille1 = randrange(1,31)
+fille2 = randrange(1,31)
+fille3 = randrange(1,31)
+
+garcon1 = randrange(1,31)
+garcon2 = randrange(1,31)
+garcon3 = randrange(1,31)
+
+total_fille = fille1 + fille2 + fille3
+total_garcon = garcon1 + garcon2 + garcon3
+total1 = fille1 + garcon1
+total2 = fille2 + garcon2
+total3 = fille3 + garcon3
+total = total_fille + total_garcon
+\end{pycode}
+
+\begin{center}
+\begin{tblr}{hlines, vlines}
+\diagbox{Genre}{Classe}&1G1&1G2&1G3&Total\\
+Fille&$\py{fille1}$&$\py{fille2}$&$\py{fille3}$&$\py{total_fille}$\\
+Garçon&$\py{garcon1}$&$\py{garcon2}$&$\py{garcon3}$&$\py{total_garcon}$\\
+Total&$\py{total1}$&$\py{total2}$&$\py{total3}$&$\py{total}$
+\end{tblr}
+\end{center}
+
+
+On pose les événements suivants :
+\begin{itemize}
+\item $F$ : \og Le premier élève arrivé est une fille \fg
+\item $U$ : \og Le premier élève arrivé est en 1G1 \fg
+\item $D$ : \og Le premier élève arrivé est en 1G2 \fg
+\item $T$ : \og Le premier élève arrivé est en 1G3 \fg
+\end{itemize}
+\begin{parts}
+\part Donner les probabilités $P(F)$ et $P(T)$.
+\part Donner les probabilités $P_U(\overbar{F})$ et $P_{\overbar{F}}(U)$.
+\part Donner les probabilités $P(D \cap F)$ et $P(T \cap \overbar{F})$.
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part $P(F) = \dfrac{\py{total_fille}}{\py{total}}$ et $P(T) = \dfrac{\py{total3}}{\py{total}}$.
+\part $P_U(\overbar{F}) = \dfrac{\py{garcon1}}{\py{total1}}$ et $P_{\overbar{F}}(U) = \dfrac{\py{garcon1}}{\py{total_garcon}}$.
+\part $P(D \cap F) = \dfrac{\py{fille2}}{\py{total}}$ et $P(T \cap \overbar{F}) = \dfrac{\py{garcon3}}{\py{total}}$
+\end{parts}
+\end{solution}
+\end{questions}
+\newpage
+\titleandname{}
+\version{}
+\begin{questions}
+\question Soit $A$ et $B$ deux événements d'une expérience aléatoire d'univers $\Omega$. Rappeler la formule permettant de calculer $P_A(B)$.
+
+\begin{equation*}
+P_A(B) =
+\end{equation*}
+
+\begin{solution}
+\begin{equation*}
+P_A(B) = \dfrac{P(A \cap B)}{P(A)}
+\end{equation*}
+\end{solution}
+
+\question Dans une classe de première spécialité (fictive), les élèves arrivent au hasard en cours. On s'interresse à l'identité de la première personne arrivée sur place. On suppose que les élèves arrivent au hasard de façon équiprobable.
+
+\begin{pycode}
+from random import *
+fille1 = randrange(1,31)
+fille2 = randrange(1,31)
+fille3 = randrange(1,31)
+
+garcon1 = randrange(1,31)
+garcon2 = randrange(1,31)
+garcon3 = randrange(1,31)
+
+total_fille = fille1 + fille2 + fille3
+total_garcon = garcon1 + garcon2 + garcon3
+total1 = fille1 + garcon1
+total2 = fille2 + garcon2
+total3 = fille3 + garcon3
+total = total_fille + total_garcon
+\end{pycode}
+
+\begin{center}
+\begin{tblr}{hlines, vlines}
+\diagbox{Genre}{Classe}&1G1&1G2&1G3&Total\\
+Fille&$\py{fille1}$&$\py{fille2}$&$\py{fille3}$&$\py{total_fille}$\\
+Garçon&$\py{garcon1}$&$\py{garcon2}$&$\py{garcon3}$&$\py{total_garcon}$\\
+Total&$\py{total1}$&$\py{total2}$&$\py{total3}$&$\py{total}$
+\end{tblr}
+\end{center}
+
+On pose les événements suivants :
+\begin{itemize}
+\item $F$ : \og Le premier élève arrivé est une fille \fg
+\item $U$ : \og Le premier élève arrivé est en 1G1 \fg
+\item $D$ : \og Le premier élève arrivé est en 1G2 \fg
+\item $T$ : \og Le premier élève arrivé est en 1G3 \fg
+\end{itemize}
+\begin{parts}
+\part Donner les probabilités $P(F)$ et $P(T)$.
+\part Donner les probabilités $P_U(\overbar{F})$ et $P_{\overbar{F}}(U)$.
+\part Donner les probabilités $P(D \cap F)$ et $P(T \cap \overbar{F})$.
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part $P(F) = \dfrac{\py{total_fille}}{\py{total}}$ et $P(T) = \dfrac{\py{total3}}{\py{total}}$.
+\part $P_U(\overbar{F}) = \dfrac{\py{garcon1}}{\py{total1}}$ et $P_{\overbar{F}}(U) = \dfrac{\py{garcon1}}{\py{total_garcon}}$.
+\part $P(D \cap F) = \dfrac{\py{fille2}}{\py{total}}$ et $P(T \cap \overbar{F}) = \dfrac{\py{garcon3}}{\py{total}}$
+\end{parts}
+\end{solution}
+\end{questions}
+\end{document}

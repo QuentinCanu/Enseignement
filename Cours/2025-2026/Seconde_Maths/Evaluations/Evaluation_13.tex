@@ -1,0 +1,115 @@
+\documentclass{controle}
+\usepackage{main}
+
+\title{Évaluation n°13 : Configurations géométriques}
+\author{Seconde 3}
+\date{13 Février 2026}
+
+% \printanswers
+
+\begin{document}
+\titleandname{}
+\version
+\begin{questions}
+\titledquestion{Questions de cours}[3]
+
+Compléter les phrases suivantes :
+\begin{parts}
+\part[1] Les droites $(PQ)$ et $(RS)$ sont parralèles, on en déduit que les vecteurs $\vect{PQ}$ et $\vect{RS}$ sont \dots
+\part[1] $ABCD$ est un parallélogramme, on en déduit que $\vect{AB}$ et $\vect{DC}$ sont \dots
+\part[1] Les points $X$, $Y$ et $Z$ sont alignés, on en déduit que les vecteurs $\vect{XY}$ et $\vect{XZ}$ sont \dots
+\end{parts}
+\begin{solution}[1cm]
+\begin{parts}
+\part[1] Les droites $(PQ)$ et $(RS)$ sont parralèles, on en déduit que les vecteurs $\vect{PQ}$ et $\vect{RS}$ sont \textbf{colinéaires}.
+\part[1] $ABCD$ est un parallélogramme, on en déduit que $\vect{AB}$ et $\vect{DC}$ sont \textbf{égaux}.
+\part[1] Les points $X$, $Y$ et $Z$ sont alignés, on en déduit que les vecteurs $\vect{XY}$ et $\vect{XZ}$ sont \textbf{colinéaires}.
+\end{parts}
+\end{solution}
+\question[7] Soit $ABC$ un triangle, et $D$ et $E$ deux points tels que $\vect{AD} = 2\vect{BA}$ et $\vect{BE} = 3\vect{BC}$
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part[2] Tracer le triangle $ABC$ de votre choix, puis placer les points $D$ et $E$.
+\part[1] Justifier que $\vect{DE} = \vect{DA} + \vect{AB} + \vect{BE}$.
+\part[1] Montrer que $\vect{DA} = 2\vect{AB}$ (sans l'aide du dessin).
+\part[1] En déduire que $\vect{DE} = 3\vect{AC}$.
+\part[2] Que peut-on en conclure pour les droites $(DE)$ et $(AC)$ ? 
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part
+\part $\vect{DE} = \vect{DA} + \vect{AB} + \vect{BE}$ par la relation de Chasles.
+\part On a $\vect{DA} = -\vect{AD} = - (2 \vect{BA}) = 2 \vect{AB}$.
+\part
+On en déduit que
+\begin{equation*}
+\begin{aligned}
+\vect{DE} &= \vect{DA} + \vect{AB} + \vect{BE}&\text{ (Question précédente)}\\
+&= 2 \vect{AB} + \vect{AB} + 3 \vect{BC}&\text{ (Substitution)}\\
+&= 3 \vect{AB} + 3 \vect{BC}&\text{ (Réduction)}\\
+&= 3 (\vect{AB} + \vect{BC})&\text{ (Factorisation)}\\
+&= 3 \vect{AC}&\text{ (Relation de Chasles)}
+\end{aligned}
+\end{equation*}
+\part On a $\vect{DE} = 3\vect{AC}$, les vecteurs sont donc colinéaires. On en déduit que les droites $(DE)$ et $(AC)$.
+\end{parts}
+\end{solution}
+\end{questions}
+\newpage
+\setcounter{page}{1}
+\titleandname{}
+\version
+\begin{questions}
+\titledquestion{Questions de cours}[3]
+
+Compléter les phrases suivantes :
+\begin{parts}
+\part[1] $I$ est le milieu du segment $[LK]$, on en déduit que $\vect{LI}$ et $\vect{IK}$ sont \dots
+\part[1] Les points $M$, $N$ et $O$ sont alignés, on en déduit que les vecteurs $\vect{NO}$ et $\vect{MN}$ sont \dots
+\part[1] $ABCD$ est un parallélogramme, on en déduit que $\vect{AB}$ et $\vect{DC}$ sont \dots
+\end{parts}
+\begin{solution}[1cm]
+\begin{parts}
+\part[1] $I$ est le milieu du segment $[LK]$, on en déduit que $\vect{LI}$ et $\vect{IK}$ sont \textbf{égaux}.
+\part[1] Les points $M$, $N$ et $O$ sont alignés, on en déduit que les vecteurs $\vect{NO}$ et $\vect{MN}$ sont \textbf{colinéaires}.
+\part[1] $ABCD$ est un parallélogramme, on en déduit que $\vect{AB}$ et $\vect{DC}$ sont \textbf{égaux}.
+\end{parts}
+\end{solution}
+\question[7] Soit $ABC$ un triangle, et $D$ et $E$ deux points tels que $\vect{AD} = 2\vect{BA}$ et $\vect{BE} = 3\vect{BC}$
+\begin{center}
+\begin{tikzpicture}
+\draw[help lines] (-3.25,-3.25) grid[step=0.5] (3.25,3.25);
+\end{tikzpicture}
+\end{center}
+\begin{parts}
+\part[2] Tracer le triangle $ABC$ de votre choix, puis placer les points $D$ et $E$.
+\part[1] Justifier que $\vect{DE} = \vect{DA} + \vect{AB} + \vect{BE}$.
+\part[1] Montrer que $\vect{DA} = 2\vect{AB}$ (sans l'aide du dessin).
+\part[1] En déduire que $\vect{DE} = 3\vect{AC}$.
+\part[2] Que peut-on en conclure pour les droites $(DE)$ et $(AC)$ ? 
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part
+\part $\vect{DE} = \vect{DA} + \vect{AB} + \vect{BE}$ par la relation de Chasles.
+\part On a $\vect{DA} = -\vect{AD} = - (2 \vect{BA}) = 2 \vect{AB}$.
+\part
+On en déduit que
+\begin{equation*}
+\begin{aligned}
+\vect{DE} &= \vect{DA} + \vect{AB} + \vect{BE}&\text{ (Question précédente)}\\
+&= 2 \vect{AB} + \vect{AB} + 3 \vect{BC}&\text{ (Substitution)}\\
+&= 3 \vect{AB} + 3 \vect{BC}&\text{ (Réduction)}\\
+&= 3 (\vect{AB} + \vect{BC})&\text{ (Factorisation)}\\
+&= 3 \vect{AC}&\text{ (Relation de Chasles)}
+\end{aligned}
+\end{equation*}
+\part On a $\vect{DE} = 3\vect{AC}$, les vecteurs sont donc colinéaires. On en déduit que les droites $(DE)$ et $(AC)$.
+\end{parts}
+\end{solution}
+\end{questions}
+\end{document}

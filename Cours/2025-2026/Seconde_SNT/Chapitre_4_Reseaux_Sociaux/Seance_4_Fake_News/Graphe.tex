@@ -1,0 +1,58 @@
+\documentclass{exos}
+\usepackage{main}
+
+\begin{document}
+Pour étudier la propagation de rumeur, on peut utiliser un graphe pour illustrer le réseau de diffusion de l'information. Dans le schéma suivant, une fake news va être propagée par $A$. Les nombres correspondent au temps que l'information met à être transmise. Ici, on suppose que quiconque transmet la fake news qu'il vient d'entendre à tous ses voisins en même temps.
+\textbf{Au bout de combien de temps $F$ reçoit-il la fake news ?}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\tikzstyle{node}=[circle,draw]
+\node[node] (A) at (0,0) {$A$};
+\node[node] (B) at (2,-1) {$B$};
+\node[node] (C) at (1,1.5) {$C$};
+\node[node] (D) at (-1,2) {$D$};
+\node[node] (E) at (3,3) {$E$};
+\node[node] (F) at (4,1) {$F$};
+
+\draw[dashed] (A) -- (B) node[midway] {$7$};
+\draw[dashed] (A) -- (C) node[midway] {$9$};
+\draw[dashed] (A) -- (D) node[midway] {$14$};
+\draw[dashed] (B) -- (C) node[midway] {$10$};
+\draw[dashed] (D) -- (C) node[midway] {$2$};
+\draw[dashed] (D) -- (E) node[midway] {$9$};
+\draw[dashed] (B) -- (F) node[midway] {$15$};
+\draw[dashed] (C) -- (F) node[midway] {$11$};
+\draw[dashed] (E) -- (F) node[midway] {$6$};
+\end{tikzpicture}
+\end{center}
+
+\vspace*{1cm}
+\hrulefill
+\vspace*{1cm}
+
+Pour étudier la propagation de rumeur, on peut utiliser un graphe pour illustrer le réseau de diffusion de l'information. Dans le schéma suivant, une fake news va être propagée par $A$. Les nombres correspondent au temps que l'information met à être transmise. Ici, on suppose que quiconque transmet la fake news qu'il vient d'entendre à tous ses voisins en même temps.
+\textbf{Au bout de combien de temps $F$ reçoit-il la fake news ?}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\tikzstyle{node}=[circle,draw]
+\node[node] (A) at (0,0) {$A$};
+\node[node] (B) at (2,-1) {$B$};
+\node[node] (C) at (1,1.5) {$C$};
+\node[node] (D) at (-1,2) {$D$};
+\node[node] (E) at (3,3) {$E$};
+\node[node] (F) at (4,1) {$F$};
+
+\draw[dashed] (A) -- (B) node[midway] {$7$};
+\draw[dashed] (A) -- (C) node[midway] {$9$};
+\draw[dashed] (A) -- (D) node[midway] {$14$};
+\draw[dashed] (B) -- (C) node[midway] {$10$};
+\draw[dashed] (D) -- (C) node[midway] {$2$};
+\draw[dashed] (D) -- (E) node[midway] {$9$};
+\draw[dashed] (B) -- (F) node[midway] {$15$};
+\draw[dashed] (C) -- (F) node[midway] {$11$};
+\draw[dashed] (E) -- (F) node[midway] {$6$};
+\end{tikzpicture}
+\end{center}
+\end{document}

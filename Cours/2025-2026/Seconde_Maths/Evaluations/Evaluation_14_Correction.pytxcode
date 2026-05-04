@@ -1,0 +1,293 @@
+=>PYTHONTEX#py#default#default#0#code#####11#
+from random import *
+from functools import reduce
+from operator import mul
+import math
+
+def gen_decompose(s):
+  seed(s)
+  p2 = randrange(0,6)
+  p3 = randrange(0,3)
+  p5 = randrange(0,3)
+  p7 = randrange(0,2)
+  p11 = randrange(0,2)
+  p13 = 1 if p7 == 0 and p11 == 0 else 0
+
+  n = 2**p2 * 3**p3 * 5**p5 * 7**p7 * 11**p11 * 13**p13
+  sol = [2]*p2 + [3]*p3 + [5]*p5 + [7]*p7 + [11]*p11 + [13]*p13
+  return (n,sol)
+
+def simplify_fracts(sol1,sol2):
+  l1, l2 = len(sol1), len(sol2)
+  c1, c2 = 0, 0
+  cancel1, cancel2 = [], []
+  without1, without2 = [], []
+  while c1 < l1 or c2 < l2:
+    elt1 = sol1[c1] if c1 < l1 else math.inf
+    elt2 = sol2[c2] if c2 < l2 else math.inf
+    if elt1 == elt2:
+      cancel1.append(f"\\cancel{{{elt1}}}")
+      cancel2.append(f"\\cancel{{{elt2}}}")
+      c1 += 1
+      c2 += 1
+    elif c2 == l2 or elt1 < elt2:
+      cancel1.append(f"{elt1}")
+      without1.append(elt1)
+      c1 += 1
+    else:
+      cancel2.append(f"{elt2}")
+      without2.append(elt2)
+      c2 += 1
+  without1 = without1 if len(without1) > 0 else [1]
+  without2 = without2 if len(without2) > 0 else [1]
+
+  str_cancel1 = " \\times ".join(cancel1)
+  str_cancel2 = " \\times ".join(cancel2)
+  str_without1 = " \\times ".join(map(str,without1))
+  str_without2 = " \\times ".join(map(str,without2))
+  res1 = reduce(mul, without1, 1)
+  res2 = reduce(mul, without2, 1)
+
+
+  return str_cancel1, str_cancel2, str_without1, str_without2, res1, res2, all(map(lambda x: x==2 or x==5,without2))
+=>PYTHONTEX#py#default#default#1#code#####69#
+n1,sol1 = gen_decompose(1)
+n2,sol2 = gen_decompose(20)
+n3,sol3 = gen_decompose(3)
+n4,sol4 = gen_decompose(4)
+n5,sol5 = gen_decompose(5)
+
+#Fractions
+numc12, denc12, num12, den12, numr12, denr12, deci12 = simplify_fracts(sol1,sol2)
+numc34, denc34, num34, den34, numr34, denr34, deci34 = simplify_fracts(sol3,sol4)
+numc52, denc52, num52, den52, numr52, denr52, deci52 = simplify_fracts(sol5,sol2)
+
+=>PYTHONTEX#py#default#default#2#i#####85#
+n1
+=>PYTHONTEX#py#default#default#3#i#####86#
+n2
+=>PYTHONTEX#py#default#default#4#i#####87#
+n3
+=>PYTHONTEX#py#default#default#5#i#####88#
+n4
+=>PYTHONTEX#py#default#default#6#i#####89#
+n5
+=>PYTHONTEX#py#default#default#7#i#####96#
+n1
+=>PYTHONTEX#py#default#default#8#i#####96#
+n2
+=>PYTHONTEX#py#default#default#9#i#####97#
+n3
+=>PYTHONTEX#py#default#default#10#i#####97#
+n4
+=>PYTHONTEX#py#default#default#11#i#####98#
+n5
+=>PYTHONTEX#py#default#default#12#i#####98#
+n2
+=>PYTHONTEX#py#default#default#13#i#####111#
+n1
+=>PYTHONTEX#py#default#default#14#i#####111#
+" \\times ".join([str(elt) for elt in sol1])
+=>PYTHONTEX#py#default#default#15#i#####112#
+n2
+=>PYTHONTEX#py#default#default#16#i#####112#
+" \\times ".join([str(elt) for elt in sol2])
+=>PYTHONTEX#py#default#default#17#i#####113#
+n3
+=>PYTHONTEX#py#default#default#18#i#####113#
+" \\times ".join([str(elt) for elt in sol3])
+=>PYTHONTEX#py#default#default#19#i#####114#
+n4
+=>PYTHONTEX#py#default#default#20#i#####114#
+" \\times ".join([str(elt) for elt in sol4])
+=>PYTHONTEX#py#default#default#21#i#####115#
+n5
+=>PYTHONTEX#py#default#default#22#i#####115#
+" \\times ".join([str(elt) for elt in sol5])
+=>PYTHONTEX#py#default#default#23#i#####119#
+n1
+=>PYTHONTEX#py#default#default#24#i#####119#
+n2
+=>PYTHONTEX#py#default#default#25#i#####119#
+numc12
+=>PYTHONTEX#py#default#default#26#i#####119#
+denc12
+=>PYTHONTEX#py#default#default#27#i#####119#
+num12
+=>PYTHONTEX#py#default#default#28#i#####119#
+den12
+=>PYTHONTEX#py#default#default#29#i#####119#
+numr12
+=>PYTHONTEX#py#default#default#30#i#####119#
+denr12
+=>PYTHONTEX#py#default#default#31#i#####120#
+n3
+=>PYTHONTEX#py#default#default#32#i#####120#
+n4
+=>PYTHONTEX#py#default#default#33#i#####120#
+numc34
+=>PYTHONTEX#py#default#default#34#i#####120#
+denc34
+=>PYTHONTEX#py#default#default#35#i#####120#
+num34
+=>PYTHONTEX#py#default#default#36#i#####120#
+den34
+=>PYTHONTEX#py#default#default#37#i#####120#
+numr34
+=>PYTHONTEX#py#default#default#38#i#####120#
+denr34
+=>PYTHONTEX#py#default#default#39#i#####121#
+n5
+=>PYTHONTEX#py#default#default#40#i#####121#
+n2
+=>PYTHONTEX#py#default#default#41#i#####121#
+numc52
+=>PYTHONTEX#py#default#default#42#i#####121#
+denc52
+=>PYTHONTEX#py#default#default#43#i#####121#
+num52
+=>PYTHONTEX#py#default#default#44#i#####121#
+den52
+=>PYTHONTEX#py#default#default#45#i#####121#
+numr52
+=>PYTHONTEX#py#default#default#46#i#####121#
+denr52
+=>PYTHONTEX#py#default#default#47#i#####125#
+"Décimal" if deci12 else "Non Décimal"
+=>PYTHONTEX#py#default#default#48#i#####126#
+"Décimal" if deci34 else "Non Décimal"
+=>PYTHONTEX#py#default#default#49#i#####127#
+"Décimal" if deci52 else "Non Décimal"
+=>PYTHONTEX#py#default#default#50#code#####138#
+n1,sol1 = gen_decompose(10)
+n2,sol2 = gen_decompose(200)
+n3,sol3 = gen_decompose(30)
+n4,sol4 = gen_decompose(40)
+n5,sol5 = gen_decompose(50)
+
+#Fractions
+numc12, denc12, num12, den12, numr12, denr12, deci12 = simplify_fracts(sol1,sol2)
+numc34, denc34, num34, den34, numr34, denr34, deci34 = simplify_fracts(sol3,sol4)
+numc52, denc52, num52, den52, numr52, denr52, deci52 = simplify_fracts(sol5,sol2)
+
+=>PYTHONTEX#py#default#default#51#i#####154#
+n1
+=>PYTHONTEX#py#default#default#52#i#####155#
+n2
+=>PYTHONTEX#py#default#default#53#i#####156#
+n3
+=>PYTHONTEX#py#default#default#54#i#####157#
+n4
+=>PYTHONTEX#py#default#default#55#i#####158#
+n5
+=>PYTHONTEX#py#default#default#56#i#####165#
+n1
+=>PYTHONTEX#py#default#default#57#i#####165#
+n2
+=>PYTHONTEX#py#default#default#58#i#####166#
+n3
+=>PYTHONTEX#py#default#default#59#i#####166#
+n4
+=>PYTHONTEX#py#default#default#60#i#####167#
+n5
+=>PYTHONTEX#py#default#default#61#i#####167#
+n2
+=>PYTHONTEX#py#default#default#62#i#####180#
+n1
+=>PYTHONTEX#py#default#default#63#i#####180#
+" \\times ".join([str(elt) for elt in sol1])
+=>PYTHONTEX#py#default#default#64#i#####181#
+n2
+=>PYTHONTEX#py#default#default#65#i#####181#
+" \\times ".join([str(elt) for elt in sol2])
+=>PYTHONTEX#py#default#default#66#i#####182#
+n3
+=>PYTHONTEX#py#default#default#67#i#####182#
+" \\times ".join([str(elt) for elt in sol3])
+=>PYTHONTEX#py#default#default#68#i#####183#
+n4
+=>PYTHONTEX#py#default#default#69#i#####183#
+" \\times ".join([str(elt) for elt in sol4])
+=>PYTHONTEX#py#default#default#70#i#####184#
+n5
+=>PYTHONTEX#py#default#default#71#i#####184#
+" \\times ".join([str(elt) for elt in sol5])
+=>PYTHONTEX#py#default#default#72#i#####188#
+n1
+=>PYTHONTEX#py#default#default#73#i#####188#
+n2
+=>PYTHONTEX#py#default#default#74#i#####188#
+numc12
+=>PYTHONTEX#py#default#default#75#i#####188#
+denc12
+=>PYTHONTEX#py#default#default#76#i#####188#
+num12
+=>PYTHONTEX#py#default#default#77#i#####188#
+den12
+=>PYTHONTEX#py#default#default#78#i#####188#
+numr12
+=>PYTHONTEX#py#default#default#79#i#####188#
+denr12
+=>PYTHONTEX#py#default#default#80#i#####189#
+n3
+=>PYTHONTEX#py#default#default#81#i#####189#
+n4
+=>PYTHONTEX#py#default#default#82#i#####189#
+numc34
+=>PYTHONTEX#py#default#default#83#i#####189#
+denc34
+=>PYTHONTEX#py#default#default#84#i#####189#
+num34
+=>PYTHONTEX#py#default#default#85#i#####189#
+den34
+=>PYTHONTEX#py#default#default#86#i#####189#
+numr34
+=>PYTHONTEX#py#default#default#87#i#####189#
+denr34
+=>PYTHONTEX#py#default#default#88#i#####190#
+n5
+=>PYTHONTEX#py#default#default#89#i#####190#
+n2
+=>PYTHONTEX#py#default#default#90#i#####190#
+numc52
+=>PYTHONTEX#py#default#default#91#i#####190#
+denc52
+=>PYTHONTEX#py#default#default#92#i#####190#
+num52
+=>PYTHONTEX#py#default#default#93#i#####190#
+den52
+=>PYTHONTEX#py#default#default#94#i#####190#
+numr52
+=>PYTHONTEX#py#default#default#95#i#####190#
+denr52
+=>PYTHONTEX#py#default#default#96#i#####194#
+"Décimal" if deci12 else "Non Décimal"
+=>PYTHONTEX#py#default#default#97#i#####195#
+"Décimal" if deci34 else "Non Décimal"
+=>PYTHONTEX#py#default#default#98#i#####196#
+"Décimal" if deci52 else "Non Décimal"
+=>PYTHONTEX:SETTINGS#
+version=0.18
+outputdir=pythontex-files-Evaluation_14_Correction
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python3|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python3|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python3|
+pygfamily=pylabcon|pycon|

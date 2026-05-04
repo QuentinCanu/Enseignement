@@ -1,0 +1,35 @@
+=>PYTHONTEX#py#default#default#0#code#####294#
+def f(n):
+  return f"{10.0/(2.0+15.0*n):.3f}"
+
+L = [1,10,50,100,150,200,500]
+fL = list(map(f,L))
+print(r"\begin{tblr}{hlines,vlines, columns = {mode=dmath}}")
+print(r"n &" + " & ".join(list(map(str,L))) + r"\\")
+print(r"u_n \simeq &" + " & ".join(list(map(str,fL))) + r"\\")
+print(r"\end{tblr}")
+=>PYTHONTEX:SETTINGS#
+version=0.18
+outputdir=pythontex-files-Bac_Blanc_2
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python3|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python3|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python3|
+pygfamily=pylabcon|pycon|
